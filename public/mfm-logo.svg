@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Mountain of Fire and Miracles Ministries Logo">
+  <title>MFM Worldwide Logo</title>
+  <defs>
+    <linearGradient id="flameGrad" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%"   stop-color="#FFE800"/>
+      <stop offset="30%"  stop-color="#FFA800"/>
+      <stop offset="65%"  stop-color="#FF5500"/>
+      <stop offset="100%" stop-color="#FF2200"/>
+    </linearGradient>
+    <path id="topArc" d="M 89,138 A 196,196 0 0,1 411,138" fill="none"/>
+    <path id="botArc" d="M 124,400 A 196,196 0 0,1 376,400" fill="none"/>
+    <clipPath id="innerClip">
+      <circle cx="250" cy="250" r="153"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer black border -->
+  <circle cx="250" cy="250" r="248" fill="#0D0D0D"/>
+  <!-- White separator -->
+  <circle cx="250" cy="250" r="240" fill="#FFFFFF"/>
+  <!-- Magenta / pink band -->
+  <circle cx="250" cy="250" r="236" fill="#DF1680"/>
+  <!-- Inner black ring -->
+  <circle cx="250" cy="250" r="157" fill="#0D0D0D"/>
+  <!-- Inner white circle -->
+  <circle cx="250" cy="250" r="153" fill="#FFFFFF"/>
+
+  <!-- Top curved text -->
+  <text font-family="'Arial Black', Impact, sans-serif" font-size="19" font-weight="900" fill="#0D0D0D" letter-spacing="0.5">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">MOUNTAIN OF FIRE AND MIRACLES</textPath>
+  </text>
+
+  <!-- Bottom curved text -->
+  <text font-family="'Arial Black', Impact, sans-serif" font-size="22" font-weight="900" fill="#0D0D0D" letter-spacing="3">
+    <textPath href="#botArc" startOffset="50%" text-anchor="middle">MINISTRIES</textPath>
+  </text>
+
+  <!-- Inner illustration clipped to white circle -->
+  <g clip-path="url(#innerClip)">
+    <!-- Flames (behind mountain) -->
+    <path d="M145,295 C132,270 142,233 145,222 C148,233 158,270 145,295Z" fill="url(#flameGrad)"/>
+    <path d="M163,295 C148,263 160,217 163,203 C166,217 178,263 163,295Z" fill="url(#flameGrad)"/>
+    <path d="M181,295 C165,259 178,207 181,191 C184,207 197,259 181,295Z" fill="url(#flameGrad)"/>
+    <path d="M200,295 C183,257 197,202 200,185 C203,202 217,257 200,295Z" fill="url(#flameGrad)"/>
+    <path d="M220,295 C203,257 217,200 220,183 C223,200 237,257 220,295Z" fill="url(#flameGrad)"/>
+    <path d="M240,295 C224,258 237,204 240,188 C243,204 256,258 240,295Z" fill="url(#flameGrad)"/>
+    <path d="M258,295 C243,262 255,214 258,200 C261,214 273,262 258,295Z" fill="url(#flameGrad)"/>
+    <path d="M275,295 C262,269 272,231 275,220 C278,231 288,269 275,295Z" fill="url(#flameGrad)"/>
+
+    <!-- Mountain silhouette -->
+    <path d="
+      M 96,404
+      L 140,350 L 162,312 L 183,274 L 200,245 L 212,224 L 221,209
+      L 228,200 L 232,195 L 236,192 L 240,190 L 243,192 L 247,200
+      L 250,212 L 253,222 L 257,218 L 261,212 L 266,207 L 271,204
+      L 275,204 L 279,208 L 284,216 L 291,230 L 304,255
+      L 320,282 L 338,310 L 356,338 L 373,363 L 390,385 L 404,404
+      Z
+    " fill="#111111"/>
+  </g>
+</svg>

@@ -27,14 +27,16 @@
   text-decoration: none;
   cursor: pointer;
 }
-.logoFlame {
-  width: 40px;
-  height: 48px;
+.logoImg {
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
 }
-.logoFlame svg {
+.logoImg img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .logoText {
   display: flex;

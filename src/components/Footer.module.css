@@ -9,6 +9,14 @@
   gap: 20px;
 }
 
+.logoWrap {
+  flex-shrink: 0;
+}
+.logoWrap img {
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(223, 22, 128, 0.3));
+}
+
 .copy {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.25);

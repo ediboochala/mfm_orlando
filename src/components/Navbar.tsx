@@ -25,21 +25,8 @@ export default function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       {/* Logo */}
       <a href="#" className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <div className={styles.logoFlame}>
-          <svg viewBox="0 0 40 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M20 2C20 2 30 14 28 26C34 20 36 12 34 6C40 14 42 26 36 36C32 42 26 46 20 54C14 46 8 42 4 36C-2 26 0 14 6 6C4 12 6 20 12 26C10 14 20 2 20 2Z"
-              fill="url(#navFlame)"
-            />
-            <defs>
-              <linearGradient id="navFlame" x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#FFF9C4" />
-                <stop offset="30%" stopColor="#FDD835" />
-                <stop offset="65%" stopColor="#E53935" />
-                <stop offset="100%" stopColor="#7A0000" />
-              </linearGradient>
-            </defs>
-          </svg>
+        <div className={styles.logoImg}>
+          <img src="/mfm-logo.svg" alt="MFM Logo" width={52} height={52} />
         </div>
         <div className={styles.logoText}>
           <span className={styles.logoName}>{CHURCH.shortName}</span>
