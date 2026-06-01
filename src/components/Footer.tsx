@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logoWrap}>
-        <img src="/mfm-logo.svg" alt="Mountain of Fire and Miracles Ministries" width={72} height={72} />
+        <img src="/mfm-logo.png" alt="Mountain of Fire and Miracles Ministries" width={72} height={72} />
       </div>
       <p className={styles.copy}>{CHURCH.copyright}</p>
       <nav className={styles.links}>
