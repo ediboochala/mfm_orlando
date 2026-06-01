@@ -1,0 +1,42 @@
+.footer {
+  background: #050505;
+  border-top: 1px solid rgba(212, 160, 23, 0.1);
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copy {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 1px;
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+}
+
+.link {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.link:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 24px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .links { flex-wrap: wrap; justify-content: center; gap: 18px; }
+}

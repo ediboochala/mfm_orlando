@@ -1,0 +1,102 @@
+.section {
+  background: linear-gradient(180deg, #0a0a0a 0%, #110505 100%);
+  border-top: 1px solid rgba(212, 160, 23, 0.12);
+  border-bottom: 1px solid rgba(212, 160, 23, 0.12);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.imgWrap { position: relative; }
+
+.imgFrame {
+  position: relative;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), rgba(176, 26, 26, 0.1));
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+.imgFrame::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid rgba(212, 160, 23, 0.1);
+}
+
+.imgPlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, #1a0505 0%, #2a0a0a 50%, #1a0505 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.placeholderLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(212, 160, 23, 0.5);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.placeholderHint {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.tag {
+  position: absolute;
+  bottom: -14px;
+  right: -14px;
+  background: var(--red);
+  padding: 16px 24px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+}
+
+.quote {
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+  margin: 28px 0;
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+.sig {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .tag { bottom: -10px; right: -10px; }
+}

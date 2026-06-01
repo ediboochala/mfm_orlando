@@ -1,0 +1,28 @@
+.wrap {
+  background: var(--gold);
+  overflow: hidden;
+  padding: 14px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.inner {
+  display: flex;
+  animation: marqueeScroll 24s linear infinite;
+  white-space: nowrap;
+}
+
+.text {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--dark);
+  text-transform: uppercase;
+  padding: 0 40px;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
