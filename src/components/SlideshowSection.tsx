@@ -33,13 +33,6 @@ const SLIDES = [
     accent: '#E57373',
     image: '/22 (4).jpg',
   },
-  {
-    label: 'Global Ministry',
-    title: 'A Fire Across the Nations',
-    desc: 'Under the leadership of Dr. D.K. Olukoya, MFM has spread to over 140 nations — carrying the gospel of deliverance to the ends of the earth.',
-    accent: '#D4A017',
-    image: '/g.o-hmpg-p2yv8mmnlqigraumc5fkktysc1o1hu6a214voa7okq.jpg',
-  },
 ]
 
 export default function SlideshowSection() {
