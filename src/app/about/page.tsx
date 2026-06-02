@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import ChurchCarousel from '@/components/ChurchCarousel'
 import {
   CHURCH,
   GENERAL_OVERSEER,
@@ -88,6 +89,10 @@ export default function AboutPage() {
                 <span className={styles.contactValue}>{CHURCH.email}</span>
               </div>
             </div>
+
+            {/* ── Church & Members Carousel ── */}
+            <ChurchCarousel />
+
           </section>
 
           {/* ── Section: General Overseer ── */}
