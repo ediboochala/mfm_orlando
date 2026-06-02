@@ -3,8 +3,8 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.09;
-  filter: grayscale(0.3) brightness(0.75);
+  opacity: 0.22;
+  filter: grayscale(0.2) brightness(0.85);
   /* Fade toward center so it doesn't compete with text */
   mask-image: linear-gradient(
     to bottom,
