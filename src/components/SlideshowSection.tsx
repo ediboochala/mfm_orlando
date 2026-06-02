@@ -10,7 +10,6 @@ const SLIDES = [
     title: 'Come Into His Presence',
     desc: 'Join us every Sunday for a powerful time of worship, the Word, and encounter with the living God.',
     accent: '#D4A017',
-    icon: '🙌',
     image: '/22 (1).jpg',
   },
   {
@@ -18,7 +17,6 @@ const SLIDES = [
     title: 'Set Free by His Power',
     desc: 'Aggressive prayer is the engine of MFM. Every service is a portal of deliverance, healing, and breakthrough.',
     accent: '#E57373',
-    icon: '🔥',
     image: '/22 (2).jpg',
   },
   {
@@ -26,7 +24,6 @@ const SLIDES = [
     title: 'Rooted in the Word',
     desc: 'We are a Word-based ministry. Every prayer point, every doctrine, every step is grounded in Scripture.',
     accent: '#D4A017',
-    icon: '📖',
     image: '/22 (3).jpg',
   },
   {
@@ -34,8 +31,14 @@ const SLIDES = [
     title: 'Building the Next Generation',
     desc: 'Our children and youth programs raise up a generation that is on fire for God — bold, pure, and unashamed.',
     accent: '#E57373',
-    icon: '✝️',
     image: '/22 (4).jpg',
+  },
+  {
+    label: 'Global Ministry',
+    title: 'A Fire Across the Nations',
+    desc: 'Under the leadership of Dr. D.K. Olukoya, MFM has spread to over 140 nations — carrying the gospel of deliverance to the ends of the earth.',
+    accent: '#D4A017',
+    image: '/g.o-hmpg-p2yv8mmnlqigraumc5fkktysc1o1hu6a214voa7okq.jpg',
   },
 ]
 
@@ -88,7 +91,6 @@ export default function SlideshowSection() {
 
         {/* Text content */}
         <div className={styles.stageContent}>
-          <div className={styles.slideIcon}>{slide.icon}</div>
           <span className={styles.slideLabel} style={{ color: slide.accent }}>{slide.label}</span>
           <h2 className={styles.slideTitle}>{slide.title}</h2>
           <div className={styles.slideDivider} style={{ background: `linear-gradient(90deg, ${slide.accent}, transparent)` }} />
@@ -123,7 +125,6 @@ export default function SlideshowSection() {
             </div>
             <div className={styles.thumbOverlay} />
             <div className={styles.thumbContent}>
-              <span className={styles.thumbIcon}>{s.icon}</span>
               <span className={styles.thumbLabel}>{s.label}</span>
             </div>
             {i === active && (
