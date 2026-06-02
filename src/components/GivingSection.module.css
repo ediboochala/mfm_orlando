@@ -13,6 +13,16 @@
   background-size: 40px 40px;
 }
 
+/* Logo watermark */
+.logoWatermark {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  filter: grayscale(1) brightness(4);
+}
+
 .inner {
   text-align: center;
   position: relative;

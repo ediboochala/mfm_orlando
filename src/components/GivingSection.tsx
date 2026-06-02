@@ -1,8 +1,15 @@
+import Image from 'next/image'
 import styles from './GivingSection.module.css'
 
 export default function GivingSection() {
   return (
     <section id="giving" className={styles.section}>
+
+      {/* Logo watermark */}
+      <div className={styles.logoWatermark} aria-hidden>
+        <Image src="/mfm-logo.png" alt="" fill style={{ objectFit: 'contain' }} />
+      </div>
+
       <div className="section-inner">
         <div className={styles.inner}>
           <span className="section-label reveal" style={{ color: 'rgba(255,255,255,0.6)' }}>
