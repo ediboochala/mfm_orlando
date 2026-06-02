@@ -1,10 +1,26 @@
+import Image from 'next/image'
 import { PRAYER_LINE, PASTOR } from '@/data/siteData'
 import styles from './PrayerSection.module.css'
 
 export default function PrayerSection() {
   return (
     <section id="prayer" className={styles.section}>
-      <div className="section-inner">
+
+      {/* Background photo */}
+      <div className={styles.bgWrap}>
+        <Image
+          src="/back.jpg"
+          alt=""
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center top' }}
+          aria-hidden
+        />
+      </div>
+
+      {/* Layered dark overlay — preserves readability while letting the image breathe */}
+      <div className={styles.bgOverlay} />
+
+      <div className="section-inner" style={{ position: 'relative', zIndex: 2 }}>
         <div className={styles.grid}>
           {/* Left */}
           <div>
@@ -55,3 +71,4 @@ export default function PrayerSection() {
     </section>
   )
 }
+
