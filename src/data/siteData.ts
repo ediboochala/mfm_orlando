@@ -166,6 +166,7 @@ export const MISSION_GOALS = [
 ]
 
 export const NAV_LINKS = [
+  { label: 'Home',        href: '/' },
   { label: 'About',       href: '/about' },
   { label: 'Pastor',      href: '/pastor' },
   { label: 'Services',    href: '#services' },
