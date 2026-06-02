@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { PASTOR } from '@/data/siteData'
 import styles from './WelcomeSection.module.css'
 
@@ -11,25 +12,13 @@ export default function WelcomeSection() {
           <div className={`${styles.imgWrap} reveal-left`}>
             <div className={styles.imgFrame}>
               <div className={styles.imgPlaceholder}>
-                <div className={styles.flameIcon}>
-                  <svg width="52" height="72" viewBox="0 0 40 56" fill="none">
-                    <path
-                      d="M20 2C20 2 30 14 28 26C34 20 36 12 34 6C40 14 42 26 36 36C32 42 26 46 20 54C14 46 8 42 4 36C-2 26 0 14 6 6C4 12 6 20 12 26C10 14 20 2 20 2Z"
-                      fill="url(#fp2)"
-                    />
-                    <defs>
-                      <linearGradient id="fp2" x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%"   stopColor="#FFF9C4" stopOpacity="0.6" />
-                        <stop offset="50%"  stopColor="#E53935" stopOpacity="0.8" />
-                        <stop offset="100%" stopColor="#7A0000" stopOpacity="0.9" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <span className={styles.placeholderLabel}>
-                  PASTOR SAMUEL<br />OMOIGBERAE
-                </span>
-                <span className={styles.placeholderHint}>Host Pastor · MFM Orlando</span>
+                <Image
+                  src="/Pastor Sam.png"
+                  alt="Pastor Samuel Omoigberae"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  priority
+                />
               </div>
               <div className={styles.tag}>Host Pastor · MFM Orlando</div>
             </div>

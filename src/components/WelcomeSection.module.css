@@ -31,14 +31,11 @@
 }
 
 .imgPlaceholder {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: linear-gradient(160deg, #1a0505 0%, #2a0808 40%, #1e0404 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  overflow: hidden;
+  background: #1a0505;
 }
 
 .flameIcon {
