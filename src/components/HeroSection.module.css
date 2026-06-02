@@ -33,18 +33,10 @@
 .logoWatermark {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
   pointer-events: none;
-}
-.logoWatermark img {
-  opacity: 0.045;
-  width: min(640px, 80vw);
-  height: auto;
-  filter: grayscale(1) brightness(3);
-  user-select: none;
+  opacity: 0.06;
+  filter: grayscale(1) brightness(2.5);
 }
 
 .heroContent {
