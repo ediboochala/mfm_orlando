@@ -15,6 +15,7 @@ import Marquee          from '@/components/Marquee'
 import WelcomeSection   from '@/components/WelcomeSection'
 import StatsSection     from '@/components/StatsSection'
 import ServicesSection  from '@/components/ServicesSection'
+import VideoSection     from '@/components/VideoSection'
 import AboutSection     from '@/components/AboutSection'
 import MinistriesSection from '@/components/MinistriesSection'
 import PrayerSection    from '@/components/PrayerSection'
@@ -38,6 +39,7 @@ export default function Home() {
         <Marquee />
         <WelcomeSection />
         <StatsSection />
+        <VideoSection />
         <ServicesSection />
         <AboutSection />
         <MinistriesSection />

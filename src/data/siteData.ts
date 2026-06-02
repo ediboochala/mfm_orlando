@@ -281,6 +281,28 @@ export const GALLERY_ITEMS = [
   { id: 12, title: 'Easter Revival Service',         category: 'Special Events', description: 'Celebrating the resurrection power of Jesus Christ.' },
 ]
 
+// ── Featured Videos (replace videoId with real YouTube video IDs) ──────────
+export const FEATURED_VIDEOS = [
+  {
+    videoId: 'jJcfCKCr4n4',
+    title: 'Power Must Change Hands',
+    desc: 'A fire-filled prayer session from MFM Ministries. Receive your breakthrough as Dr. D.K. Olukoya leads aggressive warfare prayer.',
+    channelUrl: 'https://www.youtube.com/@MFMMinistries',
+  },
+  {
+    videoId: 'Q4pHMUbALZo',
+    title: 'Sunday Worship Service Live',
+    desc: 'Join the global MFM family for a Spirit-filled Sunday service — worship, the Word, and an encounter with the living God.',
+    channelUrl: 'https://www.youtube.com/@MFMMinistries',
+  },
+  {
+    videoId: 'eWCKap5GZNE',
+    title: 'Deliverance & Healing Service',
+    desc: 'Watch as God moves in power to deliver, heal, and restore. No captive is too bound for the hand of the Almighty.',
+    channelUrl: 'https://www.youtube.com/@MFMMinistries',
+  },
+]
+
 export const YOUTUBE_CHANNELS = [
   {
     name: 'MFM Ministries (HQ)',

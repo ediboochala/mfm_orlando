@@ -1,0 +1,237 @@
+/* ── Section ── */
+.section {
+  background: #080808;
+  border-top: 1px solid rgba(212,160,23,0.1);
+  border-bottom: 1px solid rgba(212,160,23,0.1);
+  padding: 90px 0 80px;
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.label {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #D4A017;
+  display: block;
+  margin-bottom: 14px;
+}
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4A017, #B01A1A);
+  margin: 0 auto 18px;
+}
+.sub {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.45);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Card row ── */
+.cards {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* ── Single card ── */
+.card {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgba(212,160,23,0.14);
+  background: #0e0e0e;
+  cursor: pointer;
+  transition:
+    flex 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover,
+.cardExpanded {
+  flex: 2.1;
+  border-color: rgba(212,160,23,0.45);
+  box-shadow:
+    0 0 0 1px rgba(212,160,23,0.12),
+    0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ── Video / thumbnail area ── */
+.videoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.card:hover .thumb {
+  transform: scale(1.04);
+}
+
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1) 0%,
+    rgba(0,0,0,0.5) 100%
+  );
+}
+
+/* Play button circle */
+.playBtn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.playBtn > svg {
+  background: rgba(176,26,26,0.88);
+  border-radius: 50%;
+  padding: 14px 14px 14px 18px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(176,26,26,0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+.card:hover .playBtn > svg {
+  background: #B01A1A;
+  transform: scale(1.08);
+}
+
+/* YouTube iframe */
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── Text info ── */
+.info {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.videoTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  transition: color 0.25s;
+}
+.card:hover .videoTitle {
+  color: #D4A017;
+}
+
+.videoDesc {
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.45);
+  flex: 1;
+  transition: color 0.3s;
+}
+.cardExpanded .videoDesc,
+.card:hover .videoDesc {
+  color: rgba(255,255,255,0.62);
+}
+
+.channelLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212,160,23,0.7);
+  text-decoration: none;
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+.channelLink:hover {
+  color: #D4A017;
+}
+
+/* ── Channel CTA ── */
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
+}
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #D4A017;
+  border: 1px solid rgba(212,160,23,0.35);
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: background 0.25s, border-color 0.25s;
+}
+.ctaBtn:hover {
+  background: rgba(212,160,23,0.08);
+  border-color: rgba(212,160,23,0.6);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    flex: none !important;
+  }
+  .inner { padding: 0 24px; }
+}
+@media (max-width: 480px) {
+  .section { padding: 60px 0; }
+  .inner { padding: 0 16px; }
+}
