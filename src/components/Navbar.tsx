@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { NAV_LINKS, CHURCH } from '@/data/siteData'
 import styles from './Navbar.module.css'
 
@@ -26,7 +27,7 @@ export default function Navbar() {
       {/* Logo */}
       <a href="#" className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         <div className={styles.logoImg}>
-          <img src="/mfm-logo.png" alt="MFM Logo" width={52} height={52} />
+          <Image src="/mfm-logo.png" alt="MFM Logo" width={52} height={52} />
         </div>
         <div className={styles.logoText}>
           <span className={styles.logoName}>{CHURCH.shortName}</span>

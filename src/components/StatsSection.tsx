@@ -20,11 +20,11 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
           const tick = (now: number) => {
             const progress = Math.min((now - start) / duration, 1)
             const eased = 1 - Math.pow(1 - progress, 3)
-            el.textContent = Math.floor(eased * target).toLocaleString()
+            el.textContent = String(Math.floor(eased * target))
             if (progress < 1) {
               requestAnimationFrame(tick)
             } else {
-              el.textContent = target.toLocaleString() + suffix
+              el.textContent = String(target) + suffix
             }
           }
           requestAnimationFrame(tick)

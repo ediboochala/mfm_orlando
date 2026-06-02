@@ -16,7 +16,7 @@
 .imgFrame {
   position: relative;
   padding: 16px;
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), rgba(176, 26, 26, 0.1));
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(176, 26, 26, 0.08));
   border: 1px solid rgba(212, 160, 23, 0.2);
 }
 .imgFrame::before {
@@ -26,34 +26,40 @@
   left: -6px;
   right: 6px;
   bottom: 6px;
-  border: 1px solid rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(212, 160, 23, 0.08);
+  pointer-events: none;
 }
 
 .imgPlaceholder {
   width: 100%;
   aspect-ratio: 4 / 5;
-  background: linear-gradient(135deg, #1a0505 0%, #2a0a0a 50%, #1a0505 100%);
+  background: linear-gradient(160deg, #1a0505 0%, #2a0808 40%, #1e0404 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
+}
+
+.flameIcon {
+  filter: drop-shadow(0 0 18px rgba(229, 57, 53, 0.6));
+  animation: flamePulse 2.4s ease-in-out infinite;
 }
 
 .placeholderLabel {
   font-family: 'Cinzel', serif;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 3px;
-  color: rgba(212, 160, 23, 0.5);
+  color: rgba(212, 160, 23, 0.7);
   text-align: center;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .placeholderHint {
   font-size: 10px;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.25);
   letter-spacing: 2px;
-  font-style: italic;
+  text-transform: uppercase;
 }
 
 .tag {
@@ -67,36 +73,103 @@
   letter-spacing: 2px;
   color: var(--gold);
   border: 1px solid rgba(212, 160, 23, 0.3);
+  white-space: nowrap;
+}
+
+.scriptureAccent {
+  margin-top: 36px;
+  padding: 18px 24px;
+  border-left: 2px solid rgba(212, 160, 23, 0.3);
+  background: rgba(212, 160, 23, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.scriptureText {
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+.scriptureRef {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: rgba(212, 160, 23, 0.5);
+}
+
+/* ── Right Column ── */
+
+.greeting {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 28px;
+  font-style: italic;
 }
 
 .quote {
   font-style: italic;
   font-size: 17px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
   border-left: 2px solid var(--gold);
   padding-left: 24px;
   margin: 28px 0;
+  background: rgba(212, 160, 23, 0.03);
+  padding: 20px 24px;
+  border-left: 3px solid var(--gold);
 }
 
 .body {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.85;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+.sigBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 32px;
+  padding-top: 4px;
+}
+
+.sigLine {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
 }
 
 .sig {
   font-family: 'Cinzel', serif;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--gold);
   letter-spacing: 2px;
 }
 
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ── Animations ── */
+@keyframes flamePulse {
+  0%, 100% { transform: scaleY(1) scaleX(1); opacity: 0.85; }
+  50%       { transform: scaleY(1.07) scaleX(0.96); opacity: 1; }
+}
+
+/* ── Responsive ── */
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;
     gap: 50px;
   }
   .tag { bottom: -10px; right: -10px; }
+  .imgPlaceholder { aspect-ratio: 3 / 2; }
 }

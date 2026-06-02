@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mfmorlando.org'),
   title: 'MFM Orlando — The Citadel of Solution',
   description:
     'Mountain of Fire and Miracles Ministries Orlando welcomes all individuals seeking God\'s love. Join us for worship, deliverance, and spiritual breakthroughs.',
