@@ -134,7 +134,7 @@
   padding-left: 20px;
   border-left: 3px solid rgba(212, 160, 23, 0.3);
 }
-.articleDivider {
+.divider {
   height: 1px;
   background: linear-gradient(90deg, rgba(212, 160, 23, 0.25), transparent);
   margin-bottom: 44px;

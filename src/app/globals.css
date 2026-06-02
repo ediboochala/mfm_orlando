@@ -28,7 +28,10 @@ body {
   color: var(--white);
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
-  cursor: none;
+}
+
+@media (pointer: fine) {
+  body, a, button, [role="button"] { cursor: none !important; }
 }
 
 /* ── CUSTOM CURSOR ── */

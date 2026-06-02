@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import './globals.css'
+
+const CustomCursor = dynamic(() => import('@/components/CustomCursor'), { ssr: false })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mfmorlando.org'),
@@ -29,7 +32,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   )
 }

@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 // Client-only components (need browser APIs)
-const CustomCursor    = dynamic(() => import('@/components/CustomCursor'),    { ssr: false })
 const ParticlesCanvas = dynamic(() => import('@/components/ParticlesCanvas'), { ssr: false })
 
 // Regular components
@@ -28,7 +27,6 @@ export default function Home() {
   return (
     <>
       {/* Browser-only overlays */}
-      <CustomCursor />
       <ParticlesCanvas />
 
       {/* Page structure */}

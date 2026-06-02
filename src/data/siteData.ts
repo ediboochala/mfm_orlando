@@ -166,11 +166,14 @@ export const MISSION_GOALS = [
 ]
 
 export const NAV_LINKS = [
-  { label: 'About',      href: '#about' },
-  { label: 'Services',   href: '#services' },
-  { label: 'Ministries', href: '#ministries' },
-  { label: 'Prayer Line',href: '#prayer' },
-  { label: 'Contact',    href: '#contact' },
+  { label: 'About',       href: '/about' },
+  { label: 'Pastor',      href: '/pastor' },
+  { label: 'Services',    href: '#services' },
+  { label: 'Blog',        href: '/blog' },
+  { label: 'Gallery',     href: '/gallery' },
+  { label: 'Media',       href: '/media' },
+  { label: 'Prayer Line', href: '#prayer' },
+  { label: 'Contact',     href: '#contact' },
 ]
 
 export const BLOG_POSTS = [

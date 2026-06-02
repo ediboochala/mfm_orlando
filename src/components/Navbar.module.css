@@ -63,7 +63,7 @@
 /* ── DESKTOP LINKS ── */
 .navLinks {
   display: flex;
-  gap: 36px;
+  gap: 22px;
   list-style: none;
 }
 .navLinks a {

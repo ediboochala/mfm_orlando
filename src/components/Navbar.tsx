@@ -3,12 +3,15 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname, useRouter } from 'next/navigation'
 import { NAV_LINKS, CHURCH } from '@/data/siteData'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -16,16 +19,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleNavClick = (href: string) => {
+  const handleHashClick = (hash: string) => {
     setMenuOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    if (pathname === '/') {
+      const el = document.querySelector(hash)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      router.push(`/${hash}`)
+    }
   }
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       {/* Logo */}
-      <a href="#" className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+      <Link href="/" className={styles.logo}>
         <div className={styles.logoImg}>
           <Image src="/mfm-logo.png" alt="MFM Logo" width={52} height={52} />
         </div>
@@ -33,24 +40,32 @@ export default function Navbar() {
           <span className={styles.logoName}>{CHURCH.shortName}</span>
           <span className={styles.logoTagline}>{CHURCH.tagline}</span>
         </div>
-      </a>
+      </Link>
 
       {/* Desktop Nav Links */}
       <ul className={styles.navLinks}>
-        {NAV_LINKS.map((link) => (
-          <li key={link.href}>
-            <a href={link.href} onClick={(e) => { e.preventDefault(); handleNavClick(link.href) }}>
-              {link.label}
-            </a>
-          </li>
-        ))}
+        {NAV_LINKS.map((link) =>
+          link.href.startsWith('#') ? (
+            <li key={link.href}>
+              <a href={link.href} onClick={(e) => { e.preventDefault(); handleHashClick(link.href) }}>
+                {link.label}
+              </a>
+            </li>
+          ) : (
+            <li key={link.href}>
+              <Link href={link.href} onClick={() => setMenuOpen(false)}>
+                {link.label}
+              </Link>
+            </li>
+          )
+        )}
       </ul>
 
       {/* CTA */}
       <a
         href="#giving"
         className={styles.navCta}
-        onClick={(e) => { e.preventDefault(); handleNavClick('#giving') }}
+        onClick={(e) => { e.preventDefault(); handleHashClick('#giving') }}
       >
         Give Online
       </a>
@@ -69,20 +84,31 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={styles.mobileLink}
-              onClick={(e) => { e.preventDefault(); handleNavClick(link.href) }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) =>
+            link.href.startsWith('#') ? (
+              <a
+                key={link.href}
+                href={link.href}
+                className={styles.mobileLink}
+                onClick={(e) => { e.preventDefault(); handleHashClick(link.href) }}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={styles.mobileLink}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <a
             href="#giving"
             className={styles.mobileCta}
-            onClick={(e) => { e.preventDefault(); handleNavClick('#giving') }}
+            onClick={(e) => { e.preventDefault(); handleHashClick('#giving') }}
           >
             Give Online
           </a>
