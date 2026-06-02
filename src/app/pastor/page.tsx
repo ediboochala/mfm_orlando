@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PASTOR, CHURCH } from '@/data/siteData'
+import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function PastorPage() {
 
       {/* ── Hero ── */}
       <header className={styles.hero}>
+        <PageHeroWatermark />
         <div className={styles.heroInner}>
           <div className={styles.heroAccent}>
             <div className={styles.flameWrap}>

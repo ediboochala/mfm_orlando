@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CHURCH, YOUTUBE_CHANNELS, LIVE_SCHEDULE, PRAYER_LINE } from '@/data/siteData'
+import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function MediaPage() {
 
       {/* ── Hero ── */}
       <header className={styles.hero}>
+        <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>Watch. Listen. Pray.</span>
           <h1 className={styles.heroTitle}>Media &amp; Live Services</h1>

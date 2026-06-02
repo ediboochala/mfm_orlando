@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ChurchCarousel from '@/components/ChurchCarousel'
+import PageHeroWatermark from '@/components/PageHeroWatermark'
 import {
   CHURCH,
   GENERAL_OVERSEER,
@@ -36,6 +37,7 @@ export default function AboutPage() {
 
       {/* ── Hero ── */}
       <header className={styles.hero}>
+        <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>Who We Are</span>
           <h1 className={styles.heroTitle}>About MFM Orlando</h1>

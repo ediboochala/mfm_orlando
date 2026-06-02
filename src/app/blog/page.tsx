@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CHURCH, BLOG_POSTS } from '@/data/siteData'
+import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function BlogPage() {
 
       {/* ── Hero ── */}
       <header className={styles.hero}>
+        <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>Word &amp; Wisdom</span>
           <h1 className={styles.heroTitle}>The MFM Blog</h1>

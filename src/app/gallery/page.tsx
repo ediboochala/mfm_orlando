@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { CHURCH, GALLERY_CATEGORIES, GALLERY_ITEMS } from '@/data/siteData'
+import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
 
 export default function GalleryPage() {
@@ -30,6 +31,7 @@ export default function GalleryPage() {
 
       {/* ── Hero ── */}
       <header className={styles.hero}>
+        <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>His Works Among Us</span>
           <h1 className={styles.heroTitle}>Photo Gallery</h1>
