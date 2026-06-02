@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
@@ -5,6 +6,11 @@ export default function HeroSection() {
     <section id="hero" className={styles.hero}>
       <div className={styles.heroBg} />
       <div className={styles.heroGrid} />
+
+      {/* Faint logo watermark */}
+      <div className={styles.logoWatermark}>
+        <Image src="/mfm-logo.png" alt="" width={600} height={600} aria-hidden />
+      </div>
 
       <div className={styles.heroContent}>
         {/* Live Badge */}
