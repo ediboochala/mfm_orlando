@@ -37,7 +37,7 @@ export default function ServicesSection() {
         </div>
 
         <p className={`${styles.address} reveal`}>
-          {CHURCH.address}
+          📍 {CHURCH.address}
         </p>
       </div>
     </section>
