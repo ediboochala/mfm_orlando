@@ -26,6 +26,7 @@ export default function ServicesSection() {
               </div>
               <div className={styles.cardOverlay} />
               <div className={styles.cardGlow} />
+              <span className={styles.cardIcon}>{svc.icon}</span>
               <div className={styles.cardContent}>
                 <span className={styles.cardDay}>{svc.day}</span>
                 <p className={styles.cardName}>{svc.name}</p>
