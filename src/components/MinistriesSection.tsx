@@ -21,14 +21,10 @@ export default function MinistriesSection() {
               <div className={styles.cardBg} />
               <span className={styles.icon}>{m.icon}</span>
               <p className={styles.name}>{m.name}</p>
-              <p className={styles.desc}>{m.desc}</p>
+              <p className={styles.desc}>{m.tagline}</p>
               <a
-                href="#contact"
+                href="/ministries"
                 className={styles.learn}
-                onClick={(e) => {
-                  e.preventDefault()
-                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-                }}
               >
                 Learn More
               </a>
