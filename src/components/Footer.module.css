@@ -1,4 +1,4 @@
-.footer {
+﻿.footer {
   background: #050505;
   border-top: 1px solid rgba(212, 160, 23, 0.1);
   padding: 40px 60px;
@@ -19,7 +19,7 @@
 
 .copy {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(var(--text-rgb), 0.25);
   letter-spacing: 1px;
 }
 
@@ -32,7 +32,7 @@
   font-family: 'Cinzel', serif;
   font-size: 9px;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--text-rgb), 0.3);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s;
@@ -48,3 +48,7 @@
   }
   .links { flex-wrap: wrap; justify-content: center; gap: 18px; }
 }
+
+
+/* Light theme */
+:global([data-theme="light"]) .footer { background: var(--dark3); border-top-color: rgba(184,134,11,0.12); }

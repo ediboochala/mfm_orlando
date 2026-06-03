@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background: linear-gradient(180deg, #0d0000 0%, #0a0a0a 100%);
 }
 
@@ -9,7 +9,7 @@
   align-items: start;
 }
 
-/* ── TIMELINE ── */
+/* â”€â”€ TIMELINE â”€â”€ */
 .timeline {
   position: relative;
   padding-left: 30px;
@@ -52,10 +52,10 @@
 .text {
   font-size: 14px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
 }
 
-/* ── RIGHT COLUMN ── */
+/* â”€â”€ RIGHT COLUMN â”€â”€ */
 .right {
   position: sticky;
   top: 120px;
@@ -72,7 +72,7 @@
   font-family: 'Cinzel', serif;
   font-size: 20px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(var(--text-rgb), 0.8);
   font-style: italic;
   margin-bottom: 12px;
 }
@@ -102,7 +102,7 @@
   display: flex;
   gap: 12px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
   line-height: 1.6;
 }
 
@@ -121,7 +121,7 @@
 .quoteText {
   font-family: 'Cinzel', serif;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--text-rgb), 0.7);
   line-height: 1.7;
   letter-spacing: 1px;
 }
@@ -137,3 +137,9 @@
   .grid { grid-template-columns: 1fr; gap: 60px; }
   .right { position: static; }
 }
+
+
+/* Light theme */
+:global([data-theme="light"]) .section { background: var(--dark); }
+:global([data-theme="light"]) .quoteBox { background: rgba(192,57,43,0.06); }
+:global([data-theme="light"]) .verseBox { background: rgba(184,134,11,0.06); }

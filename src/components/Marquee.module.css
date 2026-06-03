@@ -1,4 +1,4 @@
-.wrap {
+﻿.wrap {
   background: var(--gold);
   overflow: hidden;
   padding: 14px 0;
@@ -26,3 +26,4 @@
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+

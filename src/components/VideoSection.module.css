@@ -1,4 +1,4 @@
-/* ── Section ── */
+﻿/* â”€â”€ Section â”€â”€ */
 .section {
   background: #080808;
   border-top: 1px solid rgba(212,160,23,0.1);
@@ -12,7 +12,7 @@
   padding: 0 40px;
 }
 
-/* ── Header ── */
+/* â”€â”€ Header â”€â”€ */
 .header {
   text-align: center;
   margin-bottom: 52px;
@@ -43,19 +43,19 @@
 .sub {
   font-size: 14px;
   line-height: 1.8;
-  color: rgba(255,255,255,0.45);
+  color: rgba(var(--text-rgb),0.45);
   max-width: 520px;
   margin: 0 auto;
 }
 
-/* ── Card row ── */
+/* â”€â”€ Card row â”€â”€ */
 .cards {
   display: flex;
   gap: 16px;
   align-items: stretch;
 }
 
-/* ── Single card ── */
+/* â”€â”€ Single card â”€â”€ */
 .card {
   flex: 1;
   min-width: 0;
@@ -79,7 +79,7 @@
     0 20px 60px rgba(0,0,0,0.6);
 }
 
-/* ── Video / thumbnail area ── */
+/* â”€â”€ Video / thumbnail area â”€â”€ */
 .videoWrap {
   position: relative;
   width: 100%;
@@ -145,7 +145,7 @@
   display: block;
 }
 
-/* ── Text info ── */
+/* â”€â”€ Text info â”€â”€ */
 .info {
   padding: 20px 22px 24px;
   display: flex;
@@ -170,13 +170,13 @@
 .videoDesc {
   font-size: 12.5px;
   line-height: 1.75;
-  color: rgba(255,255,255,0.45);
+  color: rgba(var(--text-rgb),0.45);
   flex: 1;
   transition: color 0.3s;
 }
 .cardExpanded .videoDesc,
 .card:hover .videoDesc {
-  color: rgba(255,255,255,0.62);
+  color: rgba(var(--text-rgb),0.62);
 }
 
 .channelLink {
@@ -196,7 +196,7 @@
   color: #D4A017;
 }
 
-/* ── Channel CTA ── */
+/* â”€â”€ Channel CTA â”€â”€ */
 .cta {
   display: flex;
   justify-content: center;
@@ -221,7 +221,7 @@
   border-color: rgba(212,160,23,0.6);
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 900px) {
   .cards {
     flex-direction: column;
@@ -235,3 +235,11 @@
   .section { padding: 60px 0; }
   .inner { padding: 0 16px; }
 }
+
+
+/* Light theme */
+:global([data-theme="light"]) .section { background: var(--dark); }
+:global([data-theme="light"]) .card { background: #FFFFFF; border-color: rgba(184,134,11,0.18); }
+:global([data-theme="light"]) .videoWrap { background: var(--dark3); }
+:global([data-theme="light"]) .videoTitle { color: #1c1c1c; }
+:global([data-theme="light"]) .info { background: #FFFFFF; }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
 
 :root {
   --red: #B01A1A;
@@ -11,9 +11,11 @@
   --white: #FFFFFF;
   --off-white: #F5EDD8;
   --gray: #888;
+  --text-rgb: 255, 255, 255;
+  --bg-card: #111111;
 }
 
-/* ── LIGHT THEME ── */
+/* â”€â”€ LIGHT THEME â”€â”€ */
 [data-theme="light"] {
   --red: #C0392B;
   --deep-red: #922B21;
@@ -25,6 +27,8 @@
   --white: #1C1C1C;
   --off-white: #3D2E10;
   --gray: #666;
+  --text-rgb: 28, 28, 28;
+  --bg-card: #FFFFFF;
 }
 [data-theme="light"] body {
   background: #FAF7F2;
@@ -58,7 +62,7 @@ body {
   body, a, button, [role="button"] { cursor: none !important; }
 }
 
-/* ── CUSTOM CURSOR ── */
+/* â”€â”€ CUSTOM CURSOR â”€â”€ */
 .cursor {
   position: fixed;
   width: 12px;
@@ -84,7 +88,7 @@ body {
   opacity: 0.6;
 }
 
-/* ── PARTICLES CANVAS ── */
+/* â”€â”€ PARTICLES CANVAS â”€â”€ */
 #particles {
   position: fixed;
   top: 0;
@@ -95,7 +99,7 @@ body {
   pointer-events: none;
 }
 
-/* ── SECTION BASE ── */
+/* â”€â”€ SECTION BASE â”€â”€ */
 section {
   position: relative;
   z-index: 1;
@@ -129,7 +133,7 @@ section {
   margin-bottom: 30px;
 }
 
-/* ── BUTTONS ── */
+/* â”€â”€ BUTTONS â”€â”€ */
 .btn-primary {
   font-family: 'Cinzel', serif;
   font-size: 11px;
@@ -212,7 +216,7 @@ section {
   transform: translateY(-3px);
 }
 
-/* ── SCROLL REVEAL ── */
+/* â”€â”€ SCROLL REVEAL â”€â”€ */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -244,7 +248,7 @@ section {
 .d5 { transition-delay: 0.5s; }
 .d6 { transition-delay: 0.6s; }
 
-/* ── LIVE BADGE ── */
+/* â”€â”€ LIVE BADGE â”€â”€ */
 .live-badge {
   display: inline-flex;
   align-items: center;
@@ -266,7 +270,7 @@ section {
   animation: livePulse 1.2s infinite;
 }
 
-/* ── MARQUEE ── */
+/* â”€â”€ MARQUEE â”€â”€ */
 .marquee-wrap {
   background: var(--gold);
   overflow: hidden;
@@ -290,7 +294,7 @@ section {
   flex-shrink: 0;
 }
 
-/* ── FLAME ANIMATION ── */
+/* â”€â”€ FLAME ANIMATION â”€â”€ */
 .flame-container {
   position: relative;
   width: 60px;
@@ -322,7 +326,7 @@ section {
   animation: flamePulse 0.9s 0.4s ease-in-out infinite;
 }
 
-/* ── KEYFRAMES ── */
+/* â”€â”€ KEYFRAMES â”€â”€ */
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -343,10 +347,14 @@ section {
   100% { transform: translateX(-50%); }
 }
 
-/* ── RESPONSIVE ── */
+/* â”€â”€ RESPONSIVE â”€â”€ */
 @media (max-width: 1024px) {
   .section-inner { padding: 70px 30px; }
 }
 @media (max-width: 600px) {
   .section-inner { padding: 60px 20px; }
 }
+
+
+/* Force headings and body text legible on light backgrounds */
+[data-theme="light"] .section-title { color: #1c1c1c; }

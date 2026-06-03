@@ -1,4 +1,4 @@
-/* ── Page Shell ── */
+﻿/* â”€â”€ Page Shell â”€â”€ */
 .page {
   min-height: 100vh;
   background: var(--dark);
@@ -7,7 +7,7 @@
   padding-top: 88px;
 }
 
-/* ── Top Bar ── */
+/* â”€â”€ Top Bar â”€â”€ */
 .topBar {
   background: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid rgba(212, 160, 23, 0.12);
@@ -45,10 +45,10 @@
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(var(--text-rgb), 0.25);
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .hero {
   background: linear-gradient(160deg, #0d0202 0%, #1a0505 50%, #0d0202 100%);
   border-bottom: 1px solid rgba(212, 160, 23, 0.1);
@@ -97,10 +97,10 @@
 .heroSub {
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--text-rgb), 0.5);
 }
 
-/* ── Stats Strip ── */
+/* â”€â”€ Stats Strip â”€â”€ */
 .statsStrip {
   background: rgba(212, 160, 23, 0.04);
   border-bottom: 1px solid rgba(212, 160, 23, 0.1);
@@ -130,10 +130,10 @@
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(var(--text-rgb), 0.35);
 }
 
-/* ── Main Layout ── */
+/* â”€â”€ Main Layout â”€â”€ */
 .main {
   padding: 80px 0 60px;
 }
@@ -146,7 +146,7 @@
   gap: 80px;
 }
 
-/* ── Section ── */
+/* â”€â”€ Section â”€â”€ */
 .section {
   display: flex;
   flex-direction: column;
@@ -181,12 +181,12 @@
 .sectionDesc {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(var(--text-rgb), 0.45);
   max-width: 640px;
   margin-top: 4px;
 }
 
-/* ── Two-Column Body ── */
+/* â”€â”€ Two-Column Body â”€â”€ */
 .twoCol {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -195,10 +195,10 @@
 .bodyText {
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(var(--text-rgb), 0.65);
 }
 
-/* ── Contact Strip ── */
+/* â”€â”€ Contact Strip â”€â”€ */
 .contactStrip {
   display: flex;
   gap: 0;
@@ -222,11 +222,11 @@
 }
 .contactValue {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(var(--text-rgb), 0.65);
   line-height: 1.5;
 }
 
-/* ── General Overseer Card ── */
+/* â”€â”€ General Overseer Card â”€â”€ */
 .goCard {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -317,13 +317,13 @@
 }
 .goCredValue {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
   line-height: 1.5;
 }
 .goBio {
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(var(--text-rgb), 0.65);
 }
 .goQuote {
   border-left: 3px solid var(--gold);
@@ -332,11 +332,11 @@
   font-style: italic;
   font-size: 15px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--text-rgb), 0.5);
   background: rgba(212, 160, 23, 0.03);
 }
 
-/* ── Timeline ── */
+/* â”€â”€ Timeline â”€â”€ */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -392,7 +392,7 @@
 .timelineText {
   font-size: 14px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
 }
 .highlighted .timelineDot {
   background: var(--gold);
@@ -400,13 +400,13 @@
   box-shadow: 0 0 12px rgba(212, 160, 23, 0.5);
 }
 .highlighted .timelineText {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(var(--text-rgb), 0.82);
 }
 .highlighted .timelineYear span {
   color: var(--gold);
 }
 
-/* ── Mission Grid ── */
+/* â”€â”€ Mission Grid â”€â”€ */
 .missionGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -437,11 +437,11 @@
 .missionText {
   font-size: 14px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
   padding-top: 4px;
 }
 
-/* ── Values Grid ── */
+/* â”€â”€ Values Grid â”€â”€ */
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -469,15 +469,15 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(var(--text-rgb), 0.85);
 }
 .valueDesc {
   font-size: 13px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(var(--text-rgb), 0.45);
 }
 
-/* ── CTA ── */
+/* â”€â”€ CTA â”€â”€ */
 .cta {
   background: linear-gradient(135deg, rgba(176, 26, 26, 0.1) 0%, rgba(212, 160, 23, 0.06) 100%);
   border: 1px solid rgba(212, 160, 23, 0.15);
@@ -494,7 +494,7 @@
 .ctaText {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--text-rgb), 0.5);
   max-width: 540px;
   margin: 0 auto 32px;
 }
@@ -505,18 +505,18 @@
   flex-wrap: wrap;
 }
 
-/* ── Footer Strip ── */
+/* â”€â”€ Footer Strip â”€â”€ */
 .footerStrip {
   border-top: 1px solid rgba(212, 160, 23, 0.1);
   padding: 24px 60px;
   text-align: center;
   font-size: 11px;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--text-rgb), 0.2);
   margin-top: 60px;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1024px) {
   .topBarInner,
   .mainInner   { padding: 14px 30px; }
@@ -550,3 +550,11 @@
   .timeline::before { left: 52px; }
   .timelineDot { left: -28px; }
 }
+
+
+/* Light theme - content text */
+:global([data-theme="light"]) .sectionTitle { color: #1c1c1c; }
+:global([data-theme="light"]) .goName       { color: #1c1c1c; }
+:global([data-theme="light"]) .goCredentials { background: rgba(0,0,0,0.04); }
+:global([data-theme="light"]) .goCard { background: rgba(184,134,11,0.04); }
+:global([data-theme="light"]) .ctaTitle { color: #1c1c1c; }

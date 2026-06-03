@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background: var(--dark2);
   overflow: hidden;
 }
@@ -54,7 +54,7 @@
 .desc {
   font-size: 13px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--text-rgb), 0.5);
 }
 
 .learn {
@@ -81,3 +81,7 @@
   .card:last-child { grid-column: auto; }
   .card { padding: 30px 22px; }
 }
+
+
+/* Light theme */
+:global([data-theme="light"]) .card { background: #FFFFFF; border-color: rgba(184,134,11,0.15); box-shadow: 0 2px 16px rgba(0,0,0,0.06); }

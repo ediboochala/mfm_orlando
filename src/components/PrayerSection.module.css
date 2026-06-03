@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(212, 160, 23, 0.15);
@@ -53,7 +53,7 @@
 .body {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
   margin-bottom: 30px;
 }
 
@@ -67,7 +67,7 @@
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--text-rgb), 0.7);
 }
 .numberItem:last-child { border-bottom: none; }
 
@@ -80,7 +80,7 @@
 }
 
 .numberLabel {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(var(--text-rgb), 0.4);
   font-size: 12px;
   letter-spacing: 1px;
   min-width: 80px;
@@ -103,11 +103,11 @@
 
 .cityText {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
   line-height: 1.7;
 }
 
-/* ── TIME CARD ── */
+/* â”€â”€ TIME CARD â”€â”€ */
 .timeCard {
   background: rgba(212, 160, 23, 0.06);
   border: 1px solid rgba(212, 160, 23, 0.2);
@@ -154,7 +154,7 @@
 
 .sessionTz {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(var(--text-rgb), 0.4);
   letter-spacing: 2px;
   margin-top: 6px;
 }
@@ -162,7 +162,7 @@
 .localNote {
   margin-top: 30px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--text-rgb), 0.3);
   letter-spacing: 1px;
   line-height: 1.7;
 }
@@ -178,3 +178,4 @@
   .timeCard { padding: 36px 28px; }
   .sessionTime { font-size: 24px; }
 }
+

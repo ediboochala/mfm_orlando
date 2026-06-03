@@ -1,4 +1,4 @@
-/* ── Layout vars ── */
+﻿/* â”€â”€ Layout vars â”€â”€ */
 .carousel {
   --card-w: 360px;
   --card-h: 420px;
@@ -6,7 +6,7 @@
   margin-top: 52px;
 }
 
-/* ── Sliding track ── */
+/* â”€â”€ Sliding track â”€â”€ */
 .trackWrap {
   overflow: hidden;
   cursor: grab;
@@ -21,7 +21,7 @@
   will-change: transform;
 }
 
-/* ── Individual card ── */
+/* â”€â”€ Individual card â”€â”€ */
 .card {
   position: relative;
   flex: 0 0 var(--card-w);
@@ -35,7 +35,7 @@
   inset: 0;
 }
 
-/* Bottom-up gradient scrim — photo visible at top, dark at bottom for text */
+/* Bottom-up gradient scrim â€” photo visible at top, dark at bottom for text */
 .cardOverlay {
   position: absolute;
   inset: 0;
@@ -88,10 +88,10 @@
 .cardDesc {
   font-size: 13px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--text-rgb), 0.6);
 }
 
-/* ── Controls ── */
+/* â”€â”€ Controls â”€â”€ */
 .controls {
   display: flex;
   align-items: center;
@@ -141,7 +141,7 @@
   transform: scale(1.5);
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1100px) {
   .carousel {
     --card-w: 300px;
@@ -164,3 +164,4 @@
   .cardBody { padding: 22px 20px; }
   .cardTitle { font-size: 15px; }
 }
+

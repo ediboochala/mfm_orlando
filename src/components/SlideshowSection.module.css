@@ -1,4 +1,4 @@
-/* ── Section wrapper ── */
+﻿/* â”€â”€ Section wrapper â”€â”€ */
 .section {
   background: #070707;
   padding: 0 0 60px;
@@ -15,7 +15,7 @@
   background: linear-gradient(90deg, transparent, rgba(212,160,23,0.25), transparent);
 }
 
-/* ── Main stage ── */
+/* â”€â”€ Main stage â”€â”€ */
 .stage {
   position: relative;
   width: 100%;
@@ -34,7 +34,7 @@
   z-index: 0;
 }
 
-/* Dark gradient overlay — heavier at edges, lighter in centre */
+/* Dark gradient overlay â€” heavier at edges, lighter in centre */
 .stageOverlay {
   position: absolute;
   inset: 0;
@@ -91,7 +91,7 @@
   transition: border-color 0.4s ease;
 }
 
-/* Text content — sits above everything */
+/* Text content â€” sits above everything */
 .stageContent {
   position: absolute;
   inset: 0;
@@ -146,7 +146,7 @@
 .slideDesc {
   font-size: 15px;
   line-height: 1.85;
-  color: rgba(255,255,255,0.75);
+  color: rgba(var(--text-rgb),0.75);
   max-width: 500px;
   text-shadow: 0 1px 8px rgba(0,0,0,0.9);
 }
@@ -176,10 +176,10 @@
 .slideNumTotal {
   font-family: 'Cinzel', serif;
   font-size: 13px;
-  color: rgba(255,255,255,0.25);
+  color: rgba(var(--text-rgb),0.25);
 }
 
-/* ── Thumbnail strip ── */
+/* â”€â”€ Thumbnail strip â”€â”€ */
 .thumbStrip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -244,7 +244,7 @@
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.8);
+  color: rgba(var(--text-rgb),0.8);
   text-shadow: 0 1px 6px rgba(0,0,0,0.9);
 }
 .thumbActive .thumbLabel { color: #fff; }
@@ -271,7 +271,7 @@
   to   { transform: scaleX(1); }
 }
 
-/* ── Dot nav ── */
+/* â”€â”€ Dot nav â”€â”€ */
 .dots {
   display: flex;
   justify-content: center;
@@ -293,7 +293,7 @@
   transform: scale(1.5);
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 768px) {
   .stage { height: 380px; }
   .cornerTL,
@@ -310,3 +310,4 @@
   .thumb { height: 72px; }
   .thumbLabel { display: none; }
 }
+

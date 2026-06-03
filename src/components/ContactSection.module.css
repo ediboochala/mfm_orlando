@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background: var(--dark);
 }
 
@@ -13,7 +13,7 @@
   gap: 80px;
 }
 
-/* ── INFO ── */
+/* â”€â”€ INFO â”€â”€ */
 .infoItem {
   display: flex;
   align-items: flex-start;
@@ -43,7 +43,7 @@
 
 .infoValue {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--text-rgb), 0.7);
   line-height: 1.6;
   display: block;
 }
@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--text-rgb), 0.5);
   text-decoration: none;
   font-size: 14px;
   transition: border-color 0.3s, color 0.3s, background 0.3s;
@@ -72,7 +72,7 @@
   background: rgba(212, 160, 23, 0.06);
 }
 
-/* ── FORM ── */
+/* â”€â”€ FORM â”€â”€ */
 .form {
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@
   font-family: 'Cinzel', serif;
   font-size: 9px;
   letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(var(--text-rgb), 0.4);
   text-transform: uppercase;
 }
 
@@ -108,7 +108,7 @@
   border-color: rgba(212, 160, 23, 0.4);
 }
 .formInput::placeholder {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--text-rgb), 0.2);
 }
 
 .textarea {
@@ -147,3 +147,9 @@
 @media (max-width: 1024px) {
   .grid { grid-template-columns: 1fr; gap: 50px; }
 }
+
+
+/* Light theme */
+:global([data-theme="light"]) .formInput { background: #FFFFFF; border-color: rgba(0,0,0,0.15); color: #1c1c1c; }
+:global([data-theme="light"]) .formInput:focus { border-color: var(--gold); }
+:global([data-theme="light"]) .socialLink { border-color: rgba(0,0,0,0.12); color: rgba(28,28,28,0.55); }

@@ -1,4 +1,4 @@
-/* ── Page Shell ── */
+﻿/* â”€â”€ Page Shell â”€â”€ */
 .page {
   min-height: 100vh;
   background: var(--dark);
@@ -7,7 +7,7 @@
   padding-top: 88px;
 }
 
-/* ── Top Bar ── */
+/* â”€â”€ Top Bar â”€â”€ */
 .topBar {
   background: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid rgba(212, 160, 23, 0.12);
@@ -45,10 +45,10 @@
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(var(--text-rgb), 0.25);
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .hero {
   background: linear-gradient(160deg, #0d0202 0%, #1a0505 50%, #0d0202 100%);
   border-bottom: 1px solid rgba(212, 160, 23, 0.1);
@@ -97,10 +97,10 @@
 .heroSub {
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(var(--text-rgb), 0.45);
 }
 
-/* ── Main ── */
+/* â”€â”€ Main â”€â”€ */
 .main {
   padding: 80px 0 80px;
 }
@@ -110,7 +110,7 @@
   padding: 0 60px;
 }
 
-/* ── Posts Grid ── */
+/* â”€â”€ Posts Grid â”€â”€ */
 .postsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -149,7 +149,7 @@
 .postReadTime {
   font-size: 10px;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(var(--text-rgb), 0.25);
 }
 .postTitle {
   font-family: 'Cinzel', serif;
@@ -165,7 +165,7 @@
 .postExcerpt {
   font-size: 13px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(var(--text-rgb), 0.45);
   flex: 1;
 }
 .postFooter {
@@ -179,7 +179,7 @@
 .postDate {
   font-size: 10px;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--text-rgb), 0.2);
   text-transform: uppercase;
 }
 .postCta {
@@ -193,18 +193,18 @@
   color: var(--gold);
 }
 
-/* ── Footer Strip ── */
+/* â”€â”€ Footer Strip â”€â”€ */
 .footerStrip {
   border-top: 1px solid rgba(212, 160, 23, 0.1);
   padding: 24px 60px;
   text-align: center;
   font-size: 11px;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--text-rgb), 0.2);
   margin-top: 60px;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1024px) {
   .topBarInner,
   .mainInner   { padding: 14px 30px; }
@@ -220,3 +220,9 @@
   .postsGrid   { grid-template-columns: 1fr; }
   .postCard    { padding: 28px 20px; }
 }
+
+
+/* Light theme - content text */
+:global([data-theme="light"]) .postTitle { color: #1c1c1c; }
+:global([data-theme="light"]) .postCard  { background: #FFFFFF; border-color: rgba(184,134,11,0.12); }
+:global([data-theme="light"]) .ctaTitle  { color: #1c1c1c; }

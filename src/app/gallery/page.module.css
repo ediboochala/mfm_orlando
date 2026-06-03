@@ -1,4 +1,4 @@
-/* ── Page Shell ── */
+﻿/* â”€â”€ Page Shell â”€â”€ */
 .page {
   min-height: 100vh;
   background: var(--dark);
@@ -7,7 +7,7 @@
   padding-top: 88px;
 }
 
-/* ── Top Bar ── */
+/* â”€â”€ Top Bar â”€â”€ */
 .topBar {
   background: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid rgba(212, 160, 23, 0.12);
@@ -45,10 +45,10 @@
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(var(--text-rgb), 0.25);
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .hero {
   background: linear-gradient(160deg, #0d0202 0%, #1a0505 50%, #0d0202 100%);
   border-bottom: 1px solid rgba(212, 160, 23, 0.1);
@@ -97,10 +97,10 @@
 .heroSub {
   font-size: 15px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(var(--text-rgb), 0.45);
 }
 
-/* ── Filter Bar ── */
+/* â”€â”€ Filter Bar â”€â”€ */
 .filterBar {
   background: rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(212, 160, 23, 0.1);
@@ -124,7 +124,7 @@
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(var(--text-rgb), 0.35);
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
@@ -141,7 +141,7 @@
   border-bottom-color: var(--gold);
 }
 
-/* ── Main ── */
+/* â”€â”€ Main â”€â”€ */
 .main {
   padding: 60px 0 80px;
 }
@@ -151,7 +151,7 @@
   padding: 0 60px;
 }
 
-/* ── Gallery Grid ── */
+/* â”€â”€ Gallery Grid â”€â”€ */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -185,7 +185,7 @@
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--text-rgb), 0.2);
 }
 .cardOverlay {
   position: absolute;
@@ -210,7 +210,7 @@
 .overlayDesc {
   font-size: 11px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(var(--text-rgb), 0.75);
 }
 .cardInfo {
   padding: 14px 16px;
@@ -223,7 +223,7 @@
   font-family: 'Cinzel', serif;
   font-size: 11px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(var(--text-rgb), 0.75);
   letter-spacing: 0.5px;
   line-height: 1.3;
 }
@@ -234,7 +234,7 @@
   color: rgba(212, 160, 23, 0.45);
 }
 
-/* ── CTA ── */
+/* â”€â”€ CTA â”€â”€ */
 .cta {
   margin-top: 12px;
 }
@@ -254,23 +254,23 @@
 .ctaText {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--text-rgb), 0.5);
   max-width: 520px;
   margin: 0 auto 32px;
 }
 
-/* ── Footer Strip ── */
+/* â”€â”€ Footer Strip â”€â”€ */
 .footerStrip {
   border-top: 1px solid rgba(212, 160, 23, 0.1);
   padding: 24px 60px;
   text-align: center;
   font-size: 11px;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(var(--text-rgb), 0.2);
   margin-top: 60px;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1024px) {
   .topBarInner,
   .mainInner   { padding: 14px 30px; }
@@ -291,3 +291,8 @@
   .grid        { grid-template-columns: 1fr; }
   .ctaInner    { padding: 32px 20px; }
 }
+
+
+/* Light theme */
+:global([data-theme="light"]) .ctaTitle { color: #1c1c1c; }
+:global([data-theme="light"]) .card     { background: #FFFFFF; }

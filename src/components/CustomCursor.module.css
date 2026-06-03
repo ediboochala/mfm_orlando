@@ -1,4 +1,4 @@
-/* ── Glow — slowest layer, large soft halo ── */
+﻿/* â”€â”€ Glow â€” slowest layer, large soft halo â”€â”€ */
 .glow {
   position: fixed;
   left: -400px;
@@ -13,7 +13,7 @@
   transition: width 0.5s ease, height 0.5s ease;
 }
 
-/* ── Ring — medium lag, slow-rotating with orbiting satellite ── */
+/* â”€â”€ Ring â€” medium lag, slow-rotating with orbiting satellite â”€â”€ */
 .ring {
   position: fixed;
   left: -400px;
@@ -58,7 +58,7 @@
   border-radius: 50%;
 }
 
-/* ── Dot — instant follow, sharp point ── */
+/* â”€â”€ Dot â€” instant follow, sharp point â”€â”€ */
 .dot {
   position: fixed;
   left: -400px;
@@ -76,7 +76,7 @@
   transition: width 0.18s ease, height 0.18s ease, background 0.18s, box-shadow 0.18s;
 }
 
-/* ── Hover states ── */
+/* â”€â”€ Hover states â”€â”€ */
 .dotHover {
   width: 13px;
   height: 13px;
@@ -95,7 +95,7 @@
   height: 200px;
 }
 
-/* ── Click states ── */
+/* â”€â”€ Click states â”€â”€ */
 .dotClick {
   width: 4px !important;
   height: 4px !important;
@@ -105,11 +105,12 @@
 .ringClick {
   width: 28px !important;
   height: 28px !important;
-  border-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(var(--text-rgb), 0.85) !important;
 }
 
-/* ── Rotation animation (translate included to preserve centering) ── */
+/* â”€â”€ Rotation animation (translate included to preserve centering) â”€â”€ */
 @keyframes ringRotate {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
