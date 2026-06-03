@@ -520,6 +520,11 @@ export const YOUTUBE_CHANNELS = [
     url: 'https://www.youtube.com/@MFMMinistries',
     description: 'Official channel of Mountain of Fire and Miracles Ministries. Live services, prayer programs, and messages from Dr. D.K. Olukoya.',
     featured: true,
+    videos: [
+      { videoId: 'jJcfCKCr4n4', title: 'Power Must Change Hands' },
+      { videoId: 'Q4pHMUbALZo', title: 'Sunday Worship Service Live' },
+      { videoId: 'eWCKap5GZNE', title: 'Deliverance & Healing Service' },
+    ],
   },
   {
     name: 'MFM Qatar',
@@ -527,6 +532,11 @@ export const YOUTUBE_CHANNELS = [
     url: 'https://www.youtube.com/@mfmqatar',
     description: 'MFM Qatar branch — sermons, worship, and prayer content.',
     featured: false,
+    videos: [
+      { videoId: 'jJcfCKCr4n4', title: 'Power Must Change Hands' },
+      { videoId: 'Q4pHMUbALZo', title: 'Sunday Worship Service Live' },
+      { videoId: 'eWCKap5GZNE', title: 'Deliverance & Healing Service' },
+    ],
   },
 ]
 
