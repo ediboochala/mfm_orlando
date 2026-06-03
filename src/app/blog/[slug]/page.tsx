@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { CHURCH, BLOG_POSTS } from '@/data/siteData'
 import styles from './page.module.css'
@@ -59,6 +60,18 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </header>
 
+      {/* ── Cover Image ── */}
+      <div className={styles.coverWrap}>
+        <Image
+          src={post.coverImage}
+          alt={post.title}
+          fill
+          priority
+          sizes="100vw"
+          className={styles.coverImage}
+        />
+      </div>
+
       {/* ── Article ── */}
       <main className={styles.main}>
         <div className={styles.mainInner}>
@@ -67,9 +80,38 @@ export default async function BlogPostPage({ params }: Props) {
             <p className={styles.excerpt}>{post.excerpt}</p>
             <div className={styles.divider} />
             {post.body.map((para, i) => (
-              <p key={i} className={`${styles.para} ${i === 0 ? styles.paraFirst : ''}`}>
-                {para}
-              </p>
+              <div key={i}>
+                <p className={`${styles.para} ${i === 0 ? styles.paraFirst : ''}`}>
+                  {para}
+                </p>
+                {post.mediaBlocks.filter(m => m.afterParagraph === i).map((media, j) => (
+                  <figure key={j} className={styles.mediaFigure}>
+                    {media.type === 'image' ? (
+                      <div className={styles.mediaImageWrap}>
+                        <Image
+                          src={media.src}
+                          alt={media.alt ?? ''}
+                          fill
+                          sizes="(max-width: 780px) 100vw, 780px"
+                          className={styles.mediaImage}
+                        />
+                      </div>
+                    ) : (
+                      <div className={styles.videoWrap}>
+                        <iframe
+                          src={media.src}
+                          title={media.caption ?? 'Video'}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    )}
+                    {media.caption && (
+                      <figcaption className={styles.mediaCaption}>{media.caption}</figcaption>
+                    )}
+                  </figure>
+                ))}
+              </div>
             ))}
           </article>
 

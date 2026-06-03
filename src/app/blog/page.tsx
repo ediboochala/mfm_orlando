@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CHURCH, BLOG_POSTS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
@@ -47,15 +48,26 @@ export default function BlogPage() {
           <div className={styles.postsGrid}>
             {BLOG_POSTS.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.postCard}>
-                <div className={styles.postTop}>
-                  <span className={styles.postCategory}>{post.category}</span>
-                  <span className={styles.postReadTime}>{post.readTime}</span>
+                <div className={styles.cardImageWrap}>
+                  <Image
+                    src={post.coverImage}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={styles.cardImage}
+                  />
                 </div>
-                <h2 className={styles.postTitle}>{post.title}</h2>
-                <p className={styles.postExcerpt}>{post.excerpt}</p>
-                <div className={styles.postFooter}>
-                  <span className={styles.postDate}>{post.date}</span>
-                  <span className={styles.postCta}>Read More →</span>
+                <div className={styles.cardBody}>
+                  <div className={styles.postTop}>
+                    <span className={styles.postCategory}>{post.category}</span>
+                    <span className={styles.postReadTime}>{post.readTime}</span>
+                  </div>
+                  <h2 className={styles.postTitle}>{post.title}</h2>
+                  <p className={styles.postExcerpt}>{post.excerpt}</p>
+                  <div className={styles.postFooter}>
+                    <span className={styles.postDate}>{post.date}</span>
+                    <span className={styles.postCta}>Read More →</span>
+                  </div>
                 </div>
               </Link>
             ))}

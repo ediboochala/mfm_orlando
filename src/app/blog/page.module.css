@@ -120,17 +120,40 @@
 }
 .postCard {
   background: #0a0a0a;
-  padding: 36px 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   text-decoration: none;
   color: inherit;
   transition: background 0.2s;
   cursor: pointer;
+  overflow: hidden;
 }
 .postCard:hover {
   background: rgba(176, 26, 26, 0.06);
+}
+
+/* ── Card Image ── */
+.cardImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: rgba(212, 160, 23, 0.06);
+  flex-shrink: 0;
+}
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.postCard:hover .cardImage {
+  transform: scale(1.05);
+}
+.cardBody {
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
 }
 .postTop {
   display: flex;
@@ -218,7 +241,7 @@
   .hero        { padding: 60px 20px 50px; }
   .footerStrip { padding: 20px; }
   .postsGrid   { grid-template-columns: 1fr; }
-  .postCard    { padding: 28px 20px; }
+  .cardBody    { padding: 22px 20px 26px; }
 }
 
 

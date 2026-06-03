@@ -225,7 +225,27 @@ export const NAV_LINKS = [
   { label: 'Contact',     href: '#contact' },
 ]
 
-export const BLOG_POSTS = [
+export interface MediaBlock {
+  afterParagraph: number
+  type: 'image' | 'video'
+  src: string
+  alt?: string
+  caption?: string
+}
+
+export interface BlogPost {
+  slug: string
+  title: string
+  category: string
+  date: string
+  excerpt: string
+  body: string[]
+  readTime: string
+  coverImage: string
+  mediaBlocks: MediaBlock[]
+}
+
+export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'power-of-prayer-and-fasting',
     title: 'The Power of Prayer and Fasting',
@@ -239,6 +259,10 @@ export const BLOG_POSTS = [
       'At MFM Orlando, we encourage all members to incorporate fasting into their prayer lives. Whether it is a personal fast, a corporate fast, or participation in our regular prayer programs, the discipline of fasting will transform your prayer life and open doors that have long been closed.',
     ],
     readTime: '4 min read',
+    coverImage: '/22 (1).jpg',
+    mediaBlocks: [
+      { afterParagraph: 1, type: 'image', src: '/back.jpg', alt: 'Prayer and fasting', caption: 'Fasting and prayer — a powerful spiritual combination' },
+    ],
   },
   {
     slug: 'deliverance-what-it-means',
@@ -253,6 +277,10 @@ export const BLOG_POSTS = [
       'At MFM Orlando, deliverance services are available every Friday night. If you are struggling with persistent patterns in your life — sickness, failure, broken relationships, spiritual oppression — we invite you to come and receive freedom in the name of Jesus.',
     ],
     readTime: '5 min read',
+    coverImage: '/22 (2).jpg',
+    mediaBlocks: [
+      { afterParagraph: 2, type: 'image', src: '/22 (3).jpg', alt: 'Friday Deliverance Night at MFM Orlando', caption: 'Friday Deliverance Night at MFM Orlando' },
+    ],
   },
   {
     slug: 'prayer-city-experience',
@@ -267,6 +295,10 @@ export const BLOG_POSTS = [
       'If you have never attended a Prayer City program, we strongly encourage you to plan a visit. Whether you come for a single weekend or a full program, you will not leave the same. For information on upcoming programs, please contact MFM Orlando.',
     ],
     readTime: '4 min read',
+    coverImage: '/building.png',
+    mediaBlocks: [
+      { afterParagraph: 1, type: 'image', src: '/22 (4).jpg', alt: 'Believers gathered at MFM Prayer City', caption: 'Believers gathered in worship at MFM Prayer City' },
+    ],
   },
   {
     slug: 'end-times-are-you-ready',
@@ -281,6 +313,8 @@ export const BLOG_POSTS = [
       'At MFM Orlando, we preach an end-time message — not one that leads to despair, but one that inspires urgency. If you are not yet saved, today is the day. If you are saved, today is the day to deepen your walk with God and make yourself ready for His glorious return.',
     ],
     readTime: '5 min read',
+    coverImage: '/22 (3).jpg',
+    mediaBlocks: [],
   },
   {
     slug: 'holiness-the-standard-of-heaven',
@@ -295,6 +329,10 @@ export const BLOG_POSTS = [
       'Pursue holiness as though your destiny depends on it — because it does. Join us at MFM Orlando as we pursue holiness together, through the Word, through prayer, and through the power of the Holy Spirit.',
     ],
     readTime: '4 min read',
+    coverImage: '/22 (4).jpg',
+    mediaBlocks: [
+      { afterParagraph: 1, type: 'image', src: '/g.o-hmpg-p2yv8mmnlqigraumc5fkktysc1o1hu6a214voa7okq.jpg', alt: 'Teaching on holiness', caption: 'Pursuing holiness in everyday life' },
+    ],
   },
   {
     slug: 'building-an-aggressive-prayer-life',
@@ -309,6 +347,10 @@ export const BLOG_POSTS = [
       'At MFM Orlando, we offer multiple prayer opportunities each week — from our morning prayer line (6:00–7:00 AM EST) to our revival services, deliverance nights, and crossover programs. Take advantage of these resources and watch your prayer life — and your life — be transformed.',
     ],
     readTime: '5 min read',
+    coverImage: '/back.jpg',
+    mediaBlocks: [
+      { afterParagraph: 1, type: 'image', src: '/22 (1).jpg', alt: 'MFM Orlando prayer program', caption: 'MFM Orlando morning prayer program' },
+    ],
   },
 ]
 
