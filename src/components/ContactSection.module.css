@@ -215,6 +215,8 @@
   background: #0a0a0a;
 }
 .mapFrame iframe { display: block; }
+:global([data-theme="light"]) .mapFrame { background: #f0ece4; }
+:global([data-theme="light"]) .mapWrap  { border-color: rgba(184, 134, 11, 0.18); }
 
 @media (max-width: 1024px) {
   .grid { grid-template-columns: 1fr; gap: 50px; }

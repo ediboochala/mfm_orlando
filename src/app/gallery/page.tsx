@@ -69,10 +69,10 @@ export default function GalleryPage() {
                     <svg width="40" height="54" viewBox="0 0 40 56" fill="none">
                       <path
                         d="M20 2C20 2 30 14 28 26C34 20 36 12 34 6C40 14 42 26 36 36C32 42 26 46 20 54C14 46 8 42 4 36C-2 26 0 14 6 6C4 12 6 20 12 26C10 14 20 2 20 2Z"
-                        fill="url(#galleryFlame)"
+                        fill={`url(#gf-${item.id})`}
                       />
                       <defs>
-                        <linearGradient id="galleryFlame" x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
+                        <linearGradient id={`gf-${item.id}`} x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
                           <stop offset="0%"  stopColor="#FFF9C4" stopOpacity="0.4" />
                           <stop offset="50%" stopColor="#E53935" stopOpacity="0.5" />
                           <stop offset="100%" stopColor="#7A0000" stopOpacity="0.35" />

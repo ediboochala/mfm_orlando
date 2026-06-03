@@ -6,7 +6,7 @@ export default function GivingSection() {
     <section id="giving" className={styles.section}>
 
       {/* Logo watermark */}
-      <div className={styles.logoWatermark} aria-hidden>
+      <div className={styles.logoWatermark} aria-hidden="true">
         <Image src="/mfm-logo.png" alt="" fill style={{ objectFit: 'contain' }} />
       </div>
 

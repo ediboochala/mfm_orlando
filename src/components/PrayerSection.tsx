@@ -13,7 +13,7 @@ export default function PrayerSection() {
           alt=""
           fill
           style={{ objectFit: 'cover', objectPosition: 'center top' }}
-          aria-hidden
+          aria-hidden="true"
         />
       </div>
 

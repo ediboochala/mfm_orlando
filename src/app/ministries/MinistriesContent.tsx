@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useId } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MINISTRIES, MINISTRY_PROJECTS } from '@/data/siteData'
@@ -12,6 +12,7 @@ const ALL_PHOTOS = MINISTRY_PROJECTS
 
 /* ── Shared flame placeholder ── */
 function FlameHolder({ small = false }: { small?: boolean }) {
+  const uid = useId().replace(/:/g, '_')
   return (
     <div className={small ? styles.thumbEmpty : styles.photoPlaceholder}>
       {!small && (
@@ -19,10 +20,10 @@ function FlameHolder({ small = false }: { small?: boolean }) {
           <svg width="26" height="36" viewBox="0 0 26 38" fill="none">
             <path
               d="M13 2C13 2 20 9 18 18C22 14 24 8 22 4C26 10 27 18 23 25C20 30 16 33 13 38C10 33 6 30 3 25C-1 18 0 10 4 4C2 8 4 14 8 18C6 9 13 2 13 2Z"
-              fill="url(#flame-ph)"
+              fill={`url(#flame-${uid})`}
             />
             <defs>
-              <linearGradient id="flame-ph" x1="13" y1="2" x2="13" y2="38" gradientUnits="userSpaceOnUse">
+              <linearGradient id={`flame-${uid}`} x1="13" y1="2" x2="13" y2="38" gradientUnits="userSpaceOnUse">
                 <stop offset="0%"   stopColor="#FFF9C4" stopOpacity="0.3" />
                 <stop offset="50%"  stopColor="#E53935" stopOpacity="0.4" />
                 <stop offset="100%" stopColor="#7A0000" stopOpacity="0.25" />
