@@ -86,7 +86,7 @@
   font-size: clamp(26px, 4vw, 50px);
   line-height: 1.2;
   margin-bottom: 24px;
-  color: #fff;
+  color: var(--white);
 }
 .heroDivider {
   width: 60px;
@@ -214,7 +214,7 @@
 .ctaTitle {
   font-family: 'Cinzel', serif;
   font-size: 22px;
-  color: #fff;
+  color: var(--white);
   letter-spacing: 2px;
   margin-bottom: 16px;
 }
@@ -264,3 +264,6 @@
 :global([data-theme="light"]) .body p        { color: rgba(28,28,28,0.8); }:global([data-theme="light"]) .ctaTitle  { color: #1c1c1c; }
 :global([data-theme="light"]) .navTitle  { color: rgba(28,28,28,0.7); }
 :global([data-theme="light"]) .navItem   { background: rgba(184,134,11,0.04); }
+/* Keep hero text white in light mode (hero bg stays dark) */
+:global([data-theme="light"]) .heroTitle { color: #fff !important; }
+:global([data-theme="light"]) .heroSub   { color: rgba(255,255,255,0.65) !important; }

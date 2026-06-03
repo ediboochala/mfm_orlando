@@ -86,7 +86,7 @@
   font-size: clamp(30px, 5vw, 56px);
   line-height: 1.15;
   margin-bottom: 24px;
-  color: #fff;
+  color: var(--white);
 }
 .heroDivider {
   width: 60px;
@@ -135,7 +135,7 @@
   font-family: 'Cinzel', serif;
   font-size: clamp(22px, 3vw, 34px);
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   line-height: 1.2;
 }
 .sectionDivider {
@@ -269,7 +269,7 @@
   font-family: 'Cinzel', serif;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   letter-spacing: 0.5px;
 }
 .channelHandle {
@@ -417,7 +417,7 @@
   font-family: 'Cinzel', serif;
   font-size: 22px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
@@ -496,3 +496,6 @@
 /* Light theme */
 :global([data-theme="light"]) .sectionTitle { color: #1c1c1c; }
 :global([data-theme="light"]) .card         { background: #FFFFFF; border-color: rgba(184,134,11,0.12); }
+/* Keep hero text white in light mode (hero bg stays dark) */
+:global([data-theme="light"]) .heroTitle { color: #fff !important; }
+:global([data-theme="light"]) .heroSub   { color: rgba(255,255,255,0.65) !important; }

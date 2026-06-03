@@ -158,7 +158,7 @@
   font-family: 'Cinzel', serif;
   font-size: 14px;
   font-weight: 700;
-  color: #fff;
+  color: var(--white);
   line-height: 1.4;
   letter-spacing: 0.3px;
   transition: color 0.25s;
