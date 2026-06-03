@@ -468,54 +468,27 @@ export const GALLERY_ITEMS = [
 ]
 
 export const MINISTRY_PROJECTS = [
-  {
-    id: 1,
-    title: 'Power Must Change Hands Service',
-    ministry: "Men's Fellowship",
-    date: 'March 2025',
-    description: 'Men of Valor gathered for an intense night of prayer, warfare, and spiritual breakthrough. Over 40 men in attendance.',
-    image: '/22 (1).jpg',
-  },
-  {
-    id: 2,
-    title: 'Women KFDL Conference',
-    ministry: "Women's Foundation",
-    date: 'February 2025',
-    description: 'A Spirit-filled conference equipping women to walk fully in their God-given identity — spiritually, physically, and financially.',
-    image: '/22 (2).jpg',
-  },
-  {
-    id: 3,
-    title: 'Youth Empowerment Summit',
-    ministry: 'Youth Fellowship',
-    date: 'January 2025',
-    description: 'Young adults from across Orlando gathered for a day of identity, purpose, and radical encounter with God.',
-    image: '/22 (3).jpg',
-  },
-  {
-    id: 4,
-    title: 'Children Church Dedication Service',
-    ministry: "Children's Church",
-    date: 'December 2024',
-    description: 'A joyful service where children were dedicated to the Lord and celebrated as the church of today, not just tomorrow.',
-    image: '/22 (4).jpg',
-  },
-  {
-    id: 5,
-    title: 'MFM Orlando Church Home',
-    ministry: 'All Ministries',
-    date: 'Ongoing',
-    description: 'The gathering place where every ministry serves, grows, and encounters the power of God week after week.',
-    image: '/building.png',
-  },
-  {
-    id: 6,
-    title: 'Friday Deliverance Night',
-    ministry: 'All Ministries',
-    date: 'Every Friday',
-    description: 'Consistent Friday night deliverance services — a hallmark of MFM Orlando where chains are broken and lives are transformed.',
-    image: null,
-  },
+  // Men's Fellowship
+  { id: 1,  ministryId: 'mens-fellowship',    title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/22 (1).jpg' },
+  { id: 2,  ministryId: 'mens-fellowship',    title: 'MOV Leadership Retreat',           date: 'Coming Soon',    description: 'A dedicated retreat for men to grow as leaders in the home and the church.',                image: null },
+  // Women's Foundation
+  { id: 3,  ministryId: 'womens-foundation',  title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/22 (2).jpg' },
+  { id: 4,  ministryId: 'womens-foundation',  title: 'Women\'s Prayer Breakfast',        date: 'Coming Soon',    description: 'Monthly fellowship and intercession over breakfast for women of all ages.',                   image: null },
+  // Children's Church
+  { id: 5,  ministryId: 'childrens-church',   title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/22 (4).jpg' },
+  { id: 6,  ministryId: 'childrens-church',   title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
+  // Youth Fellowship
+  { id: 7,  ministryId: 'youth-fellowship',   title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Young adults encountered God and discovered their God-given purpose.',                      image: '/22 (3).jpg' },
+  { id: 8,  ministryId: 'youth-fellowship',   title: 'Youth Outreach Day',               date: 'Coming Soon',    description: 'Taking the gospel to the streets of Orlando with energy and love.',                         image: null },
+  // Music Ministry
+  { id: 9,  ministryId: 'music-ministry',     title: 'MFM Worship Night',                date: 'Coming Soon',    description: 'An evening of anointed worship that opens the heavens and breaks every chain.',              image: null },
+  { id: 10, ministryId: 'music-ministry',     title: 'Praise & Deliverance Concert',     date: 'Coming Soon',    description: 'Music as a weapon — a full night of praise preceding signs and wonders.',                   image: null },
+  // GEN 2:18
+  { id: 11, ministryId: 'gen-218',            title: 'GEN 2:18 Singles Gathering',       date: 'Coming Soon',    description: 'Biblical teaching on identity, purpose, and God\'s design for love and marriage.',            image: null },
+  { id: 12, ministryId: 'gen-218',            title: 'Valentine Purity Gala',            date: 'Coming Soon',    description: 'An evening celebrating purity, purpose, and preparation for God\'s best.',                   image: null },
+  // Expectant Family Ministry
+  { id: 13, ministryId: 'expectant-family',   title: 'MFM Orlando Church Home',          date: 'Ongoing',        description: 'The house where every ministry gathers — built by God for His family in Orlando.',            image: '/building.png' },
+  { id: 14, ministryId: 'expectant-family',   title: 'Expectant Mothers Prayer Cover',   date: 'Coming Soon',    description: 'Covering every pregnancy with intercession from the very first trimester.',                  image: null },
 ]
 
 // ── Featured Videos (replace videoId with real YouTube video IDs) ──────────
