@@ -467,6 +467,57 @@ export const GALLERY_ITEMS = [
   { id: 12, title: 'Easter Revival Service',         category: 'Special Events', description: 'Celebrating the resurrection power of Jesus Christ.' },
 ]
 
+export const MINISTRY_PROJECTS = [
+  {
+    id: 1,
+    title: 'Power Must Change Hands Service',
+    ministry: "Men's Fellowship",
+    date: 'March 2025',
+    description: 'Men of Valor gathered for an intense night of prayer, warfare, and spiritual breakthrough. Over 40 men in attendance.',
+    image: '/22 (1).jpg',
+  },
+  {
+    id: 2,
+    title: 'Women KFDL Conference',
+    ministry: "Women's Foundation",
+    date: 'February 2025',
+    description: 'A Spirit-filled conference equipping women to walk fully in their God-given identity — spiritually, physically, and financially.',
+    image: '/22 (2).jpg',
+  },
+  {
+    id: 3,
+    title: 'Youth Empowerment Summit',
+    ministry: 'Youth Fellowship',
+    date: 'January 2025',
+    description: 'Young adults from across Orlando gathered for a day of identity, purpose, and radical encounter with God.',
+    image: '/22 (3).jpg',
+  },
+  {
+    id: 4,
+    title: 'Children Church Dedication Service',
+    ministry: "Children's Church",
+    date: 'December 2024',
+    description: 'A joyful service where children were dedicated to the Lord and celebrated as the church of today, not just tomorrow.',
+    image: '/22 (4).jpg',
+  },
+  {
+    id: 5,
+    title: 'MFM Orlando Church Home',
+    ministry: 'All Ministries',
+    date: 'Ongoing',
+    description: 'The gathering place where every ministry serves, grows, and encounters the power of God week after week.',
+    image: '/building.png',
+  },
+  {
+    id: 6,
+    title: 'Friday Deliverance Night',
+    ministry: 'All Ministries',
+    date: 'Every Friday',
+    description: 'Consistent Friday night deliverance services — a hallmark of MFM Orlando where chains are broken and lives are transformed.',
+    image: null,
+  },
+]
+
 // ── Featured Videos (replace videoId with real YouTube video IDs) ──────────
 export const FEATURED_VIDEOS = [
   {

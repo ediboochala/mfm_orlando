@@ -280,6 +280,152 @@
   color: rgba(var(--text-rgb), 0.4);
 }
 
+/* ── Projects & Impact ── */
+.projects {
+  margin-bottom: 80px;
+}
+.projectsHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.projectsLabel {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 14px;
+}
+.projectsTitle {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+:global([data-theme="light"]) .projectsTitle { color: #1c1c1c; }
+.projectsDivider {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--red));
+  margin: 0 auto 20px;
+}
+.projectsDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(var(--text-rgb), 0.5);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(212, 160, 23, 0.12);
+  background: #0a0a0a;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.projectCard:hover {
+  border-color: rgba(212, 160, 23, 0.3);
+  transform: translateY(-3px);
+}
+:global([data-theme="light"]) .projectCard {
+  background: #fff;
+  border-color: rgba(184, 134, 11, 0.15);
+}
+:global([data-theme="light"]) .projectCard:hover {
+  border-color: rgba(184, 134, 11, 0.35);
+}
+
+.projectImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #100303;
+}
+
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.projectCard:hover .projectImage {
+  transform: scale(1.04);
+}
+
+.projectPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(160deg, #100303 0%, #1a0505 100%);
+}
+.placeholderText {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212, 160, 23, 0.3);
+}
+
+.projectOverlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.projectMinistryTag {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(0, 0, 0, 0.72);
+  padding: 5px 10px;
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.projectInfo {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.projectDate {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(212, 160, 23, 0.55);
+}
+.projectTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+:global([data-theme="light"]) .projectTitle { color: #1c1c1c; }
+.projectDesc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(var(--text-rgb), 0.5);
+  margin-top: 2px;
+}
+
 /* ── CTA ── */
 .cta {
   background: linear-gradient(135deg, rgba(176, 26, 26, 0.1) 0%, rgba(212, 160, 23, 0.06) 100%);
@@ -323,10 +469,11 @@
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .topBarInner,
-  .mainInner  { padding: 14px 30px; }
-  .hero       { padding: 80px 30px 60px; }
-  .intro      { padding: 40px 30px; }
+  .mainInner   { padding: 14px 30px; }
+  .hero        { padding: 80px 30px 60px; }
+  .intro       { padding: 40px 30px; }
   .footerStrip { padding: 24px 30px; }
+  .projectsGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 800px) {
@@ -335,12 +482,13 @@
 
 @media (max-width: 600px) {
   .topBarInner,
-  .mainInner  { padding: 12px 20px; }
-  .hero       { padding: 60px 20px 50px; }
-  .intro      { padding: 32px 20px; }
+  .mainInner   { padding: 12px 20px; }
+  .hero        { padding: 60px 20px 50px; }
+  .intro       { padding: 32px 20px; }
   .footerStrip { padding: 20px; }
   .ministryCard { padding: 28px 20px; }
-  .cta        { padding: 36px 20px; }
+  .cta         { padding: 36px 20px; }
+  .projectsGrid { grid-template-columns: 1fr; }
 }
 
 /* Keep hero text white in light mode (hero bg stays dark) */
