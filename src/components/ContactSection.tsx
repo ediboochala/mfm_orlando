@@ -97,6 +97,43 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
+
+        {/* ── Location Map ── */}
+        <div className={`${styles.mapWrap} reveal`}>
+          <div className={styles.mapHeader}>
+            <div className={styles.mapInfo}>
+              <span className={styles.mapPin}>📍</span>
+              <div>
+                <span className={styles.mapLabel}>Our Location</span>
+                <span className={styles.mapAddress}>{CHURCH.address}</span>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=7200+Lake+Ellenor+Dr,+Orlando,+FL+32809"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapDirections}
+            >
+              Get Directions
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <div className={styles.mapFrame}>
+            <iframe
+              src="https://maps.google.com/maps?q=28.4625459,-81.4033997&hl=en&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="MFM Orlando location map"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   )
