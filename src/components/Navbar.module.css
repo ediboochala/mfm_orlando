@@ -107,6 +107,13 @@
   color: var(--dark);
 }
 
+/* ── RIGHT CLUSTER (toggle + CTA) ── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* ── HAMBURGER ── */
 .hamburger {
   display: none;
@@ -177,4 +184,34 @@
   .hamburger { display: flex; }
   .nav { padding: 16px 30px; }
   .scrolled { padding: 12px 30px; }
+}
+
+/* ── LIGHT THEME ── */
+:global([data-theme="light"]) .scrolled {
+  background: rgba(250, 247, 242, 0.96);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
+}
+:global([data-theme="light"]) .navLinks a {
+  color: rgba(28, 28, 28, 0.82);
+}
+:global([data-theme="light"]) .navLinks a:hover {
+  color: var(--gold);
+}
+:global([data-theme="light"]) .logoTagline {
+  color: #5a4020;
+}
+:global([data-theme="light"]) .mobileMenu {
+  background: rgba(250, 247, 242, 0.98);
+}
+:global([data-theme="light"]) .mobileLink {
+  color: rgba(28, 28, 28, 0.82);
+}
+:global([data-theme="light"]) .mobileLink:hover {
+  color: var(--gold);
+}
+:global([data-theme="light"]) .mobileCta:hover {
+  color: var(--dark);
+}
+:global([data-theme="light"]) .bar {
+  background: #3a2a10;
 }

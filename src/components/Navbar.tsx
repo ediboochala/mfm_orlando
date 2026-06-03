@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { NAV_LINKS, CHURCH } from '@/data/siteData'
+import ThemeToggle from './ThemeToggle'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -61,14 +62,17 @@ export default function Navbar() {
         )}
       </ul>
 
-      {/* CTA */}
-      <a
-        href="#giving"
-        className={styles.navCta}
+      {/* Theme toggle + CTA */}
+      <div className={styles.navRight}>
+        <ThemeToggle />
+        <a
+          href="#giving"
+          className={styles.navCta}
         onClick={(e) => { e.preventDefault(); handleHashClick('#giving') }}
       >
         Give Online
-      </a>
+        </a>
+      </div>
 
       {/* Mobile Hamburger */}
       <button

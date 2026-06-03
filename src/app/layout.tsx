@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
+import Navbar from '@/components/Navbar'
 import './globals.css'
 
-const CustomCursor = dynamic(() => import('@/components/CustomCursor'), { ssr: false })
+const CustomCursor  = dynamic(() => import('@/components/CustomCursor'),    { ssr: false })
+const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), { ssr: false })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mfmorlando.org'),
@@ -31,10 +33,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Prevent flash of wrong theme before hydration */}
+        <script dangerouslySetInnerHTML={{
+          __html: `try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}`
+        }} />
+      </head>
       <body>
         <CustomCursor />
+        <Navbar />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )

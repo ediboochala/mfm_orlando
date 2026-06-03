@@ -8,7 +8,6 @@ import { useScrollReveal } from '@/hooks/useScrollReveal'
 const ParticlesCanvas = dynamic(() => import('@/components/ParticlesCanvas'), { ssr: false })
 
 // Regular components
-import Navbar           from '@/components/Navbar'
 import HeroSection      from '@/components/HeroSection'
 import SlideshowSection from '@/components/SlideshowSection'
 import Marquee          from '@/components/Marquee'
@@ -32,7 +31,6 @@ export default function Home() {
       <ParticlesCanvas />
 
       {/* Page structure */}
-      <Navbar />
       <main>
         <HeroSection />
         <SlideshowSection />

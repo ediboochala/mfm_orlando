@@ -1,0 +1,18 @@
+.btn {
+  background: none;
+  border: 1px solid rgba(212, 160, 23, 0.4);
+  color: var(--gold);
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.3s, border-color 0.3s;
+}
+.btn:hover {
+  background: rgba(212, 160, 23, 0.12);
+  border-color: var(--gold);
+}

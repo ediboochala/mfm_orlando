@@ -1,9 +1,10 @@
 /* ── Page Shell ── */
 .page {
   min-height: 100vh;
-  background: #0a0a0a;
-  color: #fff;
+  background: var(--dark);
+  color: var(--white);
   font-family: 'Lato', sans-serif;
+  padding-top: 88px;
 }
 
 /* ── Top Bar ── */
@@ -11,9 +12,13 @@
   background: rgba(10, 10, 10, 0.95);
   border-bottom: 1px solid rgba(212, 160, 23, 0.12);
   position: sticky;
-  top: 0;
+  top: 88px;
   z-index: 100;
   backdrop-filter: blur(12px);
+}
+:global([data-theme="light"]) .topBar {
+  background: rgba(250, 247, 242, 0.96);
+  border-bottom-color: rgba(184, 134, 11, 0.2);
 }
 .topBarInner {
   max-width: 1200px;

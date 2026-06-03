@@ -13,6 +13,30 @@
   --gray: #888;
 }
 
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --red: #C0392B;
+  --deep-red: #922B21;
+  --gold: #B8860B;
+  --gold-light: #D4A017;
+  --dark: #FAF7F2;
+  --dark2: #F2EDE4;
+  --dark3: #E8E0D0;
+  --white: #1C1C1C;
+  --off-white: #3D2E10;
+  --gray: #666;
+}
+[data-theme="light"] body {
+  background: #FAF7F2;
+  color: #1C1C1C;
+}
+[data-theme="light"] .section-title {
+  color: #1C1C1C;
+}
+[data-theme="light"] .section-label {
+  color: var(--gold);
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
