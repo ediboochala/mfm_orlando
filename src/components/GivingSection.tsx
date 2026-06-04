@@ -12,7 +12,7 @@ export default function GivingSection() {
 
       <div className="section-inner">
         <div className={styles.inner}>
-          <span className="section-label reveal" style={{ color: 'rgba(255,255,255,0.6)' }}>
+          <span className={`section-label reveal ${styles.sectionLabel}`}>
             Support the Kingdom
           </span>
           <h2 className={`${styles.title} reveal d1`}>

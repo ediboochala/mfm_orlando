@@ -20,7 +20,7 @@ export default function PrayerSection() {
       {/* Layered dark overlay — preserves readability while letting the image breathe */}
       <div className={styles.bgOverlay} />
 
-      <div className="section-inner" style={{ position: 'relative', zIndex: 2 }}>
+      <div className={`section-inner ${styles.sectionInner}`}>
         <div className={styles.grid}>
           {/* Left */}
           <div>

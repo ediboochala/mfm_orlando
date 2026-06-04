@@ -10,9 +10,14 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    const subject = encodeURIComponent(form.subject || 'Website Inquiry — MFM Orlando')
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    )
+    window.open(`mailto:mfmorlando1@yahoo.com?subject=${subject}&body=${body}`)
     setSubmitted(true)
     setForm({ name: '', email: '', subject: '', message: '' })
-    setTimeout(() => setSubmitted(false), 5000)
+    setTimeout(() => setSubmitted(false), 6000)
   }
 
   return (
@@ -21,7 +26,7 @@ export default function ContactSection() {
         <div className={styles.header}>
           <span className="section-label reveal">Get in Touch</span>
           <h2 className="section-title reveal d1">Connect With Us</h2>
-          <div className="section-divider reveal d2" style={{ margin: '0 auto' }} />
+          <div className={`section-divider reveal d2 ${styles.centeredDivider}`} />
         </div>
 
         <div className={styles.grid}>
@@ -92,7 +97,7 @@ export default function ContactSection() {
                 Send Message
               </button>
               {submitted && (
-                <p className={styles.success}>✦ Message Sent! We will respond shortly.</p>
+                <p className={styles.success}>✦ Your email client has opened with your message pre-filled. Send it to reach us directly.</p>
               )}
             </form>
           </div>
@@ -125,7 +130,7 @@ export default function ContactSection() {
               src="https://maps.google.com/maps?q=28.4625459,-81.4033997&hl=en&z=15&output=embed"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              className={styles.mapIframe}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -6,6 +6,9 @@
   text-align: center;
   margin-bottom: 70px;
 }
+.centeredDivider {
+  margin: 0 auto;
+}
 
 .grid {
   display: grid;
@@ -215,6 +218,7 @@
   background: #0a0a0a;
 }
 .mapFrame iframe { display: block; }
+.mapIframe { border: 0; }
 :global([data-theme="light"]) .mapFrame { background: #f0ece4; }
 :global([data-theme="light"]) .mapWrap  { border-color: rgba(184, 134, 11, 0.18); }
 

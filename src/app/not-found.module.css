@@ -1,0 +1,92 @@
+.page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(176, 26, 26, 0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.flameWrap {
+  margin-bottom: 32px;
+  filter: drop-shadow(0 0 24px rgba(229, 57, 53, 0.6));
+  animation: flamePulse 2.4s ease-in-out infinite;
+}
+
+.errorCode {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(80px, 18vw, 160px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 8px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(212, 160, 23, 0.35);
+  margin: 0 0 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4A017, #B01A1A);
+  margin: 0 auto 28px;
+}
+
+.heading {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.sub {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 440px;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.bottomLabel {
+  position: absolute;
+  bottom: 28px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(212, 160, 23, 0.3);
+}
+
+@keyframes flamePulse {
+  0%, 100% { transform: scaleY(1) scaleX(1); opacity: 0.85; }
+  50%       { transform: scaleY(1.06) scaleX(0.97); opacity: 1; }
+}

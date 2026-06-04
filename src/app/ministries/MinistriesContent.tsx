@@ -105,7 +105,11 @@ function MinistryCarousel({
             )}
           </div>
           <div className={styles.photoCaption}>
-            <span className={styles.photoDate}>{photo.date}</span>
+            {photo.date === 'Coming Soon' ? (
+              <span className={styles.photoDateUpcoming}>Upcoming</span>
+            ) : (
+              <span className={styles.photoDate}>{photo.date}</span>
+            )}
             <h3 className={styles.photoTitle}>{photo.title}</h3>
             <p className={styles.photoDesc}>{photo.description}</p>
           </div>
@@ -243,7 +247,9 @@ function Lightbox({ startIdx, onClose }: { startIdx: number; onClose: () => void
             ) : (
               <FlameHolder />
             )}
-            <div className={styles.lbDateBadge}>{photo.date}</div>
+            <div className={`${styles.lbDateBadge} ${photo.date === 'Coming Soon' ? styles.lbDateBadgeUpcoming : ''}`}>
+              {photo.date === 'Coming Soon' ? 'Upcoming' : photo.date}
+            </div>
           </div>
 
           <button className={styles.lbNavBtn} onClick={() => { goNext(); setPlaying(false) }} aria-label="Next">

@@ -12,7 +12,7 @@ export const CHURCH = {
   phone: '+1 (407) 751-8237',
   email: 'mfmorlando1@yahoo.com',
   website: 'https://mfmorlando1.wixsite.com/mfmorlando1',
-  copyright: '© 2024 Mountain of Fire And Miracles Ministries (MFM) Orlando, Florida. All Rights Reserved.',
+  copyright: '© 2025 Mountain of Fire And Miracles Ministries (MFM) Orlando, Florida. All Rights Reserved.',
 }
 
 export const PASTOR = {
