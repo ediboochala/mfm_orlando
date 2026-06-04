@@ -521,9 +521,9 @@ export const YOUTUBE_CHANNELS = [
     description: 'Official channel of Mountain of Fire and Miracles Ministries. Live services, prayer programs, and messages from Dr. D.K. Olukoya.',
     featured: true,
     videos: [
-      { videoId: 'jJcfCKCr4n4', title: 'Power Must Change Hands' },
-      { videoId: 'Q4pHMUbALZo', title: 'Sunday Worship Service Live' },
-      { videoId: 'eWCKap5GZNE', title: 'Deliverance & Healing Service' },
+      { videoId: 'kMqJy-iHfU4', title: 'Let the Angels of God Pursue Them — MFM Manna Water' },
+      { videoId: 'i93Z5IpwE44', title: 'MFM Manna Water — Dr D.K. Olukoya' },
+      { videoId: 'AemIhKHaOLE', title: 'Prayers That Move Mountains — Dr D.K. Olukoya' },
     ],
   },
   {
