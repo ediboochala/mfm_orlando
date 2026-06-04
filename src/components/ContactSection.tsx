@@ -4,20 +4,48 @@ import { useState } from 'react'
 import { CHURCH, PASTOR, SOCIAL_LINKS } from '@/data/siteData'
 import styles from './ContactSection.module.css'
 
-export default function ContactSection() {
-  const [submitted, setSubmitted] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+type FormState = { name: string; email: string; subject: string; message: string }
+type Status = 'idle' | 'loading' | 'success' | 'error'
 
-  const handleSubmit = (e: React.FormEvent) => {
+const EMPTY: FormState = { name: '', email: '', subject: '', message: '' }
+
+export default function ContactSection() {
+  const [form, setForm]     = useState<FormState>(EMPTY)
+  const [status, setStatus] = useState<Status>('idle')
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(form.subject || 'Website Inquiry — MFM Orlando')
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    )
-    window.open(`mailto:mfmorlando1@yahoo.com?subject=${subject}&body=${body}`)
-    setSubmitted(true)
-    setForm({ name: '', email: '', subject: '', message: '' })
-    setTimeout(() => setSubmitted(false), 6000)
+    setStatus('loading')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          from_name: 'MFM Orlando Website',
+          subject: form.subject || 'New Contact Message — MFM Orlando',
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          redirect: 'false',
+        }),
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setStatus('success')
+        setForm(EMPTY)
+        setTimeout(() => setStatus('idle'), 7000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 6000)
+      }
+    } catch {
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 6000)
+    }
   }
 
   return (
@@ -30,7 +58,8 @@ export default function ContactSection() {
         </div>
 
         <div className={styles.grid}>
-          {/* Info */}
+
+          {/* ── Info column ── */}
           <div className="reveal-left">
             {[
               { icon: '📍', label: 'Physical Address', value: CHURCH.address },
@@ -42,12 +71,9 @@ export default function ContactSection() {
                 <div className={styles.iconWrap}>{item.icon}</div>
                 <div>
                   <span className={styles.infoLabel}>{item.label}</span>
-                  <span
-                    className={styles.infoValue}
-                    style={item.gold ? { whiteSpace: 'pre-line' } : undefined}
-                  >
+                  <span className={`${styles.infoValue} ${item.gold ? styles.infoValueMulti : ''}`}>
                     {item.value.split('\n').map((line, i) => (
-                      <span key={i} style={i === 1 && item.gold ? { color: 'var(--gold)' } : undefined}>
+                      <span key={i} className={i === 1 && item.gold ? styles.infoValueGold : undefined}>
                         {line}{i < item.value.split('\n').length - 1 && <br />}
                       </span>
                     ))}
@@ -58,47 +84,96 @@ export default function ContactSection() {
 
             <div className={styles.socials}>
               {SOCIAL_LINKS.map((s) => (
-                <a key={s.href} href={s.href} className={styles.socialLink} target="_blank" rel="noopener noreferrer" title={s.label}>
+                <a
+                  key={s.href}
+                  href={s.href}
+                  className={styles.socialLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={s.label}
+                >
                   {s.icon}
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Form */}
+          {/* ── Form column ── */}
           <div className="reveal-right">
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit} noValidate>
+
               {[
-                { key: 'name',    label: 'Your Name',    type: 'text',  placeholder: 'Enter your full name' },
-                { key: 'email',   label: 'Your Email',   type: 'email', placeholder: 'Enter your email address' },
-                { key: 'subject', label: 'Subject',      type: 'text',  placeholder: 'How can we help you?' },
+                { key: 'name',    label: 'Your Name',  type: 'text',  placeholder: 'Enter your full name',     required: true },
+                { key: 'email',   label: 'Your Email', type: 'email', placeholder: 'Enter your email address', required: true },
+                { key: 'subject', label: 'Subject',    type: 'text',  placeholder: 'How can we help you?',     required: false },
               ].map((field) => (
                 <div key={field.key} className={styles.formGroup}>
-                  <label className={styles.formLabel}>{field.label}</label>
+                  <label className={styles.formLabel}>
+                    {field.label}
+                    {field.required && <span className={styles.required}>*</span>}
+                  </label>
                   <input
                     type={field.type}
                     className={styles.formInput}
                     placeholder={field.placeholder}
+                    required={field.required}
                     value={(form as Record<string, string>)[field.key]}
                     onChange={(e) => setForm({ ...form, [field.key]: e.target.value })}
+                    disabled={status === 'loading'}
                   />
                 </div>
               ))}
+
               <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Message</label>
+                <label className={styles.formLabel}>
+                  Message <span className={styles.required}>*</span>
+                </label>
                 <textarea
                   className={`${styles.formInput} ${styles.textarea}`}
                   placeholder="Write your message here..."
+                  required
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  disabled={status === 'loading'}
                 />
               </div>
-              <button type="submit" className={styles.submitBtn}>
-                Send Message
+
+              <button
+                type="submit"
+                className={`${styles.submitBtn} ${status === 'loading' ? styles.submitLoading : ''}`}
+                disabled={status === 'loading'}
+              >
+                {status === 'loading' ? (
+                  <span className={styles.spinner} />
+                ) : (
+                  'Send Message'
+                )}
               </button>
-              {submitted && (
-                <p className={styles.success}>✦ Your email client has opened with your message pre-filled. Send it to reach us directly.</p>
+
+              {status === 'success' && (
+                <div className={styles.successBox}>
+                  <span className={styles.successIcon}>✦</span>
+                  <div>
+                    <p className={styles.successTitle}>Message Received</p>
+                    <p className={styles.successSub}>
+                      Thank you, {form.name || 'friend'}. We will respond to you shortly at your email address.
+                    </p>
+                  </div>
+                </div>
               )}
+
+              {status === 'error' && (
+                <div className={styles.errorBox}>
+                  <p className={styles.errorTitle}>Message could not be sent.</p>
+                  <p className={styles.errorSub}>
+                    Please email us directly at{' '}
+                    <a href={`mailto:${CHURCH.email}`} className={styles.errorLink}>
+                      {CHURCH.email}
+                    </a>
+                  </p>
+                </div>
+              )}
+
             </form>
           </div>
         </div>
