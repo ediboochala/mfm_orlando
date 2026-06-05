@@ -13,23 +13,22 @@ export default function ContactSection() {
   const [form, setForm]     = useState<FormState>(EMPTY)
   const [status, setStatus] = useState<Status>('idle')
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('loading')
 
     try {
+      const formData = new FormData(e.currentTarget)
+      formData.append('access_key', 'd0cc811c-aab9-4069-8692-049790e60eea')
+      formData.append('from_name', 'MFM Orlando Website')
+      formData.append(
+        'subject',
+        (formData.get('subject') as string) || 'New Contact Message — MFM Orlando'
+      )
+
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          from_name: 'MFM Orlando Website',
-          subject: form.subject || 'New Contact Message — MFM Orlando',
-          name: form.name,
-          email: form.email,
-          message: form.message,
-          redirect: 'false',
-        }),
+        body: formData,
       })
 
       const data = await res.json()
@@ -114,6 +113,7 @@ export default function ContactSection() {
                   </label>
                   <input
                     type={field.type}
+                    name={field.key}
                     className={styles.formInput}
                     placeholder={field.placeholder}
                     required={field.required}
@@ -129,6 +129,7 @@ export default function ContactSection() {
                   Message <span className={styles.required}>*</span>
                 </label>
                 <textarea
+                  name="message"
                   className={`${styles.formInput} ${styles.textarea}`}
                   placeholder="Write your message here..."
                   required
