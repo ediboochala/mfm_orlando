@@ -243,3 +243,6 @@
 :global([data-theme="light"]) .videoWrap { background: var(--dark3); }
 :global([data-theme="light"]) .videoTitle { color: #1c1c1c; }
 :global([data-theme="light"]) .info { background: #FFFFFF; }
+:global([data-theme="light"]) .title { color: #1c1c1c; }
+:global([data-theme="light"]) .sub { color: rgba(28, 28, 28, 0.55); }
+:global([data-theme="light"]) .videoDesc { color: rgba(28, 28, 28, 0.6); }

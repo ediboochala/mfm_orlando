@@ -175,3 +175,14 @@
   .cardContent { padding: 24px 20px; }
 }
 
+/* Light theme — cards stay dark (image bg + overlay), force text white */
+:global([data-theme="light"]) .cardName {
+  color: #ffffff;
+}
+:global([data-theme="light"]) .cardTime {
+  color: rgba(255, 255, 255, 0.55);
+}
+:global([data-theme="light"]) .address {
+  color: rgba(28, 28, 28, 0.5);
+}
+

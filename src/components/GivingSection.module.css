@@ -60,3 +60,11 @@
   .btns { flex-direction: column; align-items: center; }
 }
 
+/* Light theme — section has hardcoded red gradient, keep text white */
+:global([data-theme="light"]) .title {
+  color: #ffffff;
+}
+:global([data-theme="light"]) .sub {
+  color: rgba(255, 255, 255, 0.75);
+}
+
