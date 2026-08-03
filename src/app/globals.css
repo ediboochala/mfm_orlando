@@ -296,7 +296,7 @@ section {
 
 /* â”€â”€ MARQUEE â”€â”€ */
 .marquee-wrap {
-  background: var(--gold);
+  background: var(--primary);
   overflow: hidden;
   padding: 14px 0;
   position: relative;
