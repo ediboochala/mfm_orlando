@@ -74,7 +74,7 @@ export default function AboutPage() {
                 Mountain of Fire and Miracles Ministries (MFM) is a full-gospel, Pentecostal Christian ministry built on the foundation of aggressive prayer, biblical holiness, and the power of God to deliver, heal, and restore. Founded in Lagos, Nigeria in 1989 by Dr. Daniel Kolawole Olukoya, MFM has grown into one of the fastest-growing Christian ministries in the world, with branches in over 140 nations.
               </p>
               <p className={styles.bodyText}>
-                MFM Tampa Florida is the Tampa, Florida chapter of this global movement. Under the leadership of Pastor Samuel Omoigberae, we carry the same mandate: to preach the undiluted gospel of Jesus Christ, to pray aggressively, to deliver the captives, and to build an end-time army that is ready for the glorious return of our Lord.
+                MFM Tampa Florida is the Tampa, Florida chapter of this global movement. Under the leadership of Pastor Kehinde Olajide, we carry the same mandate: to preach the undiluted gospel of Jesus Christ, to pray aggressively, to deliver the captives, and to build an end-time army that is ready for the glorious return of our Lord.
               </p>
             </div>
             <div className={styles.contactStrip}>

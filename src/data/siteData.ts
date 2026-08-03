@@ -8,22 +8,22 @@ export const CHURCH = {
   shortName: 'MFM Tampa Florida',
   tagline: 'Tampa, Florida',
   location: 'Tampa, Florida',
-  address: '7200 Lake Ellenor Dr, Orlando, FL 32809',
-  phone: '+1 (407) 751-8237',
-  email: 'mfmorlando1@yahoo.com',
-  website: 'https://mfmorlando1.wixsite.com/mfmorlando1',
+  address: '4618 North Florida Avenue, Tampa, FL 33603',
+  phone: '+1 (346) 302-9156',
+  email: 'mfmtampaflorida@gmail.com',
+  website: 'https://mfmtampaflorida.com',
   copyright: '© 2025 Mountain of Fire And Miracles Ministries (MFM) Tampa, Florida. All Rights Reserved.',
 }
 
 export const PASTOR = {
-  name: 'Pastor Samuel Omoigberae',
+  name: 'Pastor Kehinde Olajide',
   title: 'Host Pastor, MFM Tampa Florida',
-  cell: '(407) 751-8237',
+  cell: '+1 (346) 302-9156',
   services: 'Pastoral Counseling and Prayer Available',
-  greeting: `Greetings from Pastor Samuel Omoigberae and the members of Mountain of Fire and Miracles Ministries Tampa, Florida. This is the day that the Lord hath made, we will rejoice and be glad in it. God hath been truly faithful unto us and for this we give thanks.`,
+  greeting: `Greetings from Pastor Kehinde Olajide and the members of Mountain of Fire and Miracles Ministries Tampa, Florida. This is the day that the Lord hath made, we will rejoice and be glad in it. God hath been truly faithful unto us and for this we give thanks.`,
   message: `It is indeed my pleasure to connect with you through this medium and I am so grateful that you have taken the time out of your busy schedule to reciprocate. I pray that you will have a very pleasant browsing experience.`,
   paragraphs: [
-    `Greetings from Pastor Samuel Omoigberae and the members of Mountain of Fire and Miracles Ministries Tampa, Florida. This is the day that the Lord hath made, we will rejoice and be glad in it. God hath been truly faithful unto us and for this we give thanks.`,
+    `Greetings from Pastor Kehinde Olajide and the members of Mountain of Fire and Miracles Ministries Tampa, Florida. This is the day that the Lord hath made, we will rejoice and be glad in it. God hath been truly faithful unto us and for this we give thanks.`,
     `It is indeed my pleasure to connect with you through this medium and I am so grateful that you have taken the time out of your busy schedule to reciprocate. I pray that you will have a very pleasant browsing experience.`,
     `The word of God says, “Seek the Lord while he may be found, call upon him while he is near; Let the wicked forsake his ways and the unrighteous man his thoughts; and let him return unto the Lord, and he will have mercy upon him; and to our God; for he will abundantly pardon.” (Isaiah 55:6–7).`,
     `Let us be prepared for the glorious and inevitable coming of the Lord which is soon to be. The signs of the time are seen everywhere. “Now learn a parable of the fig tree; When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh. So likewise ye, when ye shall see these things, know ye that it is near even at the doors.” (Matthew 24:32–33).`,
@@ -31,7 +31,7 @@ export const PASTOR = {
     `Please see our church bulletin for the order of services, and should you be looking for a place to worship, you are very welcome to join our growing church family. Please note counseling and deliverance are available. Thank you and may the Lord bless you richly.`,
   ],
   signature: 'Yours in His Service,',
-  signatureName: 'Pastor Samuel Omoigberae',
+  signatureName: 'Pastor Kehinde Olajide',
 }
 
 export const GENERAL_OVERSEER = {
@@ -62,39 +62,46 @@ export const SERVICES = [
     image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
-    day: 'Sundays',
-    name: 'Eagle Hour Program',
-    time: '2:00 PM (ET)',
-    icon: '🦅',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=600&q=80&auto=format&fit=crop',
+    day: 'Tuesdays',
+    name: 'Hour of Deliverance Power',
+    time: '11:00 AM – 2:00 PM (ET)',
+    icon: '⚔️',
+    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: 'Tuesday Nights',
-    name: 'Bible Study',
+    name: 'Bible Study & Personal Prayers',
     time: '7:00 PM (ET)',
     icon: '📖',
     image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: 'Wednesdays',
-    name: 'Manna Water Program',
-    time: '11:30 AM (ET)',
-    icon: '💧',
+    name: 'Hour of Deliverance Power',
+    time: '11:00 AM – 2:00 PM (ET)',
+    icon: '⚔️',
     image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: 'Thursdays',
-    name: 'Revival Service',
-    time: '7:00 PM (ET)',
-    icon: '🔥',
+    name: 'Hour of Deliverance Power',
+    time: '11:00 AM – 2:00 PM (ET)',
+    icon: '⚔️',
     image: 'https://images.unsplash.com/photo-1504704911898-68304a7d2807?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
-    day: 'Friday Nights',
-    name: 'Deliverance Service',
-    time: '11:00 PM (ET)',
-    icon: '⚔️',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&q=80&auto=format&fit=crop',
+    day: 'Thursday Nights',
+    name: 'Manna Water Service',
+    time: '7:00 PM (ET)',
+    icon: '💧',
+    image: 'https://images.unsplash.com/photo-1504704911898-68304a7d2807?w=800&h=600&q=80&auto=format&fit=crop',
+  },
+  {
+    day: 'Fridays',
+    name: 'Hour of Deliverance Power',
+    time: '11:00 AM – 2:00 PM (ET)',
+    icon: '🔥',
+    image: 'https://images.unsplash.com/photo-1504704911898-68304a7d2807?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: '1st Saturday / Month',
@@ -102,13 +109,6 @@ export const SERVICES = [
     time: '10:00 AM (ET)',
     icon: '⚡',
     image: 'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=800&h=600&q=80&auto=format&fit=crop',
-  },
-  {
-    day: 'Last Day / Month',
-    name: 'Crossover Night',
-    time: '11:00 PM – 2:00 AM (ET)',
-    icon: '🌙',
-    image: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=600&q=80&auto=format&fit=crop',
   },
 ]
 
@@ -248,9 +248,10 @@ export const PRAYER_LINE = {
 }
 
 export const SOCIAL_LINKS = [
-  { label: 'YouTube (MFM HQ)',    href: 'https://www.youtube.com/@MFMMinistries',                        icon: '▶' },
-  { label: 'Facebook',            href: 'https://www.facebook.com/MFM-Orlando-Florida-111275817320989/', icon: 'f' },
-  { label: 'YouTube (MFM Qatar)', href: 'https://www.youtube.com/@mfmqatar',                             icon: '▷' },
+  { label: 'YouTube (MFM Tampa)', href: 'https://www.youtube.com/@mfm-tampaflorida4355',   icon: '▶' },
+  { label: 'Facebook',            href: 'https://www.facebook.com/mfmtampaflorida/',       icon: 'f' },
+  { label: 'Instagram',           href: 'https://www.instagram.com/mfmtampaflorida/',      icon: '◎' },
+  { label: 'YouTube (MFM HQ)',    href: 'https://www.youtube.com/@MFMMinistries',          icon: '▶' },
 ]
 
 export const HISTORY_TIMELINE = [
@@ -272,7 +273,7 @@ export const HISTORY_TIMELINE = [
   },
   {
     year: 'Today · Tampa, FL',
-    text: "MFM Tampa Florida continues the mission under Pastor Samuel Omoigberae, delivering souls and building an aggressive end-time army for the Lord.",
+    text: "MFM Tampa Florida continues the mission under Pastor Kehinde Olajide, delivering souls and building an aggressive end-time army for the Lord.",
     highlight: true,
   },
 ]

@@ -35,6 +35,24 @@
   inset: 0;
 }
 
+.cardImgPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(160deg, #100303 0%, #1a0505 100%);
+}
+.cardImgPlaceholderText {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(var(--accent-rgb), 0.4);
+}
+
 /* Bottom-up gradient scrim â€” photo visible at top, dark at bottom for text */
 .cardOverlay {
   position: absolute;

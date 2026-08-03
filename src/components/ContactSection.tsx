@@ -190,7 +190,7 @@ export default function ContactSection() {
               </div>
             </div>
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=7200+Lake+Ellenor+Dr,+Orlando,+FL+32809"
+              href="https://www.google.com/maps/dir/?api=1&destination=4618+North+Florida+Avenue,+Tampa,+FL+33603"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapDirections}
@@ -203,7 +203,7 @@ export default function ContactSection() {
           </div>
           <div className={styles.mapFrame}>
             <iframe
-              src="https://maps.google.com/maps?q=28.4625459,-81.4033997&hl=en&z=15&output=embed"
+              src="https://maps.google.com/maps?q=4618+North+Florida+Avenue,+Tampa,+FL+33603&hl=en&z=15&output=embed"
               width="100%"
               height="100%"
               className={styles.mapIframe}

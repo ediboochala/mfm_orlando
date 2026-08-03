@@ -153,8 +153,16 @@
   width: 100%;
   height: 380px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
-  background: #180404;
+  background: linear-gradient(160deg, #100303 0%, #180404 100%);
+}
+.cardFlameIcon {
+  filter: drop-shadow(0 0 18px rgba(var(--secondary-rgb), 0.5));
 }
 .cardName {
   font-family: 'Cinzel', serif;

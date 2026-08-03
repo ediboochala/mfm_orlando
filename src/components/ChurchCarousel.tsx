@@ -30,10 +30,10 @@ const CARDS = [
     desc: 'From children to elders, from new converts to seasoned warriors — MFM Tampa Florida is a church where everyone belongs.',
   },
   {
-    image: '/Pastor Sam.png',
+    image: null,
     tag: 'Pastoral Leadership',
     title: 'Under Anointed Leadership',
-    desc: 'Under the shepherding of Pastor Samuel Omoigberae, our congregation is guided, counselled, and equipped for the work of the Kingdom.',
+    desc: 'Under the shepherding of Pastor Kehinde Olajide, our congregation is guided, counselled, and equipped for the work of the Kingdom.',
   },
 ]
 
@@ -86,12 +86,31 @@ export default function ChurchCarousel() {
             <div key={i} className={styles.card}>
               {/* Photo */}
               <div className={styles.cardImg}>
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  fill
-                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                />
+                {card.image ? (
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  />
+                ) : (
+                  <div className={styles.cardImgPlaceholder}>
+                    <svg width="34" height="48" viewBox="0 0 26 38" fill="none">
+                      <path
+                        d="M13 2C13 2 20 9 18 18C22 14 24 8 22 4C26 10 27 18 23 25C20 30 16 33 13 38C10 33 6 30 3 25C-1 18 0 10 4 4C2 8 4 14 8 18C6 9 13 2 13 2Z"
+                        fill="url(#carouselFlame)"
+                      />
+                      <defs>
+                        <linearGradient id="carouselFlame" x1="13" y1="2" x2="13" y2="38" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#FFF9C4" />
+                          <stop offset="50%" stopColor="#FF7A1A" />
+                          <stop offset="100%" stopColor="#A8125A" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <span className={styles.cardImgPlaceholderText}>Photo Coming Soon</span>
+                  </div>
+                )}
               </div>
               {/* Gradient overlay */}
               <div className={styles.cardOverlay} />
