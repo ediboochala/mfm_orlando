@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { CHURCH } from '@/data/siteData'
 import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
@@ -28,29 +29,30 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <p className={styles.eyebrow}>Welcome to</p>
+        <p className={styles.eyebrow}>Welcome to!</p>
         <h1 className={styles.title}>Mountain of Fire</h1>
         <p className={styles.of}>and Miracles</p>
         <h2 className={styles.subtitle}>Ministries</h2>
         <p className={styles.tagline}>Tampa, Florida</p>
+        <p className={styles.address}>{CHURCH.address}</p>
         <div className={styles.divider} />
-        <p className={styles.desc}>
-          MFM Tampa Florida welcomes all souls seeking God&apos;s love, deliverance, and His abundant
-          grace. You are welcome to join our growing family.
-        </p>
 
         <div className={styles.btns}>
-          <a href="#services" className="btn-primary" onClick={(e) => {
-            e.preventDefault()
-            document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })
-          }}>
-            Join Us Sunday
+          <a
+            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CHURCH.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Get Directions
           </a>
-          <a href="#contact" className="btn-secondary" onClick={(e) => {
-            e.preventDefault()
-            document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-          }}>
-            Plan Your Visit
+          <a
+            href="https://www.youtube.com/@mfm-tampaflorida4355"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            Watch Online
           </a>
         </div>
       </div>

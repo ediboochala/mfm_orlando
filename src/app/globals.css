@@ -1,7 +1,7 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  /* â”€â”€ BRAND COLOR SYSTEM (purple â†’ pink â†’ orange) â”€â”€ */
+  /* â”€â”€ BRAND COLOR SYSTEM (purple â†’ pink â†’ yellow) â”€â”€ */
   --primary: #800080;
   --primary-rgb: 128, 0, 128;
   --primary-dark: #5A005A;
@@ -11,9 +11,9 @@
   --secondary-rgb: 224, 33, 122;
   --secondary-dark: #A8125A;
   --secondary-light: #FF6FA8;
-  --accent: #FF7A1A;
-  --accent-rgb: 255, 122, 26;
-  --accent-light: #FFB347;
+  --accent: #F2B705;
+  --accent-rgb: 242, 183, 5;
+  --accent-light: #FFD93D;
   --background: #0A0A0A;
   --text: #FFFFFF;
   --text-rgb: 255, 255, 255;
@@ -45,9 +45,9 @@
   --secondary-rgb: 194, 24, 91;
   --secondary-dark: #8E0E42;
   --secondary-light: #E0509A;
-  --accent: #E85D04;
-  --accent-rgb: 232, 93, 4;
-  --accent-light: #FF8A3D;
+  --accent: #C99700;
+  --accent-rgb: 201, 151, 0;
+  --accent-light: #E8B923;
   --background: #FAF7F2;
   --text: #1C1C1C;
   --text-rgb: 28, 28, 28;
