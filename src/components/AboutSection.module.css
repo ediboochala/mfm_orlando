@@ -1,5 +1,5 @@
 ﻿.section {
-  background: linear-gradient(180deg, #0d0000 0%, #0a0a0a 100%);
+  background: linear-gradient(180deg, #0d0512 0%, #0a0a0a 100%);
 }
 
 .grid {
@@ -62,8 +62,8 @@
 }
 
 .verseBox {
-  background: rgba(212, 160, 23, 0.05);
-  border: 1px solid rgba(212, 160, 23, 0.15);
+  background: rgba(var(--accent-rgb), 0.05);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
   padding: 50px 40px;
   margin-bottom: 30px;
 }
@@ -114,7 +114,7 @@
 .quoteBox {
   margin-top: 30px;
   padding: 24px;
-  background: rgba(176, 26, 26, 0.1);
+  background: rgba(var(--secondary-rgb), 0.1);
   border-left: 2px solid var(--red);
 }
 

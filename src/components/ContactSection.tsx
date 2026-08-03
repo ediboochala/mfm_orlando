@@ -20,10 +20,10 @@ export default function ContactSection() {
     try {
       const formData = new FormData(e.currentTarget)
       formData.append('access_key', 'd0cc811c-aab9-4069-8692-049790e60eea')
-      formData.append('from_name', 'MFM Orlando Website')
+      formData.append('from_name', 'MFM Tampa Florida Website')
       formData.append(
         'subject',
-        (formData.get('subject') as string) || 'New Contact Message — MFM Orlando'
+        (formData.get('subject') as string) || 'New Contact Message — MFM Tampa Florida'
       )
 
       const res = await fetch('https://api.web3forms.com/submit', {
@@ -210,7 +210,7 @@ export default function ContactSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="MFM Orlando location map"
+              title="MFM Tampa Florida location map"
             />
           </div>
         </div>

@@ -22,7 +22,7 @@
   font-size: 10px;
   letter-spacing: 6px;
   text-transform: uppercase;
-  color: #D4A017;
+  color: var(--accent);
   display: block;
   margin-bottom: 14px;
 }
@@ -37,7 +37,7 @@
 .divider {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, #D4A017, #B01A1A);
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
   margin: 0 auto 18px;
 }
 .sub {
@@ -131,7 +131,7 @@
   transition: background 0.2s, transform 0.2s;
 }
 .card:hover .playBtn > svg {
-  background: #B01A1A;
+  background: var(--secondary);
   transform: scale(1.08);
 }
 
@@ -164,7 +164,7 @@
   transition: color 0.25s;
 }
 .card:hover .videoTitle {
-  color: #D4A017;
+  color: var(--accent);
 }
 
 .videoDesc {
@@ -193,7 +193,7 @@
   transition: color 0.2s;
 }
 .channelLink:hover {
-  color: #D4A017;
+  color: var(--accent);
 }
 
 /* â”€â”€ Channel CTA â”€â”€ */
@@ -210,7 +210,7 @@
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #D4A017;
+  color: var(--accent);
   border: 1px solid rgba(212,160,23,0.35);
   padding: 14px 28px;
   text-decoration: none;

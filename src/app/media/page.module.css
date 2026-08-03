@@ -10,7 +10,7 @@
 /* â”€â”€ Top Bar â”€â”€ */
 .topBar {
   background: rgba(10, 10, 10, 0.95);
-  border-bottom: 1px solid rgba(212, 160, 23, 0.12);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
   position: sticky;
   top: 88px;
   z-index: 100;
@@ -36,7 +36,7 @@
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.7);
+  color: rgba(var(--accent-rgb), 0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -51,7 +51,7 @@
 /* â”€â”€ Hero â”€â”€ */
 .hero {
   background: linear-gradient(160deg, #0d0202 0%, #1a0505 50%, #0d0202 100%);
-  border-bottom: 1px solid rgba(212, 160, 23, 0.1);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
   position: relative;
   overflow: hidden;
   padding: 100px 60px 80px;
@@ -61,7 +61,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(176, 26, 26, 0.18) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(var(--secondary-rgb), 0.18) 0%, transparent 65%);
   pointer-events: none;
 }
 .heroInner {
@@ -154,33 +154,33 @@
 
 /* â”€â”€ Live Schedule Table â”€â”€ */
 .scheduleTable {
-  border: 1px solid rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
   overflow: hidden;
 }
 .scheduleHead {
   display: grid;
   grid-template-columns: 180px 1fr 160px 100px;
   gap: 0;
-  background: rgba(212, 160, 23, 0.06);
-  border-bottom: 1px solid rgba(212, 160, 23, 0.12);
+  background: rgba(var(--accent-rgb), 0.06);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
 }
 .scheduleHead span {
   font-family: 'Cinzel', serif;
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.6);
+  color: rgba(var(--accent-rgb), 0.6);
   padding: 14px 20px;
 }
 .scheduleRow {
   display: grid;
   grid-template-columns: 180px 1fr 160px 100px;
   gap: 0;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.06);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.06);
   transition: background 0.15s;
 }
 .scheduleRow:last-child { border-bottom: none; }
-.scheduleRow:hover { background: rgba(212, 160, 23, 0.03); }
+.scheduleRow:hover { background: rgba(var(--accent-rgb), 0.03); }
 .scheduleDay,
 .scheduleService,
 .scheduleTime,
@@ -199,15 +199,15 @@
 }
 .scheduleService {
   color: rgba(var(--text-rgb), 0.55);
-  border-left: 1px solid rgba(212, 160, 23, 0.06);
+  border-left: 1px solid rgba(var(--accent-rgb), 0.06);
 }
 .scheduleTime {
-  color: rgba(212, 160, 23, 0.65);
+  color: rgba(var(--accent-rgb), 0.65);
   font-size: 12px;
-  border-left: 1px solid rgba(212, 160, 23, 0.06);
+  border-left: 1px solid rgba(var(--accent-rgb), 0.06);
 }
 .scheduleStreamed {
-  border-left: 1px solid rgba(212, 160, 23, 0.06);
+  border-left: 1px solid rgba(var(--accent-rgb), 0.06);
   font-family: 'Cinzel', serif;
   font-size: 9px;
   letter-spacing: 2px;
@@ -221,8 +221,8 @@
   display: flex;
   flex-direction: column;
   gap: 1px;
-  background: rgba(212, 160, 23, 0.08);
-  border: 1px solid rgba(212, 160, 23, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.08);
 }
 .channelCard {
   background: #0a0a0a;
@@ -235,7 +235,7 @@
   transition: background 0.2s;
   position: relative;
 }
-.channelCard:hover { background: rgba(176, 26, 26, 0.06); }
+.channelCard:hover { background: rgba(var(--secondary-rgb), 0.06); }
 .channelFeatured {
   border-left: 3px solid var(--gold);
 }
@@ -249,7 +249,7 @@
   text-transform: uppercase;
   color: var(--gold);
   opacity: 0.7;
-  border: 1px solid rgba(212, 160, 23, 0.3);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
   padding: 3px 8px;
 }
 .channelIcon {
@@ -275,7 +275,7 @@
 .channelHandle {
   font-size: 11px;
   letter-spacing: 2px;
-  color: rgba(212, 160, 23, 0.6);
+  color: rgba(var(--accent-rgb), 0.6);
 }
 .channelDesc {
   font-size: 13px;
@@ -285,7 +285,7 @@
 }
 .channelArrow {
   font-size: 18px;
-  color: rgba(212, 160, 23, 0.35);
+  color: rgba(var(--accent-rgb), 0.35);
   flex-shrink: 0;
   transition: color 0.2s, transform 0.2s;
 }
@@ -302,7 +302,7 @@
   gap: 20px;
 }
 .channelGroup {
-  border: 1px solid rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
   overflow: hidden;
 }
 :global([data-theme="light"]) .channelGroup { border-color: rgba(184,134,11,0.15); }
@@ -312,8 +312,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(212, 160, 23, 0.06);
-  border-top: 1px solid rgba(212, 160, 23, 0.06);
+  background: rgba(var(--accent-rgb), 0.06);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.06);
 }
 :global([data-theme="light"]) .videoStrip {
   background: rgba(184,134,11,0.08);
@@ -372,7 +372,7 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(176, 26, 26, 0.88);
+  background: rgba(var(--secondary-rgb), 0.88);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,7 +382,7 @@
 .videoPlayBtn:hover .videoPlayCircle {
   background: #cc0000;
   transform: scale(1.12);
-  box-shadow: 0 8px 28px rgba(176, 26, 26, 0.5);
+  box-shadow: 0 8px 28px rgba(var(--secondary-rgb), 0.5);
 }
 
 /* iframe */
@@ -430,8 +430,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(212, 160, 23, 0.08);
-  border: 1px solid rgba(212, 160, 23, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.08);
 }
 .prayerSessions {
   background: #0a0a0a;
@@ -445,8 +445,8 @@
   align-items: center;
   gap: 16px;
   padding: 18px 20px;
-  border: 1px solid rgba(212, 160, 23, 0.1);
-  background: rgba(212, 160, 23, 0.02);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
+  background: rgba(var(--accent-rgb), 0.02);
 }
 .sessionIcon { font-size: 22px; }
 .sessionLabel {
@@ -466,8 +466,8 @@
 }
 .anchorCard {
   padding: 18px 20px;
-  border: 1px solid rgba(212, 160, 23, 0.1);
-  background: rgba(176, 26, 26, 0.04);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
+  background: rgba(var(--secondary-rgb), 0.04);
 }
 .anchorLabel {
   display: block;
@@ -494,7 +494,7 @@
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.55);
+  color: rgba(var(--accent-rgb), 0.55);
   margin-bottom: 4px;
 }
 .numberRow {
@@ -503,7 +503,7 @@
   justify-content: space-between;
   gap: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.06);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.06);
 }
 .numberRow:last-child { border-bottom: none; padding-bottom: 0; }
 .numberTag {
@@ -528,20 +528,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  border: 1px solid rgba(212, 160, 23, 0.15);
-  background: linear-gradient(135deg, rgba(176, 26, 26, 0.08) 0%, rgba(212, 160, 23, 0.04) 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  background: linear-gradient(135deg, rgba(var(--secondary-rgb), 0.08) 0%, rgba(var(--accent-rgb), 0.04) 100%);
   overflow: hidden;
 }
 .prayerCityLeft {
   padding: 36px 40px;
-  border-right: 1px solid rgba(212, 160, 23, 0.1);
+  border-right: 1px solid rgba(var(--accent-rgb), 0.1);
 }
 .prayerCityLabel {
   display: block;
   font-size: 9px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.55);
+  color: rgba(var(--accent-rgb), 0.55);
   margin-bottom: 12px;
 }
 .prayerCityName {
@@ -568,7 +568,7 @@
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.5);
+  color: rgba(var(--accent-rgb), 0.5);
 }
 .prayerCityAddr {
   font-size: 14px;
@@ -578,7 +578,7 @@
 
 /* â”€â”€ Footer Strip â”€â”€ */
 .footerStrip {
-  border-top: 1px solid rgba(212, 160, 23, 0.1);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.1);
   padding: 24px 60px;
   text-align: center;
   font-size: 11px;
@@ -597,7 +597,7 @@
   .scheduleRow { grid-template-columns: 160px 1fr 140px 90px; }
   .prayerGrid  { grid-template-columns: 1fr; }
   .prayerCityCard { grid-template-columns: 1fr; }
-  .prayerCityLeft { border-right: none; border-bottom: 1px solid rgba(212, 160, 23, 0.1); }
+  .prayerCityLeft { border-right: none; border-bottom: 1px solid rgba(var(--accent-rgb), 0.1); }
 }
 @media (max-width: 768px) {
   .scheduleHead { display: none; }

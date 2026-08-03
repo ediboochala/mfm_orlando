@@ -8,7 +8,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Our Ministries — ${CHURCH.shortName}`,
   description:
-    "Discover the ministries of MFM Orlando — Men of Valor, Women Foundation, Youth Fellowship, Children's Church, Music Ministry, GEN 2:18, and the Expectant Family Ministry.",
+    "Discover the ministries of MFM Tampa Florida — Men of Valor, Women Foundation, Youth Fellowship, Children's Church, Music Ministry, GEN 2:18, and the Expectant Family Ministry.",
 }
 
 export default function MinistriesPage() {
@@ -46,7 +46,7 @@ export default function MinistriesPage() {
       <div className={styles.intro}>
         <div className={styles.introInner}>
           <p className={styles.introText}>
-            MFM Orlando is not just a Sunday church — it is a community of believers who serve together,
+            MFM Tampa Florida is not just a Sunday church — it is a community of believers who serve together,
             grow together, and fight together. Each of our ministries exists because a specific group of
             people has a specific need and a specific calling, and God has provided a covering for each one.
             Whether you are a man looking for brotherhood, a woman seeking to walk in her full identity,

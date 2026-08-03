@@ -289,7 +289,7 @@
   transition: background 0.25s, transform 0.25s;
 }
 .dotActive {
-  background: #D4A017;
+  background: var(--accent);
   transform: scale(1.5);
 }
 

@@ -10,7 +10,7 @@
 /* â”€â”€ Top Bar â”€â”€ */
 .topBar {
   background: rgba(10, 10, 10, 0.95);
-  border-bottom: 1px solid rgba(212, 160, 23, 0.12);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
   position: sticky;
   top: 88px;
   z-index: 100;
@@ -36,7 +36,7 @@
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.7);
+  color: rgba(var(--accent-rgb), 0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -51,7 +51,7 @@
 /* â”€â”€ Hero â”€â”€ */
 .hero {
   background: linear-gradient(160deg, #0d0202 0%, #1a0505 50%, #0d0202 100%);
-  border-bottom: 1px solid rgba(212, 160, 23, 0.1);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
   position: relative;
   overflow: hidden;
   padding: 100px 60px 80px;
@@ -61,7 +61,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(176, 26, 26, 0.18) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(var(--secondary-rgb), 0.18) 0%, transparent 65%);
   pointer-events: none;
 }
 .heroInner {
@@ -114,7 +114,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.3), transparent);
 }
 
 /* â”€â”€ Main Layout â”€â”€ */
@@ -143,8 +143,8 @@
 }
 
 .pastorCard {
-  border: 1px solid rgba(212, 160, 23, 0.18);
-  background: linear-gradient(160deg, rgba(212, 160, 23, 0.04) 0%, rgba(176, 26, 26, 0.04) 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  background: linear-gradient(160deg, rgba(var(--accent-rgb), 0.04) 0%, rgba(var(--secondary-rgb), 0.04) 100%);
   overflow: hidden;
 }
 
@@ -153,14 +153,14 @@
   width: 100%;
   height: 380px;
   overflow: hidden;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.12);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
   background: #180404;
 }
 .cardName {
   font-family: 'Cinzel', serif;
   font-size: 11px;
   letter-spacing: 2px;
-  color: rgba(212, 160, 23, 0.6);
+  color: rgba(var(--accent-rgb), 0.6);
   text-align: center;
   line-height: 1.8;
 }
@@ -182,13 +182,13 @@
 }
 .cardRole {
   font-size: 12px;
-  color: rgba(212, 160, 23, 0.7);
+  color: rgba(var(--accent-rgb), 0.7);
   letter-spacing: 1px;
   margin-bottom: 16px;
 }
 .cardDivider {
   height: 1px;
-  background: rgba(212, 160, 23, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
   margin-bottom: 16px;
 }
 .cardDetails {
@@ -206,7 +206,7 @@
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.5);
+  color: rgba(var(--accent-rgb), 0.5);
 }
 .detailValue {
   font-size: 12px;
@@ -222,19 +222,19 @@
   text-transform: uppercase;
   color: var(--gold);
   padding: 12px;
-  border: 1px solid rgba(212, 160, 23, 0.35);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
   text-decoration: none;
   transition: background 0.25s;
 }
 .contactBtn:hover {
-  background: rgba(212, 160, 23, 0.08);
+  background: rgba(var(--accent-rgb), 0.08);
 }
 
 /* Scripture Sidebar Box */
 .scriptureBox {
-  border: 1px solid rgba(212, 160, 23, 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
   padding: 24px;
-  background: rgba(212, 160, 23, 0.02);
+  background: rgba(var(--accent-rgb), 0.02);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -244,14 +244,14 @@
   font-size: 9px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.5);
+  color: rgba(var(--accent-rgb), 0.5);
 }
 .scriptureItem {
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding-left: 14px;
-  border-left: 2px solid rgba(212, 160, 23, 0.25);
+  border-left: 2px solid rgba(var(--accent-rgb), 0.25);
 }
 .scriptureVerse {
   font-style: italic;
@@ -263,7 +263,7 @@
   font-family: 'Cinzel', serif;
   font-size: 9px;
   letter-spacing: 2px;
-  color: rgba(212, 160, 23, 0.5);
+  color: rgba(var(--accent-rgb), 0.5);
 }
 
 /* â”€â”€ Letter â”€â”€ */
@@ -280,7 +280,7 @@
 .letterSeal {
   width: 56px;
   height: 56px;
-  border: 2px solid rgba(212, 160, 23, 0.4);
+  border: 2px solid rgba(var(--accent-rgb), 0.4);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -290,7 +290,7 @@
   letter-spacing: 2px;
   color: var(--gold);
   flex-shrink: 0;
-  background: rgba(212, 160, 23, 0.05);
+  background: rgba(var(--accent-rgb), 0.05);
 }
 .letterFrom {
   font-size: 10px;
@@ -307,14 +307,14 @@
 }
 .letterLocation {
   font-size: 12px;
-  color: rgba(212, 160, 23, 0.6);
+  color: rgba(var(--accent-rgb), 0.6);
   letter-spacing: 1px;
   margin-top: 2px;
 }
 
 .letterDivider {
   height: 1px;
-  background: linear-gradient(90deg, rgba(212, 160, 23, 0.3), transparent);
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.3), transparent);
   margin-bottom: 40px;
 }
 
@@ -343,8 +343,8 @@
 .signatureBlock {
   margin: 50px 0 50px;
   padding: 36px 40px;
-  border: 1px solid rgba(212, 160, 23, 0.15);
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.04) 0%, rgba(176, 26, 26, 0.03) 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.04) 0%, rgba(var(--secondary-rgb), 0.03) 100%);
   position: relative;
 }
 .signatureBlock::before {
@@ -358,7 +358,7 @@
 }
 .signatureLine {
   height: 1px;
-  background: linear-gradient(90deg, rgba(212, 160, 23, 0.35), transparent);
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.35), transparent);
   margin-bottom: 24px;
 }
 .signatureText {
@@ -389,12 +389,12 @@
 
 /* â”€â”€ Call to Action â”€â”€ */
 .cta {
-  border-top: 1px solid rgba(212, 160, 23, 0.12);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.12);
   padding-top: 50px;
 }
 .ctaInner {
-  background: linear-gradient(135deg, rgba(176, 26, 26, 0.1) 0%, rgba(212, 160, 23, 0.06) 100%);
-  border: 1px solid rgba(212, 160, 23, 0.15);
+  background: linear-gradient(135deg, rgba(var(--secondary-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0.06) 100%);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
   padding: 48px 40px;
   text-align: center;
 }
@@ -421,7 +421,7 @@
 
 /* â”€â”€ Footer Strip â”€â”€ */
 .footerStrip {
-  border-top: 1px solid rgba(212, 160, 23, 0.1);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.1);
   padding: 24px 60px;
   text-align: center;
   font-size: 11px;

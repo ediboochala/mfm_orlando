@@ -16,7 +16,7 @@
 .bgGlow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 40%, rgba(176, 26, 26, 0.14) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 50% 40%, rgba(var(--secondary-rgb), 0.14) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -33,7 +33,7 @@
   line-height: 1;
   letter-spacing: 8px;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(212, 160, 23, 0.35);
+  -webkit-text-stroke: 1px rgba(var(--accent-rgb), 0.35);
   margin: 0 0 8px;
   position: relative;
   z-index: 1;
@@ -42,7 +42,7 @@
 .divider {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, #D4A017, #B01A1A);
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
   margin: 0 auto 28px;
 }
 
@@ -83,7 +83,7 @@
   font-size: 10px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(212, 160, 23, 0.3);
+  color: rgba(var(--accent-rgb), 0.3);
 }
 
 @keyframes flamePulse {

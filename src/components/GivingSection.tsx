@@ -19,7 +19,7 @@ export default function GivingSection() {
             Give &amp; Advance<br />God&apos;s Kingdom
           </h2>
           <p className={`${styles.sub} reveal d2`}>
-            Your generous offering helps MFM Orlando continue its mission of deliverance,
+            Your generous offering helps MFM Tampa Florida continue its mission of deliverance,
             discipleship, and reaching souls for Jesus Christ.
           </p>
           <div className={`${styles.btns} reveal d3`}>

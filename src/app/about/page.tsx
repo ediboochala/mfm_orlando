@@ -15,7 +15,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `About Us — ${CHURCH.shortName}`,
   description:
-    'Learn about Mountain of Fire and Miracles Ministries Orlando — our history, our General Overseer Dr. D.K. Olukoya, our mission, and our vision.',
+    'Learn about Mountain of Fire and Miracles Ministries Tampa, Florida — our history, our General Overseer Dr. D.K. Olukoya, our mission, and our vision.',
 }
 
 export default function AboutPage() {
@@ -40,7 +40,7 @@ export default function AboutPage() {
         <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>Who We Are</span>
-          <h1 className={styles.heroTitle}>About MFM Orlando</h1>
+          <h1 className={styles.heroTitle}>About MFM Tampa Florida</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
             {CHURCH.name} — {CHURCH.tagline}.<br />
@@ -66,7 +66,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Our Identity</span>
-              <h2 className={styles.sectionTitle}>The Citadel of Solution</h2>
+              <h2 className={styles.sectionTitle}>MFM Tampa Florida</h2>
               <div className={styles.sectionDivider} />
             </div>
             <div className={styles.twoCol}>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 Mountain of Fire and Miracles Ministries (MFM) is a full-gospel, Pentecostal Christian ministry built on the foundation of aggressive prayer, biblical holiness, and the power of God to deliver, heal, and restore. Founded in Lagos, Nigeria in 1989 by Dr. Daniel Kolawole Olukoya, MFM has grown into one of the fastest-growing Christian ministries in the world, with branches in over 140 nations.
               </p>
               <p className={styles.bodyText}>
-                MFM Orlando — The Citadel of Solution — is the Orlando, Florida chapter of this global movement. Under the leadership of Pastor Samuel Omoigberae, we carry the same mandate: to preach the undiluted gospel of Jesus Christ, to pray aggressively, to deliver the captives, and to build an end-time army that is ready for the glorious return of our Lord.
+                MFM Tampa Florida is the Tampa, Florida chapter of this global movement. Under the leadership of Pastor Samuel Omoigberae, we carry the same mandate: to preach the undiluted gospel of Jesus Christ, to pray aggressively, to deliver the captives, and to build an end-time army that is ready for the glorious return of our Lord.
               </p>
             </div>
             <div className={styles.contactStrip}>
@@ -229,7 +229,7 @@ export default function AboutPage() {
           <div className={styles.cta}>
             <h3 className={styles.ctaTitle}>Join Our Family</h3>
             <p className={styles.ctaText}>
-              Whether you are new to faith or a seasoned believer, MFM Orlando has a place for you.
+              Whether you are new to faith or a seasoned believer, MFM Tampa Florida has a place for you.
               Come as you are — and encounter the God who transforms.
             </p>
             <div className={styles.ctaActions}>

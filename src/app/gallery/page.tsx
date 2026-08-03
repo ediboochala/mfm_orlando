@@ -37,7 +37,7 @@ export default function GalleryPage() {
           <h1 className={styles.heroTitle}>Photo Gallery</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
-            Glimpses of worship, prayer, deliverance, and fellowship at MFM Orlando —
+            Glimpses of worship, prayer, deliverance, and fellowship at MFM Tampa Florida —
             moments where the power of God was on full display.
           </p>
         </div>
@@ -74,8 +74,8 @@ export default function GalleryPage() {
                       <defs>
                         <linearGradient id={`gf-${item.id}`} x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
                           <stop offset="0%"  stopColor="#FFF9C4" stopOpacity="0.4" />
-                          <stop offset="50%" stopColor="#E53935" stopOpacity="0.5" />
-                          <stop offset="100%" stopColor="#7A0000" stopOpacity="0.35" />
+                          <stop offset="50%" stopColor="#E0217A" stopOpacity="0.5" />
+                          <stop offset="100%" stopColor="#A8125A" stopOpacity="0.35" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -99,7 +99,7 @@ export default function GalleryPage() {
             <div className={styles.ctaInner}>
               <h3 className={styles.ctaTitle}>Share Your Moments</h3>
               <p className={styles.ctaText}>
-                Have photos from an MFM Orlando service or event? We&apos;d love to feature them here.
+                Have photos from an MFM Tampa Florida service or event? We&apos;d love to feature them here.
                 Contact us to share your captured moments of God&apos;s work in our community.
               </p>
               <Link href="/#contact" className="btn-primary">Contact Us</Link>

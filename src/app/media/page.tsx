@@ -8,7 +8,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Media & Live — ${CHURCH.shortName}`,
   description:
-    'Watch MFM Orlando live services, access the MFM YouTube channels, and find the daily prayer line schedule.',
+    'Watch MFM Tampa Florida live services, access the MFM YouTube channels, and find the daily prayer line schedule.',
 }
 
 export default function MediaPage() {

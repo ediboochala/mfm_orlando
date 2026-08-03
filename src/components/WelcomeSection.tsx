@@ -20,7 +20,7 @@ export default function WelcomeSection() {
                   priority
                 />
               </div>
-              <div className={styles.tag}>Host Pastor · MFM Orlando</div>
+              <div className={styles.tag}>Host Pastor · MFM Tampa Florida</div>
             </div>
 
             {/* Scripture accent */}

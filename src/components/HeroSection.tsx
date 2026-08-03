@@ -32,10 +32,10 @@ export default function HeroSection() {
         <h1 className={styles.title}>Mountain of Fire</h1>
         <p className={styles.of}>and Miracles</p>
         <h2 className={styles.subtitle}>Ministries</h2>
-        <p className={styles.tagline}>The Citadel of Solution — Orlando, Florida</p>
+        <p className={styles.tagline}>Tampa, Florida</p>
         <div className={styles.divider} />
         <p className={styles.desc}>
-          MFM Orlando welcomes all souls seeking God&apos;s love, deliverance, and His abundant
+          MFM Tampa Florida welcomes all souls seeking God&apos;s love, deliverance, and His abundant
           grace. You are welcome to join our growing family.
         </p>
 

@@ -7,7 +7,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `Pastor Samuel Omoigberae — ${CHURCH.shortName}`,
-  description: 'A personal greeting and pastoral message from Pastor Samuel Omoigberae, Host Pastor of Mountain of Fire and Miracles Ministries Orlando, Florida.',
+  description: 'A personal greeting and pastoral message from Pastor Samuel Omoigberae, Host Pastor of Mountain of Fire and Miracles Ministries Tampa, Florida.',
 }
 
 const SCRIPTURES = [
@@ -47,8 +47,8 @@ export default function PastorPage() {
                 <defs>
                   <linearGradient id="heroFlame" x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
                     <stop offset="0%"  stopColor="#FFF9C4" stopOpacity="0.8" />
-                    <stop offset="50%" stopColor="#E53935" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#7A0000" stopOpacity="1" />
+                    <stop offset="50%" stopColor="#E0217A" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#A8125A" stopOpacity="1" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -62,7 +62,7 @@ export default function PastorPage() {
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
             A personal letter from Pastor Samuel Omoigberae,<br />
-            Host Pastor — Mountain of Fire and Miracles Ministries Orlando
+            Host Pastor — Mountain of Fire and Miracles Ministries Tampa, Florida
           </p>
         </div>
 

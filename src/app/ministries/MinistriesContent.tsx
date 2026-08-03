@@ -25,8 +25,8 @@ function FlameHolder({ small = false }: { small?: boolean }) {
             <defs>
               <linearGradient id={`flame-${uid}`} x1="13" y1="2" x2="13" y2="38" gradientUnits="userSpaceOnUse">
                 <stop offset="0%"   stopColor="#FFF9C4" stopOpacity="0.3" />
-                <stop offset="50%"  stopColor="#E53935" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#7A0000" stopOpacity="0.25" />
+                <stop offset="50%"  stopColor="#E0217A" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#A8125A" stopOpacity="0.25" />
               </linearGradient>
             </defs>
           </svg>
@@ -344,7 +344,7 @@ export default function MinistriesContent() {
           <div className={styles.cta}>
             <h3 className={styles.ctaTitle}>Ready to Get Involved?</h3>
             <p className={styles.ctaText}>
-              Every ministry at MFM Orlando is open and welcoming. Whether you want to join, serve, or simply find out more — reach out to us and we will connect you with the right family.
+              Every ministry at MFM Tampa Florida is open and welcoming. Whether you want to join, serve, or simply find out more — reach out to us and we will connect you with the right family.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/#contact" className="btn-primary">Contact Us</Link>

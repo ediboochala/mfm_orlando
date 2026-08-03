@@ -9,7 +9,7 @@ const CARDS = [
     image: '/22 (1).jpg',
     tag: 'Our Congregation',
     title: 'A Family of Believers',
-    desc: 'United in faith, prayer, and the love of Christ — the MFM Orlando family welcomes every soul seeking God\'s presence.',
+    desc: 'United in faith, prayer, and the love of Christ — the MFM Tampa Florida family welcomes every soul seeking God\'s presence.',
   },
   {
     image: '/22 (2).jpg',
@@ -27,7 +27,7 @@ const CARDS = [
     image: '/22 (4).jpg',
     tag: 'Church Community',
     title: 'One Body, Many Members',
-    desc: 'From children to elders, from new converts to seasoned warriors — MFM Orlando is a church where everyone belongs.',
+    desc: 'From children to elders, from new converts to seasoned warriors — MFM Tampa Florida is a church where everyone belongs.',
   },
   {
     image: '/Pastor Sam.png',

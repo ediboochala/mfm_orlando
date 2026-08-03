@@ -6,8 +6,8 @@
 .section {
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(212, 160, 23, 0.15);
-  border-bottom: 1px solid rgba(212, 160, 23, 0.15);
+  border-top: 1px solid rgba(var(--accent-rgb), 0.15);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
 /* Background photo */
@@ -94,8 +94,8 @@
 .cityBox {
   margin-top: 30px;
   padding: 20px 24px;
-  background: rgba(176, 26, 26, 0.1);
-  border: 1px solid rgba(176, 26, 26, 0.25);
+  background: rgba(var(--secondary-rgb), 0.1);
+  border: 1px solid rgba(var(--secondary-rgb), 0.25);
 }
 
 .cityLabel {
@@ -114,8 +114,8 @@
 
 /* â”€â”€ TIME CARD â”€â”€ */
 .timeCard {
-  background: rgba(212, 160, 23, 0.06);
-  border: 1px solid rgba(212, 160, 23, 0.2);
+  background: rgba(var(--accent-rgb), 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   padding: 50px 40px;
   text-align: center;
   position: relative;
@@ -133,7 +133,7 @@
 .timeSession {
   margin-bottom: 36px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.1);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
 }
 .timeSession:last-of-type {
   margin-bottom: 0;

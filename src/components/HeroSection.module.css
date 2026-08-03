@@ -13,9 +13,9 @@
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(176, 26, 26, 0.55) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(212, 160, 23, 0.12) 0%, transparent 60%),
-    linear-gradient(180deg, #0a0a0a 0%, #100505 60%, #1a0000 100%);
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(var(--secondary-rgb), 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(var(--accent-rgb), 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, #0a0a0a 0%, #100510 60%, #160022 100%);
 }
 
 .heroGrid {
@@ -23,8 +23,8 @@
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(rgba(212, 160, 23, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 160, 23, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(var(--accent-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
 }
@@ -52,19 +52,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(176, 26, 26, 0.2);
-  border: 1px solid rgba(176, 26, 26, 0.5);
+  background: rgba(var(--secondary-rgb), 0.2);
+  border: 1px solid rgba(var(--secondary-rgb), 0.5);
   padding: 6px 14px;
   margin-bottom: 30px;
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #ff6b6b;
+  color: var(--secondary-light);
 }
 .liveDot {
   width: 6px;
   height: 6px;
-  background: #ff6b6b;
+  background: var(--secondary-light);
   border-radius: 50%;
   animation: livePulse 1.2s infinite;
 }
@@ -90,13 +90,13 @@
 .flame1 {
   width: 30px;
   height: 60px;
-  background: linear-gradient(180deg, #fff5c8, #f9a825, #e53935, transparent);
+  background: linear-gradient(180deg, #fff5c8, var(--accent), var(--secondary), transparent);
   animation: flamePulse 1.2s ease-in-out infinite;
 }
 .flame2 {
   width: 22px;
   height: 48px;
-  background: linear-gradient(180deg, #fff8dc, #fdd835, transparent);
+  background: linear-gradient(180deg, #fff8dc, var(--accent-light), transparent);
   animation: flamePulse 1s 0.2s ease-in-out infinite;
 }
 .flame3 {
@@ -124,11 +124,11 @@
   font-weight: 900;
   font-size: clamp(42px, 8vw, 96px);
   line-height: 1.05;
-  background: linear-gradient(135deg, #fff 0%, #f0c040 50%, #fff 100%);
+  background: linear-gradient(135deg, #fff 0%, var(--accent-light) 50%, #fff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 40px rgba(212, 160, 23, 0.3));
+  filter: drop-shadow(0 0 40px rgba(var(--accent-rgb), 0.3));
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1s 0.5s forwards;
@@ -149,7 +149,7 @@
   font-weight: 700;
   font-size: clamp(28px, 5.5vw, 64px);
   line-height: 1.1;
-  background: linear-gradient(135deg, #e53935 0%, #d4a017 100%);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -244,7 +244,7 @@
   color: rgba(255, 255, 255, 0.55);
 }
 :global([data-theme="light"]) .tagline {
-  color: #F5EDD8;
+  color: var(--text-soft);
 }
 :global([data-theme="light"]) .desc {
   color: rgba(255, 255, 255, 0.7);
@@ -253,6 +253,6 @@
   color: rgba(255, 255, 255, 0.45);
 }
 :global([data-theme="light"]) .liveBadge {
-  color: #ff8a8a;
+  color: var(--secondary-light);
 }
 

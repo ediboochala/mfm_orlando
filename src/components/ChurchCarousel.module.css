@@ -27,7 +27,7 @@
   flex: 0 0 var(--card-w);
   height: var(--card-h);
   overflow: hidden;
-  border: 1px solid rgba(212, 160, 23, 0.18);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
 }
 
 .cardImg {
@@ -64,7 +64,7 @@
   font-size: 9px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #D4A017;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
@@ -81,7 +81,7 @@
 .cardLine {
   width: 36px;
   height: 1px;
-  background: linear-gradient(90deg, #D4A017, transparent);
+  background: linear-gradient(90deg, var(--accent), transparent);
   margin-bottom: 12px;
 }
 
@@ -103,9 +103,9 @@
 .arrow {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(212, 160, 23, 0.35);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
   background: transparent;
-  color: rgba(212, 160, 23, 0.8);
+  color: rgba(var(--accent-rgb), 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,9 +113,9 @@
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .arrow:hover {
-  background: rgba(212, 160, 23, 0.1);
-  border-color: rgba(212, 160, 23, 0.6);
-  color: #D4A017;
+  background: rgba(var(--accent-rgb), 0.1);
+  border-color: rgba(var(--accent-rgb), 0.6);
+  color: var(--accent);
 }
 .arrowDisabled {
   opacity: 0.25;
@@ -137,7 +137,7 @@
   transition: background 0.25s, transform 0.25s;
 }
 .dotActive {
-  background: #D4A017;
+  background: var(--accent);
   transform: scale(1.5);
 }
 

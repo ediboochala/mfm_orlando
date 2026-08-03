@@ -74,10 +74,10 @@ export default function ParticlesCanvas() {
         ctx.globalAlpha = p.life * 0.5
         ctx.fillStyle =
           p.hue === 'gold'
-            ? `rgba(212,160,23,${p.life})`
-            : `rgba(200,40,40,${p.life})`
+            ? `rgba(255,122,26,${p.life})`
+            : `rgba(224,33,122,${p.life})`
         ctx.shadowBlur = 6
-        ctx.shadowColor = p.hue === 'gold' ? '#D4A017' : '#B01A1A'
+        ctx.shadowColor = p.hue === 'gold' ? '#FF7A1A' : '#E0217A'
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
         ctx.fill()

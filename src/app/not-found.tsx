@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import styles from './not-found.module.css'
 
 export const metadata: Metadata = {
-  title: '404 — Page Not Found | MFM Orlando',
+  title: '404 — Page Not Found | MFM Tampa Florida',
 }
 
 export default function NotFound() {
@@ -21,8 +21,8 @@ export default function NotFound() {
           <defs>
             <linearGradient id="nfFlame" x1="20" y1="2" x2="20" y2="54" gradientUnits="userSpaceOnUse">
               <stop offset="0%"  stopColor="#FFF9C4" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="#E53935" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#7A0000" stopOpacity="1" />
+              <stop offset="50%" stopColor="#E0217A" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#A8125A" stopOpacity="1" />
             </linearGradient>
           </defs>
         </svg>
@@ -45,7 +45,7 @@ export default function NotFound() {
       </div>
 
       <p className={styles.bottomLabel} aria-hidden="true">
-        MFM Orlando — The Citadel of Solution
+        MFM Tampa Florida
       </p>
     </div>
   )

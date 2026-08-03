@@ -7,7 +7,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `Blog — ${CHURCH.shortName}`,
-  description: 'Articles, teachings, and devotionals from Mountain of Fire and Miracles Ministries Orlando on prayer, deliverance, holiness, and end-time living.',
+  description: 'Articles, teachings, and devotionals from Mountain of Fire and Miracles Ministries Tampa, Florida on prayer, deliverance, holiness, and end-time living.',
 }
 
 export default function BlogPage() {

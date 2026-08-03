@@ -1,33 +1,64 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
 
 :root {
-  --red: #B01A1A;
-  --deep-red: #7A0000;
-  --gold: #D4A017;
-  --gold-light: #F0C040;
-  --dark: #0A0A0A;
-  --dark2: #111111;
-  --dark3: #1A1A1A;
-  --white: #FFFFFF;
-  --off-white: #F5EDD8;
-  --gray: #888;
+  /* â”€â”€ BRAND COLOR SYSTEM (purple â†’ pink â†’ orange) â”€â”€ */
+  --primary: #6B2FA0;
+  --primary-rgb: 107, 47, 160;
+  --primary-dark: #3A1861;
+  --secondary: #E0217A;
+  --secondary-rgb: 224, 33, 122;
+  --secondary-dark: #A8125A;
+  --secondary-light: #FF6FA8;
+  --accent: #FF7A1A;
+  --accent-rgb: 255, 122, 26;
+  --accent-light: #FFB347;
+  --background: #0A0A0A;
+  --text: #FFFFFF;
   --text-rgb: 255, 255, 255;
-  --bg-card: #111111;
+  --text-soft: #F3E6F0;
+  --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 55%, var(--accent) 100%);
+
+  /* â”€â”€ Legacy aliases (kept so existing component styles inherit the new palette) â”€â”€ */
+  --red: var(--secondary);
+  --deep-red: var(--secondary-dark);
+  --gold: var(--accent);
+  --gold-light: var(--accent-light);
+  --dark: var(--background);
+  --dark2: #150A1D;
+  --dark3: #1C0F26;
+  --white: var(--text);
+  --off-white: var(--text-soft);
+  --gray: #9C8DAE;
+  --bg-card: #150A1D;
 }
 
 /* â”€â”€ LIGHT THEME â”€â”€ */
 [data-theme="light"] {
-  --red: #C0392B;
-  --deep-red: #922B21;
-  --gold: #B8860B;
-  --gold-light: #D4A017;
-  --dark: #FAF7F2;
-  --dark2: #F2EDE4;
-  --dark3: #E8E0D0;
-  --white: #1C1C1C;
-  --off-white: #3D2E10;
-  --gray: #666;
+  --primary: #4A1F73;
+  --primary-rgb: 74, 31, 115;
+  --primary-dark: #34134F;
+  --secondary: #C2185B;
+  --secondary-rgb: 194, 24, 91;
+  --secondary-dark: #8E0E42;
+  --secondary-light: #E0509A;
+  --accent: #E85D04;
+  --accent-rgb: 232, 93, 4;
+  --accent-light: #FF8A3D;
+  --background: #FAF7F2;
+  --text: #1C1C1C;
   --text-rgb: 28, 28, 28;
+  --text-soft: #4A2E52;
+
+  --red: var(--secondary);
+  --deep-red: var(--secondary-dark);
+  --gold: var(--accent);
+  --gold-light: var(--accent-light);
+  --dark: var(--background);
+  --dark2: #F2EAF5;
+  --dark3: #E8DCEC;
+  --white: var(--text);
+  --off-white: var(--text-soft);
+  --gray: #6B5E75;
   --bg-card: #FFFFFF;
 }
 [data-theme="light"] body {
@@ -139,15 +170,15 @@ section {
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, var(--red), var(--deep-red));
+  background: var(--gradient-brand);
   color: var(--white);
   padding: 16px 36px;
   text-decoration: none;
-  border: 1px solid rgba(212, 160, 23, 0.4);
+  border: 1px solid rgba(var(--accent-rgb), 0.4);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 30px rgba(176, 26, 26, 0.4);
+  box-shadow: 0 4px 30px rgba(var(--secondary-rgb), 0.4);
   display: inline-block;
   cursor: pointer;
 }
@@ -155,13 +186,13 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(212, 160, 23, 0.2), transparent);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2), transparent);
   opacity: 0;
   transition: opacity 0.3s;
 }
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(176, 26, 26, 0.6);
+  box-shadow: 0 10px 40px rgba(var(--secondary-rgb), 0.6);
 }
 .btn-primary:hover::before {
   opacity: 1;
@@ -174,12 +205,12 @@ section {
   color: var(--gold);
   padding: 16px 36px;
   text-decoration: none;
-  border: 1px solid rgba(212, 160, 23, 0.5);
+  border: 1px solid rgba(var(--accent-rgb), 0.5);
   transition: background 0.3s, color 0.3s, transform 0.3s;
   display: inline-block;
 }
 .btn-secondary:hover {
-  background: rgba(212, 160, 23, 0.1);
+  background: rgba(var(--accent-rgb), 0.1);
   transform: translateY(-3px);
 }
 .btn-gold {
@@ -192,12 +223,12 @@ section {
   padding: 18px 40px;
   text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 30px rgba(212, 160, 23, 0.4);
+  box-shadow: 0 4px 30px rgba(var(--accent-rgb), 0.4);
   display: inline-block;
 }
 .btn-gold:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(212, 160, 23, 0.6);
+  box-shadow: 0 10px 40px rgba(var(--accent-rgb), 0.6);
 }
 .btn-outline-white {
   font-family: 'Cinzel', serif;
@@ -253,19 +284,19 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(176, 26, 26, 0.2);
-  border: 1px solid rgba(176, 26, 26, 0.5);
+  background: rgba(var(--secondary-rgb), 0.2);
+  border: 1px solid rgba(var(--secondary-rgb), 0.5);
   padding: 6px 14px;
   margin-bottom: 30px;
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #ff6b6b;
+  color: var(--secondary-light);
 }
 .live-dot {
   width: 6px;
   height: 6px;
-  background: #ff6b6b;
+  background: var(--secondary-light);
   border-radius: 50%;
   animation: livePulse 1.2s infinite;
 }
@@ -310,13 +341,13 @@ section {
 .flame-1 {
   width: 30px;
   height: 60px;
-  background: linear-gradient(180deg, #fff5c8, #f9a825, #e53935, transparent);
+  background: linear-gradient(180deg, #fff5e0, var(--accent-light), var(--secondary), transparent);
   animation: flamePulse 1.2s ease-in-out infinite;
 }
 .flame-2 {
   width: 22px;
   height: 48px;
-  background: linear-gradient(180deg, #fff8dc, #fdd835, transparent);
+  background: linear-gradient(180deg, #fff8dc, var(--accent), transparent);
   animation: flamePulse 1s 0.2s ease-in-out infinite;
 }
 .flame-3 {
