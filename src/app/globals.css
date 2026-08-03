@@ -144,6 +144,10 @@ section {
   margin: 0 auto;
   padding: 100px 60px;
 }
+.org-name {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
 .section-label {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;

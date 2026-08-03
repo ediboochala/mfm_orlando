@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { PASTOR } from '@/data/siteData'
+import { highlightOrgName } from '@/lib/highlightOrgName'
 import styles from './WelcomeSection.module.css'
 
 export default function WelcomeSection() {
@@ -38,7 +39,7 @@ export default function WelcomeSection() {
             <h2 className="section-title">Greetings in the<br />Name of Jesus</h2>
             <div className="section-divider" />
 
-            <p className={styles.greeting}>{PASTOR.greeting}</p>
+            <p className={styles.greeting}>{highlightOrgName(PASTOR.greeting)}</p>
 
             <blockquote className={styles.quote}>
               &ldquo;Jesus wants to deliver you from the yokes, bondages, oppressions,

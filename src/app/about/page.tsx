@@ -43,7 +43,7 @@ export default function AboutPage() {
           <h1 className={styles.heroTitle}>About MFM Tampa Florida</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
-            {CHURCH.name} — {CHURCH.tagline}.<br />
+            <span className="org-name">{CHURCH.name}</span> — {CHURCH.tagline}.<br />
             A ministry of fire, miracles, and the uncompromising gospel of Jesus Christ.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.twoCol}>
               <p className={styles.bodyText}>
-                Mountain of Fire and Miracles Ministries (MFM) is a full-gospel, Pentecostal Christian ministry built on the foundation of aggressive prayer, biblical holiness, and the power of God to deliver, heal, and restore. Founded in Lagos, Nigeria in 1989 by Dr. Daniel Kolawole Olukoya, MFM has grown into one of the fastest-growing Christian ministries in the world, with branches in over 140 nations.
+                <span className="org-name">Mountain of Fire and Miracles Ministries</span> (MFM) is a full-gospel, Pentecostal Christian ministry built on the foundation of aggressive prayer, biblical holiness, and the power of God to deliver, heal, and restore. Founded in Lagos, Nigeria in 1989 by Dr. Daniel Kolawole Olukoya, MFM has grown into one of the fastest-growing Christian ministries in the world, with branches in over 140 nations.
               </p>
               <p className={styles.bodyText}>
                 MFM Tampa Florida is the Tampa, Florida chapter of this global movement. Under the leadership of Pastor Kehinde Olajide, we carry the same mandate: to preach the undiluted gospel of Jesus Christ, to pray aggressively, to deliver the captives, and to build an end-time army that is ready for the glorious return of our Lord.
@@ -186,7 +186,7 @@ export default function AboutPage() {
               <h2 className={styles.sectionTitle}>MFM Mission Statement</h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
-                The mandate of Mountain of Fire and Miracles Ministries is rooted in the Great Commission and the full gospel of Jesus Christ. These are the pillars on which the ministry was built.
+                The mandate of <span className="org-name">Mountain of Fire and Miracles Ministries</span> is rooted in the Great Commission and the full gospel of Jesus Christ. These are the pillars on which the ministry was built.
               </p>
             </div>
 

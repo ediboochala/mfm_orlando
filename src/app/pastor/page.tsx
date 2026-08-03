@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PASTOR, CHURCH } from '@/data/siteData'
+import { highlightOrgName } from '@/lib/highlightOrgName'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
 
@@ -99,7 +100,7 @@ export default function PastorPage() {
                     </div>
                     <div className={styles.cardDetail}>
                       <span className={styles.detailLabel}>Ministry</span>
-                      <span className={styles.detailValue}>{CHURCH.name}</span>
+                      <span className={`${styles.detailValue} org-name`}>{CHURCH.name}</span>
                     </div>
                     <div className={styles.cardDetail}>
                       <span className={styles.detailLabel}>Location</span>
@@ -136,7 +137,7 @@ export default function PastorPage() {
                 </div>
                 <div>
                   <p className={styles.letterFrom}>From the Desk of the Host Pastor</p>
-                  <p className={styles.letterChurch}>{CHURCH.name}</p>
+                  <p className={`${styles.letterChurch} org-name`}>{CHURCH.name}</p>
                   <p className={styles.letterLocation}>{CHURCH.location}</p>
                 </div>
               </div>
@@ -145,7 +146,7 @@ export default function PastorPage() {
 
               {PASTOR.paragraphs.map((para, i) => (
                 <p key={i} className={`${styles.para} ${i === 0 ? styles.paraFirst : ''}`}>
-                  {para}
+                  {highlightOrgName(para)}
                 </p>
               ))}
 
@@ -154,7 +155,7 @@ export default function PastorPage() {
                 <p className={styles.signatureText}>{PASTOR.signature}</p>
                 <p className={styles.signatureName}>{PASTOR.signatureName}</p>
                 <p className={styles.signatureTitle}>{PASTOR.title}</p>
-                <p className={styles.signatureChurch}>{CHURCH.name}, {CHURCH.location}</p>
+                <p className={styles.signatureChurch}><span className="org-name">{CHURCH.name}</span>, {CHURCH.location}</p>
               </div>
 
               {/* Call to Action */}
