@@ -34,7 +34,7 @@
 .item:hover::before { width: 80%; }
 
 .num {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 52px;
   font-weight: 700;
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
@@ -46,7 +46,7 @@
 }
 
 .label {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 4px;
   color: rgba(var(--text-rgb), 0.4);

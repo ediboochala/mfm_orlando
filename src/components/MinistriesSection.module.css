@@ -43,7 +43,7 @@
 }
 
 .name {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--white);
@@ -60,7 +60,7 @@
 .learn {
   display: inline-block;
   margin-top: 18px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
   color: var(--gold);

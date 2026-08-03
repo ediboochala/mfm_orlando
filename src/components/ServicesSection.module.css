@@ -132,7 +132,7 @@
 }
 
 .cardDay {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   letter-spacing: 4px;
   color: var(--gold);
@@ -141,7 +141,7 @@
   display: block;
 }
 .cardName {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--white);
@@ -149,7 +149,7 @@
   line-height: 1.35;
 }
 .cardTime {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   color: rgba(var(--text-rgb), 0.52);
   letter-spacing: 2px;
@@ -162,7 +162,7 @@
   font-size: 13px;
   color: rgba(var(--text-rgb), 0.35);
   letter-spacing: 2px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* â”€â”€ Responsive â”€â”€ */

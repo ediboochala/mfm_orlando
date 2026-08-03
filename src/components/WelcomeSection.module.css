@@ -49,7 +49,7 @@
 }
 
 .placeholderLabel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   letter-spacing: 3px;
   color: rgba(var(--accent-rgb), 0.7);
@@ -70,7 +70,7 @@
   right: -14px;
   background: var(--red);
   padding: 16px 24px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 2px;
   color: var(--gold);
@@ -96,7 +96,7 @@
 }
 
 .scriptureRef {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 3px;
   color: rgba(var(--accent-rgb), 0.5);
@@ -147,7 +147,7 @@
 }
 
 .sig {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--gold);
   letter-spacing: 2px;

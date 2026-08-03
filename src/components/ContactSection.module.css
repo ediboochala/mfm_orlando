@@ -36,7 +36,7 @@
 }
 
 .infoLabel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 3px;
   color: var(--gold);
@@ -89,7 +89,7 @@
 }
 
 .formLabel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   letter-spacing: 3px;
   color: rgba(var(--text-rgb), 0.4);
@@ -101,7 +101,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--white);
   padding: 14px 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   outline: none;
   transition: border-color 0.3s;
@@ -125,7 +125,7 @@
 }
 
 .submitBtn {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -185,7 +185,7 @@
   margin-top: 2px;
 }
 .successTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   color: var(--gold);
@@ -205,7 +205,7 @@
   border: 1px solid rgba(var(--secondary-rgb), 0.3);
 }
 .errorTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 1px;
   color: var(--secondary-light);
@@ -258,7 +258,7 @@
 .mapPin { font-size: 18px; line-height: 1; flex-shrink: 0; }
 
 .mapLabel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -277,7 +277,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;

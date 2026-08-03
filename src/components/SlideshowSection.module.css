@@ -116,9 +116,9 @@
 }
 
 .slideLabel {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 6px;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -127,7 +127,7 @@
 }
 
 .slideTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 5vw, 54px);
   color: #fff;
@@ -162,7 +162,7 @@
   z-index: 4;
 }
 .slideNumCurrent {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 700;
   color: rgba(var(--accent-rgb),0.7);
@@ -174,7 +174,7 @@
   background: rgba(255,255,255,0.25);
 }
 .slideNumTotal {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -240,7 +240,7 @@
   filter: drop-shadow(0 0 8px rgba(0,0,0,0.8));
 }
 .thumbLabel {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;

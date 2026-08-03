@@ -43,7 +43,7 @@
   flex-direction: column;
 }
 .logoName {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: var(--gold);
@@ -51,8 +51,8 @@
   line-height: 1;
 }
 .logoTagline {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 9px;
   color: var(--off-white);
   letter-spacing: 5px;
@@ -67,7 +67,7 @@
   list-style: none;
 }
 .navLinks a {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 2.5px;
   color: rgba(var(--text-rgb), 0.8);
@@ -92,7 +92,7 @@
 
 /* â”€â”€ CTA â”€â”€ */
 .navCta {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 2px;
   color: var(--gold);
@@ -153,7 +153,7 @@
   backdrop-filter: blur(16px);
 }
 .mobileLink {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   letter-spacing: 4px;
   color: rgba(var(--text-rgb), 0.8);
@@ -163,7 +163,7 @@
 }
 .mobileLink:hover { color: var(--gold); }
 .mobileCta {
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   letter-spacing: 3px;
   color: var(--gold);
