@@ -1,6 +1,6 @@
 ﻿.footer {
-  background: #050505;
-  border-top: 1px solid rgba(var(--accent-rgb), 0.1);
+  background: var(--primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 40px 60px;
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@
 
 .copy {
   font-size: 11px;
-  color: rgba(var(--text-rgb), 0.25);
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 1px;
 }
 
@@ -32,13 +32,13 @@
   font-family: 'Cinzel', serif;
   font-size: 9px;
   letter-spacing: 2px;
-  color: rgba(var(--text-rgb), 0.3);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s;
   cursor: pointer;
 }
-.link:hover { color: var(--gold); }
+.link:hover { color: var(--accent-light); }
 
 @media (max-width: 768px) {
   .footer {
@@ -48,7 +48,3 @@
   }
   .links { flex-wrap: wrap; justify-content: center; gap: 18px; }
 }
-
-
-/* Light theme */
-:global([data-theme="light"]) .footer { background: var(--dark3); border-top-color: rgba(184,134,11,0.12); }
