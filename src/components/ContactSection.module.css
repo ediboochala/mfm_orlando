@@ -130,7 +130,7 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   background: linear-gradient(135deg, var(--red), var(--deep-red));
-  color: var(--white);
+  color: #FFFFFF;
   padding: 18px;
   border: 1px solid rgba(var(--accent-rgb), 0.4);
   cursor: pointer;

@@ -104,7 +104,7 @@
 }
 .navCta:hover {
   background: var(--gold);
-  color: var(--dark);
+  color: #FFFFFF;
 }
 
 /* â”€â”€ RIGHT CLUSTER (toggle + CTA) â”€â”€ */
@@ -175,7 +175,7 @@
 }
 .mobileCta:hover {
   background: var(--gold);
-  color: var(--dark);
+  color: #FFFFFF;
 }
 
 @media (max-width: 1024px) {
@@ -208,9 +208,6 @@
 }
 :global([data-theme="light"]) .mobileLink:hover {
   color: var(--gold);
-}
-:global([data-theme="light"]) .mobileCta:hover {
-  color: var(--dark);
 }
 :global([data-theme="light"]) .bar {
   background: #3a2a10;

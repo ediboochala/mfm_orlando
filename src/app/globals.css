@@ -175,7 +175,7 @@ section {
   letter-spacing: 3px;
   text-transform: uppercase;
   background: var(--primary);
-  color: var(--white);
+  color: #FFFFFF;
   padding: 16px 36px;
   text-decoration: none;
   position: relative;
@@ -212,7 +212,7 @@ section {
   letter-spacing: 3px;
   text-transform: uppercase;
   background: var(--gold);
-  color: var(--dark);
+  color: #FFFFFF;
   padding: 18px 40px;
   text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -312,7 +312,7 @@ section {
   font-family: 'Cinzel', serif;
   font-size: 11px;
   letter-spacing: 4px;
-  color: var(--dark);
+  color: #FFFFFF;
   text-transform: uppercase;
   padding: 0 40px;
   flex-shrink: 0;
