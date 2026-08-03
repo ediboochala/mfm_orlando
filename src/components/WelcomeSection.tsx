@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { PASTOR } from '@/data/siteData'
 import styles from './WelcomeSection.module.css'
 
@@ -11,21 +12,13 @@ export default function WelcomeSection() {
           <div className={`${styles.imgWrap} reveal-left`}>
             <div className={styles.imgFrame}>
               <div className={styles.imgPlaceholder}>
-                <svg className={styles.flameIcon} width="40" height="56" viewBox="0 0 26 38" fill="none">
-                  <path
-                    d="M13 2C13 2 20 9 18 18C22 14 24 8 22 4C26 10 27 18 23 25C20 30 16 33 13 38C10 33 6 30 3 25C-1 18 0 10 4 4C2 8 4 14 8 18C6 9 13 2 13 2Z"
-                    fill="url(#welcomeFlame)"
-                  />
-                  <defs>
-                    <linearGradient id="welcomeFlame" x1="13" y1="2" x2="13" y2="38" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#FFF9C4" />
-                      <stop offset="50%" stopColor="#FF7A1A" />
-                      <stop offset="100%" stopColor="#A8125A" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <span className={styles.placeholderLabel}>Pastor Kehinde Olajide</span>
-                <span className={styles.placeholderHint}>Photo Coming Soon</span>
+                <Image
+                  src="/Pastor Tampa.png"
+                  alt="Pastor Kehinde Olajide"
+                  fill
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                  priority
+                />
               </div>
               <div className={styles.tag}>Host Pastor · MFM Tampa Florida</div>
             </div>

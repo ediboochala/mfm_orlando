@@ -30,7 +30,7 @@ const CARDS = [
     desc: 'From children to elders, from new converts to seasoned warriors — MFM Tampa Florida is a church where everyone belongs.',
   },
   {
-    image: null,
+    image: '/Pastor Tampa.png',
     tag: 'Pastoral Leadership',
     title: 'Under Anointed Leadership',
     desc: 'Under the shepherding of Pastor Kehinde Olajide, our congregation is guided, counselled, and equipped for the work of the Kingdom.',
