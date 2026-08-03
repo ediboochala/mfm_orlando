@@ -106,7 +106,7 @@
 .cardDesc {
   font-size: 13px;
   line-height: 1.75;
-  color: rgba(var(--text-rgb), 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* â”€â”€ Controls â”€â”€ */
