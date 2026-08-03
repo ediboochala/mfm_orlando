@@ -12,10 +12,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(var(--secondary-rgb), 0.55) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(var(--accent-rgb), 0.12) 0%, transparent 60%),
-    linear-gradient(180deg, #0a0a0a 0%, #100510 60%, #160022 100%);
+  background: linear-gradient(135deg, #3a003a 0%, #1a001a 55%, #000 100%);
 }
 
 .heroGrid {
