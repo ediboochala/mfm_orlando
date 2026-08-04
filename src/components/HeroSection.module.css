@@ -130,6 +130,10 @@
 .getDirections:hover {
   background: var(--accent-light) !important;
 }
+.watchOnline {
+  color: var(--accent) !important;
+  border-color: rgba(var(--accent-rgb), 0.5) !important;
+}
 
 /* ── SCROLL INDICATOR ── */
 .scrollIndicator {

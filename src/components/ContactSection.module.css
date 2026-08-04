@@ -318,5 +318,15 @@
 
 /* Light theme */
 :global([data-theme="light"]) .formInput { background: #FFFFFF; border-color: rgba(0,0,0,0.15); color: #1c1c1c; }
-:global([data-theme="light"]) .formInput:focus { border-color: var(--gold); }
+:global([data-theme="light"]) .formInput:focus { border-color: var(--primary); }
 :global([data-theme="light"]) .socialLink { border-color: rgba(0,0,0,0.12); color: rgba(28,28,28,0.55); }
+:global([data-theme="light"]) .socialLink:hover { border-color: var(--primary); color: var(--primary); }
+:global([data-theme="light"]) .infoLabel,
+:global([data-theme="light"]) .successIcon,
+:global([data-theme="light"]) .successTitle,
+:global([data-theme="light"]) .errorLink,
+:global([data-theme="light"]) .infoValueGold,
+:global([data-theme="light"]) .mapLabel,
+:global([data-theme="light"]) .mapDirections {
+  color: var(--primary);
+}

@@ -737,3 +737,8 @@
 :global([data-theme="light"]) .lightboxPanel { background: #fff; border-color: rgba(184,134,11,0.2); }
 :global([data-theme="light"]) .lbStage { background: #f5f0e8; }
 :global([data-theme="light"]) .lbTitle { color: rgba(0,0,0,0.6); }
+:global([data-theme="light"]) .backLink:hover,
+:global([data-theme="light"]) .heroLabel,
+:global([data-theme="light"]) .carouselArrow:hover {
+  color: var(--primary);
+}

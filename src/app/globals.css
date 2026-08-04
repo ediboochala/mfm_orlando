@@ -206,6 +206,10 @@ section {
   transition: background 0.3s, color 0.3s, transform 0.3s;
   display: inline-block;
 }
+[data-theme="light"] .btn-secondary {
+  color: var(--primary);
+  border-color: rgba(var(--primary-rgb), 0.5);
+}
 .btn-secondary:hover {
   background: rgba(var(--accent-rgb), 0.1);
   transform: translateY(-3px);

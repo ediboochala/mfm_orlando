@@ -42,7 +42,7 @@ export default function HeroSection() {
             href="https://www.youtube.com/@mfm-tampaflorida4355"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary"
+            className={`btn-secondary ${styles.watchOnline}`}
           >
             Watch Online
           </a>

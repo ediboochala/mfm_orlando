@@ -561,3 +561,12 @@
 /* Keep hero text white in light mode (hero bg stays dark) */
 :global([data-theme="light"]) .heroTitle { color: #fff !important; }
 :global([data-theme="light"]) .heroSub   { color: rgba(255,255,255,0.65) !important; }
+:global([data-theme="light"]) .backLink:hover,
+:global([data-theme="light"]) .heroLabel,
+:global([data-theme="light"]) .statNum,
+:global([data-theme="light"]) .sectionLabel,
+:global([data-theme="light"]) .goNameTagInitials,
+:global([data-theme="light"]) .goTitle,
+:global([data-theme="light"]) .highlighted .timelineYear span {
+  color: var(--primary);
+}
