@@ -11,7 +11,7 @@ export default function HeroSection() {
 
       {/* Faint building watermark */}
       <div className={styles.logoWatermark}>
-        <Image src="/building.png" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} aria-hidden />
+        <Image src="/back.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} aria-hidden />
       </div>
 
       <div className={styles.heroContent}>

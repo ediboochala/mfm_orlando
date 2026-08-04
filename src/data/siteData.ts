@@ -402,7 +402,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'MFM Tampa Florida regularly organizes group trips to Prayer City. If you would like to join our next trip, or simply want more information about upcoming programs, please reach out to us. Do not let another season pass while the very breakthrough you need is available to you. Pack your bag. Make the journey. God is already there, waiting.',
     ],
     readTime: '8 min read',
-    coverImage: '/building.png',
+    coverImage: '/22 (2).jpg',
     mediaBlocks: [
       { afterParagraph: 1, type: 'image', src: '/22 (4).jpg', alt: 'Believers gathered at MFM Prayer City', caption: 'Believers gathered in worship at MFM Prayer City' },
     ],
@@ -507,7 +507,7 @@ export const MINISTRY_PROJECTS = [
   { id: 11, ministryId: 'gen-218',            title: 'GEN 2:18 Singles Gathering',       date: 'Coming Soon',    description: 'Biblical teaching on identity, purpose, and God\'s design for love and marriage.',            image: null },
   { id: 12, ministryId: 'gen-218',            title: 'Valentine Purity Gala',            date: 'Coming Soon',    description: 'An evening celebrating purity, purpose, and preparation for God\'s best.',                   image: null },
   // Expectant Family Ministry
-  { id: 13, ministryId: 'expectant-family',   title: 'MFM Tampa Florida Church Home',          date: 'Ongoing',        description: 'The house where every ministry gathers — built by God for His family in Tampa.',            image: '/building.png' },
+  { id: 13, ministryId: 'expectant-family',   title: 'MFM Tampa Florida Church Home',          date: 'Ongoing',        description: 'The house where every ministry gathers — built by God for His family in Tampa.',            image: '/22 (1).jpg' },
   { id: 14, ministryId: 'expectant-family',   title: 'Expectant Mothers Prayer Cover',   date: 'Coming Soon',    description: 'Covering every pregnancy with intercession from the very first trimester.',                  image: null },
 ]
 
