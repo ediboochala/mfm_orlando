@@ -15,6 +15,22 @@ export const CHURCH = {
   copyright: '© 2025 Mountain of Fire And Miracles Ministries (MFM) Tampa, Florida. All Rights Reserved.',
 }
 
+export const CRUSADE = {
+  presentedBy: 'Mountain of Fire and Miracles Ministries — Tampa, Florida Presents',
+  title: 'The Great Florida Deliverance Crusade',
+  minister: 'Dr Daniel Olukoya',
+  ministerTitle: 'General Overseer, M.F.M Worldwide',
+  date: 'Sunday, September 27, 2026',
+  time: '4:00 PM Prompt',
+  venue: 'TBA',
+  hosts: [
+    { name: 'Pastor Kehinde Olajide', title: 'A.S.R.O, M.F.M Florida' },
+    { name: 'Pastor Olumide Oni', title: 'P.R.O Mega Region 2 USA' },
+  ],
+  rsvpNumbers: ['813-593-1638', '346-302-9156'],
+  image: null as string | null,
+}
+
 export const PASTOR = {
   name: 'Pastor Kehinde Olajide',
   title: 'Host Pastor, MFM Tampa Florida',
