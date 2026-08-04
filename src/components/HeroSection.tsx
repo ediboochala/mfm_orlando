@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CHURCH } from '@/data/siteData'
+import NextServiceBadge from './NextServiceBadge'
 import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
@@ -14,27 +15,18 @@ export default function HeroSection() {
       </div>
 
       <div className={styles.heroContent}>
-        {/* Live Badge */}
-        <div className={styles.liveBadge}>
-          <span className={styles.liveDot} />
-          <span>Live Services Every Sunday</span>
-        </div>
-
-        {/* Flame */}
-        <div className={styles.fireWrap}>
-          <div className={styles.flameContainer}>
-            <div className={`${styles.flame} ${styles.flame1}`} />
-            <div className={`${styles.flame} ${styles.flame2}`} />
-            <div className={`${styles.flame} ${styles.flame3}`} />
-          </div>
+        {/* Logo badge */}
+        <div className={styles.logoBadge}>
+          <Image src="/mfm-logo.png" alt="Mountain of Fire and Miracles Ministries" width={110} height={110} priority />
         </div>
 
         <p className={styles.eyebrow}>Welcome to!</p>
-        <h1 className={styles.title}>Mountain of Fire</h1>
-        <p className={styles.of}>and Miracles</p>
-        <h2 className={styles.subtitle}>Ministries</h2>
+        <h1 className={styles.title}>
+          Mountain of Fire<br />and Miracles Ministries
+        </h1>
         <p className={styles.tagline}>Tampa, Florida</p>
         <p className={styles.address}>{CHURCH.address}</p>
+        <NextServiceBadge />
         <div className={styles.divider} />
 
         <div className={styles.btns}>
