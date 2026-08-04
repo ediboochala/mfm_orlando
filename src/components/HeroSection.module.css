@@ -123,6 +123,13 @@
   opacity: 0;
   animation: fadeUp 0.9s 1.7s forwards;
 }
+.getDirections {
+  background: var(--accent) !important;
+  color: var(--primary-dark) !important;
+}
+.getDirections:hover {
+  background: var(--accent-light) !important;
+}
 
 /* ── SCROLL INDICATOR ── */
 .scrollIndicator {

@@ -34,7 +34,7 @@ export default function HeroSection() {
             href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CHURCH.address)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className={`btn-primary ${styles.getDirections}`}
           >
             Get Directions
           </a>
