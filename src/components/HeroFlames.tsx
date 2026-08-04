@@ -111,7 +111,7 @@ export default function HeroFlames() {
       style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', overflow: 'hidden' }}
       aria-hidden="true"
     >
-      <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%' }} />
+      <canvas ref={canvasRef} style={{ display: 'block', width: '100%', height: '100%', filter: 'blur(2.5px)' }} />
     </div>
   )
 }
