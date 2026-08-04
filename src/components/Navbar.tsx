@@ -39,7 +39,6 @@ export default function Navbar() {
         </div>
         <div className={styles.logoText}>
           <span className={styles.logoName}>{CHURCH.shortName}</span>
-          <span className={styles.logoTagline}>{CHURCH.tagline}</span>
         </div>
       </Link>
 
