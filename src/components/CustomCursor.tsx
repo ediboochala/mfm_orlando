@@ -3,6 +3,32 @@
 import { useEffect, useRef } from 'react'
 import styles from './CustomCursor.module.css'
 
+// Relative luminance (0-255) of a computed `rgb()`/`rgba()` color string.
+// Returns null for fully transparent colors so callers can keep looking
+// up the ancestor chain for the actual visible background.
+function luminanceOf(color: string): number | null {
+  const m = color.match(/rgba?\(([^)]+)\)/)
+  if (!m) return null
+  const [r, g, b, a = 1] = m[1].split(',').map(v => parseFloat(v))
+  if (Number.isNaN(r) || a === 0) return null
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+
+// Scans every element stacked at this point, topmost paint order first
+// (elementsFromPoint, not elementFromPoint — background layers here are
+// often pointer-events:none siblings like HeroSection's `.heroBg`, not
+// ancestors of whatever is hit-testable), and returns the luminance of
+// the first solid color found. Falls back to the page background.
+function backgroundLuminanceAt(x: number, y: number): number {
+  const stack = document.elementsFromPoint(x, y)
+  for (const el of stack) {
+    if ((el as HTMLElement).dataset.cursorLayer) continue
+    const lum = luminanceOf(getComputedStyle(el).backgroundColor)
+    if (lum !== null) return lum
+  }
+  return 255
+}
+
 export default function CustomCursor() {
   const dotRef  = useRef<HTMLDivElement>(null)
   const ringRef = useRef<HTMLDivElement>(null)
@@ -11,6 +37,9 @@ export default function CustomCursor() {
   const mx = useRef(-400); const my = useRef(-400)
   const rx = useRef(-400); const ry = useRef(-400)
   const gx = useRef(-400); const gy = useRef(-400)
+  const px = useRef(-400); const py = useRef(-400) // last position used for facing angle
+  const angle = useRef(-45)
+  const onDark = useRef(false)
   const rafRef = useRef<number>(0)
 
   useEffect(() => {
@@ -31,6 +60,17 @@ export default function CustomCursor() {
       gx.current += (mx.current - gx.current) * 0.055
       gy.current += (my.current - gy.current) * 0.055
 
+      // Turn the triangle to face the direction of travel
+      const dx = mx.current - px.current
+      const dy = my.current - py.current
+      if (dx * dx + dy * dy > 4) {
+        const target = Math.atan2(dy, dx) * (180 / Math.PI) + 90
+        const delta = ((target - angle.current + 180) % 360 + 360) % 360 - 180
+        angle.current += delta * 0.2
+        px.current = mx.current
+        py.current = my.current
+      }
+
       if (ringRef.current) {
         ringRef.current.style.left = rx.current + 'px'
         ringRef.current.style.top  = ry.current + 'px'
@@ -39,6 +79,19 @@ export default function CustomCursor() {
         glowRef.current.style.left = gx.current + 'px'
         glowRef.current.style.top  = gy.current + 'px'
       }
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate(-50%, -50%) rotate(${angle.current}deg)`
+      }
+
+      // Adapt color to whatever is under the pointer right now
+      const dark = backgroundLuminanceAt(mx.current, my.current) < 150
+      if (dark !== onDark.current) {
+        onDark.current = dark
+        dotRef.current?.classList.toggle(styles.onDark, dark)
+        ringRef.current?.classList.toggle(styles.onDark, dark)
+        glowRef.current?.classList.toggle(styles.onDark, dark)
+      }
+
       rafRef.current = requestAnimationFrame(animate)
     }
     rafRef.current = requestAnimationFrame(animate)
@@ -94,9 +147,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div ref={glowRef} className={styles.glow} aria-hidden="true" />
-      <div ref={ringRef} className={styles.ring} aria-hidden="true" />
-      <div ref={dotRef}  className={styles.dot}  aria-hidden="true" />
+      <div ref={glowRef} className={styles.glow} aria-hidden="true" data-cursor-layer="true" />
+      <div ref={ringRef} className={styles.ring} aria-hidden="true" data-cursor-layer="true" />
+      <div ref={dotRef}  className={styles.dot}  aria-hidden="true" data-cursor-layer="true" />
     </>
   )
 }
