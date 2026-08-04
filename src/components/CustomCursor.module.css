@@ -9,7 +9,7 @@
   pointer-events: none;
   z-index: 9996;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.18) 0%, transparent 70%);
   transition: width 0.5s ease, height 0.5s ease;
 }
 
@@ -23,11 +23,11 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 9997;
-  border: 1.5px solid rgba(var(--accent-rgb), 0.6);
+  border: 1.5px solid rgba(var(--primary-rgb), 0.6);
   transition:
     width  0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
     height 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-    border-color 0.3s;
+    border-color 0.3s, border-width 0.3s;
   animation: ringRotate 3.8s linear infinite;
 }
 
@@ -40,9 +40,9 @@
   transform: translateX(-50%);
   width: 6px;
   height: 6px;
-  background: var(--accent);
+  background: var(--primary);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.9), 0 0 16px rgba(var(--accent-rgb), 0.5);
+  box-shadow: 0 0 8px rgba(var(--primary-rgb), 0.9), 0 0 16px rgba(var(--primary-rgb), 0.5);
 }
 
 /* Second smaller satellite, opposite side */
@@ -54,7 +54,7 @@
   transform: translateX(-50%);
   width: 3px;
   height: 3px;
-  background: rgba(var(--accent-rgb), 0.5);
+  background: rgba(var(--primary-rgb), 0.5);
   border-radius: 50%;
 }
 
@@ -69,26 +69,27 @@
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  background: var(--accent);
+  background: var(--primary);
   box-shadow:
-    0 0 8px  rgba(var(--accent-rgb), 0.9),
-    0 0 20px rgba(var(--accent-rgb), 0.45);
+    0 0 8px  rgba(var(--primary-rgb), 0.9),
+    0 0 20px rgba(var(--primary-rgb), 0.45);
   transition: width 0.18s ease, height 0.18s ease, background 0.18s, box-shadow 0.18s;
 }
 
-/* â”€â”€ Hover states â”€â”€ */
+/* â”€â”€ Hover states â€” cursor "opens up" over anything clickable â”€â”€ */
 .dotHover {
-  width: 13px;
-  height: 13px;
-  background: var(--accent-light);
+  width: 10px;
+  height: 10px;
+  background: var(--primary-light);
   box-shadow:
-    0 0 12px rgba(240, 192, 64, 1),
-    0 0 32px rgba(var(--accent-rgb), 0.55);
+    0 0 12px rgba(var(--primary-rgb), 1),
+    0 0 32px rgba(var(--primary-rgb), 0.55);
 }
 .ringHover {
-  width: 58px;
-  height: 58px;
-  border-color: rgba(var(--accent-rgb), 0.95);
+  width: 68px;
+  height: 68px;
+  border-width: 1px;
+  border-color: rgba(var(--primary-rgb), 0.85);
 }
 .glowHover {
   width: 200px;
