@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, useId } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MINISTRIES, MINISTRY_PROJECTS } from '@/data/siteData'
+import MinistryIcon from '@/components/MinistryIcon'
 import styles from './page.module.css'
 
 type Project = (typeof MINISTRY_PROJECTS)[number]
@@ -305,7 +306,7 @@ export default function MinistriesContent() {
                     {/* LEFT — ministry info */}
                     <div className={styles.splitInfo}>
                       <div className={styles.cardHeader}>
-                        <span className={styles.cardIcon}>{ministry.icon}</span>
+                        <span className={styles.cardIcon}><MinistryIcon name={ministry.icon} size={40} /></span>
                         <div className={styles.cardTitles}>
                           <h2 className={styles.cardName}>{ministry.name}</h2>
                           <span className={styles.cardSubtitle}>{ministry.subtitle}</span>

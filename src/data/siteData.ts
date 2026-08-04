@@ -133,7 +133,7 @@ export const MINISTRIES = [
     id: 'mens-fellowship',
     name: "Men's Fellowship",
     subtitle: 'Men of Valor (MOV) Movement',
-    icon: '⚔️',
+    icon: 'sword',
     tagline: 'Raising mighty men of God — in the home, in the church, and in the world.',
     description: "The Men of Valor Movement exists because MFM believes that the transformation of a nation begins with the transformation of its men. Every man carries a God-given responsibility — as a father, a husband, a son, a leader, a warrior in the spiritual realm. The MOV Movement is designed to awaken that responsibility, equip men with biblical tools for spiritual warfare, and build a brotherhood of accountability, integrity, and purpose. When men rise to their calling, families are healed, children are protected, and communities are transformed.",
     details: [
@@ -149,7 +149,7 @@ export const MINISTRIES = [
     id: 'womens-foundation',
     name: "Women's Foundation",
     subtitle: 'MFM Women Foundation (KFDL)',
-    icon: '🌸',
+    icon: 'flower',
     tagline: 'Knowing God. Filled with His Spirit. Doing His Will. Loving His People.',
     description: "The MFM Women Foundation is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
     details: [
@@ -165,7 +165,7 @@ export const MINISTRIES = [
     id: 'childrens-church',
     name: "Children's Church",
     subtitle: 'Raising Kingdom Champions from Childhood',
-    icon: '✨',
+    icon: 'sparkle',
     tagline: 'Building a foundation of faith that will last a lifetime.',
     description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children's Church is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
     details: [
@@ -181,7 +181,7 @@ export const MINISTRIES = [
     id: 'youth-fellowship',
     name: 'Youth Fellowship',
     subtitle: 'Empowering the Next Generation',
-    icon: '🔥',
+    icon: 'flame',
     tagline: 'Young, on fire, and on purpose — for the glory of God.',
     description: "The Youth Fellowship at MFM Tampa Florida understands the unique pressures facing young people in this generation. Identity crises, the pull of social media, peer pressure, moral confusion — these are real and formidable. The Youth Fellowship exists to give young people an anchor: a clear identity in Christ, a community that holds them accountable, and a vision for their lives that is bigger than anything the world is offering. We are raising a generation of young men and women who know who they are, know whose they are, and will not be moved.",
     details: [
@@ -197,7 +197,7 @@ export const MINISTRIES = [
     id: 'music-ministry',
     name: 'Music Ministry',
     subtitle: 'Worship That Ushers in the Presence of God',
-    icon: '🎵',
+    icon: 'music',
     tagline: 'When the music plays, heaven opens and chains fall off.',
     description: "Music is not merely entertainment — it is a spiritual weapon. At MFM Tampa Florida, the Music Ministry understands that anointed worship prepares the ground for miracles. Music has always been a carrier of healing, deliverance, and the presence of God. The Music Ministry is called to lift the name of Jesus in a way that opens the heavens, draws the Holy Spirit, and creates an atmosphere in which lives are changed. If you have ever been in a service where the music brought you to tears or broke something loose inside you, you understand exactly why this ministry exists.",
     details: [
@@ -213,7 +213,7 @@ export const MINISTRIES = [
     id: 'gen-218',
     name: 'GEN 2:18',
     subtitle: 'Preparing Singles for the Journey to Marriage',
-    icon: '💍',
+    icon: 'ring',
     tagline: 'It is not good for man to be alone — and God has a plan for your story.',
     description: 'GEN 2:18 takes its name from the profound declaration in Genesis 2:18 — "It is not good that the man should be alone." This non-denominational movement exists to prepare singles for marriage and to support those in every stage of single life. Whether you are navigating single parenthood, waiting with hope in your twenties, or finding yourself single again later in life — GEN 2:18 is a community that understands your journey and offers biblical guidance, emotional support, and a circle of people walking the same road.',
     details: [
@@ -229,7 +229,7 @@ export const MINISTRIES = [
     id: 'expectant-family',
     name: 'Expectant Family Ministry',
     subtitle: 'Covering Every New Life in Prayer',
-    icon: '🌱',
+    icon: 'sprout',
     tagline: 'Children are a heritage of the Lord — every expectant family deserves to be covered.',
     description: "The MFM Expectant Family Ministry wraps around families in the sacred season of pregnancy and new parenthood with prayer, support, and spiritual covering. We believe that children are a heritage and reward from God, and that every pregnancy is a divine assignment that deserves to be covered in prayer from the very beginning. This ministry also speaks into the heart of marriage itself — reminding couples that their union is a sacred covenant that God established for the flourishing of both partners and the children He entrusts to them.",
     details: [

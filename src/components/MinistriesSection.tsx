@@ -1,4 +1,5 @@
 import { MINISTRIES } from '@/data/siteData'
+import MinistryIcon from './MinistryIcon'
 import styles from './MinistriesSection.module.css'
 
 export default function MinistriesSection() {
@@ -19,7 +20,7 @@ export default function MinistriesSection() {
               style={i === MINISTRIES.length - 1 ? { gridColumn: '1 / 3' } : undefined}
             >
               <div className={styles.cardBg} />
-              <span className={styles.icon}>{m.icon}</span>
+              <span className={styles.icon}><MinistryIcon name={m.icon} /></span>
               <p className={styles.name}>{m.name}</p>
               <p className={styles.desc}>{m.tagline}</p>
               <a
