@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { CRUSADE } from '@/data/siteData'
 import styles from './CrusadeSection.module.css'
 
@@ -85,6 +86,9 @@ export default function CrusadeSection() {
               <a href={`tel:${CRUSADE.rsvpNumbers[0].replace(/[^0-9+]/g, '')}`} className="btn-primary">
                 RSVP Now
               </a>
+              <Link href="/crusade" className="btn-secondary">
+                More Information
+              </Link>
               <span className={styles.rsvpNumbers}>
                 {CRUSADE.rsvpNumbers.join('  ·  ')}
               </span>
