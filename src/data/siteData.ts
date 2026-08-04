@@ -20,7 +20,7 @@ export const CRUSADE = {
   title: 'The Great Florida Deliverance Crusade',
   minister: 'Dr Daniel Olukoya',
   ministerTitle: 'General Overseer, M.F.M Worldwide',
-  date: 'Sunday, September 27, 2026',
+  date: 'Sunday, September 20, 2026',
   time: '4:00 PM Prompt',
   venue: 'TBA',
   hosts: [
