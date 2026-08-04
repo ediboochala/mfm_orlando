@@ -213,22 +213,6 @@ export const MINISTRIES = [
     scripture: '"Let everything that has breath praise the Lord." — Psalm 150:6',
   },
   {
-    id: 'gen-218',
-    name: 'GEN 2:18',
-    subtitle: 'Preparing Singles for the Journey to Marriage',
-    icon: 'ring',
-    tagline: 'It is not good for man to be alone — and God has a plan for your story.',
-    description: 'GEN 2:18 takes its name from the profound declaration in Genesis 2:18 — "It is not good that the man should be alone." This non-denominational movement exists to prepare singles for marriage and to support those in every stage of single life. Whether you are navigating single parenthood, waiting with hope in your twenties, or finding yourself single again later in life — GEN 2:18 is a community that understands your journey and offers biblical guidance, emotional support, and a circle of people walking the same road.',
-    details: [
-      'Serving single parents, adult singles (30+), due singles (25–29), young singles (18–24), and teens',
-      "Biblical teaching on relationships, identity, and God's plan for marriage",
-      'Emotional support and community for every stage of single life',
-      'Non-denominational — open to all singles seeking Godly guidance',
-    ],
-    membership: 'Open to all singles — regardless of age or background',
-    scripture: '"It is not good that the man should be alone; I will make him a helper suitable for him." — Genesis 2:18',
-  },
-  {
     id: 'expectant-family',
     name: 'Expectant Family Ministry',
     subtitle: 'Covering Every New Life in Prayer',
@@ -243,6 +227,22 @@ export const MINISTRIES = [
     ],
     membership: 'Open to all expectant mothers and families in the MFM Tampa Florida community',
     scripture: '"Children are a heritage of the Lord: and the fruit of the womb is his reward." — Psalm 127:3',
+  },
+  {
+    id: 'gen-218',
+    name: 'GEN 2:18',
+    subtitle: 'Preparing Singles for the Journey to Marriage',
+    icon: 'ring',
+    tagline: 'It is not good for man to be alone — and God has a plan for your story.',
+    description: 'GEN 2:18 takes its name from the profound declaration in Genesis 2:18 — "It is not good that the man should be alone." This non-denominational movement exists to prepare singles for marriage and to support those in every stage of single life. Whether you are navigating single parenthood, waiting with hope in your twenties, or finding yourself single again later in life — GEN 2:18 is a community that understands your journey and offers biblical guidance, emotional support, and a circle of people walking the same road.',
+    details: [
+      'Serving single parents, adult singles (30+), due singles (25–29), young singles (18–24), and teens',
+      "Biblical teaching on relationships, identity, and God's plan for marriage",
+      'Emotional support and community for every stage of single life',
+      'Non-denominational — open to all singles seeking Godly guidance',
+    ],
+    membership: 'Open to all singles — regardless of age or background',
+    scripture: '"It is not good that the man should be alone; I will make him a helper suitable for him." — Genesis 2:18',
   },
 ]
 
