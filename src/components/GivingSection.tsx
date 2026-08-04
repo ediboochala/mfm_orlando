@@ -23,7 +23,7 @@ export default function GivingSection() {
             discipleship, and reaching souls for Jesus Christ.
           </p>
           <div className={`${styles.btns} reveal d3`}>
-            <a href="#contact" className="btn-gold" onClick={(e) => {
+            <a href="#contact" className={`btn-gold ${styles.giveBtn}`} onClick={(e) => {
               e.preventDefault()
               document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
             }}>

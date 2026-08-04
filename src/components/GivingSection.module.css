@@ -60,6 +60,17 @@
   .btns { flex-direction: column; align-items: center; }
 }
 
+/* "Give Online" — white instead of the shared gold treatment, for
+   contrast against this section's red gradient */
+.giveBtn {
+  background: var(--white) !important;
+  color: #8b0000 !important;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.25) !important;
+}
+.giveBtn:hover {
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.4) !important;
+}
+
 /* Light theme — section has hardcoded red gradient, keep text white */
 :global([data-theme="light"]) .title {
   color: #ffffff;
