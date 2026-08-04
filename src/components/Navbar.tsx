@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { NAV_LINKS, CHURCH } from '@/data/siteData'
-import ThemeToggle from './ThemeToggle'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -61,9 +60,8 @@ export default function Navbar() {
         )}
       </ul>
 
-      {/* Theme toggle + CTA */}
+      {/* CTA */}
       <div className={styles.navRight}>
-        <ThemeToggle />
         <a
           href="#giving"
           className={styles.navCta}

@@ -16,7 +16,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 4px;
-  color: var(--dark);
+  color: var(--primary-dark);
   text-transform: uppercase;
   padding: 0 40px;
   flex-shrink: 0;

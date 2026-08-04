@@ -1,4 +1,4 @@
-﻿.section {
+.section {
   background: var(--dark2);
   overflow: hidden;
 }
@@ -15,22 +15,23 @@
 }
 
 .card {
-  background: #111;
+  background: #FFFFFF;
   padding: 40px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  box-shadow: 0 2px 16px rgba(128, 0, 128, 0.05);
   position: relative;
   overflow: hidden;
   transition: border-color 0.4s, transform 0.4s;
 }
 .card:hover {
-  border-color: rgba(var(--accent-rgb), 0.25);
+  border-color: rgba(var(--accent-rgb), 0.35);
   transform: translateY(-6px);
 }
 
 .cardBg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(var(--secondary-rgb), 0.08), transparent);
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06), transparent);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -46,7 +47,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 12px;
   line-height: 1.3;
 }
@@ -63,14 +64,14 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
-  color: var(--gold);
+  color: var(--primary);
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 3px;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.4);
   transition: border-color 0.3s, color 0.3s;
 }
-.learn:hover { color: var(--primary); border-color: var(--primary); }
+.learn:hover { color: var(--primary-dark); border-color: var(--primary); }
 
 @media (max-width: 1200px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
@@ -80,12 +81,4 @@
   .grid { grid-template-columns: 1fr; }
   .card:last-child { grid-column: auto; }
   .card { padding: 30px 22px; }
-}
-
-
-/* Light theme */
-:global([data-theme="light"]) .card { background: #FFFFFF; border-color: rgba(184,134,11,0.15); box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
-:global([data-theme="light"]) .learn { color: var(--primary); }
-:global([data-theme="light"]) .section :global(.section-label) {
-  color: var(--primary) !important;
 }

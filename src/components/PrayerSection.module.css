@@ -1,4 +1,4 @@
-﻿.sectionInner {
+.sectionInner {
   position: relative;
   z-index: 2;
 }
@@ -17,7 +17,7 @@
   z-index: 0;
 }
 
-/* Multi-layer overlay: keeps text readable, adds depth and warmth */
+/* Multi-layer overlay: keeps text readable, adds depth — deliberately purple, not black */
 .bgOverlay {
   position: absolute;
   inset: 0;
@@ -58,7 +58,7 @@
 .body {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(var(--text-rgb), 0.6);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 30px;
 }
 
@@ -70,9 +70,9 @@
   align-items: center;
   gap: 14px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 14px;
-  color: rgba(var(--text-rgb), 0.7);
+  color: rgba(255, 255, 255, 0.75);
 }
 .numberItem:last-child { border-bottom: none; }
 
@@ -85,7 +85,7 @@
 }
 
 .numberLabel {
-  color: rgba(var(--text-rgb), 0.4);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 12px;
   letter-spacing: 1px;
   min-width: 80px;
@@ -94,8 +94,8 @@
 .cityBox {
   margin-top: 30px;
   padding: 20px 24px;
-  background: rgba(var(--secondary-rgb), 0.1);
-  border: 1px solid rgba(var(--secondary-rgb), 0.25);
+  background: rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
 }
 
 .cityLabel {
@@ -108,14 +108,14 @@
 
 .cityText {
   font-size: 13px;
-  color: rgba(var(--text-rgb), 0.6);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.7;
 }
 
-/* â”€â”€ TIME CARD â”€â”€ */
+/* ── TIME CARD ── */
 .timeCard {
-  background: rgba(var(--accent-rgb), 0.06);
-  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
   padding: 50px 40px;
   text-align: center;
   position: relative;
@@ -133,7 +133,7 @@
 .timeSession {
   margin-bottom: 36px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 .timeSession:last-of-type {
   margin-bottom: 0;
@@ -159,7 +159,7 @@
 
 .sessionTz {
   font-size: 12px;
-  color: rgba(var(--text-rgb), 0.4);
+  color: rgba(255, 255, 255, 0.45);
   letter-spacing: 2px;
   margin-top: 6px;
 }
@@ -167,7 +167,7 @@
 .localNote {
   margin-top: 30px;
   font-size: 12px;
-  color: rgba(var(--text-rgb), 0.3);
+  color: rgba(255, 255, 255, 0.4);
   letter-spacing: 1px;
   line-height: 1.7;
 }
@@ -183,27 +183,3 @@
   .timeCard { padding: 36px 28px; }
   .sessionTime { font-size: 24px; }
 }
-
-/* Light theme — section has hardcoded dark overlay, keep all text white/light */
-:global([data-theme="light"]) .body {
-  color: rgba(255, 255, 255, 0.65);
-}
-:global([data-theme="light"]) .numberItem {
-  color: rgba(255, 255, 255, 0.75);
-}
-:global([data-theme="light"]) .numberLabel {
-  color: rgba(255, 255, 255, 0.45);
-}
-:global([data-theme="light"]) .cityText {
-  color: rgba(255, 255, 255, 0.65);
-}
-:global([data-theme="light"]) .sessionTime {
-  color: #ffffff;
-}
-:global([data-theme="light"]) .sessionTz {
-  color: rgba(255, 255, 255, 0.45);
-}
-:global([data-theme="light"]) .localNote {
-  color: rgba(255, 255, 255, 0.4);
-}
-

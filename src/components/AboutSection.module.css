@@ -1,5 +1,5 @@
-﻿.section {
-  background: linear-gradient(180deg, #0d0512 0%, #0a0a0a 100%);
+.section {
+  background: var(--dark);
 }
 
 .grid {
@@ -9,7 +9,7 @@
   align-items: start;
 }
 
-/* â”€â”€ TIMELINE â”€â”€ */
+/* ── TIMELINE ── */
 .timeline {
   position: relative;
   padding-left: 30px;
@@ -21,7 +21,7 @@
   top: 8px;
   bottom: 8px;
   width: 1px;
-  background: linear-gradient(180deg, var(--gold), var(--red), transparent);
+  background: linear-gradient(180deg, var(--gold), var(--primary-light), transparent);
 }
 
 .timelineItem {
@@ -44,7 +44,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 6px;
   display: block;
 }
@@ -55,15 +55,15 @@
   color: rgba(var(--text-rgb), 0.6);
 }
 
-/* â”€â”€ RIGHT COLUMN â”€â”€ */
+/* ── RIGHT COLUMN ── */
 .right {
   position: sticky;
   top: 120px;
 }
 
 .verseBox {
-  background: rgba(var(--accent-rgb), 0.05);
-  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  background: rgba(var(--accent-rgb), 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   padding: 50px 40px;
   margin-bottom: 30px;
 }
@@ -80,13 +80,13 @@
 .verseRef {
   font-size: 12px;
   letter-spacing: 3px;
-  color: var(--gold);
+  color: var(--primary);
 }
 
 .missionTitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: var(--gold);
+  color: var(--primary);
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
@@ -107,15 +107,15 @@
 }
 
 .bullet {
-  color: var(--gold);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
 .quoteBox {
   margin-top: 30px;
   padding: 24px;
-  background: rgba(var(--secondary-rgb), 0.1);
-  border-left: 2px solid var(--red);
+  background: rgba(var(--primary-rgb), 0.05);
+  border-left: 2px solid var(--primary);
 }
 
 .quoteText {
@@ -128,7 +128,7 @@
 
 .quoteAuthor {
   font-size: 10px;
-  color: var(--gold);
+  color: var(--primary);
   letter-spacing: 3px;
   margin-top: 10px;
 }
@@ -136,20 +136,4 @@
 @media (max-width: 1024px) {
   .grid { grid-template-columns: 1fr; gap: 60px; }
   .right { position: static; }
-}
-
-
-/* Light theme */
-:global([data-theme="light"]) .section { background: var(--dark); }
-:global([data-theme="light"]) .quoteBox { background: rgba(192,57,43,0.06); }
-:global([data-theme="light"]) .verseBox { background: rgba(184,134,11,0.06); }
-:global([data-theme="light"]) .year,
-:global([data-theme="light"]) .verseRef,
-:global([data-theme="light"]) .missionTitle,
-:global([data-theme="light"]) .bullet,
-:global([data-theme="light"]) .quoteAuthor {
-  color: var(--primary);
-}
-:global([data-theme="light"]) .section :global(.section-label) {
-  color: var(--primary) !important;
 }

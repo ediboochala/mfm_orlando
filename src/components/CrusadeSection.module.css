@@ -58,11 +58,11 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  background: linear-gradient(160deg, #1a001a 0%, #000 100%);
+  background: linear-gradient(160deg, #3d003d 0%, #1a001a 100%);
 }
 .hasImage {
   aspect-ratio: 5 / 7;
-  background: #0a0a0a;
+  background: var(--primary-dark);
 }
 
 .flameIcon {
@@ -129,7 +129,7 @@
   font-weight: 800;
   font-size: 16px;
   letter-spacing: 1px;
-  color: var(--secondary);
+  color: var(--primary);
   margin-top: 26px;
 }
 .description {

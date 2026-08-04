@@ -1,4 +1,4 @@
-﻿.section {
+.section {
   background: var(--dark2);
 }
 
@@ -7,18 +7,18 @@
   margin-bottom: 70px;
 }
 
-/* 4-column grid on desktop for a clean 2Ã—4 layout */
+/* 4-column grid on desktop for a clean 2×4 layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3px;
 }
 
-/* â”€â”€ Card shell â”€â”€ */
+/* ── Card shell ── */
 .card {
   position: relative;
   overflow: hidden;
-  background: #0d0d0d;
+  background: var(--primary-muted);
   min-height: 310px;
   display: flex;
   flex-direction: column;
@@ -31,12 +31,12 @@
 .card:hover {
   transform: translateY(-8px);
   box-shadow:
-    0 32px 80px rgba(0, 0, 0, 0.65),
+    0 32px 80px rgba(128, 0, 128, 0.25),
     0 0 40px rgba(176, 141, 26, 0.14);
   z-index: 2;
 }
 
-/* â”€â”€ Background image â”€â”€ */
+/* ── Background image ── */
 .cardImgWrap {
   position: absolute;
   inset: 0;
@@ -47,7 +47,7 @@
   transform: scale(1.09);
 }
 
-/* â”€â”€ Dark gradient overlay â”€â”€ */
+/* ── Dark gradient overlay — keeps text legible over the photo ── */
 .cardOverlay {
   position: absolute;
   inset: 0;
@@ -64,12 +64,12 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.28) 0%,
-    rgba(110, 18, 18, 0.28) 45%,
+    rgba(128, 0, 128, 0.3) 45%,
     rgba(0, 0, 0, 0.93) 100%
   );
 }
 
-/* â”€â”€ Gold shimmer top line â”€â”€ */
+/* ── Gold shimmer top line ── */
 .cardGlow {
   position: absolute;
   top: 0;
@@ -86,7 +86,7 @@
   transform: scaleX(1);
 }
 
-/* â”€â”€ Gold left accent bar â”€â”€ */
+/* ── Gold left accent bar ── */
 .card::after {
   content: '';
   position: absolute;
@@ -104,7 +104,7 @@
   transform: scaleY(1);
 }
 
-/* â”€â”€ Emoji icon (top-right) â”€â”€ */
+/* ── Emoji icon (top-right) ── */
 .cardIcon {
   position: absolute;
   top: 28px;
@@ -119,7 +119,7 @@
   transform: scale(1.2);
 }
 
-/* â”€â”€ Text content â”€â”€ */
+/* ── Text content ── */
 .cardContent {
   position: relative;
   z-index: 2;
@@ -151,21 +151,21 @@
 .cardTime {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
-  color: rgba(var(--text-rgb), 0.52);
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 2px;
 }
 
-/* â”€â”€ Address line â”€â”€ */
+/* ── Address line ── */
 .address {
   text-align: center;
   margin-top: 44px;
   font-size: 13px;
-  color: rgba(var(--text-rgb), 0.35);
+  color: rgba(var(--text-rgb), 0.5);
   letter-spacing: 2px;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* â”€â”€ Responsive â”€â”€ */
+/* ── Responsive ── */
 @media (max-width: 1200px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -174,18 +174,3 @@
   .card { min-height: 260px; }
   .cardContent { padding: 24px 20px; }
 }
-
-/* Light theme — cards stay dark (image bg + overlay), force text white */
-:global([data-theme="light"]) .cardName {
-  color: #ffffff;
-}
-:global([data-theme="light"]) .cardTime {
-  color: rgba(255, 255, 255, 0.55);
-}
-:global([data-theme="light"]) .address {
-  color: rgba(28, 28, 28, 0.5);
-}
-:global([data-theme="light"]) .section :global(.section-label) {
-  color: var(--primary) !important;
-}
-

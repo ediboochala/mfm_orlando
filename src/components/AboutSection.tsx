@@ -17,7 +17,7 @@ export default function AboutSection() {
                 <div key={i} className={styles.timelineItem}>
                   <div
                     className={styles.dot}
-                    style={item.highlight ? { background: 'var(--red)', boxShadow: '0 0 12px var(--red)' } : undefined}
+                    style={item.highlight ? { background: 'var(--primary)', boxShadow: '0 0 12px var(--primary)' } : undefined}
                   />
                   <span className={styles.year}>{item.year}</span>
                   <p className={styles.text}>{item.text}</p>

@@ -43,26 +43,26 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(160deg, #100303 0%, #1a0505 100%);
+  background: linear-gradient(160deg, var(--primary-muted) 0%, #ffffff 100%);
 }
 .cardImgPlaceholderText {
   font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(var(--accent-rgb), 0.4);
+  color: rgba(var(--primary-rgb), 0.5);
 }
 
-/* Bottom-up gradient scrim â€” photo visible at top, dark at bottom for text */
+/* Bottom-up gradient scrim — photo visible at top, dark purple at bottom for text */
 .cardOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(4, 0, 0, 0.15) 0%,
-    rgba(4, 0, 0, 0.25) 35%,
-    rgba(4, 0, 0, 0.85) 65%,
-    rgba(4, 0, 0, 0.97) 100%
+    rgba(40, 0, 40, 0.15) 0%,
+    rgba(40, 0, 40, 0.25) 35%,
+    rgba(40, 0, 40, 0.85) 65%,
+    rgba(40, 0, 40, 0.97) 100%
   );
   z-index: 1;
 }
@@ -121,9 +121,9 @@
 .arrow {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(var(--accent-rgb), 0.35);
+  border: 1px solid rgba(var(--primary-rgb), 0.35);
   background: transparent;
-  color: rgba(var(--accent-rgb), 0.8);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,9 +131,9 @@
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .arrow:hover {
-  background: rgba(var(--accent-rgb), 0.1);
-  border-color: rgba(var(--accent-rgb), 0.6);
-  color: var(--accent);
+  background: rgba(var(--primary-rgb), 0.08);
+  border-color: var(--primary);
+  color: var(--primary-dark);
 }
 .arrowDisabled {
   opacity: 0.25;
@@ -148,14 +148,14 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(var(--primary-rgb), 0.2);
   border: none;
   cursor: pointer;
   padding: 0;
   transition: background 0.25s, transform 0.25s;
 }
 .dotActive {
-  background: var(--accent);
+  background: var(--gold);
   transform: scale(1.5);
 }
 

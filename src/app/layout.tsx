@@ -33,13 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Prevent flash of wrong theme before hydration */}
-        <script dangerouslySetInnerHTML={{
-          __html: `try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}`
-        }} />
-      </head>
+    <html lang="en">
       <body>
         <CustomCursor />
         <Navbar />

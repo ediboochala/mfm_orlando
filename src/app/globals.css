@@ -1,41 +1,7 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  /* â”€â”€ BRAND COLOR SYSTEM (purple â†’ pink â†’ yellow) â”€â”€ */
-  --primary: #800080;
-  --primary-rgb: 128, 0, 128;
-  --primary-dark: #5A005A;
-  --primary-light: #FFC5FF;
-  --primary-muted: #F3E6F3;
-  --secondary: #E0217A;
-  --secondary-rgb: 224, 33, 122;
-  --secondary-dark: #A8125A;
-  --secondary-light: #FF6FA8;
-  --accent: #F2B705;
-  --accent-rgb: 242, 183, 5;
-  --accent-light: #FFD93D;
-  --background: #0A0A0A;
-  --text: #FFFFFF;
-  --text-rgb: 255, 255, 255;
-  --text-soft: #F3E6F0;
-  --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 55%, var(--accent) 100%);
-
-  /* â”€â”€ Legacy aliases (kept so existing component styles inherit the new palette) â”€â”€ */
-  --red: var(--secondary);
-  --deep-red: var(--secondary-dark);
-  --gold: var(--accent);
-  --gold-light: var(--accent-light);
-  --dark: var(--background);
-  --dark2: #150A1D;
-  --dark3: #1C0F26;
-  --white: var(--text);
-  --off-white: var(--text-soft);
-  --gray: #9C8DAE;
-  --bg-card: #150A1D;
-}
-
-/* â”€â”€ LIGHT THEME â”€â”€ */
-[data-theme="light"] {
+  /* ── BRAND COLOR SYSTEM — white, purple, a touch of yellow ── */
   --primary: #800080;
   --primary-rgb: 128, 0, 128;
   --primary-dark: #5A005A;
@@ -52,7 +18,9 @@
   --text: #1C1C1C;
   --text-rgb: 28, 28, 28;
   --text-soft: #4A2E52;
+  --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 55%, var(--accent) 100%);
 
+  /* ── Legacy aliases (kept so existing component styles inherit the palette) ── */
   --red: var(--secondary);
   --deep-red: var(--secondary-dark);
   --gold: var(--accent);
@@ -60,20 +28,10 @@
   --dark: var(--background);
   --dark2: #F2EAF5;
   --dark3: #E8DCEC;
-  --white: var(--text);
+  --white: #FFFFFF;
   --off-white: var(--text-soft);
   --gray: #6B5E75;
   --bg-card: #FFFFFF;
-}
-[data-theme="light"] body {
-  background: #FAF7F2;
-  color: #1C1C1C;
-}
-[data-theme="light"] .section-title {
-  color: #1C1C1C;
-}
-[data-theme="light"] .section-label {
-  color: var(--gold);
 }
 
 *, *::before, *::after {
@@ -87,8 +45,8 @@ html {
 }
 
 body {
-  background: var(--dark);
-  color: var(--white);
+  background: var(--background);
+  color: var(--text);
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
@@ -97,33 +55,7 @@ body {
   body, a, button, [role="button"] { cursor: none !important; }
 }
 
-/* â”€â”€ CUSTOM CURSOR â”€â”€ */
-.cursor {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  background: var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
-  mix-blend-mode: difference;
-}
-.cursor-ring {
-  position: fixed;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
-  opacity: 0.6;
-}
-
-/* â”€â”€ PARTICLES CANVAS â”€â”€ */
+/* ── PARTICLES CANVAS ── */
 #particles {
   position: fixed;
   top: 0;
@@ -134,7 +66,7 @@ body {
   pointer-events: none;
 }
 
-/* â”€â”€ SECTION BASE â”€â”€ */
+/* ── SECTION BASE ── */
 section {
   position: relative;
   z-index: 1;
@@ -154,7 +86,7 @@ section {
   font-size: 10px;
   letter-spacing: 7px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 16px;
   display: block;
 }
@@ -164,15 +96,16 @@ section {
   font-size: clamp(28px, 4vw, 48px);
   line-height: 1.15;
   margin-bottom: 20px;
+  color: var(--text);
 }
 .section-divider {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--red));
+  background: linear-gradient(90deg, var(--gold), var(--primary-light));
   margin-bottom: 30px;
 }
 
-/* â”€â”€ BUTTONS â”€â”€ */
+/* ── BUTTONS ── */
 .btn-primary {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
@@ -194,26 +127,24 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 10px 40px rgba(var(--primary-rgb), 0.45);
 }
+/* Purple outline — the default button style wherever it sits on a white/light surface */
 .btn-secondary {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   padding: 16px 36px;
   text-decoration: none;
-  border: 1px solid rgba(var(--accent-rgb), 0.5);
+  border: 1px solid rgba(var(--primary-rgb), 0.5);
   transition: background 0.3s, color 0.3s, transform 0.3s;
   display: inline-block;
 }
-[data-theme="light"] .btn-secondary {
-  color: var(--primary);
-  border-color: rgba(var(--primary-rgb), 0.5);
-}
 .btn-secondary:hover {
-  background: rgba(var(--accent-rgb), 0.1);
+  background: rgba(var(--primary-rgb), 0.08);
   transform: translateY(-3px);
 }
+/* Solid gold — reserve for buttons that sit on a purple/dark surface, never on white */
 .btn-gold {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
@@ -248,7 +179,7 @@ section {
   transform: translateY(-3px);
 }
 
-/* â”€â”€ SCROLL REVEAL â”€â”€ */
+/* ── SCROLL REVEAL ── */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -280,29 +211,29 @@ section {
 .d5 { transition-delay: 0.5s; }
 .d6 { transition-delay: 0.6s; }
 
-/* â”€â”€ LIVE BADGE â”€â”€ */
+/* ── LIVE BADGE ── */
 .live-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(var(--secondary-rgb), 0.2);
-  border: 1px solid rgba(var(--secondary-rgb), 0.5);
+  background: rgba(var(--secondary-rgb), 0.12);
+  border: 1px solid rgba(var(--secondary-rgb), 0.4);
   padding: 6px 14px;
   margin-bottom: 30px;
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--secondary-light);
+  color: var(--secondary-dark);
 }
 .live-dot {
   width: 6px;
   height: 6px;
-  background: var(--secondary-light);
+  background: var(--secondary);
   border-radius: 50%;
   animation: livePulse 1.2s infinite;
 }
 
-/* â”€â”€ MARQUEE â”€â”€ */
+/* ── MARQUEE ── */
 .marquee-wrap {
   background: var(--primary);
   overflow: hidden;
@@ -326,7 +257,7 @@ section {
   flex-shrink: 0;
 }
 
-/* â”€â”€ FLAME ANIMATION â”€â”€ */
+/* ── FLAME ANIMATION ── */
 .flame-container {
   position: relative;
   width: 60px;
@@ -358,7 +289,7 @@ section {
   animation: flamePulse 0.9s 0.4s ease-in-out infinite;
 }
 
-/* â”€â”€ KEYFRAMES â”€â”€ */
+/* ── KEYFRAMES ── */
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -379,14 +310,10 @@ section {
   100% { transform: translateX(-50%); }
 }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .section-inner { padding: 70px 30px; }
 }
 @media (max-width: 600px) {
   .section-inner { padding: 60px 20px; }
 }
-
-
-/* Force headings and body text legible on light backgrounds */
-[data-theme="light"] .section-title { color: #1c1c1c; }

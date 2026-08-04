@@ -10,7 +10,7 @@ interface ParticleData {
   speedX: number
   life: number
   decay: number
-  hue: 'gold' | 'red'
+  hue: 'gold' | 'purple'
 }
 
 function createParticle(W: number, H: number): ParticleData {
@@ -22,7 +22,7 @@ function createParticle(W: number, H: number): ParticleData {
     speedX: (Math.random() - 0.5) * 0.4,
     life: 1,
     decay: Math.random() * 0.003 + 0.001,
-    hue: Math.random() < 0.5 ? 'gold' : 'red',
+    hue: Math.random() < 0.5 ? 'gold' : 'purple',
   }
 }
 
@@ -34,7 +34,7 @@ function resetParticle(p: ParticleData, W: number, H: number) {
   p.speedX = (Math.random() - 0.5) * 0.4
   p.life = 1
   p.decay = Math.random() * 0.003 + 0.001
-  p.hue = Math.random() < 0.5 ? 'gold' : 'red'
+  p.hue = Math.random() < 0.5 ? 'gold' : 'purple'
 }
 
 export default function ParticlesCanvas() {
@@ -74,10 +74,10 @@ export default function ParticlesCanvas() {
         ctx.globalAlpha = p.life * 0.5
         ctx.fillStyle =
           p.hue === 'gold'
-            ? `rgba(255,122,26,${p.life})`
-            : `rgba(224,33,122,${p.life})`
+            ? `rgba(201,151,0,${p.life})`
+            : `rgba(128,0,128,${p.life})`
         ctx.shadowBlur = 6
-        ctx.shadowColor = p.hue === 'gold' ? '#FF7A1A' : '#E0217A'
+        ctx.shadowColor = p.hue === 'gold' ? '#C99700' : '#800080'
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
         ctx.fill()

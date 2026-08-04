@@ -1,4 +1,4 @@
-﻿.section {
+.section {
   background: var(--dark);
 }
 
@@ -16,7 +16,7 @@
   gap: 80px;
 }
 
-/* â”€â”€ INFO â”€â”€ */
+/* ── INFO ── */
 .infoItem {
   display: flex;
   align-items: flex-start;
@@ -39,7 +39,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   letter-spacing: 3px;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 4px;
   display: block;
 }
@@ -60,22 +60,22 @@
 .socialLink {
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(var(--text-rgb), 0.5);
+  color: rgba(var(--text-rgb), 0.55);
   text-decoration: none;
   font-size: 14px;
   transition: border-color 0.3s, color 0.3s, background 0.3s;
 }
 .socialLink:hover {
-  border-color: var(--primary-light);
-  color: var(--primary-light);
-  background: rgba(var(--primary-rgb), 0.12);
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.08);
 }
 
-/* â”€â”€ FORM â”€â”€ */
+/* ── FORM ── */
 .form {
   display: flex;
   flex-direction: column;
@@ -97,9 +97,9 @@
 }
 
 .formInput {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--white);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: var(--text);
   padding: 14px 18px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -108,10 +108,10 @@
   width: 100%;
 }
 .formInput:focus {
-  border-color: rgba(var(--accent-rgb), 0.4);
+  border-color: var(--primary);
 }
 .formInput::placeholder {
-  color: rgba(var(--text-rgb), 0.2);
+  color: rgba(var(--text-rgb), 0.3);
 }
 
 .textarea {
@@ -120,7 +120,7 @@
 }
 
 .required {
-  color: var(--red);
+  color: var(--secondary);
   margin-left: 3px;
 }
 
@@ -129,14 +129,14 @@
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, var(--red), var(--deep-red));
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #FFFFFF;
   padding: 18px;
   border: 1px solid rgba(var(--accent-rgb), 0.4);
   cursor: pointer;
   width: 100%;
   transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-  box-shadow: 0 4px 30px rgba(var(--secondary-rgb), 0.4);
+  box-shadow: 0 4px 30px rgba(var(--primary-rgb), 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +144,7 @@
 }
 .submitBtn:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 10px 40px rgba(var(--secondary-rgb), 0.6);
+  box-shadow: 0 10px 40px rgba(var(--primary-rgb), 0.55);
 }
 .submitBtn:disabled {
   cursor: not-allowed;
@@ -175,11 +175,11 @@
   gap: 14px;
   margin-top: 16px;
   padding: 16px 20px;
-  background: rgba(var(--accent-rgb), 0.06);
+  background: rgba(var(--accent-rgb), 0.08);
   border: 1px solid rgba(var(--accent-rgb), 0.3);
 }
 .successIcon {
-  color: var(--gold);
+  color: var(--primary);
   font-size: 18px;
   flex-shrink: 0;
   margin-top: 2px;
@@ -188,7 +188,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 4px;
 }
 .successSub {
@@ -208,7 +208,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 1px;
-  color: var(--secondary-light);
+  color: var(--secondary-dark);
   margin-bottom: 4px;
 }
 .errorSub {
@@ -216,7 +216,7 @@
   color: rgba(var(--text-rgb), 0.5);
 }
 .errorLink {
-  color: var(--gold);
+  color: var(--primary);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -226,13 +226,13 @@
   white-space: pre-line;
 }
 .infoValueGold {
-  color: var(--gold);
+  color: var(--primary);
 }
 
 /* ── Location Map ── */
 .mapWrap {
   margin-top: 72px;
-  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   overflow: hidden;
 }
 
@@ -242,12 +242,8 @@
   justify-content: space-between;
   gap: 20px;
   padding: 18px 24px;
-  background: rgba(var(--accent-rgb), 0.04);
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.12);
-}
-:global([data-theme="light"]) .mapHeader {
-  background: rgba(184, 134, 11, 0.05);
-  border-bottom-color: rgba(184, 134, 11, 0.15);
+  background: rgba(var(--accent-rgb), 0.06);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
 .mapInfo {
@@ -262,10 +258,10 @@
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   display: block;
   margin-bottom: 3px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 .mapAddress {
   font-size: 13px;
@@ -281,28 +277,26 @@
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   text-decoration: none;
-  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  border: 1px solid rgba(var(--primary-rgb), 0.35);
   padding: 10px 18px;
   flex-shrink: 0;
   transition: background 0.2s, border-color 0.2s;
 }
 .mapDirections:hover {
-  background: rgba(var(--accent-rgb), 0.08);
-  border-color: var(--gold);
+  background: rgba(var(--primary-rgb), 0.08);
+  border-color: var(--primary);
 }
 
 .mapFrame {
   width: 100%;
   height: 420px;
   position: relative;
-  background: #0a0a0a;
+  background: var(--primary-muted);
 }
 .mapFrame iframe { display: block; }
 .mapIframe { border: 0; }
-:global([data-theme="light"]) .mapFrame { background: #f0ece4; }
-:global([data-theme="light"]) .mapWrap  { border-color: rgba(184, 134, 11, 0.18); }
 
 @media (max-width: 1024px) {
   .grid { grid-template-columns: 1fr; gap: 50px; }
@@ -313,23 +307,4 @@
   .mapHeader { flex-direction: column; align-items: flex-start; gap: 14px; }
   .mapDirections { width: 100%; justify-content: center; }
   .mapFrame { height: 280px; }
-}
-
-
-/* Light theme */
-:global([data-theme="light"]) .formInput { background: #FFFFFF; border-color: rgba(0,0,0,0.15); color: #1c1c1c; }
-:global([data-theme="light"]) .formInput:focus { border-color: var(--primary); }
-:global([data-theme="light"]) .socialLink { border-color: rgba(0,0,0,0.12); color: rgba(28,28,28,0.55); }
-:global([data-theme="light"]) .socialLink:hover { border-color: var(--primary); color: var(--primary); }
-:global([data-theme="light"]) .infoLabel,
-:global([data-theme="light"]) .successIcon,
-:global([data-theme="light"]) .successTitle,
-:global([data-theme="light"]) .errorLink,
-:global([data-theme="light"]) .infoValueGold,
-:global([data-theme="light"]) .mapLabel,
-:global([data-theme="light"]) .mapDirections {
-  color: var(--primary);
-}
-:global([data-theme="light"]) .section :global(.section-label) {
-  color: var(--primary) !important;
 }
