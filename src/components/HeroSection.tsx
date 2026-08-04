@@ -1,10 +1,7 @@
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
 import { CHURCH } from '@/data/siteData'
 import NextServiceBadge from './NextServiceBadge'
 import styles from './HeroSection.module.css'
-
-const HeroFlames = dynamic(() => import('./HeroFlames'), { ssr: false })
 
 export default function HeroSection() {
   return (
@@ -16,9 +13,6 @@ export default function HeroSection() {
       <div className={styles.logoWatermark}>
         <Image src="/back.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} aria-hidden />
       </div>
-
-      {/* Rising ember/flame particles */}
-      <HeroFlames />
 
       <div className={styles.heroContent}>
         {/* Logo badge */}
