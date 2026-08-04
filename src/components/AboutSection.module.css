@@ -21,7 +21,7 @@
   top: 8px;
   bottom: 8px;
   width: 1px;
-  background: linear-gradient(180deg, var(--gold), var(--primary-light), transparent);
+  background: linear-gradient(180deg, var(--primary), var(--primary-light), transparent);
 }
 
 .timelineItem {
@@ -36,8 +36,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 12px var(--gold);
+  background: var(--primary);
+  box-shadow: 0 0 12px var(--primary);
 }
 
 .year {
