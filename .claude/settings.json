@@ -4,7 +4,8 @@
       "Bash(dir .vercel)",
       "Bash(git commit -m ' *)",
       "Bash(npx next *)",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Ochala Edibo\\\\Documents\\\\mfm-orlando_main\" -Recurse | Where-Object { $_.Extension -eq '.tsx' -or $_.Extension -eq '.ts' -or $_.Extension -eq '.css' -or $_.Extension -eq '.json' } | Select-Object -ExpandProperty FullName | Sort-Object)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Ochala Edibo\\\\Documents\\\\mfm-orlando_main\" -Recurse | Where-Object { $_.Extension -eq '.tsx' -or $_.Extension -eq '.ts' -or $_.Extension -eq '.css' -or $_.Extension -eq '.json' } | Select-Object -ExpandProperty FullName | Sort-Object)",
+      "WebFetch(domain:www.youtube.com)"
     ]
   }
 }
