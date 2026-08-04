@@ -52,6 +52,10 @@ export default function CrusadeSection() {
             <p className={styles.presentedBy}>{CRUSADE.presentedBy}</p>
             <div className="section-divider" />
 
+            <p className={styles.motto}>{CRUSADE.motto}</p>
+            <p className={styles.description}>{CRUSADE.description}</p>
+            <p className={styles.hashtag}>{CRUSADE.hashtag}</p>
+
             <div className={styles.detailsGrid}>
               <div className={styles.detailItem}>
                 <span className={styles.detailLabel}>Ministering</span>

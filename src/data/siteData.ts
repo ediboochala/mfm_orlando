@@ -18,6 +18,9 @@ export const CHURCH = {
 export const CRUSADE = {
   presentedBy: 'Mountain of Fire and Miracles Ministries — Tampa, Florida Presents',
   title: 'The Great Florida Deliverance Crusade',
+  motto: 'Expect. Receive. Testify.',
+  description: 'Join us for a powerful time of worship, prayer, and the life-changing power of God at The Great Florida Deliverance Crusade. This event is open to everyone who is seeking hope, healing, freedom, restoration, or a deeper relationship with Jesus Christ.',
+  hashtag: '#FloridaDeliveranceCrusade',
   minister: 'Dr Daniel Olukoya',
   ministerTitle: 'General Overseer, M.F.M Worldwide',
   date: 'Sunday, September 20, 2026',

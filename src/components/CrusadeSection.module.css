@@ -124,6 +124,29 @@
   margin-bottom: 8px;
 }
 
+.motto {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--secondary);
+  margin-top: 26px;
+}
+.description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.65);
+  max-width: 560px;
+  margin-top: 10px;
+}
+.hashtag {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--primary);
+  margin-top: 10px;
+}
+
 .detailsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
