@@ -28,7 +28,7 @@ export const CRUSADE = {
     { name: 'Pastor Olumide Oni', title: 'P.R.O Mega Region 2 USA' },
   ],
   rsvpNumbers: ['813-593-1638', '346-302-9156'],
-  image: null as string | null,
+  image: '/Crusade English Flyer.png' as string | null,
 }
 
 export const PASTOR = {

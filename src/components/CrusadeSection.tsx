@@ -10,13 +10,13 @@ export default function CrusadeSection() {
           {/* Image / Flyer */}
           <div className={`${styles.imgWrap} reveal-left`}>
             <div className={styles.imgFrame}>
-              <div className={styles.imgPlaceholder}>
+              <div className={`${styles.imgPlaceholder} ${CRUSADE.image ? styles.hasImage : ''}`}>
                 {CRUSADE.image ? (
                   <Image
                     src={CRUSADE.image}
                     alt={CRUSADE.title}
                     fill
-                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    style={{ objectFit: 'contain' }}
                   />
                 ) : (
                   <>

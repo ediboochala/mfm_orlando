@@ -56,6 +56,10 @@
   gap: 14px;
   background: linear-gradient(160deg, #1a001a 0%, #000 100%);
 }
+.hasImage {
+  aspect-ratio: 5 / 7;
+  background: #0a0a0a;
+}
 
 .flameIcon {
   filter: drop-shadow(0 0 18px rgba(255, 122, 26, 0.6));
