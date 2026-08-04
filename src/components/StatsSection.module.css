@@ -71,3 +71,8 @@
 
 /* Light theme */
 :global([data-theme="light"]) .section { background: var(--dark2); }
+:global([data-theme="light"]) .num {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+}

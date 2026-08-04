@@ -40,7 +40,7 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.backLink:hover { color: var(--gold); }
+.backLink:hover { color: var(--primary-light); }
 .breadcrumb {
   font-size: 10px;
   letter-spacing: 3px;
@@ -213,7 +213,7 @@
   transition: color 0.2s;
 }
 .postCard:hover .postCta {
-  color: var(--gold);
+  color: var(--primary-light);
 }
 
 /* â”€â”€ Footer Strip â”€â”€ */

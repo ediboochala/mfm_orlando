@@ -185,4 +185,7 @@
 :global([data-theme="light"]) .address {
   color: rgba(28, 28, 28, 0.5);
 }
+:global([data-theme="light"]) .section :global(.section-label) {
+  color: var(--primary) !important;
+}
 

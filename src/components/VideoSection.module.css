@@ -164,7 +164,7 @@
   transition: color 0.25s;
 }
 .card:hover .videoTitle {
-  color: var(--accent);
+  color: var(--primary-light);
 }
 
 .videoDesc {
@@ -193,7 +193,7 @@
   transition: color 0.2s;
 }
 .channelLink:hover {
-  color: var(--accent);
+  color: var(--primary-light);
 }
 
 /* â”€â”€ Channel CTA â”€â”€ */
@@ -245,4 +245,13 @@
 :global([data-theme="light"]) .info { background: #FFFFFF; }
 :global([data-theme="light"]) .title { color: #1c1c1c; }
 :global([data-theme="light"]) .sub { color: rgba(28, 28, 28, 0.55); }
+:global([data-theme="light"]) .label,
+:global([data-theme="light"]) .channelLink,
+:global([data-theme="light"]) .ctaBtn {
+  color: var(--primary);
+}
+:global([data-theme="light"]) .card:hover .videoTitle,
+:global([data-theme="light"]) .channelLink:hover {
+  color: var(--primary);
+}
 :global([data-theme="light"]) .videoDesc { color: rgba(28, 28, 28, 0.6); }

@@ -68,9 +68,9 @@
   text-decoration: none;
   padding-bottom: 3px;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, color 0.3s;
 }
-.learn:hover { border-color: var(--gold); }
+.learn:hover { color: var(--primary); border-color: var(--primary); }
 
 @media (max-width: 1200px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
@@ -85,3 +85,7 @@
 
 /* Light theme */
 :global([data-theme="light"]) .card { background: #FFFFFF; border-color: rgba(184,134,11,0.15); box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+:global([data-theme="light"]) .learn { color: var(--primary); }
+:global([data-theme="light"]) .section :global(.section-label) {
+  color: var(--primary) !important;
+}

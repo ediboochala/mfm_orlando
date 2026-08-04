@@ -40,7 +40,7 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.backLink:hover { color: var(--gold); }
+.backLink:hover { color: var(--primary-light); }
 .breadcrumb {
   font-size: 10px;
   letter-spacing: 3px;
@@ -416,9 +416,9 @@
   flex-shrink: 0;
 }
 .carouselArrow:hover {
-  background: rgba(var(--accent-rgb), 0.12);
-  color: var(--gold);
-  border-color: var(--gold);
+  background: rgba(var(--primary-rgb), 0.12);
+  color: var(--primary-light);
+  border-color: var(--primary-light);
 }
 .dots { display: flex; gap: 8px; align-items: center; }
 .dot {

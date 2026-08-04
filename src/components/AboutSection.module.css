@@ -143,3 +143,13 @@
 :global([data-theme="light"]) .section { background: var(--dark); }
 :global([data-theme="light"]) .quoteBox { background: rgba(192,57,43,0.06); }
 :global([data-theme="light"]) .verseBox { background: rgba(184,134,11,0.06); }
+:global([data-theme="light"]) .year,
+:global([data-theme="light"]) .verseRef,
+:global([data-theme="light"]) .missionTitle,
+:global([data-theme="light"]) .bullet,
+:global([data-theme="light"]) .quoteAuthor {
+  color: var(--primary);
+}
+:global([data-theme="light"]) .section :global(.section-label) {
+  color: var(--primary) !important;
+}

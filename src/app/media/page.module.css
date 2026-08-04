@@ -40,7 +40,7 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.backLink:hover { color: var(--gold); }
+.backLink:hover { color: var(--primary-light); }
 .breadcrumb {
   font-size: 10px;
   letter-spacing: 3px;
@@ -521,7 +521,7 @@
   text-decoration: none;
   transition: color 0.2s;
 }
-.numberVal:hover { color: var(--gold); }
+.numberVal:hover { color: var(--primary-light); }
 
 /* â”€â”€ Prayer City Card â”€â”€ */
 .prayerCityCard {

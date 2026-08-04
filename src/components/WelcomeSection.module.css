@@ -181,4 +181,8 @@
 :global([data-theme="light"]) .section { background: var(--dark2); }
 :global([data-theme="light"]) .imgPlaceholder { background: var(--dark3); }
 :global([data-theme="light"]) .scriptureAccent { background: rgba(184,134,11,0.07); }
+:global([data-theme="light"]) .section :global(.section-label),
+:global([data-theme="light"]) .sig {
+  color: var(--primary);
+}
 :global([data-theme="light"]) .quote { background: rgba(184,134,11,0.07); }

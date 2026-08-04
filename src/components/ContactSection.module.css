@@ -70,9 +70,9 @@
   transition: border-color 0.3s, color 0.3s, background 0.3s;
 }
 .socialLink:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(var(--accent-rgb), 0.06);
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+  background: rgba(var(--primary-rgb), 0.12);
 }
 
 /* â”€â”€ FORM â”€â”€ */
@@ -329,4 +329,7 @@
 :global([data-theme="light"]) .mapLabel,
 :global([data-theme="light"]) .mapDirections {
   color: var(--primary);
+}
+:global([data-theme="light"]) .section :global(.section-label) {
+  color: var(--primary) !important;
 }
