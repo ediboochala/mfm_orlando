@@ -157,8 +157,8 @@ export default function CrusadePage() {
               <a href={`tel:${CRUSADE.rsvpNumbers[0].replace(/[^0-9+]/g, '')}`} className="btn-primary">
                 RSVP Now
               </a>
-              <Link href="/" className="btn-secondary">
-                Back to Home
+              <Link href="/#crusade" className="btn-secondary">
+                Back to Overview
               </Link>
             </div>
           </section>
