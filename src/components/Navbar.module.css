@@ -84,6 +84,84 @@
 .navLinks a:hover { color: var(--primary); }
 .navLinks a:hover::after { width: 100%; }
 
+/* ── DROPDOWN GROUPS (desktop) ── */
+.navGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.navGroupTrigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.3px;
+  color: #333333;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.navGroup:hover .navGroupTrigger,
+.navGroup:focus-within .navGroupTrigger { color: var(--primary); }
+.chevronIcon {
+  transition: transform 0.25s ease;
+}
+.navGroup:hover .chevronIcon,
+.navGroup:focus-within .chevronIcon { transform: rotate(180deg); }
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 200px;
+  margin-top: 14px;
+  padding: 8px;
+  list-style: none;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  z-index: 1100;
+}
+/* invisible bridge so the pointer can travel from trigger to menu */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+.navGroup:hover .dropdown,
+.navGroup:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.dropdown li a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #333333;
+  white-space: nowrap;
+}
+.dropdown li a::after { display: none; }
+.dropdown li a:hover {
+  color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.08);
+}
+
 /* â”€â”€ CTA â”€â”€ */
 .navCta {
   font-family: 'Montserrat', sans-serif;
@@ -144,7 +222,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 26px;
+  padding: 90px 24px 40px;
+  overflow-y: auto;
   z-index: 1050;
   backdrop-filter: blur(16px);
 }
@@ -158,6 +238,46 @@
   transition: color 0.3s;
 }
 .mobileLink:hover { color: var(--primary); }
+
+/* ── MOBILE ACCORDION GROUPS ── */
+.mobileGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.mobileGroupTrigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #1C1C1C;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.mobileGroupTrigger .chevronIcon { transition: transform 0.25s ease; color: var(--primary); }
+.mobileGroupTrigger .chevronOpen { transform: rotate(180deg); }
+.mobileSubLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.mobileSubLink {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.mobileSubLink:hover { color: var(--primary); }
 .mobileCta {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;

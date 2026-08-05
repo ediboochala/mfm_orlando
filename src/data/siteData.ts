@@ -382,6 +382,47 @@ export const FOOTER_EXTRA_LINKS = [
   { label: 'Bookshop',        href: '/bookshop' },
 ]
 
+// ── Categorized navbar structure — groups render as hover dropdowns ──
+export interface NavLink { label: string; href: string }
+export interface NavGroup { label: string; children: NavLink[] }
+export type NavEntry = NavLink | NavGroup
+
+export const NAV_GROUPS: NavEntry[] = [
+  { label: 'Home', href: '/' },
+  {
+    label: 'About',
+    children: [
+      { label: 'About Us',    href: '/about' },
+      { label: 'Our Pastor',  href: '/pastor' },
+      { label: 'Ministries',  href: '/ministries' },
+    ],
+  },
+  {
+    label: 'Worship',
+    children: [
+      { label: 'Weekly Services',  href: '/services' },
+      { label: 'Deliverance',      href: '/deliverance' },
+      { label: 'Global Programs',  href: '/global-programs' },
+    ],
+  },
+  {
+    label: 'Media',
+    children: [
+      { label: 'Blog',            href: '/blog' },
+      { label: 'Gallery',         href: '/gallery' },
+      { label: 'Sermons & Media', href: '/media' },
+    ],
+  },
+  {
+    label: 'Connect',
+    children: [
+      { label: 'Prayer Line', href: '/prayer-line' },
+      { label: 'Contact',     href: '/contact' },
+      { label: 'Bookshop',    href: '/bookshop' },
+    ],
+  },
+]
+
 export interface MediaBlock {
   afterParagraph: number
   type: 'image' | 'video'
