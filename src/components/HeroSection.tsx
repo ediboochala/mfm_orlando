@@ -9,21 +9,9 @@ export default function HeroSection() {
       <div className={styles.heroBg} />
       <div className={styles.heroGrid} />
 
-      {/* Congregation video background — blurred, brand color dominant */}
-      <div className={styles.videoBg}>
-        <video
-          className={styles.bgVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/back.jpg"
-          aria-hidden
-        >
-          <source src="/hero-bg.mp4" type="video/mp4" />
-        </video>
-        <div className={styles.videoOverlay} />
+      {/* Faint building watermark */}
+      <div className={styles.logoWatermark}>
+        <Image src="/back.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} aria-hidden />
       </div>
 
       <div className={styles.heroContent}>
