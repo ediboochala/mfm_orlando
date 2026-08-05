@@ -361,11 +361,6 @@ export const BOOKSHOP = {
     { title: 'Healing Through Prayers', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=92', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789788424352_Cover.jpg' },
     { title: 'Command The Morning', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=97', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783691780_EPUB_Cover.jpg' },
     { title: 'Born Great But Tied Down', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=438', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783808348_Cover.jpg' },
-    { title: 'Pray Your Way to Breakthrough', author: 'Dr. D.K. Olukoya' },
-    { title: 'Criminals in the House of God', author: 'Dr. D.K. Olukoya' },
-    { title: 'Dealing With The Evil Powers Of Your Father\'s House', author: 'Dr. D.K. Olukoya' },
-    { title: 'Overpowering Witchcraft', author: 'Dr. D.K. Olukoya' },
-    { title: 'Victory Over Satanic Dreams', author: 'Dr. D.K. Olukoya' },
   ],
   moreBooksHref: 'https://www.dkoebooks.com/index.php',
 }
