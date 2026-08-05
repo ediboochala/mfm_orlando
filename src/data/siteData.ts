@@ -338,6 +338,7 @@ export const NAV_LINKS = [
   { label: 'About',       href: '/about' },
   { label: 'Pastor',      href: '/pastor' },
   { label: 'Ministries',  href: '/ministries' },
+  { label: 'Crusade',     href: '/crusade' },
   { label: 'Services',    href: '#services' },
   { label: 'Blog',        href: '/blog' },
   { label: 'Gallery',     href: '/gallery' },
