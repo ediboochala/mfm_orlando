@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 import styles from './GivingSection.module.css'
 
 export default function GivingSection() {
@@ -35,6 +36,15 @@ export default function GivingSection() {
             }}>
               Contact Us to Give
             </a>
+          </div>
+
+          {/* Embedded giving form */}
+          <div className={`${styles.formCard} reveal d4`}>
+            <Script
+              id="ministryforms-give-embed"
+              src="https://forms.ministryforms.net/embed.aspx?formId=019e20c5-6b38-4718-ab6c-d81b3a9098a6&custom-templates=null"
+              strategy="afterInteractive"
+            />
           </div>
         </div>
       </div>
