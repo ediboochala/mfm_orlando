@@ -111,7 +111,7 @@ export default function PastorPage() {
                       <span className={styles.detailValue}>{PASTOR.services}</span>
                     </div>
                   </div>
-                  <Link href="/#contact" className={styles.contactBtn}>
+                  <Link href="/contact" className={styles.contactBtn}>
                     Contact Pastor
                   </Link>
                 </div>
@@ -174,7 +174,7 @@ export default function PastorPage() {
                       View Service Times
                     </a>
                     <a
-                      href="/#contact"
+                      href="/contact"
                       className="btn-secondary"
                     >
                       Get in Touch

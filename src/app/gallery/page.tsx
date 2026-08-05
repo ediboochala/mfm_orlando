@@ -102,7 +102,7 @@ export default function GalleryPage() {
                 Have photos from an MFM Tampa Florida service or event? We&apos;d love to feature them here.
                 Contact us to share your captured moments of God&apos;s work in our community.
               </p>
-              <Link href="/#contact" className="btn-primary">Contact Us</Link>
+              <Link href="/contact" className="btn-primary">Contact Us</Link>
             </div>
           </div>
         </div>

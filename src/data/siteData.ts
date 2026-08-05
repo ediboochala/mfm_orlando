@@ -343,7 +343,7 @@ export const NAV_LINKS = [
   { label: 'Gallery',     href: '/gallery' },
   { label: 'Media',       href: '/media' },
   { label: 'Prayer Line', href: '#prayer' },
-  { label: 'Contact',     href: '#contact' },
+  { label: 'Contact',     href: '/contact' },
 ]
 
 export interface MediaBlock {

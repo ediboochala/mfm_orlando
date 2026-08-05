@@ -348,7 +348,7 @@ export default function MinistriesContent() {
               Every ministry at MFM Tampa Florida is open and welcoming. Whether you want to join, serve, or simply find out more — reach out to us and we will connect you with the right family.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/#contact" className="btn-primary">Contact Us</Link>
+              <Link href="/contact" className="btn-primary">Contact Us</Link>
               <Link href="/#services" className="btn-secondary">View Service Times</Link>
             </div>
           </div>

@@ -20,7 +20,6 @@ import AboutSection     from '@/components/AboutSection'
 import MinistriesSection from '@/components/MinistriesSection'
 import PrayerSection    from '@/components/PrayerSection'
 import GivingSection    from '@/components/GivingSection'
-import ContactSection   from '@/components/ContactSection'
 import Footer           from '@/components/Footer'
 
 export default function Home() {
@@ -45,7 +44,6 @@ export default function Home() {
         <MinistriesSection />
         <PrayerSection />
         <GivingSection />
-        <ContactSection />
       </main>
       <Footer />
     </>

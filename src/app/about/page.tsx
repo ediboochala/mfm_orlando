@@ -234,7 +234,7 @@ export default function AboutPage() {
             </p>
             <div className={styles.ctaActions}>
               <Link href="/#services" className="btn-primary">View Service Times</Link>
-              <Link href="/#contact" className="btn-secondary">Get in Touch</Link>
+              <Link href="/contact" className="btn-secondary">Get in Touch</Link>
             </div>
           </div>
 

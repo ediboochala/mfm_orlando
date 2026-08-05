@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import GivingFormEmbed from './GivingFormEmbed'
 import styles from './GivingSection.module.css'
 
@@ -24,22 +25,19 @@ export default function GivingSection() {
             discipleship, and reaching souls for Jesus Christ.
           </p>
           <div className={`${styles.btns} reveal d3`}>
-            <a href="#contact" className={`btn-gold ${styles.giveBtn}`} onClick={(e) => {
+            <a href="#giving-form" className={`btn-gold ${styles.giveBtn}`} onClick={(e) => {
               e.preventDefault()
-              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+              document.getElementById('giving-form')?.scrollIntoView({ behavior: 'smooth' })
             }}>
               Give Online
             </a>
-            <a href="#contact" className="btn-outline-white" onClick={(e) => {
-              e.preventDefault()
-              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-            }}>
+            <Link href="/contact" className="btn-outline-white">
               Contact Us to Give
-            </a>
+            </Link>
           </div>
 
           {/* Embedded giving form */}
-          <div className={`${styles.formCard} reveal d4`}>
+          <div id="giving-form" className={`${styles.formCard} reveal d4`}>
             <GivingFormEmbed />
           </div>
         </div>
