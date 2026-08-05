@@ -42,6 +42,32 @@ function firstSaturdayOfMonth(year: number, month: number): number {
   return 1 + offset
 }
 
+/**
+ * Converts a wall-clock date/time as observed in America/New_York into the
+ * absolute UTC timestamp it represents — accounting for EST/EDT. Works by
+ * guessing the timestamp, checking what NY wall-clock that guess actually
+ * produces, and correcting the difference (converges in 1–2 passes).
+ */
+function nyWallClockToUtcMillis(year: number, month: number, day: number, hour: number, minute: number): number {
+  let guess = Date.UTC(year, month, day, hour, minute)
+  const wantMillis = guess
+
+  for (let i = 0; i < 2; i++) {
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York',
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit',
+      hour12: false,
+    }).formatToParts(new Date(guess))
+    const get = (type: string) => parseInt(parts.find((p) => p.type === type)?.value ?? '0', 10)
+    const gotHour = get('hour') === 24 ? 0 : get('hour')
+    const gotMillis = Date.UTC(get('year'), get('month') - 1, get('day'), gotHour, get('minute'))
+    guess += wantMillis - gotMillis
+  }
+
+  return guess
+}
+
 export interface NextService {
   name: string
   weekdayLabel: string
@@ -49,6 +75,8 @@ export interface NextService {
   dayOfMonth: number
   hour: number
   minute: number
+  /** Absolute UTC timestamp (ms) this service instance starts, for countdowns. */
+  timestamp: number
 }
 
 export function getNextService(now: Date): NextService | null {
@@ -115,14 +143,18 @@ export function getNextService(now: Date): NextService | null {
 
   const targetDate = new Date(best.targetUtc)
   const { hour, minute } = parseStartTime(best.service.time)
+  const targetYear = targetDate.getUTCFullYear()
+  const targetMonth = targetDate.getUTCMonth()
+  const targetDay = targetDate.getUTCDate()
 
   return {
     name: best.service.name,
     weekdayLabel: WEEKDAY_NAMES[targetDate.getUTCDay()],
-    monthLabel: MONTH_NAMES[targetDate.getUTCMonth()],
-    dayOfMonth: targetDate.getUTCDate(),
+    monthLabel: MONTH_NAMES[targetMonth],
+    dayOfMonth: targetDay,
     hour,
     minute,
+    timestamp: nyWallClockToUtcMillis(targetYear, targetMonth, targetDay, hour, minute),
   }
 }
 

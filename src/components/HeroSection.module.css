@@ -101,13 +101,48 @@
   opacity: 0;
   animation: fadeUp 0.9s 1.2s forwards;
 }
+.nextServiceWrap {
+  margin-top: 22px;
+}
 .nextService {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 2px;
   color: var(--accent);
-  margin-top: 22px;
+}
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 14px;
+}
+.countdownUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40px;
+}
+.countdownValue {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1;
+  color: #FFFFFF;
+  font-variant-numeric: tabular-nums;
+}
+.countdownLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+@media (max-width: 600px) {
+  .countdown { gap: 14px; }
+  .countdownValue { font-size: 20px; }
 }
 .divider {
   width: 120px;
