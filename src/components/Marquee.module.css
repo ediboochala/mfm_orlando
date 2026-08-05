@@ -1,5 +1,5 @@
 ﻿.wrap {
-  background: var(--gold);
+  background: var(--primary);
   overflow: hidden;
   padding: 14px 0;
   position: relative;
@@ -16,7 +16,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 4px;
-  color: var(--primary-dark);
+  color: #fff;
   text-transform: uppercase;
   padding: 0 40px;
   flex-shrink: 0;
