@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CHURCH, BOOKSHOP } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
@@ -47,7 +48,20 @@ export default function BookshopPage() {
 
           <div className={styles.grid}>
             {BOOKSHOP.books.map((book, i) => {
-              const content = (
+              const content = book.cover ? (
+                <>
+                  <Image
+                    src={book.cover}
+                    alt={`${book.title} cover`}
+                    fill
+                    sizes="(max-width: 420px) 45vw, (max-width: 1024px) 30vw, 190px"
+                    className={styles.bookCoverImg}
+                  />
+                  <span className={styles.coverScrim} />
+                  {book.price && <span className={styles.bookPrice}>{book.price}</span>}
+                  {book.href && <span className={styles.bookLinkTagOnCover}>View E-Book →</span>}
+                </>
+              ) : (
                 <>
                   <span className={styles.bookIcon}>📖</span>
                   {book.price && <span className={styles.bookPrice}>{book.price}</span>}
@@ -62,7 +76,7 @@ export default function BookshopPage() {
                   href={book.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${styles.bookCard} ${styles.bookCardLink}`}
+                  className={`${styles.bookCard} ${styles.bookCardLink} ${book.cover ? styles.bookCardCover : ''}`}
                 >
                   {content}
                 </a>

@@ -141,6 +141,39 @@
 .bookCardLink {
   cursor: pointer;
 }
+.bookCardCover {
+  padding: 0;
+}
+.bookCoverImg {
+  object-fit: cover;
+}
+.coverScrim {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0 0;
+  height: 55%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+  pointer-events: none;
+}
+.bookLinkTagOnCover {
+  position: absolute;
+  z-index: 2;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.bookCardCover:hover .bookLinkTagOnCover {
+  opacity: 1;
+  transform: translateX(3px);
+}
 /* book spine */
 .bookCard::before {
   content: '';

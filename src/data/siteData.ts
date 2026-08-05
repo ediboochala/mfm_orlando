@@ -353,10 +353,10 @@ export const MISSION_GOALS = [
 export const BOOKSHOP = {
   intro: 'MFM books and prayer resources by Dr. D.K. Olukoya are available through the MFM Bookstand, and select titles can be purchased directly as e-books.',
   books: [
-    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya', price: '$9.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=84' },
-    { title: 'When Your Blood Needs Deliverance', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2089' },
-    { title: 'Pray Your Way to Marital Breakthrough (2026)', author: 'Dr. and Pastor (Mrs) D.K. Olukoya', price: '$7.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2108' },
-    { title: 'The Contest of the Serpents', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=931' },
+    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya', price: '$9.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=84', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789782947147_COVER.jpg' },
+    { title: 'When Your Blood Needs Deliverance', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2089', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789201440_Cover.jpg' },
+    { title: 'Pray Your Way to Marital Breakthrough (2026)', author: 'Dr. and Pastor (Mrs) D.K. Olukoya', price: '$7.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2108', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_Pray_Your_Way_to_Marital_Breakthrough_2026_Cover.jpg' },
+    { title: 'The Contest of the Serpents', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=931', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789200788_Cover.jpg' },
     { title: 'Pray Your Way to Breakthrough', author: 'Dr. D.K. Olukoya' },
     { title: 'Criminals in the House of God', author: 'Dr. D.K. Olukoya' },
     { title: 'Dealing With The Evil Powers Of Your Father\'s House', author: 'Dr. D.K. Olukoya' },
