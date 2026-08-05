@@ -17,7 +17,6 @@ export default function MinistriesSection() {
             <div
               key={i}
               className={`ministry-card ${styles.card} reveal d${(i % 6) + 1}`}
-              style={i === MINISTRIES.length - 1 ? { gridColumn: '1 / 3' } : undefined}
             >
               <div className={styles.cardBg} />
               <span className={styles.icon}><MinistryIcon name={m.icon} /></span>
