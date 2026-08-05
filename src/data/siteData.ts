@@ -54,7 +54,7 @@ export const CRUSADE = {
     { name: 'Pastor Olumide Oni', title: 'P.R.O Mega Region 2 USA' },
   ],
   rsvpNumbers: ['813-593-1638', '346-302-9156'],
-  image: '/Crusade English Flyer.png' as string | null,
+  image: '/Crusade Flyer UPDATED.png' as string | null,
 }
 
 export const PASTOR = {
@@ -338,7 +338,7 @@ export const NAV_LINKS = [
   { label: 'About',       href: '/about' },
   { label: 'Pastor',      href: '/pastor' },
   { label: 'Ministries',  href: '/ministries' },
-  { label: 'Services',    href: '#services' },
+  { label: 'Services',    href: '/services' },
   { label: 'Blog',        href: '/blog' },
   { label: 'Gallery',     href: '/gallery' },
   { label: 'Media',       href: '/media' },

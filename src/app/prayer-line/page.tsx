@@ -104,7 +104,7 @@ export default function PrayerLinePage() {
               or join us in person for a service of aggressive, faith-filled prayer.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/#services" className="btn-primary">View Service Times</Link>
+              <Link href="/services" className="btn-primary">View Service Times</Link>
               <Link href="/contact" className="btn-secondary">Contact Us</Link>
             </div>
           </div>

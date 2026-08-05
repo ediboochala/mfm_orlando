@@ -349,7 +349,7 @@ export default function MinistriesContent() {
             </p>
             <div className={styles.ctaActions}>
               <Link href="/contact" className="btn-primary">Contact Us</Link>
-              <Link href="/#services" className="btn-secondary">View Service Times</Link>
+              <Link href="/services" className="btn-secondary">View Service Times</Link>
             </div>
           </div>
         </div>

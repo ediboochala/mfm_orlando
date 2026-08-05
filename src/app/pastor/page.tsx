@@ -168,7 +168,7 @@ export default function PastorPage() {
                   </p>
                   <div className={styles.ctaActions}>
                     <a
-                      href="/#services"
+                      href="/services"
                       className="btn-primary"
                     >
                       View Service Times

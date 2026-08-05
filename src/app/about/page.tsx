@@ -233,7 +233,7 @@ export default function AboutPage() {
               Come as you are — and encounter the God who transforms.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/#services" className="btn-primary">View Service Times</Link>
+              <Link href="/services" className="btn-primary">View Service Times</Link>
               <Link href="/contact" className="btn-secondary">Get in Touch</Link>
             </div>
           </div>

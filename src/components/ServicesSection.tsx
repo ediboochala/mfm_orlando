@@ -6,15 +6,9 @@ export default function ServicesSection() {
   return (
     <section id="services" className={styles.section}>
       <div className="section-inner">
-        <div className={styles.header}>
-          <span className="section-label reveal">Worship with Us</span>
-          <h2 className="section-title reveal d1">Weekly Services</h2>
-          <div className="section-divider reveal d2" style={{ margin: '0 auto' }} />
-        </div>
-
         <div className={styles.grid}>
           {SERVICES.map((svc, i) => (
-            <div key={i} className={`service-card ${styles.card} reveal d${(i % 4) + 1}`}>
+            <div key={i} className={`service-card ${styles.card}`}>
               <div className={styles.cardImgWrap}>
                 <Image
                   src={svc.image}
@@ -36,7 +30,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        <p className={`${styles.address} reveal`}>
+        <p className={styles.address}>
           📍 {CHURCH.address}
         </p>
       </div>

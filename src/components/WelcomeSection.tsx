@@ -55,16 +55,9 @@ export default function WelcomeSection() {
             </div>
 
             <div className={styles.actions}>
-              <a
-                href="#services"
-                className="btn-primary"
-                onClick={(e) => {
-                  e.preventDefault()
-                  document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })
-                }}
-              >
+              <Link href="/services" className="btn-primary">
                 View Service Times
-              </a>
+              </Link>
               <Link href="/pastor" className="btn-secondary">
                 Read Full Message
               </Link>
