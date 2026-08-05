@@ -351,9 +351,12 @@ export const MISSION_GOALS = [
 
 // ── Bookshop / Resources — MFM books available through the ministry ────────
 export const BOOKSHOP = {
-  intro: 'MFM books and prayer resources by Dr. D.K. Olukoya are available through the MFM Bookstand. Titles listed below are commonly stocked — check with the church office for current availability.',
+  intro: 'MFM books and prayer resources by Dr. D.K. Olukoya are available through the MFM Bookstand, and select titles can be purchased directly as e-books.',
   books: [
-    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya' },
+    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya', price: '$9.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=84' },
+    { title: 'When Your Blood Needs Deliverance', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2089' },
+    { title: 'Pray Your Way to Marital Breakthrough (2026)', author: 'Dr. and Pastor (Mrs) D.K. Olukoya', price: '$7.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2108' },
+    { title: 'The Contest of the Serpents', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=931' },
     { title: 'Pray Your Way to Breakthrough', author: 'Dr. D.K. Olukoya' },
     { title: 'Criminals in the House of God', author: 'Dr. D.K. Olukoya' },
     { title: 'Dealing With The Evil Powers Of Your Father\'s House', author: 'Dr. D.K. Olukoya' },

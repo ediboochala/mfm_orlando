@@ -46,13 +46,32 @@ export default function BookshopPage() {
           <p className={styles.intro}>{BOOKSHOP.intro}</p>
 
           <div className={styles.grid}>
-            {BOOKSHOP.books.map((book, i) => (
-              <div key={i} className={styles.bookCard}>
-                <span className={styles.bookIcon}>📖</span>
-                <p className={styles.bookTitle}>{book.title}</p>
-                <span className={styles.bookAuthor}>{book.author}</span>
-              </div>
-            ))}
+            {BOOKSHOP.books.map((book, i) => {
+              const content = (
+                <>
+                  <span className={styles.bookIcon}>📖</span>
+                  {book.price && <span className={styles.bookPrice}>{book.price}</span>}
+                  <p className={styles.bookTitle}>{book.title}</p>
+                  <span className={styles.bookAuthor}>{book.author}</span>
+                  {book.href && <span className={styles.bookLinkTag}>View E-Book →</span>}
+                </>
+              )
+              return book.href ? (
+                <a
+                  key={i}
+                  href={book.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.bookCard} ${styles.bookCardLink}`}
+                >
+                  {content}
+                </a>
+              ) : (
+                <div key={i} className={styles.bookCard}>
+                  {content}
+                </div>
+              )
+            })}
           </div>
 
           {/* ── CTA ── */}
