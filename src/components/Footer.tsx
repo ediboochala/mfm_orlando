@@ -2,8 +2,15 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { CHURCH, NAV_LINKS, FOOTER_EXTRA_LINKS } from '@/data/siteData'
+import { CHURCH, NAV_LINKS, FOOTER_EXTRA_LINKS, SOCIAL_LINKS } from '@/data/siteData'
+import SocialIcon from './SocialIcon'
 import styles from './Footer.module.css'
+
+// Only one icon per platform in the footer — de-duped from SOCIAL_LINKS,
+// which lists both the Tampa and HQ YouTube channels separately.
+const FOOTER_SOCIALS = SOCIAL_LINKS.filter(
+  (s, i, arr) => arr.findIndex(x => x.platform === s.platform) === i
+)
 
 export default function Footer() {
   return (
@@ -38,6 +45,22 @@ export default function Footer() {
           </Link>
         ))}
       </nav>
+
+      <div className={styles.socials}>
+        {FOOTER_SOCIALS.map((s) => (
+          <a
+            key={s.href}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialLink}
+            title={s.label}
+            aria-label={s.label}
+          >
+            <SocialIcon platform={s.platform} size={16} />
+          </a>
+        ))}
+      </div>
     </footer>
   )
 }

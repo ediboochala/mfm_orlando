@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CHURCH, PASTOR, SOCIAL_LINKS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import SocialIcon from '@/components/SocialIcon'
 import ContactForm from './ContactForm'
 import styles from './page.module.css'
 
@@ -81,7 +82,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       title={s.label}
                     >
-                      {s.icon}
+                      <SocialIcon platform={s.platform} size={17} />
                     </a>
                   ))}
                 </div>

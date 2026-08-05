@@ -282,10 +282,10 @@ export const PRAYER_LINE = {
 }
 
 export const SOCIAL_LINKS = [
-  { label: 'YouTube (MFM Tampa)', href: 'https://www.youtube.com/@mfm-tampaflorida4355',   icon: '▶' },
-  { label: 'Facebook',            href: 'https://www.facebook.com/mfmtampaflorida/',       icon: 'f' },
-  { label: 'Instagram',           href: 'https://www.instagram.com/mfmtampaflorida/',      icon: '◎' },
-  { label: 'YouTube (MFM HQ)',    href: 'https://www.youtube.com/@MFMMinistries',          icon: '▶' },
+  { label: 'YouTube (MFM Tampa)', href: 'https://www.youtube.com/channel/UCktRiusABonf9JPSlLgFoWA', platform: 'youtube'   as const },
+  { label: 'Facebook',            href: 'https://www.facebook.com/mfmtampaflorida/',                platform: 'facebook'  as const },
+  { label: 'Instagram',           href: 'https://www.instagram.com/mfmtampaflorida/',                platform: 'instagram' as const },
+  { label: 'YouTube (MFM HQ)',    href: 'https://www.youtube.com/@MFMMinistries',                    platform: 'youtube'   as const },
 ]
 
 // ── Major MFM USA sister-ministry platforms ─────────────────────────────────

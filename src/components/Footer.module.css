@@ -40,6 +40,30 @@
 }
 .link:hover { color: var(--accent-light); }
 
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.socialLink {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+  transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.25s;
+}
+.socialLink:hover {
+  color: #FFFFFF;
+  border-color: var(--accent-light);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 30px 24px;
@@ -47,4 +71,5 @@
     text-align: center;
   }
   .links { flex-wrap: wrap; justify-content: center; gap: 18px; }
+  .socials { justify-content: center; }
 }

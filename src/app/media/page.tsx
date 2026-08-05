@@ -2,8 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CHURCH, LIVE_SCHEDULE, PRAYER_LINE, SOCIAL_LINKS, SISTER_MINISTRIES } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import SocialIcon, { type SocialPlatform } from '@/components/SocialIcon'
 import YoutubeChannelSection from './YoutubeChannelSection'
 import styles from './page.module.css'
+
+const BRAND_COLORS: Record<SocialPlatform, string> = {
+  youtube: '#ff0000',
+  facebook: '#1877f2',
+  instagram: '#d6249f',
+}
 
 export const metadata: Metadata = {
   title: `Media & Live — ${CHURCH.shortName}`,
@@ -111,7 +118,9 @@ export default function MediaPage() {
                   rel="noopener noreferrer"
                   className={styles.channelCard}
                 >
-                  <span className={styles.channelIcon} aria-hidden>{s.icon}</span>
+                  <span className={styles.channelIcon} style={{ color: BRAND_COLORS[s.platform] }} aria-hidden>
+                    <SocialIcon platform={s.platform} size={26} />
+                  </span>
                   <div className={styles.channelInfo}>
                     <span className={styles.channelName}>{s.label}</span>
                   </div>
