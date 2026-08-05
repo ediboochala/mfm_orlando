@@ -82,7 +82,7 @@ export default function PastorPage() {
               <div className={styles.pastorCard}>
                 <div className={styles.cardPlaceholder}>
                   <Image
-                    src="/Pastor Tampa.png"
+                    src="/Pastor Sam.png"
                     alt="Pastor Kehinde Olajide"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center top' }}

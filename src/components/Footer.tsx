@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { CHURCH, NAV_LINKS } from '@/data/siteData'
+import { CHURCH, NAV_LINKS, FOOTER_EXTRA_LINKS } from '@/data/siteData'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -32,6 +32,11 @@ export default function Footer() {
             </Link>
           )
         )}
+        {FOOTER_EXTRA_LINKS.map((link) => (
+          <Link key={link.href} href={link.href} className={styles.link}>
+            {link.label}
+          </Link>
+        ))}
       </nav>
     </footer>
   )

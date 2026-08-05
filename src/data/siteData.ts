@@ -105,95 +105,87 @@ export const SERVICES = [
   },
   {
     day: 'Tuesdays',
-    name: 'Hour of Deliverance Power',
-    time: '11:00 AM – 2:00 PM (ET)',
-    icon: '⚔️',
-    image: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&q=80&auto=format&fit=crop',
-  },
-  {
-    day: 'Tuesday Nights',
-    name: 'Bible Study & Personal Prayers',
+    name: 'Personal Prayer & Bible Study',
     time: '7:00 PM (ET)',
     icon: '📖',
     image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
-    day: 'Wednesdays',
-    name: 'Hour of Deliverance Power',
-    time: '11:00 AM – 2:00 PM (ET)',
-    icon: '⚔️',
-    image: 'https://images.unsplash.com/photo-1544427920-c49ccfb85579?w=800&h=600&q=80&auto=format&fit=crop',
-  },
-  {
     day: 'Thursdays',
-    name: 'Hour of Deliverance Power',
-    time: '11:00 AM – 2:00 PM (ET)',
-    icon: '⚔️',
-    image: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&q=80&auto=format&fit=crop',
-  },
-  {
-    day: 'Thursday Nights',
     name: 'Manna Water Service',
     time: '7:00 PM (ET)',
     icon: '💧',
     image: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
-    day: 'Fridays',
-    name: 'Hour of Deliverance Power',
-    time: '11:00 AM – 2:00 PM (ET)',
-    icon: '🔥',
-    image: 'https://images.unsplash.com/photo-1533000759938-aa0ba70beceb?w=800&h=600&q=80&auto=format&fit=crop',
-  },
-  {
     day: '1st Saturday / Month',
-    name: 'Power Must Change Hands',
+    name: 'Power Must Change Hands (PMCH)',
     time: '10:00 AM (ET)',
     icon: '⚡',
+    note: 'Streamed from MFM Lagos Headquarters',
     image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&h=600&q=80&auto=format&fit=crop',
   },
 ]
 
+// ── Online-only programs (streamed on social media, not held on-site) ──────
+export const ONLINE_PROGRAMS = [
+  {
+    name: 'Hour of Deliverance Power',
+    platform: 'Facebook Live',
+    days: 'Tuesday, Thursday, Friday',
+    time: '12:00 Noon (ET)',
+    description: 'A midday hour of targeted, aggressive deliverance prayer — streamed live so you can join from wherever you are.',
+  },
+]
+
+// ── Themed Sundays — the focus of each Sunday service in the month ─────────
+export const THEMED_SUNDAYS = [
+  { week: '1st Sunday',   theme: 'Thanksgiving / Welfare Sunday' },
+  { week: '2nd Sunday',   theme: 'Evangelism Sunday' },
+  { week: '3rd Sunday',   theme: 'Church Building Maintenance Sunday' },
+  { week: 'Last Sunday',  theme: 'Monthly Deliverance Weekend', note: 'Friday – Sunday' },
+]
+
 export const MINISTRIES = [
   {
-    id: 'mens-fellowship',
-    name: "Men's Fellowship",
-    subtitle: 'Men of Valor (MOV) Movement',
+    id: 'men-of-valor',
+    name: 'Men of Valor',
+    subtitle: "Men's Ministry",
     icon: 'sword',
     tagline: 'Raising mighty men of God — in the home, in the church, and in the world.',
-    description: "The Men of Valor Movement exists because MFM believes that the transformation of a nation begins with the transformation of its men. Every man carries a God-given responsibility — as a father, a husband, a son, a leader, a warrior in the spiritual realm. The MOV Movement is designed to awaken that responsibility, equip men with biblical tools for spiritual warfare, and build a brotherhood of accountability, integrity, and purpose. When men rise to their calling, families are healed, children are protected, and communities are transformed.",
+    description: "Men of Valor exists because MFM believes that the transformation of a nation begins with the transformation of its men. Every man carries a God-given responsibility — as a father, a husband, a son, a leader, a warrior in the spiritual realm. Men of Valor is designed to awaken that responsibility, equip men with biblical tools for spiritual warfare, and build a brotherhood of accountability, integrity, and purpose. When men rise to their calling, families are healed, children are protected, and communities are transformed.",
     details: [
       'Periodic meetings for fellowship, teaching, and strategic prayer',
       'Training in spiritual leadership for the home and the church',
       'Focus on raising Godly children through biblical principles',
       'Brotherhood and accountability among men of all ages',
     ],
-    membership: 'Every man in the church is automatically a member',
+    membership: 'Every man in the church is automatically a member. There is no dedicated Expectant Fathers ministry yet — expectant fathers currently fellowship here.',
     scripture: '"Be watchful, stand firm in the faith, act like men, be strong." — 1 Corinthians 16:13',
   },
   {
-    id: 'womens-foundation',
-    name: "Women's Foundation",
-    subtitle: 'MFM Women Foundation (KFDL)',
+    id: 'glorious-women',
+    name: 'Glorious Women',
+    subtitle: "Women's Ministry",
     icon: 'flower',
     tagline: 'Knowing God. Filled with His Spirit. Doing His Will. Loving His People.',
-    description: "The MFM Women Foundation is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
+    description: "Glorious Women is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
     details: [
       'Spirit-filled programs addressing spiritual, physical, and financial growth',
       "Focus on the woman's calling as mother, wife, and spiritual force in the home",
       'Regular fellowship and discipleship for women of all ages',
       "KFDL: Know God's Word · Filled with His Spirit · Do His Will · Love His People",
     ],
-    membership: 'Every woman in the church is automatically a member',
+    membership: 'Every woman in the church is automatically a member. There is no dedicated Expectant Mothers ministry yet — expectant mothers currently fellowship here.',
     scripture: '"She is clothed with strength and dignity; she can laugh at the days to come." — Proverbs 31:25',
   },
   {
-    id: 'childrens-church',
-    name: "Children's Church",
+    id: 'children-church',
+    name: 'Children Church',
     subtitle: 'Raising Kingdom Champions from Childhood',
     icon: 'sparkle',
     tagline: 'Building a foundation of faith that will last a lifetime.',
-    description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children's Church is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
+    description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children Church is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
     details: [
       'Age-appropriate Bible teaching and spiritual formation',
       "Helping children understand God's nature, character, and love",
@@ -204,20 +196,36 @@ export const MINISTRIES = [
     scripture: '"Train up a child in the way he should go: and when he is old, he will not depart from it." — Proverbs 22:6',
   },
   {
-    id: 'youth-fellowship',
-    name: 'Youth Fellowship',
+    id: 'youth-church',
+    name: 'Youth Church',
     subtitle: 'Empowering the Next Generation',
     icon: 'flame',
     tagline: 'Young, on fire, and on purpose — for the glory of God.',
-    description: "The Youth Fellowship at MFM Tampa Florida understands the unique pressures facing young people in this generation. Identity crises, the pull of social media, peer pressure, moral confusion — these are real and formidable. The Youth Fellowship exists to give young people an anchor: a clear identity in Christ, a community that holds them accountable, and a vision for their lives that is bigger than anything the world is offering. We are raising a generation of young men and women who know who they are, know whose they are, and will not be moved.",
+    description: "Youth Church at MFM Tampa Florida understands the unique pressures facing teenagers and young people in this generation. Identity crises, the pull of social media, peer pressure, moral confusion — these are real and formidable. Youth Church exists to give young people an anchor: a clear identity in Christ, a community that holds them accountable, and a vision for their lives that is bigger than anything the world is offering. We are raising a generation of young men and women who know who they are, know whose they are, and will not be moved.",
     details: [
-      'Emotional, spiritual, and physical empowerment for youths and young adults',
+      'Emotional, spiritual, and physical empowerment for teens and youths',
       'Helping youth discover and live out their God-given identity in Christ',
       'Navigating modern challenges: technology, culture, relationships, and purpose',
       'Dynamic worship, fellowship, and targeted prayer for young people',
     ],
-    membership: 'Open to youths and young adults in the MFM Tampa Florida family',
+    membership: 'Open to teens and youths in the MFM Tampa Florida family',
     scripture: '"Remember now your Creator in the days of your youth." — Ecclesiastes 12:1',
+  },
+  {
+    id: 'young-adults-church',
+    name: 'Young Adults Church',
+    subtitle: 'Equipping the Rising Generation of Leaders',
+    icon: 'sprout',
+    tagline: 'Purpose-driven, Spirit-filled, and ready to lead.',
+    description: "Young Adults Church exists for the season of life between youth and full adulthood — college, first jobs, early careers, and the search for direction and purpose. This is a season where the decisions made shape the rest of a person's life: who to marry, what to build a career on, how to steward independence in a way that honors God. Young Adults Church gives this generation biblical grounding, mentorship, and a community of peers pursuing God together, so they step into full adulthood already anchored in Christ.",
+    details: [
+      'Teaching on purpose, calling, career, and God-honoring independence',
+      'Mentorship and peer community for singles and young couples alike',
+      'Practical discipleship for the transition into full adult responsibility',
+      'Dynamic worship and fellowship tailored to young adults',
+    ],
+    membership: 'Open to young adults in the MFM Tampa Florida family',
+    scripture: '"Let no one despise your youth, but be an example." — 1 Timothy 4:12',
   },
   {
     id: 'music-ministry',
@@ -234,22 +242,6 @@ export const MINISTRIES = [
     ],
     membership: 'Open to all who have a gift for music and a heart for worship',
     scripture: '"Let everything that has breath praise the Lord." — Psalm 150:6',
-  },
-  {
-    id: 'expectant-family',
-    name: 'Expectant Family Ministry',
-    subtitle: 'Covering Every New Life in Prayer',
-    icon: 'sprout',
-    tagline: 'Children are a heritage of the Lord — every expectant family deserves to be covered.',
-    description: "The MFM Expectant Family Ministry wraps around families in the sacred season of pregnancy and new parenthood with prayer, support, and spiritual covering. We believe that children are a heritage and reward from God, and that every pregnancy is a divine assignment that deserves to be covered in prayer from the very beginning. This ministry also speaks into the heart of marriage itself — reminding couples that their union is a sacred covenant that God established for the flourishing of both partners and the children He entrusts to them.",
-    details: [
-      'Prayer and spiritual covering for expectant mothers throughout pregnancy',
-      'Support for new parents navigating the early stages of family life',
-      'Teaching on marriage as a divine covenant and children as a blessing',
-      'Community of families walking through the same season together',
-    ],
-    membership: 'Open to all expectant mothers and families in the MFM Tampa Florida community',
-    scripture: '"Children are a heritage of the Lord: and the fruit of the womb is his reward." — Psalm 127:3',
   },
   {
     id: 'gen-218',
@@ -296,6 +288,31 @@ export const SOCIAL_LINKS = [
   { label: 'YouTube (MFM HQ)',    href: 'https://www.youtube.com/@MFMMinistries',          icon: '▶' },
 ]
 
+// ── Major MFM USA sister-ministry platforms ─────────────────────────────────
+export const SISTER_MINISTRIES = [
+  { label: 'MFM USA',                          href: 'https://mfmamerica.org',        description: 'The official platform of MFM branches across the United States.' },
+  { label: 'MFM Mega Region 2',                href: 'https://mfmmegaregion2usa.org', description: 'MFM Mega Region 2 USA — coordinating MFM branches across the region.' },
+  { label: 'MFM Americas Youth',               href: 'https://mfmym.org',             description: 'MFM Americas Youth Ministries — raising young people across the Americas.' },
+  { label: 'MFM Mega Region 2 Youth Church',   href: 'https://mfmmegaregion2yc.org',  description: 'The Youth Church platform for MFM Mega Region 2 USA.' },
+]
+
+// ── Deliverance signup ───────────────────────────────────────────────────────
+export const DELIVERANCE = {
+  intro: 'If you are carrying a burden that will not lift — sickness, bondage, an oppression you cannot name — you do not have to carry it alone. Fill out the form below and one of our ministers will follow up with you.',
+  // TODO: replace with the real Google Form URL once provided.
+  formUrl: '',
+}
+
+// ── Global Programs — Annual 70 Days Prayer & Fasting ───────────────────────
+export const GLOBAL_PROGRAMS = {
+  seventyDays: {
+    name: 'Annual 70 Days Prayer & Fasting',
+    description: 'MFM\'s signature global prayer and fasting program, observed by MFM branches worldwide as we press into a new year with prayer, holiness, and fasting.',
+    // TODO: replace with the real external link once provided.
+    link: '',
+  },
+}
+
 export const HISTORY_TIMELINE = [
   {
     year: '1989',
@@ -333,17 +350,37 @@ export const MISSION_GOALS = [
   'To build an aggressive end-time army for the Lord.',
 ]
 
+// ── Bookshop / Resources — MFM books available through the ministry ────────
+export const BOOKSHOP = {
+  intro: 'MFM books and prayer resources by Dr. D.K. Olukoya are available through the MFM Bookstand. Titles listed below are commonly stocked — check with the church office for current availability.',
+  books: [
+    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya' },
+    { title: 'Pray Your Way to Breakthrough', author: 'Dr. D.K. Olukoya' },
+    { title: 'Criminals in the House of God', author: 'Dr. D.K. Olukoya' },
+    { title: 'Dealing With The Evil Powers Of Your Father\'s House', author: 'Dr. D.K. Olukoya' },
+    { title: 'Overpowering Witchcraft', author: 'Dr. D.K. Olukoya' },
+    { title: 'Victory Over Satanic Dreams', author: 'Dr. D.K. Olukoya' },
+  ],
+}
+
 export const NAV_LINKS = [
   { label: 'Home',        href: '/' },
   { label: 'About',       href: '/about' },
   { label: 'Pastor',      href: '/pastor' },
   { label: 'Ministries',  href: '/ministries' },
   { label: 'Services',    href: '/services' },
+  { label: 'Deliverance', href: '/deliverance' },
   { label: 'Blog',        href: '/blog' },
   { label: 'Gallery',     href: '/gallery' },
   { label: 'Media',       href: '/media' },
   { label: 'Prayer Line', href: '/prayer-line' },
   { label: 'Contact',     href: '/contact' },
+]
+
+// ── Secondary footer links — kept out of the primary nav to avoid clutter ──
+export const FOOTER_EXTRA_LINKS = [
+  { label: 'Global Programs', href: '/global-programs' },
+  { label: 'Bookshop',        href: '/bookshop' },
 ]
 
 export interface MediaBlock {
@@ -498,11 +535,11 @@ export const GALLERY_CATEGORIES = ['All', 'Worship', 'Deliverance', 'Youth', 'Ou
 export const GALLERY_ITEMS = [
   { id: 1,  title: 'Sunday Worship Service',         category: 'Worship',        description: 'Congregation gathered in powerful Sunday worship.' },
   { id: 2,  title: 'Friday Deliverance Night',       category: 'Deliverance',    description: 'Believers receiving freedom and breakthrough.' },
-  { id: 3,  title: 'Youth Fellowship Meeting',       category: 'Youth',          description: 'Young people discovering their identity in Christ.' },
+  { id: 3,  title: 'Youth Church Meeting',           category: 'Youth',          description: 'Young people discovering their identity in Christ.' },
   { id: 4,  title: 'Community Outreach Program',     category: 'Outreach',       description: 'Serving the Tampa community with love and prayer.' },
   { id: 5,  title: 'Power Must Change Hands',        category: 'Special Events', description: 'Monthly power service drawing believers together.' },
   { id: 6,  title: 'Crossover Night Service',        category: 'Special Events', description: 'End-of-month crossover service into victory.' },
-  { id: 7,  title: 'Women Fellowship Gathering',     category: 'Worship',        description: 'Sisters united in prayer and fellowship.' },
+  { id: 7,  title: 'Glorious Women Gathering',       category: 'Worship',        description: 'Sisters united in prayer and fellowship.' },
   { id: 8,  title: 'Bible Study Session',            category: 'Worship',        description: 'Deep study of the Word every Tuesday night.' },
   { id: 9,  title: 'Manna Water Program',            category: 'Special Events', description: 'Wednesday midweek programme for healing waters.' },
   { id: 10, title: 'Children Church Program',        category: 'Youth',          description: 'Raising kingdom champions from an early age.' },
@@ -511,27 +548,24 @@ export const GALLERY_ITEMS = [
 ]
 
 export const MINISTRY_PROJECTS = [
-  // Men's Fellowship
-  { id: 1,  ministryId: 'mens-fellowship',    title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/22 (1).jpg' },
-  { id: 2,  ministryId: 'mens-fellowship',    title: 'MOV Leadership Retreat',           date: 'Coming Soon',    description: 'A dedicated retreat for men to grow as leaders in the home and the church.',                image: null },
-  // Women's Foundation
-  { id: 3,  ministryId: 'womens-foundation',  title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/22 (2).jpg' },
-  { id: 4,  ministryId: 'womens-foundation',  title: 'Women\'s Prayer Breakfast',        date: 'Coming Soon',    description: 'Monthly fellowship and intercession over breakfast for women of all ages.',                   image: null },
-  // Children's Church
-  { id: 5,  ministryId: 'childrens-church',   title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/22 (4).jpg' },
-  { id: 6,  ministryId: 'childrens-church',   title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
-  // Youth Fellowship
-  { id: 7,  ministryId: 'youth-fellowship',   title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Young adults encountered God and discovered their God-given purpose.',                      image: '/22 (3).jpg' },
-  { id: 8,  ministryId: 'youth-fellowship',   title: 'Youth Outreach Day',               date: 'Coming Soon',    description: 'Taking the gospel to the streets of Tampa with energy and love.',                         image: null },
+  // Men of Valor
+  { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/22 (1).jpg' },
+  // Glorious Women
+  { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/22 (2).jpg' },
+  // Children Church
+  { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/22 (4).jpg' },
+  { id: 6,  ministryId: 'children-church',     title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
+  // Youth Church
+  { id: 7,  ministryId: 'youth-church',        title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Teens and youths encountered God and discovered their God-given purpose.',                  image: '/22 (3).jpg' },
+  { id: 8,  ministryId: 'youth-church',        title: 'Youth Outreach Day',               date: 'Coming Soon',    description: 'Taking the gospel to the streets of Tampa with energy and love.',                         image: null },
+  // Young Adults Church
+  { id: 15, ministryId: 'young-adults-church', title: 'Young Adults Purpose Summit',      date: 'Coming Soon',    description: 'Young adults gathered to hear teaching on calling, career, and God-honoring independence.',   image: null },
   // Music Ministry
   { id: 9,  ministryId: 'music-ministry',     title: 'MFM Worship Night',                date: 'Coming Soon',    description: 'An evening of anointed worship that opens the heavens and breaks every chain.',              image: null },
   { id: 10, ministryId: 'music-ministry',     title: 'Praise & Deliverance Concert',     date: 'Coming Soon',    description: 'Music as a weapon — a full night of praise preceding signs and wonders.',                   image: null },
   // GEN 2:18
   { id: 11, ministryId: 'gen-218',            title: 'GEN 2:18 Singles Gathering',       date: 'Coming Soon',    description: 'Biblical teaching on identity, purpose, and God\'s design for love and marriage.',            image: null },
   { id: 12, ministryId: 'gen-218',            title: 'Valentine Purity Gala',            date: 'Coming Soon',    description: 'An evening celebrating purity, purpose, and preparation for God\'s best.',                   image: null },
-  // Expectant Family Ministry
-  { id: 13, ministryId: 'expectant-family',   title: 'MFM Tampa Florida Church Home',          date: 'Ongoing',        description: 'The house where every ministry gathers — built by God for His family in Tampa.',            image: '/22 (1).jpg' },
-  { id: 14, ministryId: 'expectant-family',   title: 'Expectant Mothers Prayer Cover',   date: 'Coming Soon',    description: 'Covering every pregnancy with intercession from the very first trimester.',                  image: null },
 ]
 
 // ── Featured Videos (replace videoId with real YouTube video IDs) ──────────
@@ -584,11 +618,10 @@ export const YOUTUBE_CHANNELS = [
 ]
 
 export const LIVE_SCHEDULE = [
-  { day: 'Sundays',              service: 'Sunday Worship Service',  time: '10:00 AM ET', streamed: true  },
-  { day: 'Tuesdays',             service: 'Bible Study',             time: '7:00 PM ET',  streamed: false },
-  { day: 'Wednesdays',           service: 'Manna Water Program',     time: '11:30 AM ET', streamed: false },
-  { day: 'Thursdays',            service: 'Revival Service',         time: '7:00 PM ET',  streamed: true  },
-  { day: 'Friday Nights',        service: 'Deliverance Service',     time: '11:00 PM ET', streamed: true  },
-  { day: '1st Saturday / Month', service: 'Power Must Change Hands', time: '10:00 AM ET', streamed: true  },
-  { day: 'Last Day / Month',     service: 'Crossover Night',         time: '11:00 PM ET', streamed: true  },
+  { day: 'Sundays',              service: 'Sunday Worship Service',            time: '10:00 AM ET', streamed: true  },
+  { day: 'Tuesdays',             service: 'Personal Prayer & Bible Study',     time: '7:00 PM ET',  streamed: false },
+  { day: 'Tue / Thu / Fri',      service: 'Hour of Deliverance Power (Online)', time: '12:00 Noon ET', streamed: true  },
+  { day: 'Thursdays',            service: 'Manna Water Service',               time: '7:00 PM ET',  streamed: false },
+  { day: '1st Saturday / Month', service: 'Power Must Change Hands',           time: '10:00 AM ET', streamed: true  },
+  { day: 'Last Sunday / Month',  service: 'Monthly Deliverance Weekend',       time: 'Fri – Sun',   streamed: false },
 ]

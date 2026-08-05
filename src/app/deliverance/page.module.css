@@ -96,26 +96,28 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ── Main / extra sections ── */
+/* ── Main Layout ── */
 .main {
-  padding: 70px 0 10px;
+  padding: 70px 0 60px;
 }
 .mainInner {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 60px;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 50px;
 }
+
 .section {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 }
 .sectionHeader {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 .sectionLabel {
@@ -140,107 +142,53 @@
 }
 .sectionDesc {
   font-size: 15px;
+  line-height: 1.85;
+  color: rgba(var(--text-rgb), 0.6);
+}
+
+/* ── Form embed ── */
+.formWrap {
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  background: #FFFFFF;
+  overflow: hidden;
+}
+.formFrame {
+  width: 100%;
+  height: 1100px;
+  max-height: 80vh;
+  border: none;
+  display: block;
+}
+
+/* ── Placeholder (no form link yet) ── */
+.placeholder {
+  border: 1px dashed rgba(var(--accent-rgb), 0.35);
+  background: rgba(var(--accent-rgb), 0.05);
+  padding: 48px 40px;
+  text-align: center;
+}
+.placeholderIcon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+.placeholderTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.placeholderText {
+  font-size: 14px;
   line-height: 1.8;
   color: rgba(var(--text-rgb), 0.55);
-  max-width: 620px;
-  margin-top: 4px;
-}
-
-/* ── Themed Sundays ── */
-.themedGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: rgba(var(--accent-rgb), 0.08);
-  border: 1px solid rgba(var(--accent-rgb), 0.08);
-}
-.themedCard {
-  background: #FFFFFF;
-  padding: 30px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.themedWeek {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.themedTheme {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.4;
-}
-.themedNote {
-  font-size: 12px;
-  color: rgba(var(--text-rgb), 0.45);
-}
-
-/* ── Online Programs ── */
-.onlineCard {
-  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06) 0%, rgba(var(--accent-rgb), 0.06) 100%);
-  border: 1px solid rgba(var(--accent-rgb), 0.18);
-  padding: 36px 40px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 24px;
-  justify-content: space-between;
-}
-.onlineInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.onlineName {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-}
-.onlineDesc {
-  font-size: 13px;
-  line-height: 1.7;
-  color: rgba(var(--text-rgb), 0.55);
-  max-width: 520px;
-}
-.onlineMeta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  text-align: right;
-}
-.onlinePlatform {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.onlineDays {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--primary);
-}
-.onlineTime {
-  font-size: 12px;
-  color: rgba(var(--text-rgb), 0.5);
+  max-width: 460px;
+  margin: 0 auto 24px;
 }
 
 /* ── CTA ── */
-.ctaWrap {
-  background: var(--dark);
-  padding: 70px 60px;
-}
 .cta {
-  max-width: 1080px;
-  margin: 0 auto;
   background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06) 0%, rgba(var(--accent-rgb), 0.06) 100%);
   border: 1px solid rgba(var(--accent-rgb), 0.18);
   padding: 56px 40px;
@@ -279,22 +227,17 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .topBarInner  { padding: 14px 30px; }
-  .hero         { padding: 80px 30px 60px; }
-  .mainInner    { padding: 0 30px; }
-  .themedGrid   { grid-template-columns: repeat(2, 1fr); }
-  .ctaWrap      { padding: 60px 30px; }
-  .footerStrip  { padding: 24px 30px; }
+  .topBarInner,
+  .mainInner   { padding: 14px 30px; }
+  .hero        { padding: 80px 30px 60px; }
+  .footerStrip { padding: 24px 30px; }
 }
 
 @media (max-width: 700px) {
-  .topBarInner  { padding: 12px 20px; }
-  .hero         { padding: 60px 20px 50px; }
-  .mainInner    { padding: 0 20px; gap: 50px; }
-  .themedGrid   { grid-template-columns: 1fr; }
-  .onlineCard   { padding: 28px 24px; }
-  .onlineMeta   { align-items: flex-start; text-align: left; }
-  .ctaWrap      { padding: 40px 20px; }
-  .cta          { padding: 36px 20px; }
-  .footerStrip  { padding: 20px; }
+  .topBarInner,
+  .mainInner   { padding: 12px 20px; }
+  .hero        { padding: 60px 20px 50px; }
+  .footerStrip { padding: 20px; }
+  .cta         { padding: 36px 20px; }
+  .placeholder { padding: 36px 24px; }
 }

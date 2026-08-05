@@ -14,7 +14,7 @@ export default function WelcomeSection() {
             <div className={styles.imgFrame}>
               <div className={styles.imgPlaceholder}>
                 <Image
-                  src="/Pastor Tampa.png"
+                  src="/Pastor Sam.png"
                   alt="Pastor Kehinde Olajide"
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center top' }}

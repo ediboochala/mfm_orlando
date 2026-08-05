@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CHURCH } from '@/data/siteData'
+import { CHURCH, THEMED_SUNDAYS, ONLINE_PROGRAMS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import ServicesSection from '@/components/ServicesSection'
 import styles from './page.module.css'
@@ -43,6 +43,60 @@ export default function ServicesPage() {
 
       {/* ── Services Grid ── */}
       <ServicesSection />
+
+      <main className={styles.main}>
+        <div className={styles.mainInner}>
+
+          {/* ── Online Programs ── */}
+          <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionLabel}>Streamed Live</span>
+              <h2 className={styles.sectionTitle}>Online Programs</h2>
+              <div className={styles.sectionDivider} />
+              <p className={styles.sectionDesc}>
+                Can&apos;t make it in person? Join our online-only prayer program, streamed live wherever you are.
+              </p>
+            </div>
+
+            {ONLINE_PROGRAMS.map((prog, i) => (
+              <div key={i} className={styles.onlineCard}>
+                <div className={styles.onlineInfo}>
+                  <p className={styles.onlineName}>{prog.name}</p>
+                  <p className={styles.onlineDesc}>{prog.description}</p>
+                </div>
+                <div className={styles.onlineMeta}>
+                  <span className={styles.onlinePlatform}>{prog.platform}</span>
+                  <span className={styles.onlineDays}>{prog.days}</span>
+                  <span className={styles.onlineTime}>{prog.time}</span>
+                </div>
+              </div>
+            ))}
+          </section>
+
+          {/* ── Themed Sundays ── */}
+          <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionLabel}>Every Month</span>
+              <h2 className={styles.sectionTitle}>Themed Sundays</h2>
+              <div className={styles.sectionDivider} />
+              <p className={styles.sectionDesc}>
+                Each Sunday of the month carries its own focus — here&apos;s what to expect.
+              </p>
+            </div>
+
+            <div className={styles.themedGrid}>
+              {THEMED_SUNDAYS.map((t, i) => (
+                <div key={i} className={styles.themedCard}>
+                  <span className={styles.themedWeek}>{t.week}</span>
+                  <p className={styles.themedTheme}>{t.theme}</p>
+                  {t.note && <span className={styles.themedNote}>{t.note}</span>}
+                </div>
+              ))}
+            </div>
+          </section>
+
+        </div>
+      </main>
 
       {/* ── CTA ── */}
       <div className={styles.ctaWrap}>

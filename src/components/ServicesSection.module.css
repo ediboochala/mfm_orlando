@@ -154,6 +154,14 @@
   color: rgba(255, 255, 255, 0.55);
   letter-spacing: 2px;
 }
+.cardNote {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+  line-height: 1.4;
+}
 
 /* ── Address line ── */
 .address {

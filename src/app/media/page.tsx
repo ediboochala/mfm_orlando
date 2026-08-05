@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CHURCH, LIVE_SCHEDULE, PRAYER_LINE } from '@/data/siteData'
+import { CHURCH, LIVE_SCHEDULE, PRAYER_LINE, SOCIAL_LINKS, SISTER_MINISTRIES } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import YoutubeChannelSection from './YoutubeChannelSection'
 import styles from './page.module.css'
@@ -89,6 +89,68 @@ export default function MediaPage() {
             </div>
 
             <YoutubeChannelSection />
+          </section>
+
+          {/* ── Follow Us ── */}
+          <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionLabel}>Stay Connected</span>
+              <h2 className={styles.sectionTitle}>Follow MFM Tampa Florida</h2>
+              <div className={styles.sectionDivider} />
+              <p className={styles.sectionDesc}>
+                Follow us on social media for updates, sermon clips, and live service reminders.
+              </p>
+            </div>
+
+            <div className={styles.channelsGrid}>
+              {SOCIAL_LINKS.map((s) => (
+                <a
+                  key={s.href}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.channelCard}
+                >
+                  <span className={styles.channelIcon} aria-hidden>{s.icon}</span>
+                  <div className={styles.channelInfo}>
+                    <span className={styles.channelName}>{s.label}</span>
+                  </div>
+                  <span className={styles.channelArrow}>→</span>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Sister Ministries ── */}
+          <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionLabel}>MFM USA Network</span>
+              <h2 className={styles.sectionTitle}>Sister Ministries &amp; Platforms</h2>
+              <div className={styles.sectionDivider} />
+              <p className={styles.sectionDesc}>
+                MFM Tampa Florida is part of a wider family of MFM ministries across the United States.
+                Explore the major MFM USA platforms below.
+              </p>
+            </div>
+
+            <div className={styles.channelsGrid}>
+              {SISTER_MINISTRIES.map((m) => (
+                <a
+                  key={m.href}
+                  href={m.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.channelCard}
+                >
+                  <div className={styles.channelInfo}>
+                    <span className={styles.channelName}>{m.label}</span>
+                    <span className={styles.channelHandle}>{m.href.replace('https://', '')}</span>
+                    <p className={styles.channelDesc}>{m.description}</p>
+                  </div>
+                  <span className={styles.channelArrow}>→</span>
+                </a>
+              ))}
+            </div>
           </section>
 
           {/* ── Prayer Line ── */}

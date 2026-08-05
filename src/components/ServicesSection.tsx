@@ -25,6 +25,9 @@ export default function ServicesSection() {
                 <span className={styles.cardDay}>{svc.day}</span>
                 <p className={styles.cardName}>{svc.name}</p>
                 <p className={styles.cardTime}>{svc.time}</p>
+                {'note' in svc && svc.note && (
+                  <p className={styles.cardNote}>{svc.note}</p>
+                )}
               </div>
             </div>
           ))}
