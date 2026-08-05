@@ -567,24 +567,17 @@ export const MINISTRY_PROJECTS = [
   { id: 12, ministryId: 'gen-218',            title: 'Valentine Purity Gala',            date: 'Coming Soon',    description: 'An evening celebrating purity, purpose, and preparation for God\'s best.',                   image: null },
 ]
 
-// ── Featured Videos (replace videoId with real YouTube video IDs) ──────────
+// ── Featured Videos ──────────────────────────────────────────────────────
+// NOTE: videoId must be a real, embeddable YouTube video ID — verify with
+// https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ID&format=json
+// (200 + JSON = embeddable; 401 = embedding disabled by owner; 404 = ID doesn't exist)
+// before adding one here. The previous placeholder IDs in this file all
+// 404'd and have been removed rather than left broken.
 export const FEATURED_VIDEOS = [
   {
-    videoId: 'jJcfCKCr4n4',
-    title: 'Power Must Change Hands',
-    desc: 'A fire-filled prayer session from MFM Ministries. Receive your breakthrough as Dr. D.K. Olukoya leads aggressive warfare prayer.',
-    channelUrl: 'https://www.youtube.com/@MFMMinistries',
-  },
-  {
-    videoId: 'Q4pHMUbALZo',
-    title: 'Sunday Worship Service Live',
-    desc: 'Join the global MFM family for a Spirit-filled Sunday service — worship, the Word, and an encounter with the living God.',
-    channelUrl: 'https://www.youtube.com/@MFMMinistries',
-  },
-  {
-    videoId: 'eWCKap5GZNE',
-    title: 'Deliverance & Healing Service',
-    desc: 'Watch as God moves in power to deliver, heal, and restore. No captive is too bound for the hand of the Almighty.',
+    videoId: 'i93Z5IpwE44',
+    title: 'MFM Manna Water — Dr D.K. Olukoya',
+    desc: 'A Manna Water service from MFM Ministries HQ, ministered by Dr. D.K. Olukoya.',
     channelUrl: 'https://www.youtube.com/@MFMMinistries',
   },
 ]
@@ -597,9 +590,7 @@ export const YOUTUBE_CHANNELS = [
     description: 'Official channel of Mountain of Fire and Miracles Ministries. Live services, prayer programs, and messages from Dr. D.K. Olukoya.',
     featured: true,
     videos: [
-      { videoId: 'kMqJy-iHfU4', title: 'Let the Angels of God Pursue Them — MFM Manna Water' },
       { videoId: 'i93Z5IpwE44', title: 'MFM Manna Water — Dr D.K. Olukoya' },
-      { videoId: 'AemIhKHaOLE', title: 'Prayers That Move Mountains — Dr D.K. Olukoya' },
     ],
   },
   {
@@ -608,11 +599,9 @@ export const YOUTUBE_CHANNELS = [
     url: 'https://www.youtube.com/@mfmqatar',
     description: 'MFM Qatar branch — sermons, worship, and prayer content.',
     featured: false,
-    videos: [
-      { videoId: 'jJcfCKCr4n4', title: 'Power Must Change Hands' },
-      { videoId: 'Q4pHMUbALZo', title: 'Sunday Worship Service Live' },
-      { videoId: 'eWCKap5GZNE', title: 'Deliverance & Healing Service' },
-    ],
+    // No verified-embeddable video IDs for this channel yet — left empty
+    // rather than showing broken previews. See note above FEATURED_VIDEOS.
+    videos: [] as { videoId: string; title: string }[],
   },
 ]
 
