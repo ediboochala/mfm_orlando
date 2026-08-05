@@ -299,8 +299,7 @@ export const SISTER_MINISTRIES = [
 // ── Deliverance signup ───────────────────────────────────────────────────────
 export const DELIVERANCE = {
   intro: 'If you are carrying a burden that will not lift — sickness, bondage, an oppression you cannot name — you do not have to carry it alone. Fill out the form below and one of our ministers will follow up with you.',
-  // TODO: replace with the real Google Form URL once provided.
-  formUrl: '',
+  formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfQl0kOXv0nh7wfdIsaAwPVh7zUBAI-57fYrYSN-1TrsODKHQ/viewform',
 }
 
 // ── Global Programs — Annual 70 Days Prayer & Fasting ───────────────────────
