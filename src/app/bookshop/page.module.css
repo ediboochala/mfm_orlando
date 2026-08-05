@@ -118,33 +118,72 @@
 /* ── Books grid ── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(var(--accent-rgb), 0.08);
-  border: 1px solid rgba(var(--accent-rgb), 0.08);
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 28px;
 }
 .bookCard {
-  background: #FFFFFF;
-  padding: 32px 28px;
+  position: relative;
+  aspect-ratio: 3 / 4.3;
+  border-radius: 4px 10px 10px 4px;
+  padding: 26px 20px 22px 32px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  color: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
+.bookCard:hover {
+  transform: translateY(-8px) rotate(-0.6deg);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.14);
+}
+/* book spine */
+.bookCard::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.25);
+}
+/* cover sheen */
+.bookCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, transparent 55%);
+  pointer-events: none;
+}
+/* rotate through a small palette so covers read as distinct titles */
+.bookCard:nth-child(6n+1) { background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%); }
+.bookCard:nth-child(6n+2) { background: linear-gradient(160deg, #5A005A 0%, #26002A 100%); }
+.bookCard:nth-child(6n+3) { background: linear-gradient(160deg, var(--accent) 0%, #7A5F00 100%); }
+.bookCard:nth-child(6n+4) { background: linear-gradient(160deg, #7A0060 0%, #33002C 100%); }
+.bookCard:nth-child(6n+5) { background: linear-gradient(160deg, var(--primary-dark) 0%, #1A001A 100%); }
+.bookCard:nth-child(6n+6) { background: linear-gradient(160deg, #9C7A00 0%, var(--primary-dark) 100%); }
+
 .bookIcon {
-  font-size: 22px;
-  opacity: 0.7;
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  opacity: 0.85;
 }
 .bookTitle {
+  position: relative;
+  z-index: 1;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-top: auto;
 }
 .bookAuthor {
-  font-size: 12px;
-  color: rgba(var(--text-rgb), 0.45);
-  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
 }
 
 /* ── CTA ── */
@@ -191,7 +230,6 @@
   .mainInner   { padding: 14px 30px; }
   .hero        { padding: 80px 30px 60px; }
   .footerStrip { padding: 24px 30px; }
-  .grid        { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 700px) {
@@ -200,5 +238,10 @@
   .hero        { padding: 60px 20px 50px; }
   .footerStrip { padding: 20px; }
   .cta         { padding: 36px 20px; }
-  .grid        { grid-template-columns: 1fr; }
+  .grid        { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+
+@media (max-width: 420px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .bookCard { padding: 20px 16px 18px 26px; }
 }
