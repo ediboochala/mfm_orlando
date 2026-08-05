@@ -40,6 +40,16 @@ export default function CrusadePage() {
             <span className={styles.heroMetaDot} />
             <span>{CRUSADE.time}</span>
           </div>
+          <div className={styles.heroActions}>
+            <a
+              href="https://www.eventbrite.com/e/the-great-florida-deliverance-crusade-tickets-1996817130791?aff=oddtdtcreator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold"
+            >
+              Reserve a Spot
+            </a>
+          </div>
         </div>
       </header>
 
@@ -154,7 +164,15 @@ export default function CrusadePage() {
               to encounter the power of God.
             </p>
             <div className={styles.ctaActions}>
-              <a href={`tel:${CRUSADE.rsvpNumbers[0].replace(/[^0-9+]/g, '')}`} className="btn-primary">
+              <a
+                href="https://www.eventbrite.com/e/the-great-florida-deliverance-crusade-tickets-1996817130791?aff=oddtdtcreator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Reserve a Spot
+              </a>
+              <a href={`tel:${CRUSADE.rsvpNumbers[0].replace(/[^0-9+]/g, '')}`} className="btn-secondary">
                 RSVP Now
               </a>
               <Link href="/#crusade" className="btn-secondary">
