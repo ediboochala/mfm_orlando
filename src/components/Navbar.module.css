@@ -181,6 +181,26 @@
   color: #FFFFFF;
 }
 
+/* â”€â”€ DELIVERANCE CTA â”€â”€ */
+.deliveranceCta {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+  background: #0A0A0A;
+  border: 1px solid #0A0A0A;
+  border-radius: 999px;
+  padding: 10px 22px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s, transform 0.2s;
+}
+.deliveranceCta:hover {
+  background: #262626;
+  transform: translateY(-1px);
+}
+
 /* â”€â”€ RIGHT CLUSTER (toggle + CTA) â”€â”€ */
 .navRight {
   display: flex;
@@ -295,6 +315,21 @@
   border-color: var(--primary-dark);
   color: #FFFFFF;
 }
+.mobileDeliveranceCta {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+  background: #0A0A0A;
+  text-decoration: none;
+  border: 1px solid #0A0A0A;
+  border-radius: 999px;
+  padding: 14px 32px;
+  transition: background 0.3s;
+}
+.mobileDeliveranceCta:hover {
+  background: #262626;
+}
 
 @media (max-width: 1300px) {
   .nav { padding: 14px 28px; }
@@ -304,6 +339,7 @@
 @media (max-width: 1024px) {
   .navLinks { display: none; }
   .navCta   { display: none; }
+  .deliveranceCta { display: none; }
   .hamburger { display: flex; }
   .nav { padding: 16px 30px; }
   .scrolled { padding: 12px 30px; }

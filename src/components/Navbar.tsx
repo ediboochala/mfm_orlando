@@ -79,6 +79,9 @@ export default function Navbar() {
 
       {/* CTA */}
       <div className={styles.navRight}>
+        <Link href="/deliverance" className={styles.deliveranceCta}>
+          Need Deliverance?
+        </Link>
         <a href="#giving" className={styles.navCta} onClick={handleGivingClick}>
           Give Online
         </a>
@@ -141,6 +144,13 @@ export default function Navbar() {
               </Link>
             )
           )}
+          <Link
+            href="/deliverance"
+            className={styles.mobileDeliveranceCta}
+            onClick={() => setMenuOpen(false)}
+          >
+            Need Deliverance?
+          </Link>
           <a href="#giving" className={styles.mobileCta} onClick={handleGivingClick}>
             Give Online
           </a>
