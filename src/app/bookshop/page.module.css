@@ -255,6 +255,16 @@
   transform: translateX(3px);
 }
 
+/* ── More Books ── */
+.moreBooksWrap {
+  display: flex;
+  justify-content: center;
+}
+.moreBooksBtn {
+  color: var(--primary) !important;
+  border-color: rgba(var(--primary-rgb), 0.35) !important;
+}
+
 /* ── CTA ── */
 .cta {
   background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06) 0%, rgba(var(--accent-rgb), 0.06) 100%);

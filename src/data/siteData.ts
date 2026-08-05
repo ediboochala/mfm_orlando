@@ -357,12 +357,17 @@ export const BOOKSHOP = {
     { title: 'When Your Blood Needs Deliverance', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2089', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789201440_Cover.jpg' },
     { title: 'Pray Your Way to Marital Breakthrough (2026)', author: 'Dr. and Pastor (Mrs) D.K. Olukoya', price: '$7.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2108', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_Pray_Your_Way_to_Marital_Breakthrough_2026_Cover.jpg' },
     { title: 'The Contest of the Serpents', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=931', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789200788_Cover.jpg' },
+    { title: 'The Word Heals', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=1051', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789201617_Cover.jpg' },
+    { title: 'Healing Through Prayers', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=92', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789788424352_Cover.jpg' },
+    { title: 'Command The Morning', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=97', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783691780_EPUB_Cover.jpg' },
+    { title: 'Born Great But Tied Down', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=438', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783808348_Cover.jpg' },
     { title: 'Pray Your Way to Breakthrough', author: 'Dr. D.K. Olukoya' },
     { title: 'Criminals in the House of God', author: 'Dr. D.K. Olukoya' },
     { title: 'Dealing With The Evil Powers Of Your Father\'s House', author: 'Dr. D.K. Olukoya' },
     { title: 'Overpowering Witchcraft', author: 'Dr. D.K. Olukoya' },
     { title: 'Victory Over Satanic Dreams', author: 'Dr. D.K. Olukoya' },
   ],
+  moreBooksHref: 'https://www.dkoebooks.com/index.php',
 }
 
 export const NAV_LINKS = [

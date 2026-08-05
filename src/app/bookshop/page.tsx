@@ -88,6 +88,17 @@ export default function BookshopPage() {
             })}
           </div>
 
+          <div className={styles.moreBooksWrap}>
+            <a
+              href={BOOKSHOP.moreBooksHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn-secondary ${styles.moreBooksBtn}`}
+            >
+              View More Books on DKO eBooks →
+            </a>
+          </div>
+
           {/* ── CTA ── */}
           <div className={styles.cta}>
             <h3 className={styles.ctaTitle}>Visit the Bookstand</h3>
