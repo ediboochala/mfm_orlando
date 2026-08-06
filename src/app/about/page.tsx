@@ -49,16 +49,6 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* ── Stats Strip ── */}
-      <div className={styles.statsStrip}>
-        {STATS.map((s, i) => (
-          <div key={i} className={styles.statItem}>
-            <span className={styles.statNum}>{s.num}{s.suffix}</span>
-            <span className={styles.statLabel}>{s.label}</span>
-          </div>
-        ))}
-      </div>
-
       <main className={styles.main}>
         <div className={styles.mainInner}>
 
@@ -103,6 +93,16 @@ export default function AboutPage() {
               <span className={styles.sectionLabel}>Our Founder</span>
               <h2 className={styles.sectionTitle}>Meet Dr. D.K. Olukoya</h2>
               <div className={styles.sectionDivider} />
+            </div>
+
+            {/* ── Stats Strip ── */}
+            <div className={styles.statsStrip}>
+              {STATS.map((s, i) => (
+                <div key={i} className={styles.statItem}>
+                  <span className={styles.statNum}>{s.num}{s.suffix}</span>
+                  <span className={styles.statLabel}>{s.label}</span>
+                </div>
+              ))}
             </div>
 
             <div className={styles.goCard}>
