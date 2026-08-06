@@ -95,10 +95,6 @@ export default function PastorPage() {
                   <div className={styles.cardDivider} />
                   <div className={styles.cardDetails}>
                     <div className={styles.cardDetail}>
-                      <span className={styles.detailLabel}>Direct Line</span>
-                      <span className={styles.detailValue}>{PASTOR.cell}</span>
-                    </div>
-                    <div className={styles.cardDetail}>
                       <span className={styles.detailLabel}>Ministry</span>
                       <span className={`${styles.detailValue} org-name`}>{CHURCH.name}</span>
                     </div>

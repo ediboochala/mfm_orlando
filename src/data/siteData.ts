@@ -474,7 +474,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you have been waiting for a sign to start, this is it. You do not need a special title or a theological degree to fast. You need a willing heart and a desperate hunger for God that surpasses your hunger for food. Start small — skip one meal and dedicate that time to prayer. Then build from there. Let the discipline grow, and watch how God begins to move in ways that will leave you breathless. The breakthrough you have been waiting for may be just one fast away.',
     ],
     readTime: '8 min read',
-    coverImage: '/22 (1).jpg',
+    coverImage: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1200&q=80&auto=format&fit=crop',
     mediaBlocks: [
       { afterParagraph: 1, type: 'image', src: '/back.jpg', alt: 'Prayer and fasting', caption: 'Fasting and prayer — a powerful spiritual combination' },
     ],
@@ -497,7 +497,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '8 min read',
     coverImage: '/22 (2).jpg',
     mediaBlocks: [
-      { afterParagraph: 2, type: 'image', src: '/22 (3).jpg', alt: 'Friday Deliverance Night at MFM Tampa Florida', caption: 'Friday Deliverance Night at MFM Tampa Florida' },
+      { afterParagraph: 2, type: 'image', src: 'https://images.unsplash.com/photo-1725245997924-632b5673e18a?w=1200&q=80&auto=format&fit=crop', alt: 'Believers in prayer during a deliverance service', caption: 'Believers in prayer during a deliverance service' },
     ],
   },
   {
@@ -556,7 +556,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Begin today. Not with a rigid set of rules, but with a conversation with the Holy Spirit. Ask Him to show you the areas of your life that need to be surrendered. Ask Him for the grace to let them go. Ask Him to fill every empty space with His presence. Holiness is not achieved overnight — it is a daily journey, a daily choice, a daily surrender. But every step you take toward holiness is a step toward the God who loved you enough to die for you, and who desires nothing more than to see you fully free, fully His, and fully alive.',
     ],
     readTime: '8 min read',
-    coverImage: '/22 (4).jpg',
+    coverImage: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1200&q=80&auto=format&fit=crop',
     mediaBlocks: [
       { afterParagraph: 1, type: 'image', src: '/g.o-hmpg-p2yv8mmnlqigraumc5fkktysc1o1hu6a214voa7okq.jpg', alt: 'Teaching on holiness', caption: 'Pursuing holiness in everyday life' },
     ],
