@@ -68,6 +68,16 @@ export default function ServicesPage() {
                   <span className={styles.onlinePlatform}>{prog.platform}</span>
                   <span className={styles.onlineDays}>{prog.days}</span>
                   <span className={styles.onlineTime}>{prog.time}</span>
+                  {prog.watchHref && (
+                    <a
+                      href={prog.watchHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`btn-primary ${styles.onlineWatchBtn}`}
+                    >
+                      Watch on Facebook
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

@@ -232,6 +232,11 @@
   font-size: 12px;
   color: rgba(var(--text-rgb), 0.5);
 }
+.onlineWatchBtn {
+  margin-top: 10px;
+  font-size: 12px !important;
+  padding: 10px 22px !important;
+}
 
 /* ── CTA ── */
 .ctaWrap {

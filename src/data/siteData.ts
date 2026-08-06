@@ -135,6 +135,8 @@ export const ONLINE_PROGRAMS = [
     days: 'Tuesday, Thursday, Friday',
     time: '12:00 Noon (ET)',
     description: 'A midday hour of targeted, aggressive deliverance prayer — streamed live so you can join from wherever you are.',
+    // TODO: swap for a direct link to the specific Live stream/video if one is provided.
+    watchHref: 'https://www.facebook.com/mfmtampaflorida/',
   },
 ]
 
