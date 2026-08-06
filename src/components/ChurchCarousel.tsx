@@ -6,7 +6,7 @@ import styles from './ChurchCarousel.module.css'
 
 const CARDS = [
   {
-    image: '/22 (1).jpg',
+    image: 'https://images.unsplash.com/photo-1725245997924-632b5673e18a?w=1200&q=80&auto=format&fit=crop',
     tag: 'Our Congregation',
     title: 'A Family of Believers',
     desc: 'United in faith, prayer, and the love of Christ — the MFM Tampa Florida family welcomes every soul seeking God\'s presence.',
@@ -18,7 +18,7 @@ const CARDS = [
     desc: 'Every Sunday is a divine encounter. We gather to worship, receive the Word, and experience the transforming power of God.',
   },
   {
-    image: '/22 (3).jpg',
+    image: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1200&q=80&auto=format&fit=crop',
     tag: 'Prayer and Deliverance',
     title: 'Aggressive Prayer',
     desc: 'We believe in fervent, targeted prayer that breaks every yoke. Deliverance and healing are available to all who call upon His name.',

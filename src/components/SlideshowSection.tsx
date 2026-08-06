@@ -10,7 +10,7 @@ const SLIDES = [
     title: 'Come Into His Presence',
     desc: 'Join us every Sunday for a powerful time of worship, the Word, and encounter with the living God.',
     accent: '#E8B923',
-    image: '/22 (1).jpg',
+    image: 'https://images.unsplash.com/photo-1725245997924-632b5673e18a?w=1600&q=80&auto=format&fit=crop',
   },
   {
     label: 'Prayer and Deliverance',
@@ -24,7 +24,7 @@ const SLIDES = [
     title: 'Rooted in the Word',
     desc: 'We are a Word-based ministry. Every prayer point, every doctrine, every step is grounded in Scripture.',
     accent: '#E8B923',
-    image: '/22 (3).jpg',
+    image: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1600&q=80&auto=format&fit=crop',
   },
   {
     label: 'Youth and Family',
