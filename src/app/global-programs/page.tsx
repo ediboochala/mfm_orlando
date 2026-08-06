@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CHURCH, GLOBAL_PROGRAMS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import styles from './page.module.css'
@@ -45,29 +46,42 @@ export default function GlobalProgramsPage() {
       <main className={styles.main}>
         <div className={styles.mainInner}>
 
-          <div className={styles.programCard}>
-            <span className={styles.programLabel}>Annual Global Program</span>
-            <h2 className={styles.programName}>{seventyDays.name}</h2>
-            <div className={styles.programDivider} />
-            <p className={styles.programDesc}>{seventyDays.description}</p>
-
-            {seventyDays.link ? (
-              <div className={styles.programLinkWrap}>
-                <a
-                  href={seventyDays.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Learn More and Join In
-                </a>
-              </div>
-            ) : (
-              <div className={styles.pendingNote}>
-                The link for this year&apos;s {seventyDays.name} is being finalized and will be
-                posted here soon. In the meantime, contact the church office for details.
+          <div className={`${styles.programCard} ${seventyDays.image ? styles.programCardWithImage : ''}`}>
+            {seventyDays.image && (
+              <div className={styles.programImageWrap}>
+                <Image
+                  src={seventyDays.image}
+                  alt={seventyDays.name}
+                  fill
+                  sizes="(max-width: 700px) 100vw, 320px"
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
             )}
+            <div className={styles.programContent}>
+              <span className={styles.programLabel}>Annual Global Program</span>
+              <h2 className={styles.programName}>{seventyDays.name}</h2>
+              <div className={styles.programDivider} />
+              <p className={styles.programDesc}>{seventyDays.description}</p>
+
+              {seventyDays.link ? (
+                <div className={styles.programLinkWrap}>
+                  <a
+                    href={seventyDays.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                  >
+                    Learn More and Join In
+                  </a>
+                </div>
+              ) : (
+                <div className={styles.pendingNote}>
+                  The link for this year&apos;s {seventyDays.name} is being finalized and will be
+                  posted here soon. In the meantime, contact the church office for details.
+                </div>
+              )}
+            </div>
           </div>
 
           {/* ── CTA ── */}

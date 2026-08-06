@@ -319,8 +319,9 @@ export const GLOBAL_PROGRAMS = {
   seventyDays: {
     name: 'Annual 70 Days Prayer and Fasting',
     description: 'MFM\'s signature global prayer and fasting program, observed by MFM branches worldwide as we press into a new year with prayer, holiness, and fasting.',
-    // TODO: replace with the real external link once provided.
-    link: '',
+    link: 'https://www.facebook.com/share/p/18akCUvmLX/?mibextid=wwXIfr',
+    // TODO: set once the "Prayer Battle 7" cover image is saved into public/.
+    image: null as string | null,
   },
 }
 

@@ -114,6 +114,24 @@
   background: rgba(var(--accent-rgb), 0.04);
   padding: 48px 44px;
 }
+.programCardWithImage {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.programImageWrap {
+  position: relative;
+  flex: 0 0 220px;
+  width: 220px;
+  aspect-ratio: 3 / 4.3;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+.programContent {
+  flex: 1;
+  min-width: 0;
+}
 .programLabel {
   font-size: 10px;
   letter-spacing: 5px;
@@ -215,4 +233,6 @@
   .footerStrip { padding: 20px; }
   .cta         { padding: 36px 20px; }
   .programCard { padding: 28px 20px; }
+  .programCardWithImage { flex-direction: column; align-items: center; gap: 24px; }
+  .programImageWrap     { flex: none; width: 160px; }
 }
