@@ -97,6 +97,14 @@ export default function BookshopPage() {
             >
               View More Books on DKO eBooks →
             </a>
+            <a
+              href={BOOKSHOP.amazonAuthorHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn-secondary ${styles.moreBooksBtn}`}
+            >
+              Shop Dr. D.K. Olukoya on Amazon →
+            </a>
           </div>
 
           {/* ── CTA ── */}
