@@ -47,17 +47,6 @@ export default function GlobalProgramsPage() {
         <div className={styles.mainInner}>
 
           <div className={`${styles.programCard} ${seventyDays.image ? styles.programCardWithImage : ''}`}>
-            {seventyDays.image && (
-              <div className={styles.programImageWrap}>
-                <Image
-                  src={seventyDays.image}
-                  alt={seventyDays.name}
-                  fill
-                  sizes="(max-width: 700px) 100vw, 320px"
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-            )}
             <div className={styles.programContent}>
               <span className={styles.programLabel}>Annual Global Program</span>
               <h2 className={styles.programName}>{seventyDays.name}</h2>
@@ -82,6 +71,17 @@ export default function GlobalProgramsPage() {
                 </div>
               )}
             </div>
+            {seventyDays.image && (
+              <div className={styles.programImageWrap}>
+                <Image
+                  src={seventyDays.image}
+                  alt={seventyDays.name}
+                  fill
+                  sizes="(max-width: 700px) 100vw, 320px"
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            )}
           </div>
 
           {/* ── CTA ── */}
