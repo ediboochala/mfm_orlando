@@ -32,7 +32,7 @@ export default function BookshopPage() {
         <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>MFM Bookstand</span>
-          <h1 className={styles.heroTitle}>Bookshop &amp; Resources</h1>
+          <h1 className={styles.heroTitle}>Bookshop and Resources</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
             Arm yourself with the Word — books and prayer resources by Dr. D.K. Olukoya.
@@ -103,8 +103,7 @@ export default function BookshopPage() {
           <div className={styles.cta}>
             <h3 className={styles.ctaTitle}>Visit the Bookstand</h3>
             <p className={styles.ctaText}>
-              These titles and more are available at the MFM Tampa Florida Bookstand.
-              Reach out to check current availability and pricing.
+              More titles are available.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/contact" className="btn-primary">Contact Us</Link>

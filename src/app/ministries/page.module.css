@@ -447,6 +447,50 @@
   background: var(--primary-muted);
 }
 
+/* ── Departments and Units ── */
+.departmentsSection {
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  padding: 48px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.departmentsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.departmentsLabel {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.85;
+}
+.departmentsTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--text);
+}
+.departmentsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.departmentPill {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: rgba(var(--primary-rgb), 0.06);
+  border: 1px solid rgba(var(--primary-rgb), 0.18);
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
 /* ── CTA ── */
 .cta {
   background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06) 0%, rgba(var(--accent-rgb), 0.06) 100%);

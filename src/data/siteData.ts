@@ -229,14 +229,14 @@ export const MINISTRIES = [
   },
   {
     id: 'music-ministry',
-    name: 'Music Ministry',
+    name: 'Choir',
     subtitle: 'Worship That Ushers in the Presence of God',
     icon: 'music',
     tagline: 'When the music plays, heaven opens and chains fall off.',
-    description: "Music is not merely entertainment — it is a spiritual weapon. At MFM Tampa Florida, the Music Ministry understands that anointed worship prepares the ground for miracles. Music has always been a carrier of healing, deliverance, and the presence of God. The Music Ministry is called to lift the name of Jesus in a way that opens the heavens, draws the Holy Spirit, and creates an atmosphere in which lives are changed. If you have ever been in a service where the music brought you to tears or broke something loose inside you, you understand exactly why this ministry exists.",
+    description: "Music is not merely entertainment — it is a spiritual weapon. At MFM Tampa Florida, the Choir understands that anointed worship prepares the ground for miracles. Music has always been a carrier of healing, deliverance, and the presence of God. The Choir is called to lift the name of Jesus in a way that opens the heavens, draws the Holy Spirit, and creates an atmosphere in which lives are changed. If you have ever been in a service where the music brought you to tears or broke something loose inside you, you understand exactly why this ministry exists.",
     details: [
       'Leading the congregation in anointed, Spirit-filled worship',
-      'Addressing physical and emotional needs through music ministry',
+      'Addressing physical and emotional needs through the choir',
       'Creating an atmosphere of praise that precedes breakthroughs',
       'Serving in Sunday services, special programs, and deliverance nights',
     ],
@@ -259,6 +259,16 @@ export const MINISTRIES = [
     membership: 'Open to all singles — regardless of age or background',
     scripture: '"It is not good that the man should be alone; I will make him a helper suitable for him." — Genesis 2:18',
   },
+]
+
+// ── Departments and Units — serving arms of the church ──────────────────────
+export const DEPARTMENTS_AND_UNITS = [
+  'Welfare and We Care',
+  'Prayer and Intercession',
+  'Evangelism',
+  'Technical and Audiovisual',
+  'Choir',
+  'Ushering',
 ]
 
 export const PRAYER_LINE = {
@@ -636,16 +646,6 @@ export const YOUTUBE_CHANNELS = [
     videos: [
       { videoId: 'i93Z5IpwE44', title: 'MFM Manna Water — Dr D.K. Olukoya' },
     ],
-  },
-  {
-    name: 'MFM Qatar',
-    handle: '@mfmqatar',
-    url: 'https://www.youtube.com/@mfmqatar',
-    description: 'MFM Qatar branch — sermons, worship, and prayer content.',
-    featured: false,
-    // No verified-embeddable video IDs for this channel yet — left empty
-    // rather than showing broken previews. See note above FEATURED_VIDEOS.
-    videos: [] as { videoId: string; title: string }[],
   },
 ]
 

@@ -59,7 +59,7 @@ export default function GlobalProgramsPage() {
                   rel="noopener noreferrer"
                   className="btn-primary"
                 >
-                  Learn More &amp; Join In
+                  Learn More and Join In
                 </a>
               </div>
             ) : (

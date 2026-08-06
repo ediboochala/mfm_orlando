@@ -86,7 +86,7 @@ export default function CrusadePage() {
                 <span className={styles.detailSub}>{CRUSADE.ministerTitle}</span>
               </div>
               <div className={styles.detailItem}>
-                <span className={styles.detailLabel}>Date &amp; Time</span>
+                <span className={styles.detailLabel}>Date and Time</span>
                 <span className={styles.detailValue}>{CRUSADE.date}</span>
                 <span className={styles.detailSub}>{CRUSADE.time}</span>
               </div>
@@ -108,7 +108,7 @@ export default function CrusadePage() {
           {/* Venue */}
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.sectionLabel}>Venue &amp; Directions</span>
+              <span className={styles.sectionLabel}>Venue and Directions</span>
               <h2 className={styles.sectionTitle}>{CRUSADE.venueDetails.name}</h2>
               <div className={styles.sectionDivider} />
             </div>

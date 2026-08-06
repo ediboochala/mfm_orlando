@@ -13,7 +13,7 @@ export default function VideoSection() {
 
         {/* Header */}
         <div className={styles.header}>
-          <span className={styles.label}>Watch &amp; Be Blessed</span>
+          <span className={styles.label}>Watch and Be Blessed</span>
           <h2 className={styles.title}>Featured Messages</h2>
           <div className={styles.divider} />
           <p className={styles.sub}>

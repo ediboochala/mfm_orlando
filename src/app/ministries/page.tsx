@@ -32,7 +32,7 @@ export default function MinistriesPage() {
       <header className={styles.hero}>
         <PageHeroWatermark />
         <div className={styles.heroInner}>
-          <span className={styles.heroLabel}>Serve &amp; Grow</span>
+          <span className={styles.heroLabel}>Serve and Grow</span>
           <h1 className={styles.heroTitle}>Our Ministries</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>

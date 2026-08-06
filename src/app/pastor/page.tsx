@@ -8,7 +8,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `Pastor Kehinde Olajide — ${CHURCH.shortName}`,
-  description: 'A personal greeting and pastoral message from Pastor Kehinde Olajide, Host Pastor of Mountain of Fire and Miracles Ministries Tampa, Florida.',
+  description: 'A personal greeting and pastoral message from Pastor Kehinde Olajide of Mountain of Fire and Miracles Ministries Tampa, Florida.',
 }
 
 const SCRIPTURES = [
@@ -63,7 +63,7 @@ export default function PastorPage() {
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
             A personal letter from Pastor Kehinde Olajide,<br />
-            Host Pastor — Mountain of Fire and Miracles Ministries Tampa, Florida
+            MFM Tampa, Florida
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export default function PastorPage() {
                   <span>MFM</span>
                 </div>
                 <div>
-                  <p className={styles.letterFrom}>From the Desk of the Host Pastor</p>
+                  <p className={styles.letterFrom}>From the Desk of the Pastor</p>
                   <p className={`${styles.letterChurch} org-name`}>{CHURCH.name}</p>
                   <p className={styles.letterLocation}>{CHURCH.location}</p>
                 </div>

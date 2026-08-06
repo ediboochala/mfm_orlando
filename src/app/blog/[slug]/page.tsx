@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* ── CTA ── */}
           <div className={styles.cta}>
-            <h3 className={styles.ctaTitle}>Join Us in Worship &amp; Prayer</h3>
+            <h3 className={styles.ctaTitle}>Join Us in Worship and Prayer</h3>
             <p className={styles.ctaText}>
               Come and experience the God behind these words — in person, in prayer, in power.
             </p>

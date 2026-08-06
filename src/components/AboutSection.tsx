@@ -9,7 +9,7 @@ export default function AboutSection() {
           {/* Left — Timeline */}
           <div>
             <span className="section-label reveal">Our Story</span>
-            <h2 className="section-title reveal d1">A Legacy of Fire &amp; Miracles</h2>
+            <h2 className="section-title reveal d1">A Legacy of Fire and Miracles</h2>
             <div className="section-divider reveal d2" />
 
             <div className={`${styles.timeline} reveal d3`}>

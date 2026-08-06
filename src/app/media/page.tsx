@@ -13,7 +13,7 @@ const BRAND_COLORS: Record<SocialPlatform, string> = {
 }
 
 export const metadata: Metadata = {
-  title: `Media & Live — ${CHURCH.shortName}`,
+  title: `Media and Live — ${CHURCH.shortName}`,
   description:
     'Watch MFM Tampa Florida live services, access the MFM YouTube channels, and find the daily prayer line schedule.',
 }
@@ -31,7 +31,7 @@ export default function MediaPage() {
             </svg>
             Back to Home
           </Link>
-          <span className={styles.breadcrumb}>{CHURCH.shortName} · Media &amp; Live</span>
+          <span className={styles.breadcrumb}>{CHURCH.shortName} · Media and Live</span>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export default function MediaPage() {
         <PageHeroWatermark />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>Watch. Listen. Pray.</span>
-          <h1 className={styles.heroTitle}>Media &amp; Live Services</h1>
+          <h1 className={styles.heroTitle}>Media and Live Services</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>
             Access live streams, recorded services, and the MFM daily prayer line —<br />
@@ -134,7 +134,7 @@ export default function MediaPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>MFM USA Network</span>
-              <h2 className={styles.sectionTitle}>Sister Ministries &amp; Platforms</h2>
+              <h2 className={styles.sectionTitle}>Sister Ministries and Platforms</h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 MFM Tampa Florida is part of a wider family of MFM ministries across the United States.

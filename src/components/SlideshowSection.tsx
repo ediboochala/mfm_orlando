@@ -13,7 +13,7 @@ const SLIDES = [
     image: '/22 (1).jpg',
   },
   {
-    label: 'Prayer & Deliverance',
+    label: 'Prayer and Deliverance',
     title: 'Set Free by His Power',
     desc: 'Aggressive prayer is the engine of MFM. Every service is a portal of deliverance, healing, and breakthrough.',
     accent: '#FFC5FF',
@@ -27,7 +27,7 @@ const SLIDES = [
     image: '/22 (3).jpg',
   },
   {
-    label: 'Youth & Family',
+    label: 'Youth and Family',
     title: 'Building the Next Generation',
     desc: 'Our children and youth programs raise up a generation that is on fire for God — bold, pure, and unashamed.',
     accent: '#FFC5FF',

@@ -50,7 +50,7 @@ export default function PrayerLinePage() {
               <div>
                 <div className={styles.sectionHeader}>
                   <span className={styles.sectionLabel}>Call-In Numbers</span>
-                  <h2 className={styles.sectionTitle}>Dial &amp; Pray</h2>
+                  <h2 className={styles.sectionTitle}>Dial and Pray</h2>
                   <div className={styles.sectionDivider} />
                 </div>
 
@@ -87,7 +87,7 @@ export default function PrayerLinePage() {
                   <p className={styles.sessionTz}>Eastern Time</p>
                 </div>
                 <p className={styles.localNote}>
-                  Pastoral Counseling &amp; Prayer also available directly with {PASTOR.name}.
+                  Pastoral Counseling and Prayer also available directly with {PASTOR.name}.
                 </p>
                 <a href={`tel:${PASTOR.cell.replace(/[^0-9+]/g, '')}`} className={styles.localPhone}>
                   {PASTOR.cell}

@@ -19,7 +19,7 @@ const CARDS = [
   },
   {
     image: '/22 (3).jpg',
-    tag: 'Prayer & Deliverance',
+    tag: 'Prayer and Deliverance',
     title: 'Aggressive Prayer',
     desc: 'We believe in fervent, targeted prayer that breaks every yoke. Deliverance and healing are available to all who call upon His name.',
   },

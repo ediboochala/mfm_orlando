@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback, useId } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MINISTRIES, MINISTRY_PROJECTS } from '@/data/siteData'
+import { MINISTRIES, MINISTRY_PROJECTS, DEPARTMENTS_AND_UNITS } from '@/data/siteData'
 import MinistryIcon from '@/components/MinistryIcon'
 import styles from './page.module.css'
 
@@ -339,6 +339,19 @@ export default function MinistriesContent() {
                 </section>
               )
             })}
+          </div>
+
+          {/* Departments and Units */}
+          <div className={styles.departmentsSection}>
+            <div className={styles.departmentsHeader}>
+              <span className={styles.departmentsLabel}>Serving Arms</span>
+              <h2 className={styles.departmentsTitle}>Departments and Units</h2>
+            </div>
+            <div className={styles.departmentsList}>
+              {DEPARTMENTS_AND_UNITS.map((dept) => (
+                <span key={dept} className={styles.departmentPill}>{dept}</span>
+              ))}
+            </div>
           </div>
 
           {/* CTA */}

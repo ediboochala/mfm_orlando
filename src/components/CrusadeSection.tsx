@@ -64,7 +64,7 @@ export default function CrusadeSection() {
                 <span className={styles.detailSub}>{CRUSADE.ministerTitle}</span>
               </div>
               <div className={styles.detailItem}>
-                <span className={styles.detailLabel}>Date &amp; Time</span>
+                <span className={styles.detailLabel}>Date and Time</span>
                 <span className={styles.detailValue}>{CRUSADE.date}</span>
                 <span className={styles.detailSub}>{CRUSADE.time}</span>
               </div>

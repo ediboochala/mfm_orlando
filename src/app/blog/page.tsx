@@ -31,7 +31,7 @@ export default function BlogPage() {
       <header className={styles.hero}>
         <PageHeroWatermark />
         <div className={styles.heroInner}>
-          <span className={styles.heroLabel}>Word &amp; Wisdom</span>
+          <span className={styles.heroLabel}>Word and Wisdom</span>
           <h1 className={styles.heroTitle}>The MFM Blog</h1>
           <div className={styles.heroDivider} />
           <p className={styles.heroSub}>

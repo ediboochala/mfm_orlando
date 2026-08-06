@@ -7,7 +7,7 @@ export default function MinistriesSection() {
     <section id="ministries" className={styles.section}>
       <div className="section-inner">
         <div className={styles.header}>
-          <span className="section-label reveal">Serve &amp; Grow</span>
+          <span className="section-label reveal">Serve and Grow</span>
           <h2 className="section-title reveal d1">Our Ministries</h2>
           <div className="section-divider reveal d2" style={{ margin: '0 auto' }} />
         </div>

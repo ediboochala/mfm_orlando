@@ -101,7 +101,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Leadership</span>
-              <h2 className={styles.sectionTitle}>General Overseer &amp; Founder</h2>
+              <h2 className={styles.sectionTitle}>General Overseer and Founder</h2>
               <div className={styles.sectionDivider} />
             </div>
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 <div className={styles.goImagePlaceholder}>
                   <Image
                     src="/g.o-hmpg-p2yv8mmnlqigraumc5fkktysc1o1hu6a214voa7okq.jpg"
-                    alt="Dr. Daniel Kolawole Olukoya — General Overseer & Founder, MFM"
+                    alt="Dr. Daniel Kolawole Olukoya — General Overseer and Founder, MFM"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center top' }}
                     priority
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Our Story</span>
-              <h2 className={styles.sectionTitle}>A Legacy of Fire &amp; Miracles</h2>
+              <h2 className={styles.sectionTitle}>A Legacy of Fire and Miracles</h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 From a living room prayer meeting of 24 brethren in Lagos, Nigeria, to a global ministry spanning 140+ nations — the story of MFM is the story of what God can do through willing vessels committed to prayer.
