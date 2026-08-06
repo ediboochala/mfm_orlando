@@ -82,7 +82,7 @@ export default function PastorPage() {
               <div className={styles.pastorCard}>
                 <div className={styles.cardPlaceholder}>
                   <Image
-                    src="/ChatGPT Image Aug 5, 2026, 08_17_07 PM.png"
+                    src="/Pst Tampa.png"
                     alt="Pastor Kehinde Olajide"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center top' }}
