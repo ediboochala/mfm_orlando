@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CHURCH, GALLERY_CATEGORIES, GALLERY_ITEMS } from '@/data/siteData'
@@ -9,10 +9,40 @@ import styles from './page.module.css'
 
 export default function GalleryPage() {
   const [active, setActive] = useState('All')
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   const filtered = active === 'All'
     ? GALLERY_ITEMS
     : GALLERY_ITEMS.filter((item) => item.category === active)
+
+  // Only photos that actually have an image can be viewed in the lightbox
+  const viewable = filtered.filter((item) => item.image)
+
+  const closeLightbox = () => setLightboxIndex(null)
+  const showPrev = () => setLightboxIndex((i) => (i === null ? null : (i - 1 + viewable.length) % viewable.length))
+  const showNext = () => setLightboxIndex((i) => (i === null ? null : (i + 1) % viewable.length))
+
+  // Keyboard navigation + body scroll lock while the lightbox is open
+  useEffect(() => {
+    if (lightboxIndex === null) return
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeLightbox()
+      if (e.key === 'ArrowLeft') showPrev()
+      if (e.key === 'ArrowRight') showNext()
+    }
+    document.addEventListener('keydown', onKeyDown)
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = prevOverflow
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxIndex, viewable.length])
+
+  const current = lightboxIndex !== null ? viewable[lightboxIndex] : null
 
   return (
     <div className={styles.page}>
@@ -64,7 +94,24 @@ export default function GalleryPage() {
         <div className={styles.mainInner}>
           <div className={styles.grid}>
             {filtered.map((item) => (
-              <div key={item.id} className={styles.card}>
+              <div
+                key={item.id}
+                className={`${styles.card} ${item.image ? styles.cardClickable : ''}`}
+                onClick={() => {
+                  if (!item.image) return
+                  const idx = viewable.findIndex((v) => v.id === item.id)
+                  if (idx !== -1) setLightboxIndex(idx)
+                }}
+                role={item.image ? 'button' : undefined}
+                tabIndex={item.image ? 0 : undefined}
+                onKeyDown={(e) => {
+                  if (!item.image) return
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    const idx = viewable.findIndex((v) => v.id === item.id)
+                    if (idx !== -1) setLightboxIndex(idx)
+                  }
+                }}
+              >
                 <div className={styles.cardImage}>
                   {item.image ? (
                     <Image
@@ -122,6 +169,74 @@ export default function GalleryPage() {
       <footer className={styles.footerStrip}>
         <p>{CHURCH.copyright}</p>
       </footer>
+
+      {/* ── Lightbox ── */}
+      {current && (
+        <div
+          className={styles.lightbox}
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label={current.title}
+        >
+          <button
+            className={styles.lightboxClose}
+            onClick={closeLightbox}
+            aria-label="Close"
+          >
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M2 2L20 20M20 2L2 20" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+          </button>
+
+          {viewable.length > 1 && (
+            <button
+              className={`${styles.lightboxArrow} ${styles.lightboxArrowLeft}`}
+              onClick={(e) => { e.stopPropagation(); showPrev() }}
+              aria-label="Previous photo"
+            >
+              <svg width="16" height="26" viewBox="0 0 16 26" fill="none">
+                <path d="M14 2L3 13L14 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
+
+          <div className={styles.lightboxStage} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.lightboxImageWrap}>
+              <Image
+                src={current.image!}
+                alt={current.title}
+                fill
+                sizes="90vw"
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
+            <div className={styles.lightboxCaption}>
+              <span className={styles.lightboxCategory}>{current.category}</span>
+              <h3 className={styles.lightboxTitle}>{current.title}</h3>
+              <p className={styles.lightboxDesc}>{current.description}</p>
+              {viewable.length > 1 && (
+                <span className={styles.lightboxCounter}>
+                  {lightboxIndex! + 1} / {viewable.length}
+                </span>
+              )}
+            </div>
+          </div>
+
+          {viewable.length > 1 && (
+            <button
+              className={`${styles.lightboxArrow} ${styles.lightboxArrowRight}`}
+              onClick={(e) => { e.stopPropagation(); showNext() }}
+              aria-label="Next photo"
+            >
+              <svg width="16" height="26" viewBox="0 0 16 26" fill="none">
+                <path d="M2 2L13 13L2 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
+        </div>
+      )}
     </div>
   )
 }
