@@ -386,7 +386,6 @@ export const NAV_LINKS = [
   { label: 'Services',    href: '/services' },
   { label: 'Deliverance', href: '/deliverance' },
   { label: 'Blog',        href: '/blog' },
-  { label: 'Gallery',     href: '/gallery' },
   { label: 'Media',       href: '/media' },
   { label: 'Prayer Line', href: '/prayer-line' },
   { label: 'Contact',     href: '/contact' },
@@ -425,7 +424,6 @@ export const NAV_GROUPS: NavEntry[] = [
     label: 'Media',
     children: [
       { label: 'Blog',            href: '/blog' },
-      { label: 'Gallery',         href: '/gallery' },
       { label: 'Sermons and Media', href: '/media' },
     ],
   },
