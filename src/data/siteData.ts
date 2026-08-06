@@ -587,18 +587,6 @@ export const BLOG_POSTS: BlogPost[] = [
 export const GALLERY_CATEGORIES = ['All', 'Worship', 'Deliverance', 'Youth', 'Outreach', 'Special Events']
 
 export const GALLERY_ITEMS = [
-  { id: 1,  title: 'Sunday Worship Service',         category: 'Worship',        description: 'Congregation gathered in powerful Sunday worship.' },
-  { id: 2,  title: 'Friday Deliverance Night',       category: 'Deliverance',    description: 'Believers receiving freedom and breakthrough.' },
-  { id: 3,  title: 'Youth Church Meeting',           category: 'Youth',          description: 'Young people discovering their identity in Christ.' },
-  { id: 4,  title: 'Community Outreach Program',     category: 'Outreach',       description: 'Serving the Tampa community with love and prayer.' },
-  { id: 5,  title: 'Power Must Change Hands',        category: 'Special Events', description: 'Monthly power service drawing believers together.' },
-  { id: 6,  title: 'Crossover Night Service',        category: 'Special Events', description: 'End-of-month crossover service into victory.' },
-  { id: 7,  title: 'Glorious Women Gathering',       category: 'Worship',        description: 'Sisters united in prayer and fellowship.' },
-  { id: 8,  title: 'Bible Study Session',            category: 'Worship',        description: 'Deep study of the Word every Tuesday night.' },
-  { id: 9,  title: 'Manna Water Program',            category: 'Special Events', description: 'Wednesday midweek programme for healing waters.' },
-  { id: 10, title: "Children's Ministry Program",    category: 'Youth',          description: 'Raising kingdom champions from an early age.' },
-  { id: 11, title: 'Men of Valor Meeting',           category: 'Worship',        description: 'Men of God standing firm in faith and accountability.' },
-  { id: 12, title: 'Easter Revival Service',         category: 'Special Events', description: 'Celebrating the resurrection power of Jesus Christ.' },
   { id: 13, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Sisters fellowshipping together after a powerful service.',              image: '/WhatsApp Image 2026-08-05 at 14.23.28 (2).jpeg' },
   { id: 14, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members greeting one another with joy after service.',                   image: '/WhatsApp Image 2026-08-05 at 14.23.28 (3).jpeg' },
   { id: 15, title: 'Sunday Fellowship',              category: 'Worship',        description: 'A member dressed in celebration for a special Sunday service.',          image: '/WhatsApp Image 2026-08-05 at 14.23.28.jpeg' },
