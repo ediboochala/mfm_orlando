@@ -100,8 +100,8 @@ export default function AboutPage() {
           {/* ── Section: General Overseer ── */}
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.sectionLabel}>Leadership</span>
-              <h2 className={styles.sectionTitle}>General Overseer and Founder</h2>
+              <span className={styles.sectionLabel}>Our Founder</span>
+              <h2 className={styles.sectionTitle}>Meet Dr. D.K. Olukoya</h2>
               <div className={styles.sectionDivider} />
             </div>
 
