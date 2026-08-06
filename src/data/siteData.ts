@@ -181,11 +181,11 @@ export const MINISTRIES = [
   },
   {
     id: 'children-church',
-    name: 'Children Church',
+    name: "Children's Ministry",
     subtitle: 'Raising Kingdom Champions from Childhood',
     icon: 'sparkle',
     tagline: 'Building a foundation of faith that will last a lifetime.',
-    description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children Church is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
+    description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children's Ministry is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
     details: [
       'Age-appropriate Bible teaching and spiritual formation',
       "Helping children understand God's nature, character, and love",
@@ -373,6 +373,7 @@ export const BOOKSHOP = {
     { title: 'Born Great But Tied Down', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=438', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783808348_Cover.jpg' },
   ],
   moreBooksHref: 'https://www.dkoebooks.com/index.php',
+  amazonAuthorHref: 'https://www.amazon.com/stores/Dr-D-K-Olukoya/author/B00M6U2B4U?ref=sr_ntt_srch_lnk_1&qid=1785985292&sr=8-1&shoppingPortalEnabled=true&ccs_id=0380880b-228c-47ab-9d63-3f1c002d85c2',
 }
 
 export const NAV_LINKS = [
@@ -595,7 +596,7 @@ export const GALLERY_ITEMS = [
   { id: 7,  title: 'Glorious Women Gathering',       category: 'Worship',        description: 'Sisters united in prayer and fellowship.' },
   { id: 8,  title: 'Bible Study Session',            category: 'Worship',        description: 'Deep study of the Word every Tuesday night.' },
   { id: 9,  title: 'Manna Water Program',            category: 'Special Events', description: 'Wednesday midweek programme for healing waters.' },
-  { id: 10, title: 'Children Church Program',        category: 'Youth',          description: 'Raising kingdom champions from an early age.' },
+  { id: 10, title: "Children's Ministry Program",    category: 'Youth',          description: 'Raising kingdom champions from an early age.' },
   { id: 11, title: 'Men of Valor Meeting',           category: 'Worship',        description: 'Men of God standing firm in faith and accountability.' },
   { id: 12, title: 'Easter Revival Service',         category: 'Special Events', description: 'Celebrating the resurrection power of Jesus Christ.' },
 ]
@@ -605,7 +606,7 @@ export const MINISTRY_PROJECTS = [
   { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/22 (1).jpg' },
   // Glorious Women
   { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/22 (2).jpg' },
-  // Children Church
+  // Children's Ministry
   { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/22 (4).jpg' },
   { id: 6,  ministryId: 'children-church',     title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
   // Youth Church

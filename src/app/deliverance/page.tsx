@@ -54,7 +54,10 @@ export default function DeliverancePage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Deliverance Signup</span>
-              <h2 className={styles.sectionTitle}>Tell Us What You Need Prayer For</h2>
+              <h2 className={styles.sectionScripture}>
+                &ldquo;But on Mount Zion there shall be deliverance… and the house of Jacob shall possess their possessions.&rdquo;
+                <span className={styles.sectionScriptureRef}>— Obadiah 1:17</span>
+              </h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>{DELIVERANCE.intro}</p>
             </div>

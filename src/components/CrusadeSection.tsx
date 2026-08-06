@@ -107,7 +107,7 @@ export default function CrusadeSection() {
 
       {/* Logo watermark */}
       <div className={styles.logoWatermark} aria-hidden="true">
-        <Image src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg" alt="" fill style={{ objectFit: 'contain' }} />
+        <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
       </div>
     </section>
   )

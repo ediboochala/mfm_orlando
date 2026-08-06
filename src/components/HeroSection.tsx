@@ -18,7 +18,7 @@ export default function HeroSection() {
         {/* Logo badge */}
         <div className={styles.logoBadge}>
           <Image
-            src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg"
+            src="/new Logo mfm.png"
             alt="Mountain of Fire and Miracles Ministries"
             width={110}
             height={110}

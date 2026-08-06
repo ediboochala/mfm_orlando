@@ -13,15 +13,15 @@ export const metadata: Metadata = {
     'Mountain of Fire and Miracles Ministries Tampa, Florida welcomes all individuals seeking God\'s love. Join us for worship, deliverance, and spiritual breakthroughs.',
   keywords: 'MFM Tampa Florida, Mountain of Fire, Miracles Ministries, Church Tampa, Deliverance, Christian Church Florida',
   icons: {
-    icon: [{ url: '/WhatsApp Image 2026-08-06 at 04.45.10.jpeg', type: 'image/jpeg' }],
-    apple: '/WhatsApp Image 2026-08-06 at 04.45.10.jpeg',
+    icon: [{ url: '/new Logo mfm.png', type: 'image/png' }],
+    apple: '/new Logo mfm.png',
   },
   openGraph: {
     title: 'MFM Tampa Florida',
     description: 'Mountain of Fire and Miracles Ministries Tampa, Florida — Join us for worship, deliverance, and spiritual breakthroughs.',
     url: 'https://mfmorlando.org',
     siteName: 'MFM Tampa Florida',
-    images: [{ url: '/WhatsApp Image 2026-08-06 at 04.45.10.jpeg', width: 675, height: 375, alt: 'MFM Tampa Florida Logo' }],
+    images: [{ url: '/new Logo mfm.png', width: 1507, height: 1563, alt: 'MFM Tampa Florida Logo' }],
     locale: 'en_US',
     type: 'website',
   },

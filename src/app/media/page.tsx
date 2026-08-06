@@ -133,8 +133,8 @@ export default function MediaPage() {
           {/* ── Sister Ministries ── */}
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.sectionLabel}>MFM USA Network</span>
-              <h2 className={styles.sectionTitle}>Sister Ministries and Platforms</h2>
+              <span className={styles.sectionLabel}>Sister Ministries</span>
+              <h2 className={styles.sectionTitle}>MFM USA Network</h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 MFM Tampa Florida is part of a wider family of MFM ministries across the United States.

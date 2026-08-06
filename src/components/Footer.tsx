@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.logoWrap}>
         <Image
-          src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg"
+          src="/new Logo mfm.png"
           alt="Mountain of Fire and Miracles Ministries"
           width={72}
           height={72}

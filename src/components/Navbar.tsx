@@ -44,7 +44,7 @@ export default function Navbar() {
       <Link href="/" className={styles.logo}>
         <div className={styles.logoImg}>
           <Image
-            src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg"
+            src="/new Logo mfm.png"
             alt="MFM Logo"
             width={52}
             height={52}
