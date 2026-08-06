@@ -599,6 +599,11 @@ export const GALLERY_ITEMS = [
   { id: 10, title: "Children's Ministry Program",    category: 'Youth',          description: 'Raising kingdom champions from an early age.' },
   { id: 11, title: 'Men of Valor Meeting',           category: 'Worship',        description: 'Men of God standing firm in faith and accountability.' },
   { id: 12, title: 'Easter Revival Service',         category: 'Special Events', description: 'Celebrating the resurrection power of Jesus Christ.' },
+  { id: 13, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Sisters fellowshipping together after a powerful service.',              image: '/WhatsApp Image 2026-08-05 at 14.23.28 (2).jpeg' },
+  { id: 14, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members greeting one another with joy after service.',                   image: '/WhatsApp Image 2026-08-05 at 14.23.28 (3).jpeg' },
+  { id: 15, title: 'Sunday Fellowship',              category: 'Worship',        description: 'A member dressed in celebration for a special Sunday service.',          image: '/WhatsApp Image 2026-08-05 at 14.23.28.jpeg' },
+  { id: 16, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members of the MFM Tampa Florida family fellowshipping together.',       image: '/WhatsApp Image 2026-08-05 at 14.23.29.jpeg' },
+  { id: 17, title: 'Sunday Fellowship',              category: 'Special Events', description: 'Fellowshipping beneath a portrait of Dr. D.K. Olukoya and Pst (Mrs) Shade Olukoya.', image: '/WhatsApp Image 2026-08-05 at 14.23.34.jpeg' },
 ]
 
 export const MINISTRY_PROJECTS = [
