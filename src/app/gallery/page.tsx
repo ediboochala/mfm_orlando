@@ -73,6 +73,7 @@ export default function GalleryPage() {
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       style={{ objectFit: 'cover' }}
+                      className={styles.cardImg}
                     />
                   ) : (
                     <div className={styles.imagePlaceholder}>
