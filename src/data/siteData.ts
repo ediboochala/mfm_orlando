@@ -587,6 +587,7 @@ export const BLOG_POSTS: BlogPost[] = [
 export const GALLERY_CATEGORIES = ['All', 'Worship', 'Deliverance', 'Youth', 'Outreach', 'Special Events']
 
 export const GALLERY_ITEMS = [
+  { id: 18, title: 'Fellowship with Pastor Kehinde Olajide', category: 'Worship',  description: 'A joyful moment of fellowship at MFM Tampa Florida.',                     image: '/WhatsApp Image 2026-08-03 at 21.25.01.jpeg' },
   { id: 13, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Sisters fellowshipping together after a powerful service.',              image: '/WhatsApp Image 2026-08-05 at 14.23.28 (2).jpeg' },
   { id: 14, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members greeting one another with joy after service.',                   image: '/WhatsApp Image 2026-08-05 at 14.23.28 (3).jpeg' },
   { id: 15, title: 'Sunday Fellowship',              category: 'Worship',        description: 'A member dressed in celebration for a special Sunday service.',          image: '/WhatsApp Image 2026-08-05 at 14.23.28.jpeg' },
