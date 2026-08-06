@@ -9,7 +9,7 @@ export default function GivingSection() {
 
       {/* Logo watermark */}
       <div className={styles.logoWatermark} aria-hidden="true">
-        <Image src="/mfm-logo.png" alt="" fill style={{ objectFit: 'contain' }} />
+        <Image src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg" alt="" fill style={{ objectFit: 'contain' }} />
       </div>
 
       <div className="section-inner">

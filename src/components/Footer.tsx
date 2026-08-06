@@ -16,7 +16,13 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logoWrap}>
-        <Image src="/mfm-logo.png" alt="Mountain of Fire and Miracles Ministries" width={72} height={72} />
+        <Image
+          src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg"
+          alt="Mountain of Fire and Miracles Ministries"
+          width={72}
+          height={72}
+          style={{ objectFit: 'cover' }}
+        />
       </div>
       <p className={styles.copy}>{CHURCH.copyright}</p>
       <nav className={styles.links}>

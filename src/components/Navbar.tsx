@@ -43,7 +43,13 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className={styles.logo}>
         <div className={styles.logoImg}>
-          <Image src="/mfm-logo.png" alt="MFM Logo" width={52} height={52} />
+          <Image
+            src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg"
+            alt="MFM Logo"
+            width={52}
+            height={52}
+            style={{ objectFit: 'cover' }}
+          />
         </div>
         <div className={styles.logoText}>
           <span className={styles.logoName}>{CHURCH.shortName}</span>

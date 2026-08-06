@@ -17,7 +17,14 @@ export default function HeroSection() {
       <div className={styles.heroContent}>
         {/* Logo badge */}
         <div className={styles.logoBadge}>
-          <Image src="/mfm-logo.png" alt="Mountain of Fire and Miracles Ministries" width={110} height={110} priority />
+          <Image
+            src="/WhatsApp Image 2026-08-06 at 04.45.10.jpeg"
+            alt="Mountain of Fire and Miracles Ministries"
+            width={110}
+            height={110}
+            style={{ objectFit: 'cover' }}
+            priority
+          />
         </div>
 
         <p className={styles.eyebrow}>Welcome to!</p>

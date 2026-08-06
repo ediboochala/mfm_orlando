@@ -45,7 +45,7 @@ export const CRUSADE = {
   hotels: [
     { name: 'Embassy Suites by Hilton', address: '3705 Spectrum Boulevard, Tampa, FL 33612' },
     { name: 'Home2 Suites by Hilton', address: '11606 North McKinley Drive, Tampa, FL 33612' },
-    { name: 'La Quinta Inn & Suites by Wyndham', address: '3701 East Fowler Avenue, Tampa, FL 33612' },
+    { name: 'La Quinta Inn and Suites by Wyndham', address: '3701 East Fowler Avenue, Tampa, FL 33612' },
     { name: 'Hyatt Place Tampa', address: '11408 North 30th Street, Tampa, FL 33612' },
     { name: 'Holiday Inn Tampa North', address: '3751 East Fowler Avenue, Tampa, FL 33612' },
   ],
@@ -59,7 +59,7 @@ export const CRUSADE = {
 
 export const PASTOR = {
   name: 'Pastor Kehinde Olajide',
-  title: 'Host Pastor, MFM Tampa Florida',
+  title: 'MFM Tampa, Florida',
   cell: '+1 (346) 302-9156',
   services: 'Pastoral Counseling and Prayer Available',
   greeting: `Greetings from Pastor Kehinde Olajide and the members of Mountain of Fire and Miracles Ministries Tampa, Florida. This is the day that the Lord hath made, we will rejoice and be glad in it. God hath been truly faithful unto us and for this we give thanks.`,
@@ -79,11 +79,11 @@ export const PASTOR = {
 export const GENERAL_OVERSEER = {
   name: 'Dr. Daniel Kolawole Olukoya',
   initials: 'DKO',
-  title: 'General Overseer & Founder',
+  title: 'General Overseer and Founder',
   degree: 'First Class Honours in Microbiology — University of Lagos, Nigeria',
   phd: 'Ph.D. in Molecular Genetics — University of Reading, United Kingdom',
   publications: 'Over 80 scientific publications',
-  family: 'Married to Pastor Folashade Olukoya; son Elijah Toluwani',
+  family: 'Married to Pastor Folashade Olukoya',
   bio: `Dr. D.K. Olukoya's life and ministry is devoted to the revival of Apostolic signs, Holy Ghost fireworks, and the unlimited demonstration of God's power to deliver to the uttermost. He teaches that holiness within and without is the greatest spiritual insecticide and a condition for Heaven. As a Prophet, Evangelist, Teacher, Role Model, and Preacher of the Word, he continues to spread the message of God's power to restore, break yokes, and bring salvation to all nations.`,
   quote: 'Holiness within and without is the greatest spiritual insecticide and a condition for Heaven.',
 }
@@ -105,7 +105,7 @@ export const SERVICES = [
   },
   {
     day: 'Tuesdays',
-    name: 'Personal Prayer & Bible Study',
+    name: 'Personal Prayer and Bible Study',
     time: '7:00 PM (ET)',
     icon: '📖',
     image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&h=600&q=80&auto=format&fit=crop',
@@ -302,10 +302,10 @@ export const DELIVERANCE = {
   formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfQl0kOXv0nh7wfdIsaAwPVh7zUBAI-57fYrYSN-1TrsODKHQ/viewform',
 }
 
-// ── Global Programs — Annual 70 Days Prayer & Fasting ───────────────────────
+// ── Global Programs — Annual 70 Days Prayer and Fasting ─────────────────────
 export const GLOBAL_PROGRAMS = {
   seventyDays: {
-    name: 'Annual 70 Days Prayer & Fasting',
+    name: 'Annual 70 Days Prayer and Fasting',
     description: 'MFM\'s signature global prayer and fasting program, observed by MFM branches worldwide as we press into a new year with prayer, holiness, and fasting.',
     // TODO: replace with the real external link once provided.
     link: '',
@@ -413,7 +413,7 @@ export const NAV_GROUPS: NavEntry[] = [
     children: [
       { label: 'Blog',            href: '/blog' },
       { label: 'Gallery',         href: '/gallery' },
-      { label: 'Sermons & Media', href: '/media' },
+      { label: 'Sermons and Media', href: '/media' },
     ],
   },
   {
@@ -605,7 +605,7 @@ export const MINISTRY_PROJECTS = [
   { id: 15, ministryId: 'young-adults-church', title: 'Young Adults Purpose Summit',      date: 'Coming Soon',    description: 'Young adults gathered to hear teaching on calling, career, and God-honoring independence.',   image: null },
   // Music Ministry
   { id: 9,  ministryId: 'music-ministry',     title: 'MFM Worship Night',                date: 'Coming Soon',    description: 'An evening of anointed worship that opens the heavens and breaks every chain.',              image: null },
-  { id: 10, ministryId: 'music-ministry',     title: 'Praise & Deliverance Concert',     date: 'Coming Soon',    description: 'Music as a weapon — a full night of praise preceding signs and wonders.',                   image: null },
+  { id: 10, ministryId: 'music-ministry',     title: 'Praise and Deliverance Concert',   date: 'Coming Soon',    description: 'Music as a weapon — a full night of praise preceding signs and wonders.',                   image: null },
   // GEN 2:18
   { id: 11, ministryId: 'gen-218',            title: 'GEN 2:18 Singles Gathering',       date: 'Coming Soon',    description: 'Biblical teaching on identity, purpose, and God\'s design for love and marriage.',            image: null },
   { id: 12, ministryId: 'gen-218',            title: 'Valentine Purity Gala',            date: 'Coming Soon',    description: 'An evening celebrating purity, purpose, and preparation for God\'s best.',                   image: null },
@@ -651,7 +651,7 @@ export const YOUTUBE_CHANNELS = [
 
 export const LIVE_SCHEDULE = [
   { day: 'Sundays',              service: 'Sunday Worship Service',            time: '10:00 AM ET', streamed: true  },
-  { day: 'Tuesdays',             service: 'Personal Prayer & Bible Study',     time: '7:00 PM ET',  streamed: false },
+  { day: 'Tuesdays',             service: 'Personal Prayer and Bible Study',   time: '7:00 PM ET',  streamed: false },
   { day: 'Tue / Thu / Fri',      service: 'Hour of Deliverance Power (Online)', time: '12:00 Noon ET', streamed: true  },
   { day: 'Thursdays',            service: 'Manna Water Service',               time: '7:00 PM ET',  streamed: false },
   { day: '1st Saturday / Month', service: 'Power Must Change Hands',           time: '10:00 AM ET', streamed: true  },
