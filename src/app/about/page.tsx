@@ -56,7 +56,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Our Identity</span>
-              <h2 className={styles.sectionTitle}>MFM Tampa Florida</h2>
+              <h2 className={styles.sectionTitle}>MFM Tampa <span className="title-accent">Florida</span></h2>
               <div className={styles.sectionDivider} />
             </div>
             <div className={styles.twoCol}>
@@ -91,7 +91,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Our Founder</span>
-              <h2 className={styles.sectionTitle}>Meet Dr. D.K. Olukoya</h2>
+              <h2 className={styles.sectionTitle}>Meet Dr. D.K. <span className="title-accent">Olukoya</span></h2>
               <div className={styles.sectionDivider} />
             </div>
 
@@ -183,7 +183,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Our Purpose</span>
-              <h2 className={styles.sectionTitle}>MFM Mission Statement</h2>
+              <h2 className={styles.sectionTitle}>MFM Mission <span className="title-accent">Statement</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 The mandate of <span className="org-name">Mountain of Fire and Miracles Ministries</span> is rooted in the Great Commission and the full gospel of Jesus Christ. These are the pillars on which the ministry was built.
@@ -204,7 +204,7 @@ export default function AboutPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>What We Stand For</span>
-              <h2 className={styles.sectionTitle}>Core Values</h2>
+              <h2 className={styles.sectionTitle}>Core <span className="title-accent">Values</span></h2>
               <div className={styles.sectionDivider} />
             </div>
             <div className={styles.valuesGrid}>

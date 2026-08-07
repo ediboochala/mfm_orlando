@@ -76,7 +76,7 @@ export default function CrusadePage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Event Details</span>
-              <h2 className={styles.sectionTitle}>Join Us</h2>
+              <h2 className={styles.sectionTitle}>Join <span className="title-accent">Us</span></h2>
               <div className={styles.sectionDivider} />
             </div>
             <div className={styles.detailsGrid}>
@@ -133,7 +133,7 @@ export default function CrusadePage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Where to Stay</span>
-              <h2 className={styles.sectionTitle}>Hotels Close to Yuengling Center</h2>
+              <h2 className={styles.sectionTitle}>Hotels Close to <span className="title-accent">Yuengling Center</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 Traveling in for the crusade? Here are a few nearby hotel options near the venue.

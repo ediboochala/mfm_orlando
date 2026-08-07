@@ -36,7 +36,7 @@ export default function WelcomeSection() {
           {/* Text */}
           <div className="reveal-right">
             <span className="section-label">A Word from Our Pastor</span>
-            <h2 className="section-title">Greetings in the<br />Name of Jesus</h2>
+            <h2 className="section-title">Greetings in the<br />Name of <span className="title-accent">Jesus</span></h2>
             <div className="section-divider" />
 
             <p className={styles.greeting}>{highlightOrgName(PASTOR.greeting)}</p>

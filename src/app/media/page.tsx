@@ -56,7 +56,7 @@ export default function MediaPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Broadcast Schedule</span>
-              <h2 className={styles.sectionTitle}>Live Service Schedule</h2>
+              <h2 className={styles.sectionTitle}>Live Service <span className="title-accent">Schedule</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 The following services are streamed live. Join us online or in person.
@@ -87,7 +87,7 @@ export default function MediaPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>YouTube</span>
-              <h2 className={styles.sectionTitle}>Watch on YouTube</h2>
+              <h2 className={styles.sectionTitle}>Watch on <span className="title-accent">YouTube</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 Subscribe to our YouTube channels to watch live services and access a library of
@@ -102,7 +102,7 @@ export default function MediaPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Stay Connected</span>
-              <h2 className={styles.sectionTitle}>Follow MFM Tampa Florida</h2>
+              <h2 className={styles.sectionTitle}>Follow MFM Tampa <span className="title-accent">Florida</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 Follow us on social media for updates, sermon clips, and live service reminders.
@@ -134,7 +134,7 @@ export default function MediaPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Sister Ministries</span>
-              <h2 className={styles.sectionTitle}>MFM USA Network</h2>
+              <h2 className={styles.sectionTitle}>MFM USA <span className="title-accent">Network</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 MFM Tampa Florida is part of a wider family of MFM ministries across the United States.
@@ -166,7 +166,7 @@ export default function MediaPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Daily Prayer</span>
-              <h2 className={styles.sectionTitle}>MFM Daily Prayer Line</h2>
+              <h2 className={styles.sectionTitle}>MFM Daily Prayer <span className="title-accent">Line</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 Anchored by Dr. D.K. Olukoya and anointed pastors, the MFM prayer line runs twice

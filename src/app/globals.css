@@ -98,6 +98,11 @@ section {
   margin-bottom: 20px;
   color: var(--text);
 }
+/* Two-tone heading accent — wrap the highlighted word(s) in a span with
+   this class to color them purple against the otherwise-black title. */
+.title-accent {
+  color: var(--primary);
+}
 .section-divider {
   width: 60px;
   height: 2px;

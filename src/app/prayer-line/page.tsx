@@ -50,7 +50,7 @@ export default function PrayerLinePage() {
               <div>
                 <div className={styles.sectionHeader}>
                   <span className={styles.sectionLabel}>Call-In Numbers</span>
-                  <h2 className={styles.sectionTitle}>Dial and Pray</h2>
+                  <h2 className={styles.sectionTitle}>Dial and <span className="title-accent">Pray</span></h2>
                   <div className={styles.sectionDivider} />
                 </div>
 

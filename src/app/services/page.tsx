@@ -51,7 +51,7 @@ export default function ServicesPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Streamed Live</span>
-              <h2 className={styles.sectionTitle}>Online Programs</h2>
+              <h2 className={styles.sectionTitle}>Online <span className="title-accent">Programs</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 Can&apos;t make it in person? Join our online-only prayer program, streamed live wherever you are.
@@ -87,7 +87,7 @@ export default function ServicesPage() {
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Every Month</span>
-              <h2 className={styles.sectionTitle}>Themed Sundays</h2>
+              <h2 className={styles.sectionTitle}>Themed <span className="title-accent">Sundays</span></h2>
               <div className={styles.sectionDivider} />
               <p className={styles.sectionDesc}>
                 Each Sunday of the month carries its own focus — here&apos;s what to expect.
