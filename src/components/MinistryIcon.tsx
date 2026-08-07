@@ -93,6 +93,40 @@ export default function MinistryIcon({ name, size = 32 }: MinistryIconProps) {
         />
       )
       break
+    case 'heart':
+      content = (
+        <path
+          d="M14 24s-9.5-5.7-9.5-13A5.5 5.5 0 0114 7a5.5 5.5 0 019.5 4c0 7.3-9.5 13-9.5 13z"
+          {...strokeProps}
+        />
+      )
+      break
+    case 'care':
+      content = (
+        <>
+          <path d="M4 13a10 10 0 0120 0" {...strokeProps} />
+          <path d="M4 13c0 4.5 2.2 8 5 10M24 13c0 4.5-2.2 8-5 10" {...strokeProps} />
+          <circle cx={14} cy={9} r={2.3} fill={stroke} />
+        </>
+      )
+      break
+    case 'pray':
+      content = (
+        <path
+          d="M14 4C10 8 8 13 8 19c0 3 2.5 5 6 6 3.5-1 6-3 6-6 0-6-2-11-6-15z"
+          {...strokeProps}
+        />
+      )
+      break
+    case 'broadcast':
+      content = (
+        <>
+          <circle cx={14} cy={20} r={1.8} fill={stroke} />
+          <path d="M9.5 16.5a7 7 0 019 0" {...strokeProps} />
+          <path d="M5.5 12.5a13 13 0 0117 0" {...strokeProps} />
+        </>
+      )
+      break
     default:
       content = <circle cx={14} cy={14} r={6} {...strokeProps} />
   }

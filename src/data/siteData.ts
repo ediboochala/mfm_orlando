@@ -93,7 +93,7 @@ export const GENERAL_OVERSEER = {
 export const STATS = [
   { num: 1989, suffix: '', label: 'Year Founded' },
   { num: 140,  suffix: '+', label: 'Nations Reached' },
-  { num: 7,    suffix: '', label: 'Active Ministries' },
+  { num: 11,   suffix: '', label: 'Active Ministries' },
   { num: 6,    suffix: '', label: 'Services Per Week' },
 ]
 
@@ -269,6 +269,74 @@ export const MINISTRIES = [
     ],
     membership: 'Open to all singles — regardless of age or background',
     scripture: '"It is not good that the man should be alone; I will make him a helper suitable for him." — Genesis 2:18',
+  },
+  {
+    id: 'welfare',
+    name: 'Welfare',
+    subtitle: 'Meeting the Practical Needs of the Church Family',
+    icon: 'heart',
+    image: '/WhatsApp Image 2026-08-05 at 14.23.28 (3).jpeg',
+    tagline: 'Making sure no one in the house of God carries a practical burden alone.',
+    description: "The Welfare Ministry exists to meet the practical, everyday needs that arise within the church family — because faith is lived out not only in the sanctuary but in the ordinary struggles of daily life. Whether it is a family facing financial hardship, a member without transportation to service, or a need that has gone unspoken out of pride or fear, Welfare stands ready to respond with the love of Christ in a tangible way. This ministry believes that caring for the body is part of caring for the soul.",
+    details: [
+      'Identifying and responding to material and financial needs within the church',
+      'Coordinating support during times of hardship, loss, or transition',
+      'Working closely with the Thanksgiving/Welfare Sunday offering to meet needs',
+      'Ensuring every member knows help is available — no one has to ask twice',
+    ],
+    membership: 'Open to all with a heart to serve and give practically to others',
+    scripture: '"Pure religion and undefiled before God and the Father is this, To visit the fatherless and widows in their affliction." — James 1:27',
+  },
+  {
+    id: 'we-care',
+    name: 'We Care',
+    subtitle: 'A Ministry of Comfort, Visitation, and Presence',
+    icon: 'care',
+    image: '/WhatsApp Image 2026-08-05 at 14.23.29.jpeg',
+    tagline: 'Showing up for one another — in sickness, in loss, and in every season that is hard to walk alone.',
+    description: "We Care is the arm of the church devoted to comfort and presence — visiting the sick, checking in on members who have been absent, standing with families through bereavement, and simply making sure no one at MFM Tampa Florida feels forgotten. In a world that moves fast and often overlooks the quietly struggling, We Care slows down to notice, to call, to show up. It is the practical expression of being the hands and feet of Christ to one another.",
+    details: [
+      'Hospital and home visitations for members who are sick or recovering',
+      'Reaching out to members who have missed services or gone quiet',
+      'Standing with families through bereavement and difficult seasons',
+      'Following up with prayer, calls, and visits so no one is forgotten',
+    ],
+    membership: 'Open to all with a heart for compassion and consistent follow-up',
+    scripture: '"Bear ye one another\'s burdens, and so fulfil the law of Christ." — Galatians 6:2',
+  },
+  {
+    id: 'prayer-and-intercession',
+    name: 'Prayer and Intercession',
+    subtitle: 'Standing in the Gap for the Church and the Nations',
+    icon: 'pray',
+    image: '/7.png',
+    tagline: 'The engine room of the church — where heaven is moved on behalf of others.',
+    description: "The Prayer and Intercession Ministry is the engine room of MFM Tampa Florida. While the whole church is called to pray, intercessors carry a specific assignment: to stand in the gap for the pastor, the members, the city of Tampa, and the nations — often for burdens that are never spoken from the pulpit. This ministry covers every service in prayer before it begins, holds the ropes for members going through personal battles, and contends for revival, healing, and breakthrough on behalf of others.",
+    details: [
+      'Covering every service, program, and outreach in prayer',
+      'Interceding for the pastor, church members, and specific prayer requests',
+      'Participating in prayer chains, prayer walks, and all-night vigils',
+      'Standing in the gap for the city of Tampa and the nations of the world',
+    ],
+    membership: 'Open to committed intercessors with a burden for prayer',
+    scripture: '"And I sought for a man among them, that should make up the hedge, and stand in the gap before me for the land." — Ezekiel 22:30',
+  },
+  {
+    id: 'technical-and-audiovisual',
+    name: 'Technical and Audiovisual',
+    subtitle: 'Serving Behind the Scenes So the Word Reaches Every Ear',
+    icon: 'broadcast',
+    image: '/WhatsApp Image 2026-08-05 at 14.23.28 (2).jpeg',
+    tagline: 'Every sound, every stream, every slide — stewarded with excellence for the glory of God.',
+    description: "The Technical and Audiovisual Ministry works quietly behind the scenes so that every service runs in decency and order. From sound and projection to livestreaming and recording, this team ensures that the Word preached in the sanctuary reaches every ear clearly — whether a member is seated in the front row or watching from another state. It is a ministry of excellence, precision, and service, powered by a conviction that nothing done for God should be done carelessly.",
+    details: [
+      'Managing sound, projection, and lighting for every service and program',
+      'Livestreaming services so members and visitors abroad can watch and worship',
+      'Recording and archiving sermons, testimonies, and special programs',
+      'Maintaining and troubleshooting all church media and technical equipment',
+    ],
+    membership: 'Open to those with a gift or interest in sound, media, or technical serving',
+    scripture: '"Let all things be done decently and in order." — 1 Corinthians 14:40',
   },
 ]
 
@@ -623,6 +691,14 @@ export const MINISTRY_PROJECTS = [
   // GEN 2:18
   { id: 11, ministryId: 'gen-218',            title: 'GEN 2:18 Singles Gathering',       date: 'Coming Soon',    description: 'Biblical teaching on identity, purpose, and God\'s design for love and marriage.',            image: null },
   { id: 12, ministryId: 'gen-218',            title: 'Valentine Purity Gala',            date: 'Coming Soon',    description: 'An evening celebrating purity, purpose, and preparation for God\'s best.',                   image: null },
+  // Welfare
+  { id: 16, ministryId: 'welfare',                    title: 'Welfare Outreach Drive',           date: 'Coming Soon',    description: 'Meeting practical and material needs within the church family.',                            image: null },
+  // We Care
+  { id: 17, ministryId: 'we-care',                    title: 'Hospital and Home Visitations',    date: 'Ongoing',        description: 'Comforting and checking in on members who are sick, absent, or grieving.',                   image: null },
+  // Prayer and Intercession
+  { id: 18, ministryId: 'prayer-and-intercession',    title: 'All-Night Prayer Vigil',           date: 'Coming Soon',    description: 'Intercessors gathered to stand in the gap for the church and the nations.',                  image: null },
+  // Technical and Audiovisual
+  { id: 19, ministryId: 'technical-and-audiovisual',  title: 'Livestream and Media Team',        date: 'Ongoing',        description: 'Serving behind the scenes so every service reaches every ear clearly.',                     image: null },
 ]
 
 // ── Featured Videos ──────────────────────────────────────────────────────
