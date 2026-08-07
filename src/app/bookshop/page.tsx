@@ -90,14 +90,6 @@ export default function BookshopPage() {
 
           <div className={styles.moreBooksWrap}>
             <a
-              href={BOOKSHOP.moreBooksHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`btn-secondary ${styles.moreBooksBtn}`}
-            >
-              View More Books on DKO eBooks →
-            </a>
-            <a
               href={BOOKSHOP.amazonAuthorHref}
               target="_blank"
               rel="noopener noreferrer"

@@ -451,7 +451,6 @@ export const BOOKSHOP = {
     { title: 'Command The Morning', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=97', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783691780_EPUB_Cover.jpg' },
     { title: 'Born Great But Tied Down', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=438', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783808348_Cover.jpg' },
   ],
-  moreBooksHref: 'https://www.dkoebooks.com/index.php',
   amazonAuthorHref: 'https://www.amazon.com/stores/Dr-D-K-Olukoya/author/B00M6U2B4U?ref=sr_ntt_srch_lnk_1&qid=1785985292&sr=8-1&shoppingPortalEnabled=true&ccs_id=0380880b-228c-47ab-9d63-3f1c002d85c2',
 }
 
