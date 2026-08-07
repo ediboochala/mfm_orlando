@@ -154,6 +154,7 @@ export const MINISTRIES = [
     name: 'Men of Valor',
     subtitle: "Men's Ministry",
     icon: 'sword',
+    image: '/Men of valor.png',
     tagline: 'Raising mighty men of God — in the home, in the church, and in the world.',
     description: "Men of Valor exists because MFM believes that the transformation of a nation begins with the transformation of its men. Every man carries a God-given responsibility — as a father, a husband, a son, a leader, a warrior in the spiritual realm. Men of Valor is designed to awaken that responsibility, equip men with biblical tools for spiritual warfare, and build a brotherhood of accountability, integrity, and purpose. When men rise to their calling, families are healed, children are protected, and communities are transformed.",
     details: [
@@ -170,6 +171,7 @@ export const MINISTRIES = [
     name: 'Glorious Women',
     subtitle: "Women's Ministry",
     icon: 'flower',
+    image: '/5.png',
     tagline: 'Knowing God. Filled with His Spirit. Doing His Will. Loving His People.',
     description: "Glorious Women is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
     details: [
@@ -186,6 +188,7 @@ export const MINISTRIES = [
     name: "Children's Ministry",
     subtitle: 'Raising Kingdom Champions from Childhood',
     icon: 'sparkle',
+    image: '/2.png',
     tagline: 'Building a foundation of faith that will last a lifetime.',
     description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children's Ministry is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
     details: [
@@ -202,6 +205,7 @@ export const MINISTRIES = [
     name: 'Youth Church',
     subtitle: 'Empowering the Next Generation',
     icon: 'flame',
+    image: '/3.png',
     tagline: 'Young, on fire, and on purpose — for the glory of God.',
     description: "Youth Church at MFM Tampa Florida understands the unique pressures facing teenagers and young people in this generation. Identity crises, the pull of social media, peer pressure, moral confusion — these are real and formidable. Youth Church exists to give young people an anchor: a clear identity in Christ, a community that holds them accountable, and a vision for their lives that is bigger than anything the world is offering. We are raising a generation of young men and women who know who they are, know whose they are, and will not be moved.",
     details: [
@@ -218,6 +222,7 @@ export const MINISTRIES = [
     name: 'Young Adults Church',
     subtitle: 'Equipping the Rising Generation of Leaders',
     icon: 'sprout',
+    image: '/3.png',
     tagline: 'Purpose-driven, Spirit-filled, and ready to lead.',
     description: "Young Adults Church exists for the season of life between youth and full adulthood — college, first jobs, early careers, and the search for direction and purpose. This is a season where the decisions made shape the rest of a person's life: who to marry, what to build a career on, how to steward independence in a way that honors God. Young Adults Church gives this generation biblical grounding, mentorship, and a community of peers pursuing God together, so they step into full adulthood already anchored in Christ.",
     details: [
@@ -234,6 +239,7 @@ export const MINISTRIES = [
     name: 'Choir',
     subtitle: 'Worship That Ushers in the Presence of God',
     icon: 'music',
+    image: '/6.png',
     tagline: 'When the music plays, heaven opens and chains fall off.',
     description: "Music is not merely entertainment — it is a spiritual weapon. At MFM Tampa Florida, the Choir understands that anointed worship prepares the ground for miracles. Music has always been a carrier of healing, deliverance, and the presence of God. The Choir is called to lift the name of Jesus in a way that opens the heavens, draws the Holy Spirit, and creates an atmosphere in which lives are changed. If you have ever been in a service where the music brought you to tears or broke something loose inside you, you understand exactly why this ministry exists.",
     details: [
@@ -250,6 +256,7 @@ export const MINISTRIES = [
     name: 'GEN 2:18',
     subtitle: 'Preparing Singles for the Journey to Marriage',
     icon: 'ring',
+    image: '/4.png',
     tagline: 'It is not good for man to be alone — and God has a plan for your story.',
     description: 'GEN 2:18 takes its name from the profound declaration in Genesis 2:18 — "It is not good that the man should be alone." This non-denominational movement exists to prepare singles for marriage and to support those in every stage of single life. Whether you are navigating single parenthood, waiting with hope in your twenties, or finding yourself single again later in life — GEN 2:18 is a community that understands your journey and offers biblical guidance, emotional support, and a circle of people walking the same road.',
     details: [
