@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { MINISTRIES } from '@/data/siteData'
 import MinistryIcon from './MinistryIcon'
 import styles from './MinistriesSection.module.css'
@@ -14,21 +15,19 @@ export default function MinistriesSection() {
 
         <div className={styles.grid}>
           {MINISTRIES.map((m, i) => (
-            <div
+            <Link
               key={i}
+              href={`/ministries#${m.id}`}
               className={`ministry-card ${styles.card} reveal d${(i % 6) + 1}`}
             >
               <div className={styles.cardBg} />
               <span className={styles.icon}><MinistryIcon name={m.icon} /></span>
               <p className={styles.name}>{m.name}</p>
               <p className={styles.desc}>{m.tagline}</p>
-              <a
-                href="/ministries"
-                className={styles.learn}
-              >
+              <span className={styles.learn}>
                 Learn More
-              </a>
-            </div>
+              </span>
+            </Link>
           ))}
         </div>
       </div>

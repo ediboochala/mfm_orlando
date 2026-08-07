@@ -15,12 +15,18 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background: #FFFFFF;
   padding: 40px 28px;
   border: 1px solid rgba(var(--accent-rgb), 0.15);
   box-shadow: 0 2px 16px rgba(128, 0, 128, 0.05);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   transition: border-color 0.4s, transform 0.4s;
 }
 /* Last card fills the two empty slots left in its row instead of

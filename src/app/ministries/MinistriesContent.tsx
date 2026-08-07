@@ -300,7 +300,7 @@ export default function MinistriesContent() {
             {MINISTRIES.map((ministry) => {
               const photos = MINISTRY_PROJECTS.filter(p => p.ministryId === ministry.id)
               return (
-                <section key={ministry.id} className={styles.ministrySection}>
+                <section key={ministry.id} id={ministry.id} className={styles.ministrySection}>
                   <div className={styles.ministrySplit}>
 
                     {/* LEFT — ministry info */}
