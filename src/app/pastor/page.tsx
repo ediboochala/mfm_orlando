@@ -132,7 +132,7 @@ export default function PastorPage() {
                   <span>MFM</span>
                 </div>
                 <div>
-                  <p className={styles.letterFrom}>From the Desk of the Pastor</p>
+                  <p className={styles.letterFrom}>A Personal Welcome from Pastor Kehinde Olajide</p>
                   <p className={`${styles.letterChurch} org-name`}>{CHURCH.name}</p>
                   <p className={styles.letterLocation}>{CHURCH.location}</p>
                 </div>
