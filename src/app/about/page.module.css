@@ -324,14 +324,29 @@
   color: rgba(var(--text-rgb), 0.7);
 }
 .goQuote {
-  border-left: 3px solid var(--gold);
-  padding: 16px 24px;
+  position: relative;
+  border-top: 2px solid var(--gold);
+  padding: 26px 28px 22px 44px;
   margin: 0;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 15px;
-  line-height: 1.75;
-  color: rgba(var(--text-rgb), 0.55);
-  background: rgba(var(--accent-rgb), 0.04);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(var(--text-rgb), 0.72);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.06) 0%, rgba(var(--primary-rgb), 0.03) 100%);
+}
+.goQuote::before {
+  content: '\201C';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.45;
 }
 
 /* ── Timeline ── */
