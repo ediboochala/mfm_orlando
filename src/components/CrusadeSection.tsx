@@ -1,12 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CRUSADE } from '@/data/siteData'
+import { CRUSADE, GLOBAL_PROGRAMS, THEMED_SUNDAYS } from '@/data/siteData'
 import styles from './CrusadeSection.module.css'
+
+const MONTHLY_DELIVERANCE = THEMED_SUNDAYS.find((s) => s.theme === 'Monthly Deliverance Weekend')
 
 export default function CrusadeSection() {
   return (
     <section id="crusade" className={styles.section}>
       <div className="section-inner">
+        <div className={styles.outerGrid}>
         <div className={styles.grid}>
           {/* Image / Flyer */}
           <div className={`${styles.imgWrap} reveal-left`}>
@@ -102,6 +105,32 @@ export default function CrusadeSection() {
               </span>
             </div>
           </div>
+        </div>
+
+        {/* More Upcoming — space for the next events beside the crusade */}
+        <aside className={`${styles.eventsSidebar} reveal-right`}>
+          <span className={styles.eventsSidebarLabel}>More Upcoming</span>
+
+          <Link href="/global-programs" className={styles.eventCard}>
+            <span className={styles.eventCardTag}>Annual Program</span>
+            <span className={styles.eventCardTitle}>{GLOBAL_PROGRAMS.seventyDays.name}</span>
+            <span className={styles.eventCardDesc}>{GLOBAL_PROGRAMS.seventyDays.description}</span>
+            <span className={styles.eventCardLink}>Learn More →</span>
+          </Link>
+
+          {MONTHLY_DELIVERANCE && (
+            <Link href="/deliverance" className={styles.eventCard}>
+              <span className={styles.eventCardTag}>
+                {MONTHLY_DELIVERANCE.week}{MONTHLY_DELIVERANCE.note ? ` · ${MONTHLY_DELIVERANCE.note}` : ''}
+              </span>
+              <span className={styles.eventCardTitle}>{MONTHLY_DELIVERANCE.theme}</span>
+              <span className={styles.eventCardDesc}>
+                A weekend set apart for aggressive, targeted prayer and deliverance — every last Sunday of the month.
+              </span>
+              <span className={styles.eventCardLink}>Learn More →</span>
+            </Link>
+          )}
+        </aside>
         </div>
       </div>
 
