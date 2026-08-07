@@ -10,7 +10,7 @@ const SLIDES = [
     title: 'Come Into His Presence',
     desc: 'Join us every Sunday for a powerful time of worship, the Word, and encounter with the living God.',
     accent: '#E8B923',
-    image: 'https://images.unsplash.com/photo-1725245997924-632b5673e18a?w=1600&q=80&auto=format&fit=crop',
+    image: '/22 (3).jpg',
   },
   {
     label: 'Prayer and Deliverance',
