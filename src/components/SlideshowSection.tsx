@@ -24,7 +24,7 @@ const SLIDES = [
     title: 'Rooted in the Word',
     desc: 'We are a Word-based ministry. Every prayer point, every doctrine, every step is grounded in Scripture.',
     accent: '#E8B923',
-    image: '/22 (1).jpg',
+    image: '/22 (5).png',
   },
   {
     label: 'Youth and Family',
