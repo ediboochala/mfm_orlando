@@ -474,9 +474,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you have been waiting for a sign to start, this is it. You do not need a special title or a theological degree to fast. You need a willing heart and a desperate hunger for God that surpasses your hunger for food. Start small — skip one meal and dedicate that time to prayer. Then build from there. Let the discipline grow, and watch how God begins to move in ways that will leave you breathless. The breakthrough you have been waiting for may be just one fast away.',
     ],
     readTime: '8 min read',
-    coverImage: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1200&q=80&auto=format&fit=crop',
+    coverImage: '/1.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/back.jpg', alt: 'Prayer and fasting', caption: 'Fasting and prayer — a powerful spiritual combination' },
+      { afterParagraph: 1, type: 'image', src: '/7.png', alt: 'Prayer and fasting', caption: 'Fasting and prayer — a powerful spiritual combination' },
     ],
   },
   {
@@ -495,9 +495,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you are struggling with patterns that will not break, we want you to know: there is nothing wrong with coming for help. There is nothing wrong with saying, "I need more than I currently have." That humility is not weakness — it is wisdom. Come to MFM Tampa Florida this Friday night. Come as you are, with the full weight of what you have been carrying. You may leave with the testimony that changes the rest of your life.',
     ],
     readTime: '8 min read',
-    coverImage: '/22 (2).jpg',
+    coverImage: '/7.png',
     mediaBlocks: [
-      { afterParagraph: 2, type: 'image', src: 'https://images.unsplash.com/photo-1725245997924-632b5673e18a?w=1200&q=80&auto=format&fit=crop', alt: 'Believers in prayer during a deliverance service', caption: 'Believers in prayer during a deliverance service' },
+      { afterParagraph: 2, type: 'image', src: '/1.png', alt: 'Believers in prayer during a deliverance service', caption: 'Believers in prayer during a deliverance service' },
     ],
   },
   {
@@ -516,9 +516,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'MFM Tampa Florida regularly organizes group trips to Prayer City. If you would like to join our next trip, or simply want more information about upcoming programs, please reach out to us. Do not let another season pass while the very breakthrough you need is available to you. Pack your bag. Make the journey. God is already there, waiting.',
     ],
     readTime: '8 min read',
-    coverImage: '/22 (2).jpg',
+    coverImage: '/6.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/22 (4).jpg', alt: 'Believers gathered at MFM Prayer City', caption: 'Believers gathered in worship at MFM Prayer City' },
+      { afterParagraph: 1, type: 'image', src: '/4.png', alt: 'Believers gathered at MFM Prayer City', caption: 'Believers gathered in worship at MFM Prayer City' },
     ],
   },
   {
@@ -537,7 +537,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'We do not know the day or the hour. But we know it is close. The signs are everywhere. Do not let busyness, distraction, or the comfort of a settled life cause you to sleep through one of the most significant moments in all of human history. Wake up. Look up. Get ready. And if you need help getting ready, MFM Tampa Florida is here — a community of believers who take the return of Jesus not as a theory, but as the most certain event on the horizon.',
     ],
     readTime: '8 min read',
-    coverImage: '/22 (3).jpg',
+    coverImage: '/3.png',
     mediaBlocks: [],
   },
   {
@@ -556,9 +556,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'Begin today. Not with a rigid set of rules, but with a conversation with the Holy Spirit. Ask Him to show you the areas of your life that need to be surrendered. Ask Him for the grace to let them go. Ask Him to fill every empty space with His presence. Holiness is not achieved overnight — it is a daily journey, a daily choice, a daily surrender. But every step you take toward holiness is a step toward the God who loved you enough to die for you, and who desires nothing more than to see you fully free, fully His, and fully alive.',
     ],
     readTime: '8 min read',
-    coverImage: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1200&q=80&auto=format&fit=crop',
+    coverImage: '/5.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/g.o-hmpg-p2yv8mmnlqigraumc5fkktysc1o1hu6a214voa7okq.jpg', alt: 'Teaching on holiness', caption: 'Pursuing holiness in everyday life' },
+      { afterParagraph: 1, type: 'image', src: '/7.png', alt: 'Teaching on holiness', caption: 'Pursuing holiness in everyday life' },
     ],
   },
   {
@@ -577,9 +577,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'At MFM Tampa Florida, we offer multiple prayer opportunities every week. Our morning prayer line runs from 6:00–7:00 AM EST, Monday through Friday — join by phone and spend the first hour of your day in the presence of God before the world can get to you. Our Friday night revival services, deliverance nights, and crossover programs are all built on extended, aggressive, corporate prayer. There is something that happens when people pray together — with one voice, one focus, one desperate hunger for God — that releases an authority solitary prayer alone cannot match. Come and join us. Let your prayer life be transformed. And watch what God does with a person who simply refuses to stop.',
     ],
     readTime: '8 min read',
-    coverImage: '/back.jpg',
+    coverImage: '/1.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/22 (1).jpg', alt: 'MFM Tampa Florida prayer program', caption: 'MFM Tampa Florida morning prayer program' },
+      { afterParagraph: 1, type: 'image', src: '/6.png', alt: 'MFM Tampa Florida prayer program', caption: 'MFM Tampa Florida morning prayer program' },
     ],
   },
 ]
@@ -597,14 +597,14 @@ export const GALLERY_ITEMS = [
 
 export const MINISTRY_PROJECTS = [
   // Men of Valor
-  { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/22 (1).jpg' },
+  { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/6.png' },
   // Glorious Women
-  { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/22 (2).jpg' },
+  { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/4.png' },
   // Children's Ministry
-  { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/22 (4).jpg' },
+  { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/2.png' },
   { id: 6,  ministryId: 'children-church',     title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
   // Youth Church
-  { id: 7,  ministryId: 'youth-church',        title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Teens and youths encountered God and discovered their God-given purpose.',                  image: '/22 (3).jpg' },
+  { id: 7,  ministryId: 'youth-church',        title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Teens and youths encountered God and discovered their God-given purpose.',                  image: '/3.png' },
   { id: 8,  ministryId: 'youth-church',        title: 'Youth Outreach Day',               date: 'Coming Soon',    description: 'Taking the gospel to the streets of Tampa with energy and love.',                         image: null },
   // Young Adults Church
   { id: 15, ministryId: 'young-adults-church', title: 'Young Adults Purpose Summit',      date: 'Coming Soon',    description: 'Young adults gathered to hear teaching on calling, career, and God-honoring independence.',   image: null },
