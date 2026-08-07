@@ -440,16 +440,16 @@ export const MISSION_GOALS = [
 
 // ── Bookshop / Resources — MFM books available through the ministry ────────
 export const BOOKSHOP = {
-  intro: 'MFM books and prayer resources by Dr. D.K. Olukoya are available through the MFM Bookstand, and select titles can be purchased directly as e-books.',
+  intro: 'MFM books and prayer resources by Dr. D.K. Olukoya are available through the MFM Bookstand, and select titles can be purchased directly on Amazon.',
   books: [
-    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya', price: '$9.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=84', cover: '/ChatGPT Image Aug 5, 2026, 05_15_35 PM (1).png' },
-    { title: 'When Your Blood Needs Deliverance', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2089', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789201440_Cover.jpg' },
-    { title: 'Pray Your Way to Marital Breakthrough (2026)', author: 'Dr. and Pastor (Mrs) D.K. Olukoya', price: '$7.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=2108', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_Pray_Your_Way_to_Marital_Breakthrough_2026_Cover.jpg' },
-    { title: 'The Contest of the Serpents', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=931', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789200788_Cover.jpg' },
-    { title: 'The Word Heals', author: 'Dr. D.K. Olukoya', price: '$4.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=1051', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789789201617_Cover.jpg' },
-    { title: 'Healing Through Prayers', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=92', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789788424352_Cover.jpg' },
-    { title: 'Command The Morning', author: 'Dr. D.K. Olukoya', price: '$3.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=97', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783691780_EPUB_Cover.jpg' },
-    { title: 'Born Great But Tied Down', author: 'Dr. D.K. Olukoya', price: '$2.99', href: 'https://www.dkoebooks.com/index.php?module=ebooks&func=ebookDetail&id=438', cover: 'https://s3.amazonaws.com/dmr-ebook-covers-repost/large/cvi43_9789783808348_Cover.jpg' },
+    { title: 'Prayer Rain', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Prayer-Rain-Daniel-Olukoya-ebook/dp/B004UIGFJI/', cover: '/book-covers/prayer-rain.jpg' },
+    { title: '101 Weapons of Spiritual Warfare', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/101-Weapons-Spiritual-Warfare-Olukoya-ebook/dp/B00H8BPHMA/', cover: '/book-covers/101-weapons-spiritual-warfare.jpg' },
+    { title: 'The Battle for Destiny', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Battle-Destiny-Dr-D-Olukoya/dp/9789201419/', cover: '/book-covers/battle-for-destiny.jpg' },
+    { title: 'Deliverance from Spirit Husband and Spirit Wife', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Deliverance-Spirit-Husband-Wife-ebook/dp/B005DF6YSO/', cover: '/book-covers/deliverance-spirit-husband-spirit-wife.jpg' },
+    { title: 'Prayers to Overcome the Battles of Life', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Prayers-overcome-battles-life-Olukoya/dp/9789201907/', cover: '/book-covers/prayers-to-overcome-battles-of-life.jpg' },
+    { title: 'Deliverance Navigator', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Deliverance-Navigator-Dr-D-Olukoya-ebook/dp/B073H3565Z/', cover: '/book-covers/deliverance-navigator.jpg' },
+    { title: 'Dream Pointer', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Dream-Pointer-Dr-D-Olukoya-ebook/dp/B06XRH413Z/', cover: '/book-covers/dream-pointer.jpg' },
+    { title: 'Deliverance Through the Watches (Mega 12-in-1)', author: 'Dr. D.K. Olukoya', price: 'Amazon', href: 'https://www.amazon.com/Deliverance-Through-Watches-Mega-12-ebook/dp/B07K5JFK8B/', cover: '/book-covers/deliverance-through-the-watches.jpg' },
   ],
   amazonAuthorHref: 'https://www.amazon.com/stores/Dr-D-K-Olukoya/author/B00M6U2B4U?ref=sr_ntt_srch_lnk_1&qid=1785985292&sr=8-1&shoppingPortalEnabled=true&ccs_id=0380880b-228c-47ab-9d63-3f1c002d85c2',
 }
