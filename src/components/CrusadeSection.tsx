@@ -1,9 +1,31 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CRUSADE, BACK_TO_SCHOOL_EVENT } from '@/data/siteData'
 import styles from './CrusadeSection.module.css'
 
 export default function CrusadeSection() {
+  const [showBackToSchoolInfo, setShowBackToSchoolInfo] = useState(false)
+
+  // Escape to close + lock body scroll while the info modal is open
+  useEffect(() => {
+    if (!showBackToSchoolInfo) return
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowBackToSchoolInfo(false)
+    }
+    document.addEventListener('keydown', onKeyDown)
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = prevOverflow
+    }
+  }, [showBackToSchoolInfo])
+
   return (
     <section id="crusade" className={styles.section}>
       <div className="section-inner">
@@ -109,10 +131,9 @@ export default function CrusadeSection() {
         <aside className={`${styles.eventsSidebar} reveal-right`}>
           <span className={styles.eventsSidebarLabel}>More Upcoming</span>
 
-          <a
-            href={BACK_TO_SCHOOL_EVENT.flyer}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => setShowBackToSchoolInfo(true)}
             className={styles.flyerCard}
           >
             <span className={styles.flyerImgWrap}>
@@ -127,9 +148,9 @@ export default function CrusadeSection() {
             <span className={styles.flyerCaption}>
               <span className={styles.eventCardTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
               <span className={styles.eventCardTitle}>{BACK_TO_SCHOOL_EVENT.title}</span>
-              <span className={styles.eventCardLink}>View Full Flyer →</span>
+              <span className={styles.eventCardLink}>View More Information →</span>
             </span>
-          </a>
+          </button>
         </aside>
         </div>
       </div>
@@ -138,6 +159,51 @@ export default function CrusadeSection() {
       <div className={styles.logoWatermark} aria-hidden="true">
         <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
       </div>
+
+      {/* Back-to-School — event info modal */}
+      {showBackToSchoolInfo && (
+        <div
+          className={styles.infoModal}
+          onClick={() => setShowBackToSchoolInfo(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={BACK_TO_SCHOOL_EVENT.title}
+        >
+          <button
+            className={styles.infoModalClose}
+            onClick={() => setShowBackToSchoolInfo(false)}
+            aria-label="Close"
+          >
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M2 2L20 20M20 2L2 20" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+            </svg>
+          </button>
+
+          <div className={styles.infoModalStage} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.infoModalImageWrap}>
+              <Image
+                src={BACK_TO_SCHOOL_EVENT.flyer}
+                alt={BACK_TO_SCHOOL_EVENT.title}
+                fill
+                sizes="(max-width: 700px) 90vw, 420px"
+                style={{ objectFit: 'contain' }}
+                priority
+              />
+            </div>
+            <div className={styles.infoModalBody}>
+              <span className={styles.infoModalTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
+              <h3 className={styles.infoModalTitle}>{BACK_TO_SCHOOL_EVENT.title}</h3>
+              <p className={styles.infoModalDesc}>{BACK_TO_SCHOOL_EVENT.description}</p>
+              <div className={styles.infoModalHeads}>
+                <span className={styles.infoModalHeadsLabel}>Give donations to</span>
+                <span className={styles.infoModalHeadsNames}>
+                  {BACK_TO_SCHOOL_EVENT.heads.map((h) => h.name).join(' & ')}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
