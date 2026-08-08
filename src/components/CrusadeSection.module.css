@@ -142,6 +142,10 @@
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
+  /* Solid fallback so the section's watermark/grid pattern never shows
+     through while the photo is still loading (e.g. a cold image-optimizer
+     cache right after a deploy). */
+  background: var(--primary-dark);
 }
 .flyerCaption {
   display: flex;
@@ -418,6 +422,10 @@
 }
 @media (max-width: 640px) {
   .eventsSidebar { flex-direction: column; }
+  /* Once the sidebar stacks into a column, the row-layout flex-basis above
+     would apply to height instead of width — reset it so cards size purely
+     from their own content, full width. */
+  .eventCard, .flyerCard { flex: none; width: 100%; max-width: none; }
 }
 @media (max-width: 600px) {
   .detailsGrid { grid-template-columns: 1fr; }

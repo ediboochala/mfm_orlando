@@ -143,7 +143,7 @@ export default function CrusadeSection() {
                   src={BACK_TO_SCHOOL_EVENT.flyer}
                   alt={BACK_TO_SCHOOL_EVENT.title}
                   fill
-                  sizes="280px"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1200px) 320px, 280px"
                   style={{ objectFit: 'cover' }}
                 />
               </span>
