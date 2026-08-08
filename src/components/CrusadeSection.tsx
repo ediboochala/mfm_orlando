@@ -211,12 +211,6 @@ export default function CrusadeSection() {
               <span className={styles.infoModalTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
               <h3 className={styles.infoModalTitle}>{BACK_TO_SCHOOL_EVENT.title}</h3>
               <p className={styles.infoModalDesc}>{BACK_TO_SCHOOL_EVENT.description}</p>
-              <div className={styles.infoModalHeads}>
-                <span className={styles.infoModalHeadsLabel}>Give donations to</span>
-                <span className={styles.infoModalHeadsNames}>
-                  {BACK_TO_SCHOOL_EVENT.heads.map((h) => h.name).join(' & ')}
-                </span>
-              </div>
               <a
                 href={BACK_TO_SCHOOL_EVENT.eventbriteHref}
                 target="_blank"

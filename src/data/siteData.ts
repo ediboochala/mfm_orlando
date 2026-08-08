@@ -62,10 +62,6 @@ export const BACK_TO_SCHOOL_EVENT = {
   title: 'Back-to-School Supplies Donation',
   tag: 'This Weekend · Aug 7–9',
   description: 'Want to bless a student? Donate BRAND-NEW school supplies only — backpacks, notebooks, pens, pencils, crayons, folders, and other essentials. Donations are received Friday through Sunday and given directly to the Welfare & We Care Department. All supplies will be given out to students on Sunday.',
-  heads: [
-    { name: 'Sis. Kemi' },
-    { name: 'Sis. Shade' },
-  ],
   eventbriteHref: 'https://www.eventbrite.com/e/back-to-school-prayers-and-free-school-supplies-tickets-1997179788510',
   flyer: '/back to school.png',
 }
