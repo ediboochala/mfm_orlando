@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CRUSADE, GLOBAL_PROGRAMS, THEMED_SUNDAYS, BACK_TO_SCHOOL_EVENT } from '@/data/siteData'
+import { CRUSADE, BACK_TO_SCHOOL_EVENT } from '@/data/siteData'
 import styles from './CrusadeSection.module.css'
-
-const MONTHLY_DELIVERANCE = THEMED_SUNDAYS.find((s) => s.theme === 'Monthly Deliverance Weekend')
 
 export default function CrusadeSection() {
   return (
@@ -111,36 +109,26 @@ export default function CrusadeSection() {
         <aside className={`${styles.eventsSidebar} reveal-right`}>
           <span className={styles.eventsSidebarLabel}>More Upcoming</span>
 
-          <Link href="/global-programs" className={styles.eventCard}>
-            <span className={styles.eventCardTag}>Annual Program</span>
-            <span className={styles.eventCardTitle}>{GLOBAL_PROGRAMS.seventyDays.name}</span>
-            <span className={styles.eventCardDesc}>{GLOBAL_PROGRAMS.seventyDays.description}</span>
-            <span className={styles.eventCardLink}>Learn More →</span>
-          </Link>
-
-          {MONTHLY_DELIVERANCE && (
-            <Link href="/deliverance" className={styles.eventCard}>
-              <span className={styles.eventCardTag}>
-                {MONTHLY_DELIVERANCE.week}{MONTHLY_DELIVERANCE.note ? ` · ${MONTHLY_DELIVERANCE.note}` : ''}
-              </span>
-              <span className={styles.eventCardTitle}>{MONTHLY_DELIVERANCE.theme}</span>
-              <span className={styles.eventCardDesc}>
-                A weekend set apart for aggressive, targeted prayer and deliverance — every last Sunday of the month.
-              </span>
-              <span className={styles.eventCardLink}>Learn More →</span>
-            </Link>
-          )}
-
           <a
             href={BACK_TO_SCHOOL_EVENT.flyer}
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.eventCard}
+            className={styles.flyerCard}
           >
-            <span className={styles.eventCardTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
-            <span className={styles.eventCardTitle}>{BACK_TO_SCHOOL_EVENT.title}</span>
-            <span className={styles.eventCardDesc}>{BACK_TO_SCHOOL_EVENT.description}</span>
-            <span className={styles.eventCardLink}>View Flyer →</span>
+            <span className={styles.flyerImgWrap}>
+              <Image
+                src={BACK_TO_SCHOOL_EVENT.flyer}
+                alt={BACK_TO_SCHOOL_EVENT.title}
+                fill
+                sizes="280px"
+                style={{ objectFit: 'cover' }}
+              />
+            </span>
+            <span className={styles.flyerCaption}>
+              <span className={styles.eventCardTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
+              <span className={styles.eventCardTitle}>{BACK_TO_SCHOOL_EVENT.title}</span>
+              <span className={styles.eventCardLink}>View Full Flyer →</span>
+            </span>
           </a>
         </aside>
         </div>
