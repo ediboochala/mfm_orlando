@@ -66,6 +66,7 @@ export const BACK_TO_SCHOOL_EVENT = {
     { name: 'Sis. Kemi' },
     { name: 'Sis. Shade' },
   ],
+  eventbriteHref: 'https://www.eventbrite.com/e/back-to-school-prayers-and-free-school-supplies-tickets-1997179788510',
   flyer: '/back to school.png',
 }
 

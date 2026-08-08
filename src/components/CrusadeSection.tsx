@@ -200,6 +200,14 @@ export default function CrusadeSection() {
                   {BACK_TO_SCHOOL_EVENT.heads.map((h) => h.name).join(' & ')}
                 </span>
               </div>
+              <a
+                href={BACK_TO_SCHOOL_EVENT.eventbriteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn-primary ${styles.infoModalRsvp}`}
+              >
+                Reserve a Spot
+              </a>
             </div>
           </div>
         </div>

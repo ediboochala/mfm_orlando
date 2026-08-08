@@ -246,6 +246,10 @@
   font-size: 15px;
   color: #FFFFFF;
 }
+.infoModalRsvp {
+  align-self: flex-start;
+  margin-top: 18px;
+}
 
 /* ── Image / Flyer ── */
 .imgWrap { position: relative; }
