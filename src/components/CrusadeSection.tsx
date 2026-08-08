@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CRUSADE, GLOBAL_PROGRAMS, THEMED_SUNDAYS } from '@/data/siteData'
+import { CRUSADE, GLOBAL_PROGRAMS, THEMED_SUNDAYS, BACK_TO_SCHOOL_EVENT } from '@/data/siteData'
 import styles from './CrusadeSection.module.css'
 
 const MONTHLY_DELIVERANCE = THEMED_SUNDAYS.find((s) => s.theme === 'Monthly Deliverance Weekend')
@@ -130,6 +130,18 @@ export default function CrusadeSection() {
               <span className={styles.eventCardLink}>Learn More →</span>
             </Link>
           )}
+
+          <a
+            href={BACK_TO_SCHOOL_EVENT.flyer}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.eventCard}
+          >
+            <span className={styles.eventCardTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
+            <span className={styles.eventCardTitle}>{BACK_TO_SCHOOL_EVENT.title}</span>
+            <span className={styles.eventCardDesc}>{BACK_TO_SCHOOL_EVENT.description}</span>
+            <span className={styles.eventCardLink}>View Flyer →</span>
+          </a>
         </aside>
         </div>
       </div>
