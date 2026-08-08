@@ -114,24 +114,28 @@
 .flyerCard {
   display: block;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-  appearance: none;
   background: rgba(var(--primary-rgb), 0.04);
   border: 1px solid rgba(var(--primary-rgb), 0.15);
   border-radius: 4px;
   overflow: hidden;
-  text-decoration: none;
   transition: border-color 0.3s, transform 0.25s, box-shadow 0.3s;
 }
 .flyerCard:hover {
   border-color: rgba(var(--accent-rgb), 0.5);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+.flyerImgBtn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  appearance: none;
+  background: none;
 }
 .flyerImgWrap {
   position: relative;
@@ -142,9 +146,24 @@
 .flyerCaption {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 6px;
   padding: 16px 18px 18px;
   text-align: left;
+}
+.flyerCardRsvp {
+  font-size: 10px !important;
+  letter-spacing: 2px !important;
+  padding: 12px 22px !important;
+  margin-top: 6px;
+}
+.flyerCaption .eventCardLink {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 8px;
+  cursor: pointer;
+  appearance: none;
 }
 
 /* ── Back-to-School info modal ── */

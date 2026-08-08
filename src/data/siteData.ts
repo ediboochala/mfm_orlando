@@ -72,7 +72,7 @@ export const BACK_TO_SCHOOL_EVENT = {
 
 export const PASTOR = {
   name: 'Pastor Kehinde Olajide',
-  title: 'MFM Tampa, Florida',
+  title: 'Assistant Senior Regional Overseer (A.S.R.O) MFM, Tampa, Florida.',
   cell: '+1 (346) 302-9156',
   services: 'Pastoral Counseling and Prayer Available',
   greeting: `Greetings in the name of our Lord Jesus Christ! I warmly welcome you to Mountain of Fire and Miracles Ministries Tampa, Florida.`,

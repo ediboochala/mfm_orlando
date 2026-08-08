@@ -131,26 +131,43 @@ export default function CrusadeSection() {
         <aside className={`${styles.eventsSidebar} reveal-right`}>
           <span className={styles.eventsSidebarLabel}>More Upcoming</span>
 
-          <button
-            type="button"
-            onClick={() => setShowBackToSchoolInfo(true)}
-            className={styles.flyerCard}
-          >
-            <span className={styles.flyerImgWrap}>
-              <Image
-                src={BACK_TO_SCHOOL_EVENT.flyer}
-                alt={BACK_TO_SCHOOL_EVENT.title}
-                fill
-                sizes="280px"
-                style={{ objectFit: 'cover' }}
-              />
-            </span>
-            <span className={styles.flyerCaption}>
+          <div className={styles.flyerCard}>
+            <button
+              type="button"
+              onClick={() => setShowBackToSchoolInfo(true)}
+              className={styles.flyerImgBtn}
+              aria-label={`View more information about ${BACK_TO_SCHOOL_EVENT.title}`}
+            >
+              <span className={styles.flyerImgWrap}>
+                <Image
+                  src={BACK_TO_SCHOOL_EVENT.flyer}
+                  alt={BACK_TO_SCHOOL_EVENT.title}
+                  fill
+                  sizes="280px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </span>
+            </button>
+            <div className={styles.flyerCaption}>
               <span className={styles.eventCardTag}>{BACK_TO_SCHOOL_EVENT.tag}</span>
               <span className={styles.eventCardTitle}>{BACK_TO_SCHOOL_EVENT.title}</span>
-              <span className={styles.eventCardLink}>View More Information →</span>
-            </span>
-          </button>
+              <a
+                href={BACK_TO_SCHOOL_EVENT.eventbriteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn-primary ${styles.flyerCardRsvp}`}
+              >
+                Reserve a Spot
+              </a>
+              <button
+                type="button"
+                onClick={() => setShowBackToSchoolInfo(true)}
+                className={styles.eventCardLink}
+              >
+                View More Information →
+              </button>
+            </div>
+          </div>
         </aside>
         </div>
       </div>
