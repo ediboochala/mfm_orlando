@@ -7,7 +7,7 @@ const CustomCursor  = dynamic(() => import('@/components/CustomCursor'),    { ss
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), { ssr: false })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mfmorlando.org'),
+  metadataBase: new URL('https://www.mfmtampaflorida.org'),
   title: 'MFM Tampa Florida',
   description:
     'Mountain of Fire and Miracles Ministries Tampa, Florida welcomes all individuals seeking God\'s love. Join us for worship, deliverance, and spiritual breakthroughs.',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MFM Tampa Florida',
     description: 'Mountain of Fire and Miracles Ministries Tampa, Florida — Join us for worship, deliverance, and spiritual breakthroughs.',
-    url: 'https://mfmorlando.org',
+    url: 'https://www.mfmtampaflorida.org',
     siteName: 'MFM Tampa Florida',
     images: [{ url: '/new Logo mfm.png', width: 1507, height: 1563, alt: 'MFM Tampa Florida Logo' }],
     locale: 'en_US',

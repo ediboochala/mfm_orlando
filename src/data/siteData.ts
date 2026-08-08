@@ -11,7 +11,7 @@ export const CHURCH = {
   address: '4618 North Florida Avenue, Tampa, FL 33603',
   phone: '+1 (346) 302-9156',
   email: 'mfmtampaflorida@gmail.com',
-  website: 'https://mfmtampaflorida.com',
+  website: 'https://www.mfmtampaflorida.org',
   copyright: '© 2025 Mountain of Fire And Miracles Ministries (MFM) Tampa, Florida. All Rights Reserved.',
 }
 

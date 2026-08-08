@@ -1,6 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    // The .com domain is kept only so it can forward to the canonical .org site.
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'mfmtampaflorida.com' }],
+        destination: 'https://www.mfmtampaflorida.org/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.mfmtampaflorida.com' }],
+        destination: 'https://www.mfmtampaflorida.org/:path*',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       {
