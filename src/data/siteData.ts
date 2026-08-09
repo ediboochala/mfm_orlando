@@ -165,7 +165,7 @@ export const MINISTRIES = [
     name: 'Men of Valor',
     subtitle: "Men's Ministry",
     icon: 'sword',
-    image: '/Men of valor.png',
+    image: '/ministry-silhouettes/men-of-valor-praying-hands.png',
     tagline: 'Raising mighty men of God — in the home, in the church, and in the world.',
     description: "Men of Valor exists because MFM believes that the transformation of a nation begins with the transformation of its men. Every man carries a God-given responsibility — as a father, a husband, a son, a leader, a warrior in the spiritual realm. Men of Valor is designed to awaken that responsibility, equip men with biblical tools for spiritual warfare, and build a brotherhood of accountability, integrity, and purpose. When men rise to their calling, families are healed, children are protected, and communities are transformed.",
     details: [
@@ -182,7 +182,7 @@ export const MINISTRIES = [
     name: 'Glorious Women',
     subtitle: "Women's Ministry",
     icon: 'flower',
-    image: '/5.png',
+    image: '/ministry-silhouettes/glorious-women-bowed-head.png',
     tagline: 'Knowing God. Filled with His Spirit. Doing His Will. Loving His People.',
     description: "Glorious Women is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
     details: [
@@ -682,9 +682,9 @@ export const GALLERY_ITEMS = [
 
 export const MINISTRY_PROJECTS = [
   // Men of Valor
-  { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/Men of valor.png' },
+  { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/ministry-silhouettes/men-of-valor-praying-hands.png' },
   // Glorious Women
-  { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/4.png' },
+  { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/ministry-silhouettes/glorious-women-bowed-head.png' },
   // Children's Ministry
   { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/2.png' },
   { id: 6,  ministryId: 'children-church',     title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
