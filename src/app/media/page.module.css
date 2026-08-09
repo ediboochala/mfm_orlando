@@ -46,17 +46,30 @@
 
 /* â”€â”€ Hero â”€â”€ */
 .hero {
-  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 50%, var(--primary) 100%);
+  background: var(--primary-dark);
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.1);
   position: relative;
   overflow: hidden;
   padding: 100px 60px 80px;
   text-align: center;
 }
+.heroPhoto {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.heroTint {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(160deg, rgba(var(--primary-rgb), 0.85) 0%, rgba(90, 0, 90, 0.92) 50%, rgba(var(--primary-rgb), 0.85) 100%);
+  pointer-events: none;
+}
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: radial-gradient(ellipse at 50% 0%, rgba(var(--secondary-rgb), 0.18) 0%, transparent 65%);
   pointer-events: none;
 }
@@ -64,7 +77,7 @@
   max-width: 700px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 .heroLabel {
   font-family: 'Montserrat', sans-serif;

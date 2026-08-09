@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CHURCH, LIVE_SCHEDULE, PRAYER_LINE, SOCIAL_LINKS, SISTER_MINISTRIES } from '@/data/siteData'
-import PageHeroWatermark from '@/components/PageHeroWatermark'
 import SocialIcon, { type SocialPlatform } from '@/components/SocialIcon'
 import YoutubeChannelSection from './YoutubeChannelSection'
 import styles from './page.module.css'
@@ -37,7 +37,17 @@ export default function MediaPage() {
 
       {/* ── Hero ── */}
       <header className={styles.hero}>
-        <PageHeroWatermark />
+        <div className={styles.heroPhoto}>
+          <Image
+            src="/media-hero-broadcast-camera.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
+        <div className={styles.heroTint} aria-hidden="true" />
         <div className={styles.heroInner}>
           <span className={styles.heroLabel}>Watch. Listen. Pray.</span>
           <h1 className={styles.heroTitle}>Media and Live Services</h1>
