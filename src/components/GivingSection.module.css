@@ -87,3 +87,79 @@
   border-radius: 8px;
   display: block;
 }
+
+/* Text-To-Give modal */
+.textGiveModal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(10, 0, 10, 0.94);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: textGiveFadeIn 0.25s ease;
+}
+@keyframes textGiveFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.textGiveClose {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.textGiveClose:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.08);
+}
+.textGiveCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+.textGiveLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.textGiveNumber {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 7vw, 56px);
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-top: 16px;
+  line-height: 1.15;
+}
+.textGiveNumber:hover { color: var(--gold); }
+.textGiveHint {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 16px;
+  max-width: 360px;
+}
+.textGiveBtn {
+  margin-top: 28px;
+}

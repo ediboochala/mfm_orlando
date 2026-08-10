@@ -57,15 +57,6 @@ export const CRUSADE = {
   image: '/Crusade Flyer UPDATED.png' as string | null,
 }
 
-// ── Back-to-School Supplies Donation — Welfare & We Care Department drive ──
-export const BACK_TO_SCHOOL_EVENT = {
-  title: 'Back-to-School Supplies Donation',
-  tag: 'This Weekend · Aug 7–9',
-  description: 'Want to bless a student? Donate BRAND-NEW school supplies only — backpacks, notebooks, pens, pencils, crayons, folders, and other essentials. Donations are received Friday through Sunday and given directly to the Welfare & We Care Department. All supplies will be given out to students on Sunday.',
-  eventbriteHref: 'https://www.eventbrite.com/e/back-to-school-prayers-and-free-school-supplies-tickets-1997179788510',
-  flyer: '/back to school.png',
-}
-
 export const PASTOR = {
   name: 'Pastor Kehinde Olajide',
   title: 'Assistant Senior Regional Overseer (A.S.R.O) MFM, Tampa, Florida.',
