@@ -58,7 +58,7 @@ export default function GivingSection() {
             <button
               type="button"
               onClick={() => setShowTextToGive(true)}
-              className="btn-outline-white"
+              className="btn-gold"
             >
               Text-To-Give
             </button>
