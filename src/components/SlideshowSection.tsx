@@ -10,28 +10,24 @@ const SLIDES = [
     title: 'Come Into His Presence',
     desc: 'Join us every Sunday for a powerful time of worship, the Word, and encounter with the living God.',
     accent: '#E8B923',
-    image: '/22 (3).jpg',
   },
   {
     label: 'Prayer and Deliverance',
     title: 'Set Free by His Power',
     desc: 'Aggressive prayer is the engine of MFM. Every service is a portal of deliverance, healing, and breakthrough.',
     accent: '#FFC5FF',
-    image: '/22 (2).jpg',
   },
   {
     label: 'Bible Study',
     title: 'Rooted in the Word',
     desc: 'We are a Word-based ministry. Every prayer point, every doctrine, every step is grounded in Scripture.',
     accent: '#E8B923',
-    image: '/22 (5).png',
   },
   {
     label: 'Youth and Family',
     title: 'Building the Next Generation',
     desc: 'Our children and youth programs raise up a generation that is on fire for God — bold, pure, and unashamed.',
     accent: '#FFC5FF',
-    image: '/22 (4).jpg',
   },
 ]
 
@@ -61,15 +57,9 @@ export default function SlideshowSection() {
       {/* ── Main Stage ── */}
       <div className={`${styles.stage} ${fading ? styles.fading : ''}`}>
 
-        {/* Photo background */}
-        <div className={styles.stageImg}>
-          <Image
-            src={slide.image}
-            alt={slide.label}
-            fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-            priority={active === 0}
-          />
+        {/* Faint logo watermark */}
+        <div className={styles.stageLogoWatermark} aria-hidden="true">
+          <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
         </div>
 
         {/* Dark overlay — keeps text readable */}
@@ -107,14 +97,9 @@ export default function SlideshowSection() {
             onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}: ${s.label}`}
           >
-            {/* Real photo thumbnail */}
-            <div className={styles.thumbImg}>
-              <Image
-                src={s.image}
-                alt={s.label}
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center', opacity: i === active ? 1 : 0.45 }}
-              />
+            {/* Faint logo watermark */}
+            <div className={styles.thumbLogoWatermark} aria-hidden="true">
+              <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
             </div>
             <div className={styles.thumbOverlay} />
             <div className={styles.thumbContent}>
