@@ -3,15 +3,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.22;
-  filter: grayscale(0.2) brightness(0.85);
-  /* Fade toward center so it doesn't compete with text */
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.6) 0%,
-    rgba(0,0,0,0.9) 40%,
-    rgba(0,0,0,0.9) 60%,
-    rgba(0,0,0,0.4) 100%
-  );
+  opacity: 0.1;
+  filter: grayscale(1) brightness(3);
 }
 

@@ -184,6 +184,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(var(--accent-rgb), 0.1);
+  background: var(--primary-muted);
 }
 .mediaImage {
   object-fit: cover;

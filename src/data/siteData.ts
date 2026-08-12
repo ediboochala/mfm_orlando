@@ -103,21 +103,18 @@ export const SERVICES = [
     name: 'Sunday Worship Service',
     time: '10:00 AM (ET)',
     icon: '🙏',
-    image: 'https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: 'Tuesdays',
     name: 'Personal Prayer and Bible Study',
     time: '7:00 PM (ET)',
     icon: '📖',
-    image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: 'Thursdays',
     name: 'Manna Water Service',
     time: '7:00 PM (ET)',
     icon: '💧',
-    image: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&h=600&q=80&auto=format&fit=crop',
   },
   {
     day: '1st Saturday / Month',
@@ -125,7 +122,6 @@ export const SERVICES = [
     time: '10:00 AM (ET)',
     icon: '⚡',
     note: 'Streamed from MFM Lagos Headquarters',
-    image: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&h=600&q=80&auto=format&fit=crop',
   },
 ]
 
@@ -550,9 +546,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you have been waiting for a sign to start, this is it. You do not need a special title or a theological degree to fast. You need a willing heart and a desperate hunger for God that surpasses your hunger for food. Start small — skip one meal and dedicate that time to prayer. Then build from there. Let the discipline grow, and watch how God begins to move in ways that will leave you breathless. The breakthrough you have been waiting for may be just one fast away.',
     ],
     readTime: '8 min read',
-    coverImage: '/1.png',
+    coverImage: '/new Logo mfm.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/7.png', alt: 'Prayer and fasting', caption: 'Fasting and prayer — a powerful spiritual combination' },
+      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Fasting and prayer — a powerful spiritual combination' },
     ],
   },
   {
@@ -571,9 +567,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you are struggling with patterns that will not break, we want you to know: there is nothing wrong with coming for help. There is nothing wrong with saying, "I need more than I currently have." That humility is not weakness — it is wisdom. Come to MFM Tampa Florida this Friday night. Come as you are, with the full weight of what you have been carrying. You may leave with the testimony that changes the rest of your life.',
     ],
     readTime: '8 min read',
-    coverImage: '/7.png',
+    coverImage: '/new Logo mfm.png',
     mediaBlocks: [
-      { afterParagraph: 2, type: 'image', src: '/1.png', alt: 'Believers in prayer during a deliverance service', caption: 'Believers in prayer during a deliverance service' },
+      { afterParagraph: 2, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Believers in prayer during a deliverance service' },
     ],
   },
   {
@@ -592,9 +588,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'MFM Tampa Florida regularly organizes group trips to Prayer City. If you would like to join our next trip, or simply want more information about upcoming programs, please reach out to us. Do not let another season pass while the very breakthrough you need is available to you. Pack your bag. Make the journey. God is already there, waiting.',
     ],
     readTime: '8 min read',
-    coverImage: '/6.png',
+    coverImage: '/new Logo mfm.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/4.png', alt: 'Believers gathered at MFM Prayer City', caption: 'Believers gathered in worship at MFM Prayer City' },
+      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Believers gathered in worship at MFM Prayer City' },
     ],
   },
   {
@@ -613,7 +609,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'We do not know the day or the hour. But we know it is close. The signs are everywhere. Do not let busyness, distraction, or the comfort of a settled life cause you to sleep through one of the most significant moments in all of human history. Wake up. Look up. Get ready. And if you need help getting ready, MFM Tampa Florida is here — a community of believers who take the return of Jesus not as a theory, but as the most certain event on the horizon.',
     ],
     readTime: '8 min read',
-    coverImage: '/3.png',
+    coverImage: '/new Logo mfm.png',
     mediaBlocks: [],
   },
   {
@@ -632,9 +628,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'Begin today. Not with a rigid set of rules, but with a conversation with the Holy Spirit. Ask Him to show you the areas of your life that need to be surrendered. Ask Him for the grace to let them go. Ask Him to fill every empty space with His presence. Holiness is not achieved overnight — it is a daily journey, a daily choice, a daily surrender. But every step you take toward holiness is a step toward the God who loved you enough to die for you, and who desires nothing more than to see you fully free, fully His, and fully alive.',
     ],
     readTime: '8 min read',
-    coverImage: '/5.png',
+    coverImage: '/new Logo mfm.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/7.png', alt: 'Teaching on holiness', caption: 'Pursuing holiness in everyday life' },
+      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Pursuing holiness in everyday life' },
     ],
   },
   {
@@ -653,9 +649,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'At MFM Tampa Florida, we offer multiple prayer opportunities every week. Our morning prayer line runs from 6:00–7:00 AM EST, Monday through Friday — join by phone and spend the first hour of your day in the presence of God before the world can get to you. Our Friday night revival services, deliverance nights, and crossover programs are all built on extended, aggressive, corporate prayer. There is something that happens when people pray together — with one voice, one focus, one desperate hunger for God — that releases an authority solitary prayer alone cannot match. Come and join us. Let your prayer life be transformed. And watch what God does with a person who simply refuses to stop.',
     ],
     readTime: '8 min read',
-    coverImage: '/1.png',
+    coverImage: '/new Logo mfm.png',
     mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/6.png', alt: 'MFM Tampa Florida prayer program', caption: 'MFM Tampa Florida morning prayer program' },
+      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'MFM Tampa Florida morning prayer program' },
     ],
   },
 ]
@@ -663,12 +659,12 @@ export const BLOG_POSTS: BlogPost[] = [
 export const GALLERY_CATEGORIES = ['All', 'Worship', 'Deliverance', 'Youth', 'Outreach', 'Special Events']
 
 export const GALLERY_ITEMS = [
-  { id: 18, title: 'Fellowship with Pastor Kehinde Olajide', category: 'Worship',  description: 'A joyful moment of fellowship at MFM Tampa Florida.',                     image: '/WhatsApp Image 2026-08-03 at 21.25.01.jpeg' },
-  { id: 13, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Sisters fellowshipping together after a powerful service.',              image: '/WhatsApp Image 2026-08-05 at 14.23.28 (2).jpeg' },
-  { id: 14, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members greeting one another with joy after service.',                   image: '/WhatsApp Image 2026-08-05 at 14.23.28 (3).jpeg' },
-  { id: 15, title: 'Sunday Fellowship',              category: 'Worship',        description: 'A member dressed in celebration for a special Sunday service.',          image: '/WhatsApp Image 2026-08-05 at 14.23.28.jpeg' },
-  { id: 16, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members of the MFM Tampa Florida family fellowshipping together.',       image: '/WhatsApp Image 2026-08-05 at 14.23.29.jpeg' },
-  { id: 17, title: 'Sunday Fellowship',              category: 'Special Events', description: 'Fellowshipping beneath a portrait of Dr. D.K. Olukoya and Pst (Mrs) Shade Olukoya.', image: '/WhatsApp Image 2026-08-05 at 14.23.34.jpeg' },
+  { id: 18, title: 'Fellowship with Pastor Kehinde Olajide', category: 'Worship',  description: 'A joyful moment of fellowship at MFM Tampa Florida.',                     image: null },
+  { id: 13, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Sisters fellowshipping together after a powerful service.',              image: null },
+  { id: 14, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members greeting one another with joy after service.',                   image: null },
+  { id: 15, title: 'Sunday Fellowship',              category: 'Worship',        description: 'A member dressed in celebration for a special Sunday service.',          image: null },
+  { id: 16, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members of the MFM Tampa Florida family fellowshipping together.',       image: null },
+  { id: 17, title: 'Sunday Fellowship',              category: 'Special Events', description: 'Fellowshipping beneath a portrait of Dr. D.K. Olukoya and Pst (Mrs) Shade Olukoya.', image: null },
 ]
 
 export const MINISTRY_PROJECTS = [
@@ -677,10 +673,10 @@ export const MINISTRY_PROJECTS = [
   // Glorious Women
   { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/new Logo mfm.png' },
   // Children's Ministry
-  { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: '/2.png' },
+  { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: null },
   { id: 6,  ministryId: 'children-church',     title: 'Kingdom Kids Camp',                date: 'Coming Soon',    description: 'A fun-filled day of games, worship, and learning the Word of God.',                         image: null },
   // Youth Church
-  { id: 7,  ministryId: 'youth-church',        title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Teens and youths encountered God and discovered their God-given purpose.',                  image: '/3.png' },
+  { id: 7,  ministryId: 'youth-church',        title: 'Youth Empowerment Summit',         date: 'January 2025',   description: 'Teens and youths encountered God and discovered their God-given purpose.',                  image: null },
   { id: 8,  ministryId: 'youth-church',        title: 'Youth Outreach Day',               date: 'Coming Soon',    description: 'Taking the gospel to the streets of Tampa with energy and love.',                         image: null },
   // Young Adults Church
   { id: 15, ministryId: 'young-adults-church', title: 'Young Adults Purpose Summit',      date: 'Coming Soon',    description: 'Young adults gathered to hear teaching on calling, career, and God-honoring independence.',   image: null },

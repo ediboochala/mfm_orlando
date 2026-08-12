@@ -9,9 +9,9 @@ export default function HeroSection() {
       <div className={styles.heroBg} />
       <div className={styles.heroGrid} />
 
-      {/* Faint building watermark */}
+      {/* Faint logo watermark */}
       <div className={styles.logoWatermark}>
-        <Image src="/back.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center' }} aria-hidden />
+        <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} aria-hidden />
       </div>
 
       <div className={styles.heroContent}>

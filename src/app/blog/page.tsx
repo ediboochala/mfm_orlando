@@ -51,10 +51,12 @@ export default function BlogPage() {
                 <div className={styles.cardImageWrap}>
                   <Image
                     src={post.coverImage}
-                    alt={post.title}
+                    alt=""
+                    aria-hidden="true"
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className={styles.cardImage}
+                    style={{ objectFit: 'contain', opacity: 0.08, filter: 'grayscale(1) brightness(0)' }}
                   />
                 </div>
                 <div className={styles.cardBody}>

@@ -6,25 +6,25 @@ import styles from './ChurchCarousel.module.css'
 
 const CARDS = [
   {
-    image: 'https://images.unsplash.com/photo-1725245997924-632b5673e18a?w=1200&q=80&auto=format&fit=crop',
+    image: null,
     tag: 'Our Congregation',
     title: 'A Family of Believers',
     desc: 'United in faith, prayer, and the love of Christ — the MFM Tampa Florida family welcomes every soul seeking God\'s presence.',
   },
   {
-    image: '/22 (2).jpg',
+    image: null,
     tag: 'Sunday Service',
     title: 'Spirit-Filled Worship',
     desc: 'Every Sunday is a divine encounter. We gather to worship, receive the Word, and experience the transforming power of God.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1579028073882-362f186efb77?w=1200&q=80&auto=format&fit=crop',
+    image: null,
     tag: 'Prayer and Deliverance',
     title: 'Aggressive Prayer',
     desc: 'We believe in fervent, targeted prayer that breaks every yoke. Deliverance and healing are available to all who call upon His name.',
   },
   {
-    image: '/22 (4).jpg',
+    image: null,
     tag: 'Church Community',
     title: 'One Body, Many Members',
     desc: 'From children to elders, from new converts to seasoned warriors — MFM Tampa Florida is a church where everyone belongs.',
@@ -95,20 +95,9 @@ export default function ChurchCarousel() {
                   />
                 ) : (
                   <div className={styles.cardImgPlaceholder}>
-                    <svg width="34" height="48" viewBox="0 0 26 38" fill="none">
-                      <path
-                        d="M13 2C13 2 20 9 18 18C22 14 24 8 22 4C26 10 27 18 23 25C20 30 16 33 13 38C10 33 6 30 3 25C-1 18 0 10 4 4C2 8 4 14 8 18C6 9 13 2 13 2Z"
-                        fill="url(#carouselFlame)"
-                      />
-                      <defs>
-                        <linearGradient id="carouselFlame" x1="13" y1="2" x2="13" y2="38" gradientUnits="userSpaceOnUse">
-                          <stop offset="0%" stopColor="#FFF9C4" />
-                          <stop offset="50%" stopColor="#FF7A1A" />
-                          <stop offset="100%" stopColor="#A8125A" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <span className={styles.cardImgPlaceholderText}>Photo Coming Soon</span>
+                    <div className={styles.cardLogoWatermark} aria-hidden="true">
+                      <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
+                    </div>
                   </div>
                 )}
               </div>

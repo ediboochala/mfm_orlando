@@ -64,11 +64,13 @@ export default async function BlogPostPage({ params }: Props) {
       <div className={styles.coverWrap}>
         <Image
           src={post.coverImage}
-          alt={post.title}
+          alt=""
+          aria-hidden="true"
           fill
           priority
           sizes="100vw"
           className={styles.coverImage}
+          style={{ objectFit: 'contain', opacity: 0.08, filter: 'grayscale(1) brightness(0)' }}
         />
       </div>
 
@@ -91,9 +93,11 @@ export default async function BlogPostPage({ params }: Props) {
                         <Image
                           src={media.src}
                           alt={media.alt ?? ''}
+                          aria-hidden={!media.alt}
                           fill
                           sizes="(max-width: 780px) 100vw, 780px"
                           className={styles.mediaImage}
+                          style={{ objectFit: 'contain', opacity: 0.1, filter: 'grayscale(1) brightness(0)' }}
                         />
                       </div>
                     ) : (

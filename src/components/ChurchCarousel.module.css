@@ -38,19 +38,13 @@
 .cardImgPlaceholder {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(160deg, var(--primary-muted) 0%, #ffffff 100%);
+  background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 100%);
 }
-.cardImgPlaceholderText {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(var(--primary-rgb), 0.5);
+.cardLogoWatermark {
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  filter: grayscale(1) brightness(3);
 }
 
 /* Bottom-up gradient scrim — photo visible at top, dark purple at bottom for text */
