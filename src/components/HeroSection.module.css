@@ -8,11 +8,17 @@
   z-index: 1;
 }
 
+.heroPhoto {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
 .heroBg {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: var(--primary);
+  background: linear-gradient(160deg, rgba(var(--primary-rgb), 0.88) 0%, rgba(90, 0, 90, 0.9) 50%, rgba(var(--primary-rgb), 0.88) 100%);
 }
 
 .heroGrid {

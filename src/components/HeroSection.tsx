@@ -6,6 +6,17 @@ import styles from './HeroSection.module.css'
 export default function HeroSection() {
   return (
     <section id="hero" className={styles.hero}>
+      <div className={styles.heroPhoto}>
+        <Image
+          src="/pexels-caleboquendo-34612562.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+          aria-hidden
+        />
+      </div>
       <div className={styles.heroBg} />
       <div className={styles.heroGrid} />
 
