@@ -59,7 +59,6 @@ export default function BookshopPage() {
                   />
                   <span className={styles.coverScrim} />
                   {book.price && <span className={styles.bookPrice}>{book.price}</span>}
-                  {book.href && <span className={styles.bookLinkTagOnCover}>View E-Book →</span>}
                 </>
               ) : (
                 <>
@@ -67,7 +66,6 @@ export default function BookshopPage() {
                   {book.price && <span className={styles.bookPrice}>{book.price}</span>}
                   <p className={styles.bookTitle}>{book.title}</p>
                   <span className={styles.bookAuthor}>{book.author}</span>
-                  {book.href && <span className={styles.bookLinkTag}>View E-Book →</span>}
                 </>
               )
               return book.href ? (

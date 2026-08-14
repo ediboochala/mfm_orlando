@@ -183,7 +183,7 @@ export const MINISTRIES = [
   },
   {
     id: 'children-church',
-    name: "Children's Ministry",
+    name: 'Children',
     subtitle: 'Raising Kingdom Champions from Childhood',
     icon: 'sparkle',
     image: '/new Logo mfm.png',
