@@ -20,11 +20,6 @@ export default function HeroSection() {
       <div className={styles.heroBg} />
       <div className={styles.heroGrid} />
 
-      {/* Faint logo watermark */}
-      <div className={styles.logoWatermark}>
-        <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} aria-hidden />
-      </div>
-
       <div className={styles.heroContent}>
         {/* Logo badge */}
         <div className={styles.logoBadge}>

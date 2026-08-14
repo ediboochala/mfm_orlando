@@ -32,16 +32,6 @@
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
 }
 
-/* ── Logo watermark ── */
-.logoWatermark {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.06;
-  filter: grayscale(1) brightness(2.5);
-}
-
 .heroContent {
   position: relative;
   z-index: 2;
