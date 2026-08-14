@@ -10,24 +10,28 @@ const SLIDES = [
     title: 'Come Into His Presence',
     desc: 'Join us every Sunday for a powerful time of worship, the Word, and encounter with the living God.',
     accent: '#E8B923',
+    image: '/pexels-caleboquendo-8254904.jpg',
   },
   {
     label: 'Prayer and Deliverance',
     title: 'Set Free by His Power',
     desc: 'Aggressive prayer is the engine of MFM. Every service is a portal of deliverance, healing, and breakthrough.',
     accent: '#FFC5FF',
+    image: '/pexels-chad-kirchoff-346647-952437.jpg',
   },
   {
     label: 'Bible Study',
     title: 'Rooted in the Word',
     desc: 'We are a Word-based ministry. Every prayer point, every doctrine, every step is grounded in Scripture.',
     accent: '#E8B923',
+    image: '/pexels-caleboquendo-39004758.jpg',
   },
   {
     label: 'Youth and Family',
     title: 'Building the Next Generation',
     desc: 'Our children and youth programs raise up a generation that is on fire for God — bold, pure, and unashamed.',
     accent: '#FFC5FF',
+    image: '/pexels-caleboquendo-38345953.jpg',
   },
 ]
 
@@ -57,9 +61,9 @@ export default function SlideshowSection() {
       {/* ── Main Stage ── */}
       <div className={`${styles.stage} ${fading ? styles.fading : ''}`}>
 
-        {/* Faint logo watermark */}
-        <div className={styles.stageLogoWatermark} aria-hidden="true">
-          <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
+        {/* Slide background photo */}
+        <div className={styles.stagePhoto} aria-hidden="true">
+          <Image src={slide.image} alt="" fill priority style={{ objectFit: 'cover' }} sizes="100vw" />
         </div>
 
         {/* Dark overlay — keeps text readable */}
@@ -97,9 +101,9 @@ export default function SlideshowSection() {
             onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}: ${s.label}`}
           >
-            {/* Faint logo watermark */}
-            <div className={styles.thumbLogoWatermark} aria-hidden="true">
-              <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
+            {/* Thumbnail photo */}
+            <div className={styles.thumbPhoto} aria-hidden="true">
+              <Image src={s.image} alt="" fill style={{ objectFit: 'cover' }} sizes="25vw" />
             </div>
             <div className={styles.thumbOverlay} />
             <div className={styles.thumbContent}>
