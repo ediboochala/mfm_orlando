@@ -152,7 +152,7 @@ export const MINISTRIES = [
     name: 'Men of Valor',
     subtitle: "Men's Ministry",
     icon: 'sword',
-    image: '/new Logo mfm.png',
+    image: '/men-of-valor-ministry.jpg',
     tagline: 'Raising mighty men of God — in the home, in the church, and in the world.',
     description: "Men of Valor exists because MFM believes that the transformation of a nation begins with the transformation of its men. Every man carries a God-given responsibility — as a father, a husband, a son, a leader, a warrior in the spiritual realm. Men of Valor is designed to awaken that responsibility, equip men with biblical tools for spiritual warfare, and build a brotherhood of accountability, integrity, and purpose. When men rise to their calling, families are healed, children are protected, and communities are transformed.",
     details: [
@@ -169,7 +169,7 @@ export const MINISTRIES = [
     name: 'Glorious Women',
     subtitle: "Women's Ministry",
     icon: 'flower',
-    image: '/new Logo mfm.png',
+    image: '/glorious-women-ministry.jpg',
     tagline: 'Knowing God. Filled with His Spirit. Doing His Will. Loving His People.',
     description: "Glorious Women is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
     details: [
@@ -186,7 +186,7 @@ export const MINISTRIES = [
     name: 'Children',
     subtitle: 'Raising Kingdom Champions from Childhood',
     icon: 'sparkle',
-    image: '/pexels-julianemonarifotografia-18531787.jpg',
+    image: '/children.jpg',
     tagline: 'Building a foundation of faith that will last a lifetime.',
     description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children's Ministry is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
     details: [
@@ -203,7 +203,7 @@ export const MINISTRIES = [
     name: 'Youth Church',
     subtitle: 'Empowering the Next Generation',
     icon: 'flame',
-    image: '/new Logo mfm.png',
+    image: '/youths.jpg',
     tagline: 'Young, on fire, and on purpose — for the glory of God.',
     description: "Youth Church at MFM Tampa Florida understands the unique pressures facing teenagers and young people in this generation. Identity crises, the pull of social media, peer pressure, moral confusion — these are real and formidable. Youth Church exists to give young people an anchor: a clear identity in Christ, a community that holds them accountable, and a vision for their lives that is bigger than anything the world is offering. We are raising a generation of young men and women who know who they are, know whose they are, and will not be moved.",
     details: [
@@ -220,7 +220,7 @@ export const MINISTRIES = [
     name: 'Young Adults Church',
     subtitle: 'Equipping the Rising Generation of Leaders',
     icon: 'sprout',
-    image: '/new Logo mfm.png',
+    image: '/young-adults-ministry.jpg',
     tagline: 'Purpose-driven, Spirit-filled, and ready to lead.',
     description: "Young Adults Church exists for the season of life between youth and full adulthood — college, first jobs, early careers, and the search for direction and purpose. This is a season where the decisions made shape the rest of a person's life: who to marry, what to build a career on, how to steward independence in a way that honors God. Young Adults Church gives this generation biblical grounding, mentorship, and a community of peers pursuing God together, so they step into full adulthood already anchored in Christ.",
     details: [
@@ -237,7 +237,7 @@ export const MINISTRIES = [
     name: 'Choir',
     subtitle: 'Worship That Ushers in the Presence of God',
     icon: 'music',
-    image: '/new Logo mfm.png',
+    image: '/choir.jpg',
     tagline: 'When the music plays, heaven opens and chains fall off.',
     description: "Music is not merely entertainment — it is a spiritual weapon. At MFM Tampa Florida, the Choir understands that anointed worship prepares the ground for miracles. Music has always been a carrier of healing, deliverance, and the presence of God. The Choir is called to lift the name of Jesus in a way that opens the heavens, draws the Holy Spirit, and creates an atmosphere in which lives are changed. If you have ever been in a service where the music brought you to tears or broke something loose inside you, you understand exactly why this ministry exists.",
     details: [
@@ -271,7 +271,7 @@ export const MINISTRIES = [
     name: 'Welfare',
     subtitle: 'Meeting the Practical Needs of the Church Family',
     icon: 'heart',
-    image: '/new Logo mfm.png',
+    image: '/welfare.jpg',
     tagline: 'Making sure no one in the house of God carries a practical burden alone.',
     description: "The Welfare Ministry exists to meet the practical, everyday needs that arise within the church family — because faith is lived out not only in the sanctuary but in the ordinary struggles of daily life. Whether it is a family facing financial hardship, a member without transportation to service, or a need that has gone unspoken out of pride or fear, Welfare stands ready to respond with the love of Christ in a tangible way. This ministry believes that caring for the body is part of caring for the soul.",
     details: [
@@ -288,7 +288,7 @@ export const MINISTRIES = [
     name: 'We Care',
     subtitle: 'A Ministry of Comfort, Visitation, and Presence',
     icon: 'care',
-    image: '/new Logo mfm.png',
+    image: '/we-care-ministry.jpg',
     tagline: 'Showing up for one another — in sickness, in loss, and in every season that is hard to walk alone.',
     description: "We Care is the arm of the church devoted to comfort and presence — visiting the sick, checking in on members who have been absent, standing with families through bereavement, and simply making sure no one at MFM Tampa Florida feels forgotten. In a world that moves fast and often overlooks the quietly struggling, We Care slows down to notice, to call, to show up. It is the practical expression of being the hands and feet of Christ to one another.",
     details: [
@@ -305,7 +305,7 @@ export const MINISTRIES = [
     name: 'Prayer and Intercession',
     subtitle: 'Standing in the Gap for the Church and the Nations',
     icon: 'pray',
-    image: '/new Logo mfm.png',
+    image: '/prayer-and-intercession-ministry.jpg',
     tagline: 'The engine room of the church — where heaven is moved on behalf of others.',
     description: "The Prayer and Intercession Ministry is the engine room of MFM Tampa Florida. While the whole church is called to pray, intercessors carry a specific assignment: to stand in the gap for the pastor, the members, the city of Tampa, and the nations — often for burdens that are never spoken from the pulpit. This ministry covers every service in prayer before it begins, holds the ropes for members going through personal battles, and contends for revival, healing, and breakthrough on behalf of others.",
     details: [
@@ -322,7 +322,7 @@ export const MINISTRIES = [
     name: 'Technical and Audiovisual',
     subtitle: 'Serving Behind the Scenes So the Word Reaches Every Ear',
     icon: 'broadcast',
-    image: '/new Logo mfm.png',
+    image: '/technical-audiovisual-ministry.jpg',
     tagline: 'Every sound, every stream, every slide — stewarded with excellence for the glory of God.',
     description: "The Technical and Audiovisual Ministry works quietly behind the scenes so that every service runs in decency and order. From sound and projection to livestreaming and recording, this team ensures that the Word preached in the sanctuary reaches every ear clearly — whether a member is seated in the front row or watching from another state. It is a ministry of excellence, precision, and service, powered by a conviction that nothing done for God should be done carelessly.",
     details: [
