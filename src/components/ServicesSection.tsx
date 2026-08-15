@@ -11,10 +11,10 @@ export default function ServicesSection() {
             <div key={i} className={`service-card ${styles.card}`}>
               <div className={styles.cardImgWrap} aria-hidden="true">
                 <Image
-                  src="/new Logo mfm.png"
+                  src={svc.image}
                   alt=""
                   fill
-                  style={{ objectFit: 'contain', opacity: 0.14, filter: 'grayscale(1) brightness(3)' }}
+                  style={{ objectFit: 'cover' }}
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>

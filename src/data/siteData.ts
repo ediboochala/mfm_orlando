@@ -103,18 +103,21 @@ export const SERVICES = [
     name: 'Sunday Worship Service',
     time: '10:00 AM (ET)',
     icon: '🙏',
+    image: '/3 sunday service (2).jpg',
   },
   {
     day: 'Tuesdays',
     name: 'Personal Prayer and Bible Study',
     time: '7:00 PM (ET)',
     icon: '📖',
+    image: '/3 bible study personal prayer.jpg',
   },
   {
     day: 'Thursdays',
     name: 'Manna Water Service',
     time: '7:00 PM (ET)',
     icon: '💧',
+    image: '/3 manna water service.jpg',
   },
   {
     day: '1st Saturday / Month',
@@ -122,6 +125,7 @@ export const SERVICES = [
     time: '10:00 AM (ET)',
     icon: '⚡',
     note: 'Streamed from MFM Lagos Headquarters',
+    image: '/3 pmch (2).jpg',
   },
 ]
 
