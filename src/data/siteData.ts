@@ -254,7 +254,7 @@ export const MINISTRIES = [
     name: 'GEN 2:18',
     subtitle: 'Preparing Singles for the Journey to Marriage',
     icon: 'ring',
-    image: '/new Logo mfm.png',
+    image: '/gen-218-ministry.jpg',
     tagline: 'It is not good for man to be alone — and God has a plan for your story.',
     description: 'GEN 2:18 takes its name from the profound declaration in Genesis 2:18 — "It is not good that the man should be alone." This non-denominational movement exists to prepare singles for marriage and to support those in every stage of single life. Whether you are navigating single parenthood, waiting with hope in your twenties, or finding yourself single again later in life — GEN 2:18 is a community that understands your journey and offers biblical guidance, emotional support, and a circle of people walking the same road.',
     details: [
