@@ -307,13 +307,19 @@
   aspect-ratio: 16/10;
   overflow: hidden;
   background: var(--primary-muted);
-  /* Every ministry now shares the one MFM crest — letterbox it instead of
-     the edge-to-edge crop that was meant for distinct photos. */
+  /* Ministries still sharing the MFM crest get it letterboxed instead of
+     the edge-to-edge crop used for ministries with a distinct photo. */
   padding: 44px;
+}
+.photoWrapCover {
+  padding: 0;
 }
 .photoImg {
   object-fit: contain;
   transition: transform 0.5s ease;
+}
+.photoWrapCover .photoImg {
+  object-fit: cover;
 }
 .photoCard:hover .photoImg { transform: scale(1.04); }
 

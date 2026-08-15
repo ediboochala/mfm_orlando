@@ -186,7 +186,7 @@ export const MINISTRIES = [
     name: 'Children',
     subtitle: 'Raising Kingdom Champions from Childhood',
     icon: 'sparkle',
-    image: '/new Logo mfm.png',
+    image: '/pexels-julianemonarifotografia-18531787.jpg',
     tagline: 'Building a foundation of faith that will last a lifetime.',
     description: "Children are not the church of tomorrow — they are the church of today. The MFM Tampa Florida Children's Ministry is dedicated to nurturing the faith of every child, leading them into a personal relationship with Jesus Christ as their Savior, and instilling the values of holiness and obedience to God from an early age. We believe that a child who encounters the living God is equipped to face every challenge the world will bring. The seeds planted in a child's heart during these early years become the convictions that anchor them through every storm of life.",
     details: [
