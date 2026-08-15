@@ -546,10 +546,8 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you have been waiting for a sign to start, this is it. You do not need a special title or a theological degree to fast. You need a willing heart and a desperate hunger for God that surpasses your hunger for food. Start small — skip one meal and dedicate that time to prayer. Then build from there. Let the discipline grow, and watch how God begins to move in ways that will leave you breathless. The breakthrough you have been waiting for may be just one fast away.',
     ],
     readTime: '8 min read',
-    coverImage: '/new Logo mfm.png',
-    mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Fasting and prayer — a powerful spiritual combination' },
-    ],
+    coverImage: '/blog-prayer-and-fasting.jpg',
+    mediaBlocks: [],
   },
   {
     slug: 'deliverance-what-it-means',
@@ -567,10 +565,8 @@ export const BLOG_POSTS: BlogPost[] = [
       'If you are struggling with patterns that will not break, we want you to know: there is nothing wrong with coming for help. There is nothing wrong with saying, "I need more than I currently have." That humility is not weakness — it is wisdom. Come to MFM Tampa Florida this Friday night. Come as you are, with the full weight of what you have been carrying. You may leave with the testimony that changes the rest of your life.',
     ],
     readTime: '8 min read',
-    coverImage: '/new Logo mfm.png',
-    mediaBlocks: [
-      { afterParagraph: 2, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Believers in prayer during a deliverance service' },
-    ],
+    coverImage: '/blog-deliverance.jpg',
+    mediaBlocks: [],
   },
   {
     slug: 'prayer-city-experience',
@@ -588,10 +584,8 @@ export const BLOG_POSTS: BlogPost[] = [
       'MFM Tampa Florida regularly organizes group trips to Prayer City. If you would like to join our next trip, or simply want more information about upcoming programs, please reach out to us. Do not let another season pass while the very breakthrough you need is available to you. Pack your bag. Make the journey. God is already there, waiting.',
     ],
     readTime: '8 min read',
-    coverImage: '/new Logo mfm.png',
-    mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Believers gathered in worship at MFM Prayer City' },
-    ],
+    coverImage: '/blog-prayer-city-experience.jpg',
+    mediaBlocks: [],
   },
   {
     slug: 'end-times-are-you-ready',
@@ -609,7 +603,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'We do not know the day or the hour. But we know it is close. The signs are everywhere. Do not let busyness, distraction, or the comfort of a settled life cause you to sleep through one of the most significant moments in all of human history. Wake up. Look up. Get ready. And if you need help getting ready, MFM Tampa Florida is here — a community of believers who take the return of Jesus not as a theory, but as the most certain event on the horizon.',
     ],
     readTime: '8 min read',
-    coverImage: '/new Logo mfm.png',
+    coverImage: '/blog-end-times.jpg',
     mediaBlocks: [],
   },
   {
@@ -628,10 +622,8 @@ export const BLOG_POSTS: BlogPost[] = [
       'Begin today. Not with a rigid set of rules, but with a conversation with the Holy Spirit. Ask Him to show you the areas of your life that need to be surrendered. Ask Him for the grace to let them go. Ask Him to fill every empty space with His presence. Holiness is not achieved overnight — it is a daily journey, a daily choice, a daily surrender. But every step you take toward holiness is a step toward the God who loved you enough to die for you, and who desires nothing more than to see you fully free, fully His, and fully alive.',
     ],
     readTime: '8 min read',
-    coverImage: '/new Logo mfm.png',
-    mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'Pursuing holiness in everyday life' },
-    ],
+    coverImage: '/blog-holiness.jpg',
+    mediaBlocks: [],
   },
   {
     slug: 'building-an-aggressive-prayer-life',
@@ -649,10 +641,8 @@ export const BLOG_POSTS: BlogPost[] = [
       'At MFM Tampa Florida, we offer multiple prayer opportunities every week. Our morning prayer line runs from 6:00–7:00 AM EST, Monday through Friday — join by phone and spend the first hour of your day in the presence of God before the world can get to you. Our Friday night revival services, deliverance nights, and crossover programs are all built on extended, aggressive, corporate prayer. There is something that happens when people pray together — with one voice, one focus, one desperate hunger for God — that releases an authority solitary prayer alone cannot match. Come and join us. Let your prayer life be transformed. And watch what God does with a person who simply refuses to stop.',
     ],
     readTime: '8 min read',
-    coverImage: '/new Logo mfm.png',
-    mediaBlocks: [
-      { afterParagraph: 1, type: 'image', src: '/new Logo mfm.png', alt: '', caption: 'MFM Tampa Florida morning prayer program' },
-    ],
+    coverImage: '/blog-aggressive-prayer-life.jpg',
+    mediaBlocks: [],
   },
 ]
 

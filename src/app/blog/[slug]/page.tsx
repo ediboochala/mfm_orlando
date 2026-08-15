@@ -70,7 +70,6 @@ export default async function BlogPostPage({ params }: Props) {
           priority
           sizes="100vw"
           className={styles.coverImage}
-          style={{ objectFit: 'contain', opacity: 0.08, filter: 'grayscale(1) brightness(0)' }}
         />
       </div>
 
@@ -97,7 +96,6 @@ export default async function BlogPostPage({ params }: Props) {
                           fill
                           sizes="(max-width: 780px) 100vw, 780px"
                           className={styles.mediaImage}
-                          style={{ objectFit: 'contain', opacity: 0.1, filter: 'grayscale(1) brightness(0)' }}
                         />
                       </div>
                     ) : (
