@@ -1,9 +1,18 @@
-﻿.wrap {
+.wrap {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.1;
-  filter: grayscale(1) brightness(3);
+  overflow: hidden;
 }
 
+.tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(var(--primary-rgb), 0.86) 0%,
+    rgba(90, 0, 90, 0.88) 50%,
+    rgba(var(--primary-rgb), 0.86) 100%
+  );
+}

@@ -5,12 +5,13 @@ export default function PageHeroWatermark() {
   return (
     <div className={styles.wrap} aria-hidden="true">
       <Image
-        src="/new Logo mfm.png"
+        src="/pexels-caleboquendo-34612562.jpg"
         alt=""
         fill
-        style={{ objectFit: 'contain' }}
+        style={{ objectFit: 'cover' }}
         priority
       />
+      <div className={styles.tint} />
     </div>
   )
 }
