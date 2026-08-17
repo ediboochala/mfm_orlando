@@ -322,3 +322,21 @@ section {
 @media (max-width: 600px) {
   .section-inner { padding: 60px 20px; }
 }
+
+/* ── REDUCED MOTION ──
+   Respect the OS-level "reduce motion" preference: cut every CSS animation/
+   transition down to near-instant and make scroll-reveal content visible
+   immediately, instead of leaving it stuck at opacity:0 waiting for a
+   transition that will never visibly run. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -7,6 +7,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `USA Prayer Line — ${CHURCH.shortName}`,
   description: `Dial in to the MFM USA Prayer Line, anchored by ${PRAYER_LINE.anchor}. Call in daily and receive a spiritual breakthrough.`,
+  alternates: { canonical: '/prayer-line' },
 }
 
 export default function PrayerLinePage() {

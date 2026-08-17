@@ -15,9 +15,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = BLOG_POSTS.find((p) => p.slug === slug)
   if (!post) return {}
+  const title = `${post.title} — ${CHURCH.shortName}`
   return {
-    title: `${post.title} — ${CHURCH.shortName}`,
+    title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: new Date(post.date).toISOString(),
+      images: [{ url: post.coverImage }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    },
   }
 }
 
@@ -30,8 +45,29 @@ export default async function BlogPostPage({ params }: Props) {
   const prevPost   = BLOG_POSTS[postIndex - 1] ?? null
   const nextPost   = BLOG_POSTS[postIndex + 1] ?? null
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: encodeURI(`${CHURCH.website}${post.coverImage}`),
+    datePublished: new Date(post.date).toISOString(),
+    author: { '@type': 'Organization', name: CHURCH.name },
+    publisher: {
+      '@type': 'Organization',
+      name: CHURCH.name,
+      logo: { '@type': 'ImageObject', url: encodeURI(`${CHURCH.website}/new Logo mfm.png`) },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${CHURCH.website}/blog/${post.slug}` },
+  }
+
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
 
       {/* ── Top Bar ── */}
       <div className={styles.topBar}>

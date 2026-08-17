@@ -8,6 +8,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Weekly Services — ${CHURCH.shortName}`,
   description: 'Join MFM Tampa Florida for worship, deliverance, and prayer throughout the week — see our full weekly service schedule.',
+  alternates: { canonical: '/services' },
 }
 
 export default function ServicesPage() {

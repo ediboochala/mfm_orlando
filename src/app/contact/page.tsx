@@ -9,6 +9,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Contact Us — ${CHURCH.shortName}`,
   description: 'Get in touch with Mountain of Fire and Miracles Ministries Tampa, Florida — visit us, call us, or send a message.',
+  alternates: { canonical: '/contact' },
 }
 
 export default function ContactPage() {

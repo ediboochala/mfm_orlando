@@ -8,6 +8,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Global Programs — ${CHURCH.shortName}`,
   description: `Join MFM branches worldwide for the ${GLOBAL_PROGRAMS.seventyDays.name}.`,
+  alternates: { canonical: '/global-programs' },
 }
 
 export default function GlobalProgramsPage() {

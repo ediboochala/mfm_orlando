@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ChurchCarousel from '@/components/ChurchCarousel'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import CountUp from '@/components/CountUp'
 import {
   CHURCH,
   GENERAL_OVERSEER,
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
   title: `About Us — ${CHURCH.shortName}`,
   description:
     'Learn about Mountain of Fire and Miracles Ministries Tampa, Florida — our history, our General Overseer Dr. D.K. Olukoya, our mission, and our vision.',
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
@@ -99,7 +101,7 @@ export default function AboutPage() {
             <div className={styles.statsStrip}>
               {STATS.map((s, i) => (
                 <div key={i} className={styles.statItem}>
-                  <span className={styles.statNum}>{s.num}{s.suffix}</span>
+                  <CountUp end={s.num} suffix={s.suffix} className={styles.statNum} />
                   <span className={styles.statLabel}>{s.label}</span>
                 </div>
               ))}

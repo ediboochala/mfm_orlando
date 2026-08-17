@@ -7,11 +7,83 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `${CRUSADE.title} — ${CHURCH.shortName}`,
   description: CRUSADE.description,
+  alternates: { canonical: '/crusade' },
+  openGraph: {
+    title: `${CRUSADE.title} — ${CHURCH.shortName}`,
+    description: CRUSADE.description,
+    type: 'website',
+    images: CRUSADE.image ? [{ url: CRUSADE.image }] : undefined,
+  },
+}
+
+// Builds an ISO-8601 datetime string (with an explicit UTC offset) from
+// CRUSADE.date ("Sunday, September 20, 2026") and CRUSADE.time ("4:00 PM
+// Prompt") for the Event schema below. Built from date/time parts directly
+// rather than Date#toISOString() so the result doesn't depend on the build
+// server's local timezone (Vercel builds run in UTC). The offset is
+// hardcoded to Eastern Daylight Time (-04:00), which covers the venue
+// (Tampa, FL) for the crusade's Mar–Nov date; update if a future crusade
+// date falls in EST instead.
+function crusadeStartDateISO(): string {
+  const parsed = new Date(CRUSADE.date)
+  if (Number.isNaN(parsed.getTime())) return CRUSADE.date
+
+  const y  = parsed.getFullYear()
+  const mo = String(parsed.getMonth() + 1).padStart(2, '0')
+  const d  = String(parsed.getDate()).padStart(2, '0')
+
+  const timeMatch = CRUSADE.time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i)
+  if (!timeMatch) return `${y}-${mo}-${d}`
+
+  let hours = parseInt(timeMatch[1], 10)
+  const minutes = timeMatch[2]
+  const meridiem = timeMatch[3].toUpperCase()
+  if (meridiem === 'PM' && hours !== 12) hours += 12
+  if (meridiem === 'AM' && hours === 12) hours = 0
+
+  return `${y}-${mo}-${d}T${String(hours).padStart(2, '0')}:${minutes}:00-04:00`
+}
+
+const crusadeJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: CRUSADE.title,
+  description: CRUSADE.description,
+  startDate: crusadeStartDateISO(),
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: CRUSADE.venueDetails.name,
+    address: CRUSADE.venueDetails.mapAddress,
+  },
+  image: CRUSADE.image ? [encodeURI(`${CHURCH.website}${CRUSADE.image}`)] : undefined,
+  organizer: {
+    '@type': 'Organization',
+    name: CHURCH.name,
+    url: CHURCH.website,
+  },
+  performer: {
+    '@type': 'Person',
+    name: CRUSADE.minister,
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://www.eventbrite.com/e/the-great-florida-deliverance-crusade-tickets-1996817130791?aff=oddtdtcreator',
+  },
 }
 
 export default function CrusadePage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crusadeJsonLd) }}
+      />
 
       {/* ── Back Nav ── */}
       <div className={styles.topBar}>

@@ -8,6 +8,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Bookshop — ${CHURCH.shortName}`,
   description: 'Browse MFM books and prayer resources by Dr. D.K. Olukoya, available through the MFM Tampa Florida Bookstand.',
+  alternates: { canonical: '/bookshop' },
 }
 
 export default function BookshopPage() {

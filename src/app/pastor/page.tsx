@@ -9,6 +9,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Pastor Kehinde Olajide — ${CHURCH.shortName}`,
   description: 'A personal greeting and pastoral message from Pastor Kehinde Olajide of Mountain of Fire and Miracles Ministries Tampa, Florida.',
+  alternates: { canonical: '/pastor' },
 }
 
 const SCRIPTURES = [

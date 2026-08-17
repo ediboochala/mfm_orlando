@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: `Media and Live — ${CHURCH.shortName}`,
   description:
     'Watch MFM Tampa Florida live services, access the MFM YouTube channels, and find the daily prayer line schedule.',
+  alternates: { canonical: '/media' },
 }
 
 export default function MediaPage() {

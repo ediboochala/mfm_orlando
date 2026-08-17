@@ -7,6 +7,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Need Deliverance? — ${CHURCH.shortName}`,
   description: 'Request deliverance prayer from MFM Tampa Florida. Fill out our deliverance signup form and a minister will follow up with you.',
+  alternates: { canonical: '/deliverance' },
 }
 
 export default function DeliverancePage() {
