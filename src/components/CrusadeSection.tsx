@@ -1,24 +1,53 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CRUSADE } from '@/data/siteData'
 import styles from './CrusadeSection.module.css'
 
 export default function CrusadeSection() {
+  const [showDescription, setShowDescription] = useState(false)
+
+  useEffect(() => {
+    if (!showDescription) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowDescription(false)
+    }
+    document.addEventListener('keydown', onKeyDown)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [showDescription])
+
   return (
     <section id="crusade" className={styles.section}>
       <div className="section-inner">
         <div className={styles.grid}>
           {/* Image / Flyer */}
           <div className={`${styles.imgWrap} reveal-left`}>
-            <div className={styles.imgFrame}>
+            <button
+              type="button"
+              className={styles.imgFrame}
+              onClick={() => setShowDescription(true)}
+              aria-haspopup="dialog"
+              aria-label="View full crusade description"
+            >
               <div className={`${styles.imgPlaceholder} ${CRUSADE.image ? styles.hasImage : ''}`}>
                 {CRUSADE.image ? (
-                  <Image
-                    src={CRUSADE.image}
-                    alt={CRUSADE.title}
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
+                  <>
+                    <Image
+                      src={CRUSADE.image}
+                      alt={CRUSADE.title}
+                      fill
+                      style={{ objectFit: 'contain' }}
+                    />
+                    <div className={styles.imgHoverHint}>
+                      <span>Click to Read Full Description</span>
+                    </div>
+                  </>
                 ) : (
                   <>
                     <svg className={styles.flameIcon} width="44" height="60" viewBox="0 0 26 38" fill="none">
@@ -43,7 +72,7 @@ export default function CrusadeSection() {
                 <span className={styles.dateTagDay}>{CRUSADE.date}</span>
                 <span className={styles.dateTagTime}>{CRUSADE.time}</span>
               </div>
-            </div>
+            </button>
           </div>
 
           {/* Details */}
@@ -128,6 +157,66 @@ export default function CrusadeSection() {
       <div className={styles.logoWatermark} aria-hidden="true">
         <Image src="/new Logo mfm.png" alt="" fill style={{ objectFit: 'contain' }} />
       </div>
+
+      {/* Full Description Modal */}
+      {showDescription && (
+        <div
+          className={styles.modalOverlay}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${CRUSADE.title} — Full Description`}
+          onClick={() => setShowDescription(false)}
+        >
+          <div className={styles.modalCard} onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className={styles.modalClose}
+              onClick={() => setShowDescription(false)}
+              aria-label="Close"
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M2 2L16 16M16 2L2 16" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+            </button>
+
+            {CRUSADE.image && (
+              <div className={styles.modalImgWrap}>
+                <Image
+                  src={CRUSADE.image}
+                  alt={CRUSADE.title}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            )}
+
+            <div className={styles.modalBody}>
+              <span className={styles.modalLabel}>About This Crusade</span>
+              <h3 className={styles.modalTitle}>{CRUSADE.title}</h3>
+              <p className={styles.modalMotto}>{CRUSADE.motto}</p>
+
+              {CRUSADE.detailedDescription.map((para, i) => (
+                <p key={i} className={styles.modalText}>{para}</p>
+              ))}
+              <p className={styles.hashtag}>{CRUSADE.hashtag}</p>
+
+              <div className={styles.modalActions}>
+                <a
+                  href="https://www.eventbrite.com/e/the-great-florida-deliverance-crusade-tickets-1996817130791?aff=oddtdtcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Reserve a Spot
+                </a>
+                <Link href="/crusade" className="btn-secondary" onClick={() => setShowDescription(false)}>
+                  More Information
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

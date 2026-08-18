@@ -42,10 +42,45 @@
 .imgWrap { position: relative; }
 
 .imgFrame {
+  display: block;
+  width: 100%;
   position: relative;
   padding: 14px;
   background: rgba(var(--primary-rgb), 0.04);
   border: 1px solid rgba(var(--primary-rgb), 0.15);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color 0.3s;
+}
+.imgFrame:hover {
+  border-color: rgba(var(--primary-rgb), 0.4);
+}
+.imgFrame:hover .imgHoverHint {
+  opacity: 1;
+}
+
+.imgHoverHint {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 0, 20, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.imgHoverHint span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .imgPlaceholder {
@@ -245,4 +280,107 @@
 @media (max-width: 600px) {
   .detailsGrid { grid-template-columns: 1fr; }
   .actions { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Full Description Modal ── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 0, 10, 0.72);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.25s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0;
+  width: 100%;
+  max-width: 920px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #FFFFFF;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
+.modalClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.modalClose:hover {
+  background: var(--primary);
+}
+
+.modalImgWrap {
+  position: relative;
+  min-height: 320px;
+  background: var(--primary-dark);
+}
+
+.modalBody {
+  padding: 40px 40px 40px 32px;
+}
+.modalLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.modalTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--primary);
+  margin-top: 8px;
+}
+.modalMotto {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: 6px;
+}
+.modalText {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 16px;
+}
+.modalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+@media (max-width: 720px) {
+  .modalCard { grid-template-columns: 1fr; max-height: 92vh; }
+  .modalImgWrap { min-height: 240px; }
+  .modalBody { padding: 28px 24px; }
 }
