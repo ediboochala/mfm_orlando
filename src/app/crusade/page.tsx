@@ -128,7 +128,7 @@ export default function CrusadePage() {
               rel="noopener noreferrer"
               className="btn-outline-white"
             >
-              ♫ Listen to the Jingle
+              ♫ Crusade Radio Announcements
             </a>
           </div>
         </div>

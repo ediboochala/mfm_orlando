@@ -56,7 +56,7 @@ export const CRUSADE = {
   rsvpNumbers: ['813-593-1638', '346-302-9156'],
   image: '/Crusade Flyer UPDATED.png' as string | null,
   jingle: {
-    label: 'Listen to the Crusade Jingle',
+    label: 'Crusade Radio Announcements',
     url: 'https://shorturl.at/7Ohcr',
     logo: '/mytuner_logo.png',
     platform: 'myTuner Radio',
