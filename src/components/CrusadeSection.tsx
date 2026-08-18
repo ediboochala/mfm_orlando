@@ -101,6 +101,25 @@ export default function CrusadeSection() {
                 {CRUSADE.rsvpNumbers.join('  ·  ')}
               </span>
             </div>
+
+            <a
+              href={CRUSADE.jingle.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.jingleBtn}
+            >
+              <span className={styles.jingleIcon} aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18V5l12-2v13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="6" cy="18" r="3" stroke="currentColor" strokeWidth="1.6" />
+                  <circle cx="18" cy="16" r="3" stroke="currentColor" strokeWidth="1.6" />
+                </svg>
+              </span>
+              {CRUSADE.jingle.label}
+              <span className={styles.jingleLogo}>
+                <Image src={CRUSADE.jingle.logo} alt={CRUSADE.jingle.platform} width={72} height={37} style={{ objectFit: 'contain' }} />
+              </span>
+            </a>
           </div>
         </div>
       </div>

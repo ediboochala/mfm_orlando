@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CRUSADE, CHURCH } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
@@ -121,6 +122,14 @@ export default function CrusadePage() {
             >
               Reserve a Spot
             </a>
+            <a
+              href={CRUSADE.jingle.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-white"
+            >
+              ♫ Listen to the Jingle
+            </a>
           </div>
         </div>
       </header>
@@ -173,6 +182,31 @@ export default function CrusadePage() {
               <div className={styles.detailItem}>
                 <span className={styles.detailLabel}>RSVP / Prayer Line</span>
                 <span className={styles.detailValue}>{CRUSADE.rsvpNumbers.join('  ·  ')}</span>
+              </div>
+            </div>
+          </section>
+
+          {/* Jingle */}
+          <section className={styles.section}>
+            <div className={styles.jingleCard}>
+              <div className={styles.jingleCardInfo}>
+                <span className={styles.sectionLabel}>On the Radio</span>
+                <h3 className={styles.jingleCardTitle}>Hear the Official Crusade Jingle</h3>
+                <p className={styles.jingleCardText}>
+                  Streaming now on {CRUSADE.jingle.platform} — tap play and get the sound of
+                  the crusade stuck in your spirit before the big day.
+                </p>
+                <a
+                  href={CRUSADE.jingle.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  ♫ {CRUSADE.jingle.label}
+                </a>
+              </div>
+              <div className={styles.jingleCardLogo}>
+                <Image src={CRUSADE.jingle.logo} alt={CRUSADE.jingle.platform} width={140} height={72} style={{ objectFit: 'contain' }} />
               </div>
             </div>
           </section>

@@ -122,6 +122,9 @@
 .heroActions {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
   margin-top: 32px;
 }
 
@@ -230,6 +233,43 @@
   font-size: 12px;
   font-weight: 500;
   color: rgba(var(--text-rgb), 0.55);
+}
+
+/* ── Jingle ── */
+.jingleCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 28px;
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  background: rgba(var(--primary-rgb), 0.04);
+  padding: 36px 40px;
+}
+.jingleCardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 560px;
+}
+.jingleCardTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--primary);
+}
+.jingleCardText {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(var(--text-rgb), 0.65);
+  margin-bottom: 6px;
+}
+.jingleCardLogo {
+  flex-shrink: 0;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(var(--primary-rgb), 0.12);
 }
 
 /* ── Venue ── */
@@ -351,6 +391,7 @@
   .detailsGrid  { grid-template-columns: repeat(2, 1fr); }
   .hotelsGrid   { grid-template-columns: repeat(2, 1fr); }
   .venueCard    { flex-direction: column; align-items: flex-start; }
+  .jingleCard   { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 700px) {
@@ -361,5 +402,6 @@
   .detailsGrid  { grid-template-columns: 1fr; padding: 24px; }
   .hotelsGrid   { grid-template-columns: 1fr; }
   .venueCard    { padding: 28px 24px; }
+  .jingleCard   { padding: 28px 24px; }
   .cta          { padding: 36px 20px; }
 }
