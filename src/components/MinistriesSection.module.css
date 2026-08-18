@@ -55,7 +55,7 @@
 }
 
 .name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--text);
@@ -72,7 +72,7 @@
 .learn {
   display: inline-block;
   margin-top: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
   color: var(--primary);

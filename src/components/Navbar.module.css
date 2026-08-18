@@ -42,7 +42,7 @@
   flex-direction: column;
 }
 .logoName {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 800;
   font-size: 17px;
   color: var(--primary);
@@ -51,7 +51,7 @@
   text-transform: uppercase;
 }
 .logoTagline {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 9.5px;
   letter-spacing: 0.8px;
@@ -79,7 +79,7 @@
   list-style: none;
 }
 .navLinks a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 12.5px;
   letter-spacing: 0.3px;
@@ -113,7 +113,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 12.5px;
   letter-spacing: 0.3px;
@@ -183,7 +183,7 @@
 
 /* â”€â”€ CTA â”€â”€ */
 .navCta {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: #FFFFFF;
@@ -202,7 +202,7 @@
 
 /* â”€â”€ DELIVERANCE CTA â”€â”€ */
 .deliveranceCta {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 12.5px;
   letter-spacing: 0.3px;
@@ -268,7 +268,7 @@
   backdrop-filter: blur(16px);
 }
 .mobileLink {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
@@ -289,7 +289,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 1px;
@@ -308,7 +308,7 @@
   gap: 16px;
 }
 .mobileSubLink {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -318,7 +318,7 @@
 }
 .mobileSubLink:hover { color: var(--primary); }
 .mobileCta {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: #FFFFFF;
@@ -335,7 +335,7 @@
   color: #FFFFFF;
 }
 .mobileDeliveranceCta {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: #FFFFFF;

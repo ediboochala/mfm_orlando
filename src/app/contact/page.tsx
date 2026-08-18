@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CHURCH, PASTOR, SOCIAL_LINKS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import SocialIcon from '@/components/SocialIcon'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import ContactForm from './ContactForm'
 import styles from './page.module.css'
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Contact Us', path: '/contact' }]} />
 
       {/* ── Back Nav ── */}
       <div className={styles.topBar}>

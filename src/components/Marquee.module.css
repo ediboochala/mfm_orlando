@@ -13,7 +13,7 @@
 }
 
 .text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 4px;
   color: #fff;

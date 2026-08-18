@@ -4,6 +4,7 @@ import Link from 'next/link'
 import ChurchCarousel from '@/components/ChurchCarousel'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import CountUp from '@/components/CountUp'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import {
   CHURCH,
   GENERAL_OVERSEER,
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'About Us', path: '/about' }]} />
 
       {/* ── Top Bar ── */}
       <div className={styles.topBar}>

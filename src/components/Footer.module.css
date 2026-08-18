@@ -20,7 +20,7 @@
 }
 
 .connectText h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair), serif;
   font-style: italic;
   font-size: 22px;
   color: #FFFFFF;
@@ -106,7 +106,7 @@
   filter: drop-shadow(0 0 10px rgba(232, 185, 35, 0.25));
 }
 .brandName {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-playfair), serif;
   font-style: italic;
   font-size: 19px;
   color: #FFFFFF;
@@ -180,7 +180,7 @@
 /* Link columns */
 .colLinks h4,
 .colGive h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1.5px;

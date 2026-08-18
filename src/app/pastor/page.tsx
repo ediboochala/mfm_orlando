@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { PASTOR, CHURCH } from '@/data/siteData'
 import { highlightOrgName } from '@/lib/highlightOrgName'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ const SCRIPTURES = [
 export default function PastorPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Our Pastor', path: '/pastor' }]} />
 
       {/* ── Back Nav ── */}
       <div className={styles.topBar}>

@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600&display=swap');
+/* Montserrat and Playfair Display are loaded via next/font/google in
+   layout.tsx (self-hosted, no external request, automatic font-display:
+   swap) — see the --font-montserrat / --font-playfair variables it sets
+   on <html>. Do not reintroduce a Google Fonts @import here; it re-adds a
+   render-blocking cross-origin request that next/font exists to avoid. */
 
 :root {
   /* ── BRAND COLOR SYSTEM — white, purple, a touch of yellow ── */
@@ -47,7 +51,7 @@ html {
 body {
   background: var(--background);
   color: var(--text);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   overflow-x: hidden;
 }
 
@@ -81,7 +85,7 @@ section {
   font-size: 14px !important;
 }
 .section-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 10px;
   letter-spacing: 7px;
@@ -91,7 +95,7 @@ section {
   display: block;
 }
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
   line-height: 1.15;
@@ -112,7 +116,7 @@ section {
 
 /* ── BUTTONS ── */
 .btn-primary {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -134,7 +138,7 @@ section {
 }
 /* Purple outline — the default button style wherever it sits on a white/light surface */
 .btn-secondary {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -151,7 +155,7 @@ section {
 }
 /* Solid gold — reserve for buttons that sit on a purple/dark surface, never on white */
 .btn-gold {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -168,7 +172,7 @@ section {
   box-shadow: 0 10px 40px rgba(var(--accent-rgb), 0.6);
 }
 .btn-outline-white {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -253,7 +257,7 @@ section {
   white-space: nowrap;
 }
 .marquee-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 4px;
   color: #FFFFFF;

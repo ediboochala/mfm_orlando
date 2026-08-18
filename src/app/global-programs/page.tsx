@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CHURCH, GLOBAL_PROGRAMS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function GlobalProgramsPage() {
 
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Global Programs', path: '/global-programs' }]} />
 
       {/* ── Back Nav ── */}
       <div className={styles.topBar}>

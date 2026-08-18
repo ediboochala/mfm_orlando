@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { CHURCH, BLOG_POSTS } from '@/data/siteData'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -67,6 +68,13 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Blog', path: '/blog' },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ]}
       />
 
       {/* ── Top Bar ── */}

@@ -1,11 +1,29 @@
 import type { Metadata, Viewport } from 'next'
 import dynamic from 'next/dynamic'
+import { Montserrat, Playfair_Display } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import { CHURCH, SOCIAL_LINKS } from '@/data/siteData'
 import './globals.css'
 
 const CustomCursor  = dynamic(() => import('@/components/CustomCursor'),    { ssr: false })
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), { ssr: false })
+
+// Self-hosted via next/font — no external Google Fonts request, no
+// render-blocking @import, automatic font-display: swap and CLS-safe
+// fallback metrics. Weights/styles mirror the old @import exactly.
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['500', '600'],
+  style: ['italic'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mfmtampaflorida.org'),
@@ -85,7 +103,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${playfairDisplay.variable}`}>
       <body>
         <script
           type="application/ld+json"

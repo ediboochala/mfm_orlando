@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CRUSADE, CHURCH } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -85,6 +86,7 @@ export default function CrusadePage() {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(crusadeJsonLd) }}
       />
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Crusade', path: '/crusade' }]} />
 
       {/* ── Back Nav ── */}
       <div className={styles.topBar}>

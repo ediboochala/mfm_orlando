@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CHURCH, LIVE_SCHEDULE, PRAYER_LINE, SOCIAL_LINKS, SISTER_MINISTRIES } from '@/data/siteData'
 import SocialIcon, { type SocialPlatform } from '@/components/SocialIcon'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import YoutubeChannelSection from './YoutubeChannelSection'
 import styles from './page.module.css'
 
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function MediaPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Media and Live', path: '/media' }]} />
 
       {/* ── Top Bar ── */}
       <div className={styles.topBar}>

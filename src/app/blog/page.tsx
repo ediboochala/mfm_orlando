@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CHURCH, BLOG_POSTS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }]} />
 
       {/* ── Top Bar ── */}
       <div className={styles.topBar}>

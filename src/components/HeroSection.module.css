@@ -56,7 +56,7 @@
 
 /* ── TEXT ── */
 .eyebrow {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 4px;
@@ -68,7 +68,7 @@
   animation: fadeUp 0.9s 0.3s forwards;
 }
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 900;
   font-size: clamp(32px, 6vw, 64px);
   line-height: 1.15;
@@ -79,7 +79,7 @@
   animation: fadeUp 1s 0.5s forwards;
 }
 .tagline {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 800;
   font-size: clamp(16px, 2.2vw, 22px);
   letter-spacing: 3px;
@@ -101,7 +101,7 @@
   margin-top: 22px;
 }
 .nextService {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 2px;
@@ -121,7 +121,7 @@
   min-width: 40px;
 }
 .countdownValue {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 800;
   font-size: 24px;
   line-height: 1;
@@ -129,7 +129,7 @@
   font-variant-numeric: tabular-nums;
 }
 .countdownLabel {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -178,7 +178,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 9px;
   letter-spacing: 4px;
   color: rgba(255, 255, 255, 0.45);

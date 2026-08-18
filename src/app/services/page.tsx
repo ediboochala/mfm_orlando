@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CHURCH, THEMED_SUNDAYS, ONLINE_PROGRAMS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import ServicesSection from '@/components/ServicesSection'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Weekly Services', path: '/services' }]} />
 
       {/* ── Back Nav ── */}
       <div className={styles.topBar}>

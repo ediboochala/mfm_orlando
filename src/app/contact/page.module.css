@@ -3,7 +3,7 @@
   min-height: 100vh;
   background: var(--dark);
   color: var(--text);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   padding-top: 88px;
 }
 
@@ -28,7 +28,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
   z-index: 1;
 }
 .heroLabel {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   font-size: 10px;
   letter-spacing: 7px;
@@ -77,7 +77,7 @@
   margin-bottom: 20px;
 }
 .heroTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4.5vw, 52px);
   line-height: 1.15;
@@ -139,7 +139,7 @@
   font-size: 16px;
 }
 .infoLabel {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 10px;
   letter-spacing: 3px;
   color: var(--primary);
@@ -190,7 +190,7 @@
   gap: 8px;
 }
 .formLabel {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 9px;
   letter-spacing: 3px;
   color: rgba(var(--text-rgb), 0.4);
@@ -201,7 +201,7 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
   color: var(--text);
   padding: 14px 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 14px;
   outline: none;
   transition: border-color 0.3s;
@@ -213,7 +213,7 @@
 .required { color: var(--secondary); margin-left: 3px; }
 
 .submitBtn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -259,7 +259,7 @@
 }
 .successIcon { color: var(--primary); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
 .successTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   color: var(--primary);
@@ -274,7 +274,7 @@
   border: 1px solid rgba(var(--secondary-rgb), 0.3);
 }
 .errorTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 1px;
   color: var(--secondary-dark);
@@ -300,7 +300,7 @@
 .mapInfo { display: flex; align-items: center; gap: 16px; }
 .mapPin { font-size: 18px; line-height: 1; flex-shrink: 0; }
 .mapLabel {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -314,7 +314,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -346,7 +346,7 @@
   text-align: center;
 }
 .ctaTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 26px;
   color: var(--text);
   letter-spacing: 2px;

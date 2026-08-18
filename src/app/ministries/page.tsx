@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CHURCH } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import MinistriesContent from './MinistriesContent'
 import styles from './page.module.css'
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function MinistriesPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Our Ministries', path: '/ministries' }]} />
 
       {/* ── Top Bar ── */}
       <div className={styles.topBar}>

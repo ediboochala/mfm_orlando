@@ -18,7 +18,7 @@
   margin-bottom: 52px;
 }
 .label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 10px;
   letter-spacing: 6px;
   text-transform: uppercase;
@@ -27,7 +27,7 @@
   margin-bottom: 14px;
 }
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: clamp(26px, 4vw, 44px);
   font-weight: 700;
   color: #1c1c1c;
@@ -156,7 +156,7 @@
 }
 
 .videoTitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #1c1c1c;
@@ -184,7 +184,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -207,7 +207,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
