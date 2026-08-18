@@ -158,9 +158,12 @@ export function getNextService(now: Date): NextService | null {
   }
 }
 
-export function formatNextService(next: NextService): string {
+/** Just the date/time portion, e.g. "Sunday, August 23 at 10:00 AM" — the
+ *  service name itself (next.name) is displayed separately so it can be
+ *  styled as the prominent headline, with this line as its subtext. */
+export function formatNextServiceDateTime(next: NextService): string {
   const hour12 = next.hour % 12 === 0 ? 12 : next.hour % 12
   const period = next.hour >= 12 ? 'PM' : 'AM'
   const minuteStr = next.minute.toString().padStart(2, '0')
-  return `NEXT SERVICE — ${next.weekdayLabel.toUpperCase()}, ${next.monthLabel.toUpperCase()} ${next.dayOfMonth} AT ${hour12}:${minuteStr} ${period}`
+  return `${next.weekdayLabel}, ${next.monthLabel} ${next.dayOfMonth} at ${hour12}:${minuteStr} ${period}`
 }

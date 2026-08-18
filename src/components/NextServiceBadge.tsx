@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { getNextService, formatNextService, type NextService } from '@/lib/nextService'
+import { getNextService, formatNextServiceDateTime, type NextService } from '@/lib/nextService'
 import styles from './HeroSection.module.css'
 
 interface Countdown {
@@ -50,7 +50,9 @@ export default function NextServiceBadge() {
 
   return (
     <div className={styles.nextServiceWrap}>
-      <p className={styles.nextService}>{formatNextService(next)}</p>
+      <span className={styles.nextServiceLabel}>Next Up</span>
+      <p className={styles.nextServiceName}>{next.name}</p>
+      <p className={styles.nextServiceDate}>{formatNextServiceDateTime(next)}</p>
       {countdown && (
         <div className={styles.countdown} role="timer" aria-label="Countdown to next service">
           {[

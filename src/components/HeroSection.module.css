@@ -99,13 +99,35 @@
 }
 .nextServiceWrap {
   margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s 1.3s forwards;
 }
-.nextService {
+.nextServiceLabel {
+  display: block;
   font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   color: var(--accent);
+}
+.nextServiceName {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 800;
+  font-size: clamp(17px, 2.4vw, 22px);
+  color: #FFFFFF;
+  margin-top: 6px;
+}
+.nextServiceDate {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
 }
 .countdown {
   display: flex;
@@ -146,7 +168,7 @@
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   margin: 30px auto;
   opacity: 0;
-  animation: fadeUp 0.9s 1.3s forwards;
+  animation: fadeUp 0.9s 1.5s forwards;
 }
 .btns {
   display: flex;
@@ -154,7 +176,7 @@
   justify-content: center;
   flex-wrap: wrap;
   opacity: 0;
-  animation: fadeUp 0.9s 1.7s forwards;
+  animation: fadeUp 0.9s 1.9s forwards;
 }
 .getDirections {
   background: var(--accent) !important;
