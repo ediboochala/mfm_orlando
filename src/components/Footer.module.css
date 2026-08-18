@@ -251,6 +251,44 @@
   line-height: 1.4;
 }
 
+/* Live visitor counter */
+.visitorBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 26px 0;
+}
+.visitorInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.visitorLabel {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+.visitorCounter {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.visitorCounter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+.visitorHint {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
 /* Bottom bar */
 .bottomBar {
   border-top: 1px solid rgba(255, 255, 255, 0.1);

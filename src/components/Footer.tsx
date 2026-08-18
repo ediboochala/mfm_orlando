@@ -184,6 +184,27 @@ export default function Footer() {
 
         </div>
 
+        {/* Live visitor counter */}
+        <div className={styles.visitorBar}>
+          <div className={styles.visitorInner}>
+            <span className={styles.visitorLabel}>Visitors From Around the World</span>
+            <a
+              href="https://info.flagcounter.com/N061"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.visitorCounter}
+              aria-label="View live visitor statistics by country"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://s01.flagcounter.com/count2/N061/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+                alt="Flag Counter — live map of countries visiting this site"
+              />
+            </a>
+            <span className={styles.visitorHint}>Updates live as visitors arrive · Tap the flags for full stats</span>
+          </div>
+        </div>
+
         <div className={styles.bottomBar}>
           <p className={styles.copy}>{CHURCH.copyright}</p>
         </div>
