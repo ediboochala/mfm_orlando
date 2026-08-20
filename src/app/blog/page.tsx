@@ -52,14 +52,25 @@ export default function BlogPage() {
             {BLOG_POSTS.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.postCard}>
                 <div className={styles.cardImageWrap}>
-                  <Image
-                    src={post.coverImage}
-                    alt=""
-                    aria-hidden="true"
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className={styles.cardImage}
-                  />
+                  {post.coverImage ? (
+                    <Image
+                      src={post.coverImage}
+                      alt=""
+                      aria-hidden="true"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className={styles.cardImage}
+                    />
+                  ) : (
+                    <Image
+                      src="/new Logo mfm.png"
+                      alt=""
+                      aria-hidden="true"
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className={styles.cardImagePlaceholder}
+                    />
+                  )}
                 </div>
                 <div className={styles.cardBody}>
                   <div className={styles.postTop}>

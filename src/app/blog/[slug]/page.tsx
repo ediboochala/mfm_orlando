@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       type: 'article',
       publishedTime: new Date(post.date).toISOString(),
-      images: [{ url: post.coverImage }],
+      images: post.coverImage ? [{ url: post.coverImage }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description: post.excerpt,
-      images: [post.coverImage],
+      images: post.coverImage ? [post.coverImage] : undefined,
     },
   }
 }
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: Props) {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
-    image: encodeURI(`${CHURCH.website}${post.coverImage}`),
+    image: post.coverImage ? encodeURI(`${CHURCH.website}${post.coverImage}`) : undefined,
     datePublished: new Date(post.date).toISOString(),
     author: { '@type': 'Organization', name: CHURCH.name },
     publisher: {
@@ -132,15 +132,27 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ── Cover Image ── */}
       <div className={styles.coverWrap}>
-        <Image
-          src={post.coverImage}
-          alt=""
-          aria-hidden="true"
-          fill
-          priority
-          sizes="100vw"
-          className={styles.coverImage}
-        />
+        {post.coverImage ? (
+          <Image
+            src={post.coverImage}
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            sizes="100vw"
+            className={styles.coverImage}
+          />
+        ) : (
+          <Image
+            src="/new Logo mfm.png"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            style={{ objectFit: 'contain' }}
+            className={styles.coverImagePlaceholder}
+          />
+        )}
       </div>
 
       {/* ── Article ── */}

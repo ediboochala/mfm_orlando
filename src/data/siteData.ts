@@ -535,7 +535,7 @@ export interface BlogPost {
   excerpt: string
   body: string[]
   readTime: string
-  coverImage: string
+  coverImage: string | null
   mediaBlocks: MediaBlock[]
 }
 
@@ -652,7 +652,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'And you can trust Him with it.',
     ],
     readTime: '6 min read',
-    coverImage: '/blog-gods-unique-plan-cover.png',
+    coverImage: null,
     mediaBlocks: [
       {
         afterParagraph: 10,

@@ -144,6 +144,11 @@
 .postCard:hover .cardImage {
   transform: scale(1.05);
 }
+.cardImagePlaceholder {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+}
 .cardBody {
   padding: 28px 32px 32px;
   display: flex;

@@ -124,6 +124,9 @@
   object-fit: cover;
   object-position: center;
 }
+.coverImagePlaceholder {
+  opacity: 0.15;
+}
 
 /* ── Main ── */
 .main {
