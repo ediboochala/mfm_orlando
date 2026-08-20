@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -7,6 +8,31 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 type Props = { params: Promise<{ slug: string }> }
+
+// Lightweight markdown support for post.body strings: '## '/'### ' prefixes
+// render as headings, and **bold**/*italic* render inline. Kept intentionally
+// minimal (no nested/mixed emphasis, no lists) — existing posts are plain
+// prose and pass through renderInline() untouched since they contain no
+// markdown tokens.
+function renderInline(text: string, keyPrefix: string): ReactNode[] {
+  const parts: ReactNode[] = []
+  const pattern = /\*\*(.+?)\*\*|\*(.+?)\*/g
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+  let i = 0
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index))
+    if (match[1] !== undefined) {
+      parts.push(<strong key={`${keyPrefix}-${i}`}>{match[1]}</strong>)
+    } else {
+      parts.push(<em key={`${keyPrefix}-${i}`}>{match[2]}</em>)
+    }
+    lastIndex = pattern.lastIndex
+    i++
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex))
+  return parts
+}
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({ slug: post.slug }))
@@ -126,9 +152,15 @@ export default async function BlogPostPage({ params }: Props) {
             <div className={styles.divider} />
             {post.body.map((para, i) => (
               <div key={i}>
-                <p className={`${styles.para} ${i === 0 ? styles.paraFirst : ''}`}>
-                  {para}
-                </p>
+                {para.startsWith('### ') ? (
+                  <h3 className={styles.h3}>{renderInline(para.slice(4), `${i}-h3`)}</h3>
+                ) : para.startsWith('## ') ? (
+                  <h2 className={styles.h2}>{renderInline(para.slice(3), `${i}-h2`)}</h2>
+                ) : (
+                  <p className={`${styles.para} ${i === 0 ? styles.paraFirst : ''}`}>
+                    {renderInline(para, `${i}-p`)}
+                  </p>
+                )}
                 {post.mediaBlocks.filter(m => m.afterParagraph === i).map((media, j) => (
                   <figure key={j} className={styles.mediaFigure}>
                     {media.type === 'image' ? (
