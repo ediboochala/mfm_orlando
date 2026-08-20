@@ -128,6 +128,28 @@
   background: rgba(var(--primary-rgb), 0.06);
 }
 
+/* Trailing post(s) that would otherwise leave the last row half-empty span
+   the full grid width instead, laid out as a wide featured card. */
+.postCardWide {
+  grid-column: 1 / -1;
+}
+@media (min-width: 1025px) {
+  .postCardWide {
+    flex-direction: row;
+  }
+  .postCardWide .cardImageWrap {
+    width: 42%;
+    aspect-ratio: auto;
+  }
+  .postCardWide .cardBody {
+    flex: 1;
+    justify-content: center;
+  }
+  .postCardWide .postTitle {
+    font-size: 20px;
+  }
+}
+
 /* ── Card Image ── */
 .cardImageWrap {
   position: relative;

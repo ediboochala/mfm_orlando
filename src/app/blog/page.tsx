@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   alternates: { canonical: '/blog' },
 }
 
+// The grid is 3 columns wide on desktop. When the post count doesn't divide
+// evenly by 3, the trailing posts that would otherwise leave empty cells in
+// the last row are widened to span the full row instead (see .postCardWide).
+const GRID_COLUMNS = 3
+const wideStartIndex = BLOG_POSTS.length - (BLOG_POSTS.length % GRID_COLUMNS)
+
 export default function BlogPage() {
   return (
     <div className={styles.page}>
@@ -49,8 +55,12 @@ export default function BlogPage() {
         <div className={styles.mainInner}>
 
           <div className={styles.postsGrid}>
-            {BLOG_POSTS.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.postCard}>
+            {BLOG_POSTS.map((post, i) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className={`${styles.postCard} ${i >= wideStartIndex ? styles.postCardWide : ''}`}
+              >
                 <div className={styles.cardImageWrap}>
                   {post.coverImage ? (
                     <Image
