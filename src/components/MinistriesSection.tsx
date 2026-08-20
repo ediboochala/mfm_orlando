@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { MINISTRIES } from '@/data/siteData'
 import MinistryIcon from './MinistryIcon'
@@ -20,13 +21,25 @@ export default function MinistriesSection() {
               href={`/ministries#${m.id}`}
               className={`ministry-card ${styles.card} reveal d${(i % 6) + 1}`}
             >
-              <div className={styles.cardBg} />
+              <div className={styles.cardImgWrap} aria-hidden="true">
+                <Image
+                  src={m.image}
+                  alt=""
+                  fill
+                  className={styles.cardImg}
+                  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+              </div>
+              <div className={styles.cardOverlay} />
+              <div className={styles.cardGlow} />
               <span className={styles.icon}><MinistryIcon name={m.icon} /></span>
-              <p className={styles.name}>{m.name}</p>
-              <p className={styles.desc}>{m.tagline}</p>
-              <span className={styles.learn}>
-                Learn More
-              </span>
+              <div className={styles.cardContent}>
+                <p className={styles.name}>{m.name}</p>
+                <p className={styles.desc}>{m.tagline}</p>
+                <span className={styles.learn}>
+                  Learn More
+                </span>
+              </div>
             </Link>
           ))}
         </div>
