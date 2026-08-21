@@ -491,9 +491,9 @@ export const NAV_GROUPS: NavEntry[] = [
     children: [
       { label: 'About Us',    href: '/about' },
       { label: 'Our Pastor',  href: '/pastor' },
-      { label: 'Ministries',  href: '/ministries' },
     ],
   },
+  { label: 'Ministries', href: '/ministries' },
   {
     label: 'Worship',
     children: [
@@ -502,13 +502,8 @@ export const NAV_GROUPS: NavEntry[] = [
       { label: 'Global Programs',  href: '/global-programs' },
     ],
   },
-  {
-    label: 'Media',
-    children: [
-      { label: 'Blog',            href: '/blog' },
-      { label: 'Sermons and Media', href: '/media' },
-    ],
-  },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Media', href: '/media' },
   {
     label: 'Connect',
     children: [
