@@ -652,7 +652,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'And you can trust Him with it.',
     ],
     readTime: '6 min read',
-    coverImage: null,
+    coverImage: '/a6e259f47a4b3371c1f753aa26b582c7.jpg',
     mediaBlocks: [
       {
         afterParagraph: 10,
