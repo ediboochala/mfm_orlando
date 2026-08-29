@@ -6,9 +6,6 @@ import Image from 'next/image'
 import GivingFormEmbed from './GivingFormEmbed'
 import styles from './GivingSection.module.css'
 
-const TEXT_TO_GIVE_NUMBER = '+1 (813) 592-3641'
-const TEXT_TO_GIVE_SMS_HREF = `sms:${TEXT_TO_GIVE_NUMBER.replace(/[^0-9+]/g, '')}`
-
 const ZELLE_PHONE = '+1 (813) 592-3641'
 const ZELLE_PHONE_TEL_HREF = `tel:${ZELLE_PHONE.replace(/[^0-9+]/g, '')}`
 const ZELLE_EMAIL = 'mfmtampaflorida@gmail.com'
@@ -21,17 +18,15 @@ const ZELLE_STEPS = [
   'Review and send — it arrives instantly, with no fees',
 ]
 
-type ActiveModal = 'text' | 'zelle' | null
-
 export default function GivingSection() {
-  const [activeModal, setActiveModal] = useState<ActiveModal>(null)
+  const [showZelle, setShowZelle] = useState(false)
 
-  // Escape to close + lock body scroll while a modal is open
+  // Escape to close + lock body scroll while the modal is open
   useEffect(() => {
-    if (!activeModal) return
+    if (!showZelle) return
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setActiveModal(null)
+      if (e.key === 'Escape') setShowZelle(false)
     }
     document.addEventListener('keydown', onKeyDown)
     const prevOverflow = document.body.style.overflow
@@ -41,7 +36,7 @@ export default function GivingSection() {
       document.removeEventListener('keydown', onKeyDown)
       document.body.style.overflow = prevOverflow
     }
-  }, [activeModal])
+  }, [showZelle])
 
   return (
     <section id="giving" className={styles.section}>
@@ -72,14 +67,7 @@ export default function GivingSection() {
             </a>
             <button
               type="button"
-              onClick={() => setActiveModal('text')}
-              className="btn-gold"
-            >
-              Text-To-Give
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveModal('zelle')}
+              onClick={() => setShowZelle(true)}
               className="btn-gold"
             >
               Give with Zelle
@@ -93,52 +81,19 @@ export default function GivingSection() {
         </div>
       </div>
 
-      {/* Text-To-Give modal — portalled to <body> so it isn't trapped under the
+      {/* Give with Zelle modal — portalled to <body> so it isn't trapped under the
           navbar by the global `section { z-index: 1 }` stacking context */}
-      {activeModal === 'text' && createPortal(
+      {showZelle && createPortal(
         <div
-          className={styles.textGiveModal}
-          onClick={() => setActiveModal(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Text-To-Give"
-        >
-          <button
-            className={styles.textGiveClose}
-            onClick={() => setActiveModal(null)}
-            aria-label="Close"
-          >
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <path d="M2 2L20 20M20 2L2 20" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-            </svg>
-          </button>
-
-          <div className={styles.textGiveCard} onClick={(e) => e.stopPropagation()}>
-            <span className={styles.textGiveLabel}>Text-To-Give</span>
-            <a href={TEXT_TO_GIVE_SMS_HREF} className={styles.textGiveNumber}>
-              {TEXT_TO_GIVE_NUMBER}
-            </a>
-            <p className={styles.textGiveHint}>Text this number directly to give from your phone.</p>
-            <a href={TEXT_TO_GIVE_SMS_HREF} className={`btn-gold ${styles.textGiveBtn}`}>
-              Open Messages
-            </a>
-          </div>
-        </div>,
-        document.body
-      )}
-
-      {/* Give with Zelle modal */}
-      {activeModal === 'zelle' && createPortal(
-        <div
-          className={styles.textGiveModal}
-          onClick={() => setActiveModal(null)}
+          className={styles.modal}
+          onClick={() => setShowZelle(false)}
           role="dialog"
           aria-modal="true"
           aria-label="Give with Zelle"
         >
           <button
-            className={styles.textGiveClose}
-            onClick={() => setActiveModal(null)}
+            className={styles.modalClose}
+            onClick={() => setShowZelle(false)}
             aria-label="Close"
           >
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
