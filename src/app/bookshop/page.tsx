@@ -107,8 +107,8 @@ export default function BookshopPage() {
               More titles are available.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/contact" className="btn-primary">Contact Us</Link>
-              <Link href="/services" className="btn-secondary">Visit a Service</Link>
+              <Link href="/contact" className="btn-gold">Contact Us</Link>
+              <Link href="/services" className="btn-outline-white">Visit a Service</Link>
             </div>
           </div>
 
