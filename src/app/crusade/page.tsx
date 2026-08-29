@@ -276,14 +276,14 @@ export default function CrusadePage() {
                 href="https://www.eventbrite.com/e/the-great-florida-deliverance-crusade-tickets-1996817130791?aff=oddtdtcreator"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-gold"
               >
                 Reserve a Spot
               </a>
-              <a href={`tel:${CRUSADE.rsvpNumbers[0].replace(/[^0-9+]/g, '')}`} className="btn-secondary">
+              <a href={`tel:${CRUSADE.rsvpNumbers[0].replace(/[^0-9+]/g, '')}`} className="btn-outline-white">
                 RSVP Now
               </a>
-              <Link href="/#crusade" className="btn-secondary">
+              <Link href="/#crusade" className="btn-outline-white">
                 Back to Overview
               </Link>
             </div>

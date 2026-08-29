@@ -103,8 +103,8 @@ export default function DeliverancePage() {
               There is nothing wrong with asking for help — that is wisdom, not weakness.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/services" className="btn-primary">View Service Times</Link>
-              <Link href="/prayer-line" className="btn-secondary">USA Prayer Line</Link>
+              <Link href="/services" className="btn-gold">View Service Times</Link>
+              <Link href="/prayer-line" className="btn-outline-white">USA Prayer Line</Link>
             </div>
           </div>
 

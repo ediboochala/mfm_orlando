@@ -181,7 +181,7 @@
 
 /* ── CTA ── */
 .cta {
-  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.06) 0%, rgba(var(--accent-rgb), 0.06) 100%);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark) 100%);
   border: 1px solid rgba(var(--accent-rgb), 0.18);
   padding: 56px 40px;
   text-align: center;
@@ -189,14 +189,14 @@
 .ctaTitle {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 26px;
-  color: var(--text);
+  color: var(--white);
   letter-spacing: 2px;
   margin-bottom: 16px;
 }
 .ctaText {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(var(--text-rgb), 0.55);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 540px;
   margin: 0 auto 32px;
 }

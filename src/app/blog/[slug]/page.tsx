@@ -232,8 +232,8 @@ export default async function BlogPostPage({ params }: Props) {
               Come and experience the God behind these words — in person, in prayer, in power.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/services" className="btn-primary">View Service Times</Link>
-              <Link href="/blog" className="btn-secondary">More Articles</Link>
+              <Link href="/services" className="btn-gold">View Service Times</Link>
+              <Link href="/blog" className="btn-outline-white">More Articles</Link>
             </div>
           </div>
 

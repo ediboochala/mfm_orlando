@@ -142,8 +142,8 @@ export default function ContactPage() {
               Join us for a service and experience the family of MFM Tampa Florida.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/services" className="btn-primary">View Service Times</Link>
-              <Link href="/#giving" className="btn-secondary">Give Online</Link>
+              <Link href="/services" className="btn-gold">View Service Times</Link>
+              <Link href="/#giving" className="btn-outline-white">Give Online</Link>
             </div>
           </div>
 

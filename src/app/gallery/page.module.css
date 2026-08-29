@@ -259,7 +259,7 @@
   margin-top: 12px;
 }
 .ctaInner {
-  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0.06) 100%);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark) 100%);
   border: 1px solid rgba(var(--accent-rgb), 0.15);
   padding: 48px 40px;
   text-align: center;
@@ -267,14 +267,14 @@
 .ctaTitle {
   font-family: var(--font-montserrat), sans-serif;
   font-size: 22px;
-  color: var(--text);
+  color: var(--white);
   letter-spacing: 2px;
   margin-bottom: 16px;
 }
 .ctaText {
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(var(--text-rgb), 0.5);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 520px;
   margin: 0 auto 32px;
 }

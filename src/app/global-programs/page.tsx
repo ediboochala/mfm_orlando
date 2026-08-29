@@ -95,8 +95,8 @@ export default function GlobalProgramsPage() {
               Join us in person or online as we press into God together.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/services" className="btn-primary">View Service Times</Link>
-              <Link href="/contact" className="btn-secondary">Contact Us</Link>
+              <Link href="/services" className="btn-gold">View Service Times</Link>
+              <Link href="/contact" className="btn-outline-white">Contact Us</Link>
             </div>
           </div>
 

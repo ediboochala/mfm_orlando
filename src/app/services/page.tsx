@@ -124,11 +124,11 @@ export default function ServicesPage() {
               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CHURCH.address)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-gold"
             >
               Get Directions
             </a>
-            <Link href="/#giving" className="btn-secondary">
+            <Link href="/#giving" className="btn-outline-white">
               Give Online
             </Link>
           </div>

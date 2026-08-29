@@ -168,13 +168,13 @@ export default function PastorPage() {
                   <div className={styles.ctaActions}>
                     <a
                       href="/services"
-                      className="btn-primary"
+                      className="btn-gold"
                     >
                       View Service Times
                     </a>
                     <a
                       href="/contact"
-                      className="btn-secondary"
+                      className="btn-outline-white"
                     >
                       Get in Touch
                     </a>
