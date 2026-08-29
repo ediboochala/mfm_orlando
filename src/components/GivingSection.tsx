@@ -68,9 +68,16 @@ export default function GivingSection() {
             <button
               type="button"
               onClick={() => setShowZelle(true)}
-              className="btn-gold"
+              className={`btn-gold ${styles.zelleBtn}`}
             >
-              Give with Zelle
+              Give with
+              <Image
+                src="/zelle-logo-white.png"
+                alt="Zelle"
+                width={800}
+                height={371}
+                className={styles.zelleBtnLogo}
+              />
             </button>
           </div>
 

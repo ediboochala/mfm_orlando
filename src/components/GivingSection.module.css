@@ -71,6 +71,24 @@
   box-shadow: 0 10px 40px rgba(255, 255, 255, 0.4) !important;
 }
 
+/* "Give with Zelle" — Zelle's own brand purple, with their wordmark
+   standing in for the word "Zelle" per their logo usage guidelines */
+.zelleBtn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  background: #6D1ED4 !important;
+  box-shadow: 0 4px 30px rgba(109, 30, 212, 0.45) !important;
+}
+.zelleBtn:hover {
+  box-shadow: 0 10px 40px rgba(109, 30, 212, 0.65) !important;
+}
+.zelleBtnLogo {
+  height: 15px;
+  width: auto;
+  display: block;
+}
+
 /* Embedded giving form — white card so the third-party widget reads
    cleanly against the section's purple background */
 .formCard {
