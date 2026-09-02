@@ -195,20 +195,29 @@ export default function CrusadePage() {
                 <span className={styles.sectionLabel}>On the Radio</span>
                 <h3 className={styles.jingleCardTitle}>Hear the Official Crusade Jingle</h3>
                 <p className={styles.jingleCardText}>
-                  Streaming now on {CRUSADE.jingle.platform} — tap play and get the sound of
-                  the crusade stuck in your spirit before the big day.
+                  Streaming now on {CRUSADE.jingle.stations.map((s) => s.platform).join(' and ')} —
+                  tap play and get the sound of the crusade stuck in your spirit before the big day.
                 </p>
-                <a
-                  href={CRUSADE.jingle.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  ♫ {CRUSADE.jingle.label}
-                </a>
+                <div className={styles.jingleStations}>
+                  {CRUSADE.jingle.stations.map((station) => (
+                    <a
+                      key={station.url}
+                      href={station.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      ♫ {station.label}
+                    </a>
+                  ))}
+                </div>
               </div>
-              <div className={styles.jingleCardLogo}>
-                <Image src={CRUSADE.jingle.logo} alt={CRUSADE.jingle.platform} width={140} height={72} style={{ objectFit: 'contain' }} />
+              <div className={styles.jingleCardLogos}>
+                {CRUSADE.jingle.stations.map((station) => (
+                  <div key={station.url} className={styles.jingleCardLogo}>
+                    <Image src={station.logo} alt={station.platform} width={140} height={72} style={{ objectFit: 'contain' }} />
+                  </div>
+                ))}
               </div>
             </div>
           </section>

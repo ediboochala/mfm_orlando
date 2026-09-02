@@ -265,6 +265,17 @@
   color: rgba(var(--text-rgb), 0.65);
   margin-bottom: 6px;
 }
+.jingleStations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.jingleCardLogos {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 12px;
+}
 .jingleCardLogo {
   flex-shrink: 0;
   padding: 16px 20px;
@@ -392,6 +403,7 @@
   .hotelsGrid   { grid-template-columns: repeat(2, 1fr); }
   .venueCard    { flex-direction: column; align-items: flex-start; }
   .jingleCard   { flex-direction: column; align-items: flex-start; }
+  .jingleCardLogos { flex-direction: row; flex-wrap: wrap; }
 }
 
 @media (max-width: 700px) {

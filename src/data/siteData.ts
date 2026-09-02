@@ -60,6 +60,10 @@ export const CRUSADE = {
     url: 'https://shorturl.at/7Ohcr',
     logo: '/mytuner_logo.png',
     platform: 'myTuner Radio',
+    stations: [
+      { label: 'Listen on myTuner Radio', url: 'https://shorturl.at/7Ohcr', logo: '/mytuner_logo.png', platform: 'myTuner Radio' },
+      { label: 'Listen on The JOY FM', url: 'https://www.thejoyfm.com/music/listen-live/', logo: '/Thejoyfm_Logo.png', platform: 'The JOY FM' },
+    ],
   },
 }
 
