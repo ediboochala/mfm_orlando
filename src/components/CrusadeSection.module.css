@@ -268,9 +268,18 @@
 }
 .jingleLogo {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 3px;
   padding-left: 12px;
   border-left: 1px solid rgba(var(--primary-rgb), 0.18);
+}
+.jingleStation {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: rgba(var(--primary-rgb), 0.75);
+  white-space: nowrap;
 }
 
 @media (max-width: 1024px) {

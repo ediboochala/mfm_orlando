@@ -130,6 +130,7 @@ export default function CrusadeSection() {
                   {CRUSADE.jingle.label}
                   <span className={styles.jingleLogo}>
                     <Image src={station.logo} alt={station.platform} width={72} height={37} style={{ objectFit: 'contain' }} />
+                    <span className={styles.jingleStation}>{station.name}</span>
                   </span>
                 </a>
               ))}

@@ -61,8 +61,8 @@ export const CRUSADE = {
     logo: '/mytuner_logo.png',
     platform: 'myTuner Radio',
     stations: [
-      { label: 'Listen on myTuner Radio', url: 'https://shorturl.at/7Ohcr', logo: '/mytuner_logo.png', platform: 'myTuner Radio' },
-      { label: 'Listen on The JOY FM', url: 'https://www.thejoyfm.com/music/listen-live/', logo: '/Thejoyfm_Logo.png', platform: 'The JOY FM' },
+      { label: 'Listen on myTuner Radio', url: 'https://shorturl.at/7Ohcr', logo: '/mytuner_logo.png', platform: 'myTuner Radio', name: 'Tampa247gospel' },
+      { label: 'Listen on The JOY FM', url: 'https://www.thejoyfm.com/music/listen-live/', logo: '/Thejoyfm_Logo.png', platform: 'The JOY FM', name: 'The JOY FM' },
     ],
   },
 }
