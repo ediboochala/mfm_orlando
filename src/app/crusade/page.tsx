@@ -195,20 +195,33 @@ export default function CrusadePage() {
                 <span className={styles.sectionLabel}>On the Radio</span>
                 <h3 className={styles.jingleCardTitle}>Hear the Official Crusade Jingle</h3>
                 <p className={styles.jingleCardText}>
-                  Streaming now on {CRUSADE.jingle.platform} — tap play and get the sound of
-                  the crusade stuck in your spirit before the big day.
+                  Streaming now on {CRUSADE.jingle.stations.map((s) => s.platform).join(' and ')} —
+                  tap play and get the sound of the crusade stuck in your spirit before the big day.
                 </p>
-                <a
-                  href={CRUSADE.jingle.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  ♫ {CRUSADE.jingle.label}
-                </a>
               </div>
-              <div className={styles.jingleCardLogo}>
-                <Image src={CRUSADE.jingle.logo} alt={CRUSADE.jingle.platform} width={140} height={72} style={{ objectFit: 'contain' }} />
+              <div className={styles.jingleBtns}>
+                {CRUSADE.jingle.stations.map((station) => (
+                  <a
+                    key={station.url}
+                    href={station.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.jingleBtn}
+                  >
+                    <span className={styles.jingleIcon} aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18V5l12-2v13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="6" cy="18" r="3" stroke="currentColor" strokeWidth="1.6" />
+                        <circle cx="18" cy="16" r="3" stroke="currentColor" strokeWidth="1.6" />
+                      </svg>
+                    </span>
+                    {CRUSADE.jingle.label}
+                    <span className={styles.jingleLogo}>
+                      <Image src={station.logo} alt={station.platform} width={72} height={37} style={{ objectFit: 'contain' }} />
+                      <span className={styles.jingleStation}>{station.name}</span>
+                    </span>
+                  </a>
+                ))}
               </div>
             </div>
           </section>
