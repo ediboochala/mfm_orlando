@@ -16,6 +16,8 @@ const nextConfig = {
         destination: 'https://www.mfmtampaflorida.org/:path*',
         permanent: true,
       },
+      // The crusade page has been retired; send old links to the homepage.
+      { source: '/crusade', destination: '/', permanent: false },
     ]
   },
   images: {

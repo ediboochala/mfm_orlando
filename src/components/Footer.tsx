@@ -163,7 +163,6 @@ export default function Footer() {
             <nav>
               <a href="#giving" className={styles.link} onClick={handleGivingClick}>Give Online</a>
               <Link href="/bookshop" className={styles.link}>Bookshop</Link>
-              <Link href="/crusade" className={styles.link}>The Crusade</Link>
               <Link href="/gallery" className={styles.link}>Photo Gallery</Link>
             </nav>
 
