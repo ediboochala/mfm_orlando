@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { CHURCH } from '@/data/siteData'
+import { CHURCH, WEB3FORMS_KEY } from '@/data/siteData'
 import styles from './page.module.css'
 
 type FormState = { name: string; email: string; subject: string; message: string }
@@ -19,7 +19,7 @@ export default function ContactForm() {
 
     try {
       const formData = new FormData(e.currentTarget)
-      formData.append('access_key', 'd0cc811c-aab9-4069-8692-049790e60eea')
+      formData.append('access_key', WEB3FORMS_KEY)
       formData.append('from_name', 'MFM Tampa Florida Website')
       formData.append(
         'subject',

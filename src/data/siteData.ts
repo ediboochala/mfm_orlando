@@ -48,6 +48,10 @@ export const GENERAL_OVERSEER = {
   quote: 'Holiness within and without is the greatest spiritual insecticide and a condition for Heaven.',
 }
 
+// ── Web3Forms access key — every website form (Contact, Deliverance) emails
+//    its submissions to the inbox this key was registered with.
+export const WEB3FORMS_KEY = 'f42eff97-7491-4e37-b37b-6c43e0797da4'
+
 // ── Declaration over MFM by the General Overseer (homepage band) ────────
 export const DECLARATION = [
   { lead: 'A sanctuary of', word: 'Peace' },

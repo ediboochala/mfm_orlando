@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { DELIVERANCE, PASTOR } from '@/data/siteData'
+import { DELIVERANCE, PASTOR, WEB3FORMS_KEY } from '@/data/siteData'
 import styles from './DeliveranceForm.module.css'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
@@ -52,10 +52,8 @@ export default function DeliveranceForm() {
     sheet.append(DELIVERANCE.formFields.email, fields.email.trim())
     sheet.append(DELIVERANCE.formFields.reason, reason)
 
-    // Same Web3Forms key as the Contact page, so requests arrive in the
-    // church inbox that already receives contact messages.
     const email = {
-      access_key: 'd0cc811c-aab9-4069-8692-049790e60eea',
+      access_key: WEB3FORMS_KEY,
       from_name: 'MFM Tampa Florida Website',
       subject: `New Deliverance Request — ${fields.name.trim()}`,
       replyto: fields.email.trim(),
