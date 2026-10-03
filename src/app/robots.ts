@@ -8,9 +8,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // Gallery currently redirects to "/" — keep crawlers from wasting
-      // budget on it while it's disabled.
-      disallow: '/gallery',
     },
     sitemap: `${base}/sitemap.xml`,
     host: base,

@@ -473,7 +473,13 @@ export const NAV_GROUPS: NavEntry[] = [
     ],
   },
   { label: 'Blog', href: '/blog' },
-  { label: 'Media', href: '/media' },
+  {
+    label: 'Media',
+    children: [
+      { label: 'Media and Live', href: '/media' },
+      { label: 'Photo Gallery',  href: '/gallery' },
+    ],
+  },
   {
     label: 'Connect',
     children: [
@@ -744,15 +750,63 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 ]
 
-export const GALLERY_CATEGORIES = ['All', 'Worship', 'Deliverance', 'Youth', 'Outreach', 'Special Events']
+// ── Event Gallery ────────────────────────────────────────────────────────
+// Each event is an album on /gallery. Drop photos in /public/gallery/<slug>/
+// and list them in `photos` — the page handles layout, captions and the
+// lightbox. An event with no photos shows "coming soon" tiles instead.
+export interface GalleryPhoto {
+  src: string
+  caption?: string
+}
 
-export const GALLERY_ITEMS = [
-  { id: 18, title: 'Fellowship with Pastor Kehinde Olajide', category: 'Worship',  description: 'A joyful moment of fellowship at MFM Tampa Florida.',                     image: null },
-  { id: 13, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Sisters fellowshipping together after a powerful service.',              image: null },
-  { id: 14, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members greeting one another with joy after service.',                   image: null },
-  { id: 15, title: 'Sunday Fellowship',              category: 'Worship',        description: 'A member dressed in celebration for a special Sunday service.',          image: null },
-  { id: 16, title: 'Sunday Fellowship',              category: 'Worship',        description: 'Members of the MFM Tampa Florida family fellowshipping together.',       image: null },
-  { id: 17, title: 'Sunday Fellowship',              category: 'Special Events', description: 'Fellowshipping beneath a portrait of Dr. D.K. Olukoya and Pst (Mrs) Shade Olukoya.', image: null },
+export interface GalleryEvent {
+  slug: string
+  label: string
+  title: string
+  tagline: string
+  date: string
+  venue: string
+  summary: string[]
+  facts: { label: string; value: string }[]
+  photos: GalleryPhoto[]
+}
+
+export const GALLERY_EVENTS: GalleryEvent[] = [
+  {
+    slug: 'crusade',
+    label: 'The Crusade',
+    title: 'The Great Florida Deliverance Crusade',
+    tagline: 'Expect. Receive. Testify.',
+    date: 'Sunday, September 20, 2026',
+    venue: 'Yuengling Center — USF, Tampa, FL',
+    summary: [
+      'Believers from across Tampa and beyond filled the Yuengling Center for an evening of aggressive worship, fervent prayer, and the ministration of the Word by Dr Daniel Olukoya, General Overseer of Mountain of Fire and Miracles Ministries Worldwide.',
+      'Chains were broken, bodies were touched, and destinies were restored. These are the moments we captured of a night Florida will not forget.',
+    ],
+    facts: [
+      { label: 'Minister', value: 'Dr Daniel Olukoya' },
+      { label: 'Hosts',    value: 'Pst Kehinde Olajide · Pst Olumide Oni' },
+      { label: 'Hashtag',  value: '#FloridaDeliveranceCrusade' },
+    ],
+    photos: [],
+  },
+  {
+    slug: 'church-dedication',
+    label: 'Church Dedication',
+    title: 'Church Dedication Service',
+    tagline: 'A House Set Apart for His Glory',
+    date: 'Date to be announced',
+    venue: 'MFM Tampa Florida',
+    summary: [
+      'With thanksgiving and prayer, the MFM Tampa Florida family gathered to dedicate our house of worship to the Lord — a place set apart for prayer, deliverance, and the preaching of His Word.',
+      '"Except the LORD build the house, they labour in vain that build it." (Psalm 127:1). Relive the worship, the prayers, and the joy of that special day.',
+    ],
+    facts: [
+      { label: 'Hosted by', value: 'Pastor Kehinde Olajide' },
+      { label: 'Scripture', value: 'Psalm 127:1' },
+    ],
+    photos: [],
+  },
 ]
 
 export const MINISTRY_PROJECTS = [

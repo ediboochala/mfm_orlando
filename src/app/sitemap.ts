@@ -1,8 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { CHURCH, BLOG_POSTS } from '@/data/siteData'
 
-// Gallery is intentionally excluded — it currently 302-redirects to "/"
-// (see src/app/gallery/layout.tsx) and shouldn't be offered to crawlers.
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
   { path: '',                 priority: 1.0, changeFrequency: 'weekly'  },
   { path: '/about',           priority: 0.8, changeFrequency: 'monthly' },
@@ -13,6 +11,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: '/global-programs', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/blog',            priority: 0.7, changeFrequency: 'weekly'  },
   { path: '/media',           priority: 0.6, changeFrequency: 'weekly'  },
+  { path: '/gallery',         priority: 0.6, changeFrequency: 'monthly' },
   { path: '/prayer-line',     priority: 0.7, changeFrequency: 'monthly' },
   { path: '/bookshop',        priority: 0.5, changeFrequency: 'monthly' },
   { path: '/contact',         priority: 0.6, changeFrequency: 'yearly'  },
