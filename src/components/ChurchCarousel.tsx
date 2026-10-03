@@ -12,19 +12,19 @@ const CARDS = [
     desc: 'United in faith, prayer, and the love of Christ — the MFM Tampa Florida family welcomes every soul seeking God\'s presence.',
   },
   {
-    image: '/4 worship.jpg',
+    image: '/about-spirit-filled-worship.jpg',
     tag: 'Sunday Service',
     title: 'Spirit-Filled Worship',
     desc: 'Every Sunday is a divine encounter. We gather to worship, receive the Word, and experience the transforming power of God.',
   },
   {
-    image: '/4 agressive prayers.jpg',
+    image: '/about-aggressive-prayer.jpg',
     tag: 'Prayer and Deliverance',
     title: 'Aggressive Prayer',
     desc: 'We believe in fervent, targeted prayer that breaks every yoke. Deliverance and healing are available to all who call upon His name.',
   },
   {
-    image: '/4 one body many members.jpg',
+    image: '/about-one-body-many-members.jpg',
     tag: 'Church Community',
     title: 'One Body, Many Members',
     desc: 'From children to elders, from new converts to seasoned warriors — MFM Tampa Florida is a church where everyone belongs.',
