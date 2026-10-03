@@ -46,25 +46,51 @@ export default function DeliveranceForm() {
       .filter(Boolean)
       .join('\n\n')
 
-    const body = new FormData()
-    body.append(DELIVERANCE.formFields.name, fields.name.trim())
-    body.append(DELIVERANCE.formFields.mobile, fields.mobile.trim())
-    body.append(DELIVERANCE.formFields.email, fields.email.trim())
-    body.append(DELIVERANCE.formFields.reason, reason)
+    const sheet = new FormData()
+    sheet.append(DELIVERANCE.formFields.name, fields.name.trim())
+    sheet.append(DELIVERANCE.formFields.mobile, fields.mobile.trim())
+    sheet.append(DELIVERANCE.formFields.email, fields.email.trim())
+    sheet.append(DELIVERANCE.formFields.reason, reason)
 
-    try {
+    // Same Web3Forms key as the Contact page, so requests arrive in the
+    // church inbox that already receives contact messages.
+    const email = {
+      access_key: 'd0cc811c-aab9-4069-8692-049790e60eea',
+      from_name: 'MFM Tampa Florida Website',
+      subject: `New Deliverance Request — ${fields.name.trim()}`,
+      replyto: fields.email.trim(),
+      Name: fields.name.trim(),
+      Mobile: fields.mobile.trim(),
+      Email: fields.email.trim(),
+      Areas: areas.length ? areas.join(', ') : '—',
+      Details: fields.reason.trim() || '—',
+    }
+
+    const [toSheet, toEmail] = await Promise.allSettled([
       // Google Forms doesn't send CORS headers, so the response is opaque —
       // a resolved request means it was delivered.
-      await fetch(DELIVERANCE.formUrl.replace(/\/viewform.*$/, '/formResponse'), {
+      fetch(DELIVERANCE.formUrl.replace(/\/viewform.*$/, '/formResponse'), {
         method: 'POST',
         mode: 'no-cors',
-        body,
-      })
+        body: sheet,
+      }),
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(email),
+      }).then(async (res) => {
+        const data = await res.json()
+        if (!data.success) throw new Error(data.message)
+      }),
+    ])
+
+    // Either channel reaching the church is enough to reassure the visitor.
+    if (toSheet.status === 'fulfilled' || toEmail.status === 'fulfilled') {
       setStatus('sent')
       setFields(EMPTY)
       setAreas([])
       setTouched(false)
-    } catch {
+    } else {
       setStatus('error')
     }
   }
