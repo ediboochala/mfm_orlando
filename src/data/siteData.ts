@@ -929,6 +929,26 @@ export const GALLERY_EVENTS: GalleryEvent[] = [
   },
 ]
 
+// ── Event replays — full services embedded on the homepage ──
+export const EVENT_REPLAYS = [
+  {
+    videoId: 'GMse2IaNGN4',
+    badge: 'Crusade Replay',
+    title: 'The Great Florida Deliverance Crusade',
+    date: 'September 20, 2026 · Yuengling Center, USF',
+    desc: 'Relive the full crusade with Dr Daniel Olukoya: worship, prayer, healing, and deliverance.',
+    gallerySlug: 'crusade',
+  },
+  {
+    videoId: 'hErvfwfnF8w',
+    badge: 'Church Dedication',
+    title: 'Dedication Ceremony of MFM Florida, USA',
+    date: 'Ministered by Dr Daniel Olukoya',
+    desc: 'Watch the dedication of our house of worship to the Lord, set apart for His glory.',
+    gallerySlug: 'church-dedication',
+  },
+]
+
 export const MINISTRY_PROJECTS = [
   // Men of Valor
   { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/new Logo mfm.png' },

@@ -10,6 +10,7 @@ const ParticlesCanvas = dynamic(() => import('@/components/ParticlesCanvas'), { 
 // Regular components
 import HeroSection      from '@/components/HeroSection'
 import FeaturedProgramSection from '@/components/FeaturedProgramSection'
+import EventReplaysSection from '@/components/EventReplaysSection'
 import SlideshowSection from '@/components/SlideshowSection'
 import Marquee          from '@/components/Marquee'
 import WelcomeSection   from '@/components/WelcomeSection'
@@ -31,6 +32,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeaturedProgramSection />
+        <EventReplaysSection />
         <SlideshowSection />
         <Marquee />
         <WelcomeSection />
