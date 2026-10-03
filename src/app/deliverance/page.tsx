@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CHURCH, PASTOR, DELIVERANCE } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
@@ -53,6 +54,27 @@ export default function DeliverancePage() {
       {/* ── Main Content ── */}
       <main className={styles.main}>
         <div className={styles.mainInner}>
+
+          {/* ── Feature photo ── */}
+          <figure className={styles.feature}>
+            <div className={styles.featureFrame}>
+              <Image
+                src="/deliverance-ministration.jpg"
+                alt="A minister in prayer at the pulpit during the Great Florida Deliverance Crusade"
+                fill
+                sizes="(max-width: 900px) 100vw, 900px"
+                style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+                priority
+              />
+              <div className={styles.featureShade} />
+              <figcaption className={styles.featureCaption}>
+                <span className={styles.featureLabel}>Great Florida Deliverance Crusade</span>
+                <span className={styles.featureText}>
+                  &ldquo;Is any thing too hard for the LORD?&rdquo; <em>— Genesis 18:14</em>
+                </span>
+              </figcaption>
+            </div>
+          </figure>
 
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
