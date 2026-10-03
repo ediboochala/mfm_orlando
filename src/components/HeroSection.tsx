@@ -8,12 +8,12 @@ export default function HeroSection() {
     <section id="hero" className={styles.hero}>
       <div className={styles.heroPhoto}>
         <Image
-          src="/pexels-caleboquendo-34612562.jpg"
+          src="/church-building-hero.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover', objectPosition: 'center 45%' }}
           aria-hidden
         />
       </div>
@@ -28,7 +28,7 @@ export default function HeroSection() {
             alt="Mountain of Fire and Miracles Ministries"
             width={110}
             height={110}
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 45%' }}
             priority
           />
         </div>
