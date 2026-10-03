@@ -21,7 +21,7 @@ export default function EventReplaysSection() {
           <div className={styles.divider} />
           <p className={styles.sub}>
             Missed it, or want to experience it again? Watch the full Great Florida Deliverance Crusade
-            and the Dedication Ceremony of MFM Florida right here.
+            and the Dedication Ceremony of MFM Tampa right here.
           </p>
         </div>
 

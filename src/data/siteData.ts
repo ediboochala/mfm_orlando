@@ -942,7 +942,7 @@ export const EVENT_REPLAYS = [
   {
     videoId: 'hErvfwfnF8w',
     badge: 'Church Dedication',
-    title: 'Dedication Ceremony of MFM Florida, USA',
+    title: 'Dedication Ceremony of MFM Tampa',
     date: 'September 19, 2026 · Dr Daniel Olukoya',
     desc: 'Watch the dedication of our house of worship to the Lord, set apart for His glory.',
     gallerySlug: 'church-dedication',
