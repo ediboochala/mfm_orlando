@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { CHURCH, PASTOR, DELIVERANCE } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
+import DeliveranceForm from './DeliveranceForm'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -13,13 +14,6 @@ export const metadata: Metadata = {
 }
 
 export default function DeliverancePage() {
-  // Google Forms "viewform" links embed cleanly with `embedded=true` appended.
-  const embedUrl = DELIVERANCE.formUrl
-    ? DELIVERANCE.formUrl.includes('embedded=true')
-      ? DELIVERANCE.formUrl
-      : `${DELIVERANCE.formUrl}${DELIVERANCE.formUrl.includes('?') ? '&' : '?'}embedded=true`
-    : ''
-
   return (
     <div className={styles.page}>
       <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Deliverance', path: '/deliverance' }]} />
@@ -87,16 +81,8 @@ export default function DeliverancePage() {
               <p className={styles.sectionDesc}>{DELIVERANCE.intro}</p>
             </div>
 
-            {embedUrl ? (
-              <div className={styles.formWrap}>
-                <iframe
-                  src={embedUrl}
-                  className={styles.formFrame}
-                  title="Deliverance Signup Form"
-                >
-                  Loading form…
-                </iframe>
-              </div>
+            {DELIVERANCE.formUrl ? (
+              <DeliveranceForm />
             ) : (
               <div className={styles.placeholder}>
                 <span className={styles.placeholderIcon}>🕊️</span>

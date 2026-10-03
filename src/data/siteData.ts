@@ -377,6 +377,16 @@ export const SISTER_MINISTRIES = [
 export const DELIVERANCE = {
   intro: 'If you are carrying a burden that will not lift — sickness, bondage, an oppression you cannot name — you do not have to carry it alone. Fill out the form below and one of our ministers will follow up with you.',
   formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfQl0kOXv0nh7wfdIsaAwPVh7zUBAI-57fYrYSN-1TrsODKHQ/viewform',
+  // The on-page form posts straight into the Google Form above, so responses
+  // still land in its linked sheet. IDs come from the form's own field data —
+  // if a question is added or rebuilt in Google Forms, update these.
+  formFields: {
+    name:   'entry.160446061',
+    mobile: 'entry.86043608',
+    email:  'entry.2113979486',
+    reason: 'entry.1020246183',
+  },
+  areas: ['Sickness and Health', 'Marriage and Family', 'Finances and Career', 'Spiritual Attack', 'Dreams', 'Addiction', 'Fear and Anxiety', 'Something Else'],
 }
 
 // ── Global Programs — Annual 70 Days Prayer and Fasting ─────────────────────
