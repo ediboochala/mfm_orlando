@@ -12,7 +12,7 @@ const CARDS = [
     desc: 'United in faith, prayer, and the love of Christ — the MFM Tampa Florida family welcomes every soul seeking God\'s presence.',
   },
   {
-    image: '/about-spirit-filled-worship.jpg',
+    image: '/about-spirit-filled-worship-praise.jpg',
     tag: 'Sunday Service',
     title: 'Spirit-Filled Worship',
     desc: 'Every Sunday is a divine encounter. We gather to worship, receive the Word, and experience the transforming power of God.',
