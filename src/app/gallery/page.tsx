@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CHURCH, GALLERY_EVENTS, type GalleryEvent, type GalleryPhoto } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
+import SocialFollowRow from '@/components/SocialFollowRow'
 import styles from './page.module.css'
 
 type Slide = GalleryPhoto & { event: GalleryEvent }
@@ -351,6 +352,9 @@ export default function GalleryPage() {
               Send us your captured moments of God&apos;s work in our community.
             </p>
             <Link href="/contact" className="btn-gold">Share Your Photos</Link>
+            <div className={styles.ctaFollow}>
+              <SocialFollowRow label="See more on our socials" />
+            </div>
           </div>
         </div>
       </main>

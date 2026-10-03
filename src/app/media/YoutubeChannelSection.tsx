@@ -25,7 +25,7 @@ export default function YoutubeChannelSection() {
             rel="noopener noreferrer"
             className={`${styles.channelCard} ${ch.featured ? styles.channelFeatured : ''}`}
           >
-            {ch.featured && <span className={styles.featuredBadge}>Official HQ</span>}
+            {ch.featured && <span className={styles.featuredBadge}>{ch.badge}</span>}
             <div className={styles.channelIcon}>{YT_ICON}</div>
             <div className={styles.channelInfo}>
               <h3 className={styles.channelName}>{ch.name}</h3>

@@ -59,6 +59,18 @@ export default function Footer() {
                 Follow on Facebook
               </a>
             )}
+            {FOOTER_SOCIALS.filter((s) => s.platform !== 'facebook').map((s) => (
+              <a
+                key={s.href}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.connectIconBtn}
+                aria-label={`Follow MFM Tampa Florida on ${s.platform === 'youtube' ? 'YouTube' : 'Instagram'}`}
+              >
+                <SocialIcon platform={s.platform} size={16} />
+              </a>
+            ))}
             <Link href="/media" className={styles.connectBtnGhost}>
               Watch Live
               <span aria-hidden="true">→</span>

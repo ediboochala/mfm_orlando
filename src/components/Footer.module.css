@@ -59,6 +59,25 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+.connectIconBtn {
+  --icon-bg: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
+  transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+.connectIconBtn:hover {
+  background: #FFFFFF;
+  color: var(--primary);
+  --icon-bg: #FFFFFF;
+  transform: translateY(-2px);
+}
+
 .connectBtnGhost {
   display: inline-flex;
   align-items: center;

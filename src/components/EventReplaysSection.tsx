@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { EVENT_REPLAYS } from '@/data/siteData'
+import SocialFollowRow from './SocialFollowRow'
 import styles from './EventReplaysSection.module.css'
 
 export default function EventReplaysSection() {
@@ -96,6 +97,10 @@ export default function EventReplaysSection() {
               </article>
             )
           })}
+        </div>
+
+        <div className={`${styles.follow} reveal`}>
+          <SocialFollowRow label="Never miss a service, follow MFM Tampa" />
         </div>
       </div>
     </section>

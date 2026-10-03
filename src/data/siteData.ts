@@ -350,7 +350,7 @@ export const PRAYER_LINE = {
 }
 
 export const SOCIAL_LINKS = [
-  { label: 'YouTube (MFM Tampa)', href: 'https://www.youtube.com/channel/UCktRiusABonf9JPSlLgFoWA', platform: 'youtube'   as const },
+  { label: 'YouTube (MFM Tampa)', href: 'https://www.youtube.com/@mfm-tampaflorida4355',            platform: 'youtube'   as const },
   { label: 'Facebook',            href: 'https://www.facebook.com/mfmtampaflorida/',                platform: 'facebook'  as const },
   { label: 'Instagram',           href: 'https://www.instagram.com/mfmtampaflorida/',                platform: 'instagram' as const },
   { label: 'YouTube (MFM HQ)',    href: 'https://www.youtube.com/@MFMMinistries',                    platform: 'youtube'   as const },
@@ -998,10 +998,22 @@ export const FEATURED_VIDEOS = [
 
 export const YOUTUBE_CHANNELS = [
   {
+    name: 'MFM Tampa Florida',
+    handle: '@mfm-tampaflorida4355',
+    url: 'https://www.youtube.com/@mfm-tampaflorida4355',
+    description: 'Our own channel: Sunday services, crusade replays, and special programs from MFM Tampa Florida.',
+    badge: 'Our Channel',
+    featured: true,
+    videos: [
+      { videoId: 'GMse2IaNGN4', title: 'The Great Florida Deliverance Crusade' },
+    ],
+  },
+  {
     name: 'MFM Ministries (HQ)',
     handle: '@MFMMinistries',
     url: 'https://www.youtube.com/@MFMMinistries',
     description: 'Official channel of Mountain of Fire and Miracles Ministries. Live services, prayer programs, and messages from Dr. D.K. Olukoya.',
+    badge: 'Official HQ',
     featured: true,
     videos: [
       { videoId: 'i93Z5IpwE44', title: 'MFM Manna Water — Dr D.K. Olukoya' },

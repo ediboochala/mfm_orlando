@@ -527,6 +527,11 @@
   to { transform: rotate(360deg); }
 }
 .ctaInner > * { position: relative; }
+.ctaFollow {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
 .ctaTitle {
   font-family: var(--font-playfair), serif;
   font-size: 28px;
