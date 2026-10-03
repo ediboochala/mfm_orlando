@@ -10,6 +10,8 @@ import styles from './page.module.css'
 type Slide = GalleryPhoto & { event: GalleryEvent }
 
 const PLACEHOLDER_TILES = 6
+// Photos shown per album before "Show more" — keeps big albums calm
+const PAGE_SIZE = 12
 
 export default function GalleryPage() {
   const [active, setActive] = useState<string>('all')
@@ -17,6 +19,21 @@ export default function GalleryPage() {
   const gridRef = useRef<HTMLDivElement>(null)
   const tabsRef = useRef<HTMLDivElement>(null)
   const [indicator, setIndicator] = useState({ left: 0, width: 0 })
+  // Per-album moment filter and how many photos are revealed so far
+  const [moments, setMoments] = useState<Record<string, string>>({})
+  const [visible, setVisible] = useState<Record<string, number>>({})
+
+  const photosFor = useCallback(
+    (event: GalleryEvent) => {
+      const m = moments[event.slug]
+      return m ? event.photos.filter((p) => p.moment === m) : event.photos
+    },
+    [moments]
+  )
+  const pickMoment = (slug: string, moment: string) => {
+    setMoments((prev) => ({ ...prev, [slug]: moment }))
+    setVisible((prev) => ({ ...prev, [slug]: PAGE_SIZE }))
+  }
 
   const events = useMemo(
     () => (active === 'all' ? GALLERY_EVENTS : GALLERY_EVENTS.filter((e) => e.slug === active)),
@@ -25,8 +42,8 @@ export default function GalleryPage() {
 
   // Flat list of every visible photo — the lightbox walks through this in order
   const slides: Slide[] = useMemo(
-    () => events.flatMap((event) => event.photos.map((p) => ({ ...p, event }))),
-    [events]
+    () => events.flatMap((event) => photosFor(event).map((p) => ({ ...p, event }))),
+    [events, photosFor]
   )
 
   const totalPhotos = GALLERY_EVENTS.reduce((n, e) => n + e.photos.length, 0)
@@ -64,7 +81,7 @@ export default function GalleryPage() {
     )
     items.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
-  }, [active])
+  }, [active, moments, visible])
 
   const open = (src: string) => {
     const index = slides.findIndex((s) => s.src === src)
@@ -231,15 +248,42 @@ export default function GalleryPage() {
             </aside>
 
             {/* Photo wall */}
-            <div className={styles.wall}>
+            {(() => {
+              const filtered = photosFor(event)
+              const limit = visible[event.slug] ?? PAGE_SIZE
+              const shownPhotos = filtered.slice(0, limit)
+              const remaining = filtered.length - shownPhotos.length
+              const currentMoment = moments[event.slug] ?? ''
+              return (
+            <div className={styles.wallCol}>
+              {event.moments && event.photos.length > 0 && (
+                <div className={styles.chips} role="group" aria-label={`Filter ${event.label} photos`}>
+                  {['', ...event.moments].map((m) => {
+                    const count = m ? event.photos.filter((p) => p.moment === m).length : event.photos.length
+                    return (
+                      <button
+                        key={m || 'all'}
+                        type="button"
+                        className={`${styles.chip} ${currentMoment === m ? styles.chipActive : ''}`}
+                        aria-pressed={currentMoment === m}
+                        onClick={() => pickMoment(event.slug, m)}
+                      >
+                        {m || 'Highlights'}
+                        <span className={styles.chipCount}>{count}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+              )}
+            <div className={styles.wall} key={currentMoment}>
               {event.photos.length > 0
-                ? event.photos.map((photo, i) => (
+                ? shownPhotos.map((photo, i) => (
                     <button
                       key={photo.src}
                       type="button"
                       data-reveal
                       className={styles.tile}
-                      style={{ '--d': `${(i % 6) * 70}ms` } as React.CSSProperties}
+                      style={{ '--d': `${(i % PAGE_SIZE) * 60}ms` } as React.CSSProperties}
                       onClick={() => open(photo.src)}
                       aria-label={`View photo: ${photo.caption ?? event.title}`}
                     >
@@ -278,6 +322,21 @@ export default function GalleryPage() {
                     </div>
                   ))}
             </div>
+              {remaining > 0 && (
+                <div className={styles.moreWrap}>
+                  <button
+                    type="button"
+                    className={styles.moreBtn}
+                    onClick={() => setVisible((prev) => ({ ...prev, [event.slug]: limit + PAGE_SIZE }))}
+                  >
+                    Show {Math.min(remaining, PAGE_SIZE)} more photos
+                    <span className={styles.moreMeta}>{shownPhotos.length} of {filtered.length}</span>
+                  </button>
+                </div>
+              )}
+            </div>
+              )
+            })()}
 
             {eventIdx < events.length - 1 && <div className={styles.albumDivider} aria-hidden="true" />}
           </section>

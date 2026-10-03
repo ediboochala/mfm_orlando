@@ -757,6 +757,8 @@ export const BLOG_POSTS: BlogPost[] = [
 export interface GalleryPhoto {
   src: string
   caption?: string
+  /** Optional chapter of the event (e.g. "Worship") — albums with moments get filter chips */
+  moment?: string
 }
 
 export interface GalleryEvent {
@@ -768,6 +770,8 @@ export interface GalleryEvent {
   venue: string
   summary: string[]
   facts: { label: string; value: string }[]
+  /** Order of the filter chips; only used when photos carry a `moment` */
+  moments?: string[]
   photos: GalleryPhoto[]
 }
 
@@ -788,7 +792,55 @@ export const GALLERY_EVENTS: GalleryEvent[] = [
       { label: 'Hosts',    value: 'Pst Kehinde Olajide · Pst Olumide Oni' },
       { label: 'Hashtag',  value: '#FloridaDeliveranceCrusade' },
     ],
-    photos: [],
+    moments: ['Worship', 'The Word', 'Prayer', 'Testimonies', 'Fellowship'],
+    photos: [
+      { src: '/gallery/crusade/welcome-sign.jpg', moment: 'Fellowship', caption: 'A warm welcome at the doors of the Yuengling Center' },
+      { src: '/gallery/crusade/dr-olukoya-preaching.jpg', moment: 'The Word', caption: 'Dr Daniel Olukoya ministers the Word' },
+      { src: '/gallery/crusade/hands-stretched.jpg', moment: 'Prayer', caption: 'Hands stretched out in faith across the arena' },
+      { src: '/gallery/crusade/banner-dance.jpg', moment: 'Worship', caption: 'Dancing before the Lord with the golden banner' },
+      { src: '/gallery/crusade/choir-sings.jpg', moment: 'Worship', caption: 'The choir lifts its voice in praise' },
+      { src: '/gallery/crusade/altar-prayer.jpg', moment: 'Prayer', caption: 'Believers on their knees at the altar' },
+      { src: '/gallery/crusade/victory-dance.jpg', moment: 'Testimonies', caption: 'A victory dance after a testimony of deliverance' },
+      { src: '/gallery/crusade/pastors-in-worship.jpg', moment: 'Worship', caption: 'Pastors leading the congregation in praise' },
+      { src: '/gallery/crusade/praying-hands-bw.jpg', moment: 'Prayer', caption: 'Lost in prayer' },
+      { src: '/gallery/crusade/joyful-praise.jpg', moment: 'Worship', caption: 'Joy unspeakable' },
+      { src: '/gallery/crusade/pastors-gather.jpg', moment: 'Fellowship', caption: 'Pastors from across the region, gathered as one' },
+      { src: '/gallery/crusade/tears-of-release-bw.jpg', moment: 'Prayer', caption: 'Tears of release' },
+      { src: '/gallery/crusade/arms-lifted.jpg', moment: 'Worship', caption: 'Arms lifted high in thanksgiving' },
+      { src: '/gallery/crusade/worship-leader.jpg', moment: 'Worship', caption: 'Leading the house into worship' },
+      { src: '/gallery/crusade/banner-dance-stage.jpg', moment: 'Worship', caption: 'Praise in motion before the stage' },
+      { src: '/gallery/crusade/choir-procession.jpg', moment: 'Worship', caption: 'The choir moves down to the floor in celebration' },
+      { src: '/gallery/crusade/choir-bw.jpg', moment: 'Worship', caption: 'Choir ministration' },
+      { src: '/gallery/crusade/band.jpg', moment: 'Worship', caption: 'The band carrying the sound of worship' },
+      { src: '/gallery/crusade/ministering-in-song.jpg', moment: 'Worship', caption: 'Ministering in song from the pulpit' },
+      { src: '/gallery/crusade/worship-leader-wide.jpg', moment: 'Worship', caption: 'A voice raised to heaven' },
+      { src: '/gallery/crusade/clapping-in-praise.jpg', moment: 'Worship', caption: 'Clapping in praise' },
+      { src: '/gallery/crusade/eyes-closed-worship.jpg', moment: 'Worship', caption: 'Eyes closed, heart open' },
+      { src: '/gallery/crusade/standing-in-praise.jpg', moment: 'Worship', caption: 'On their feet in praise' },
+      { src: '/gallery/crusade/elder-praise.jpg', moment: 'Worship', caption: 'Praise from a grateful heart' },
+      { src: '/gallery/crusade/hands-raised.jpg', moment: 'Worship', caption: 'Hands raised in surrender' },
+      { src: '/gallery/crusade/hand-lifted.jpg', moment: 'Worship', caption: 'A hand lifted in the crowd' },
+      { src: '/gallery/crusade/raised-hand.jpg', moment: 'Worship', caption: 'Reaching toward heaven' },
+      { src: '/gallery/crusade/the-word.jpg', moment: 'The Word', caption: 'The congregation stands for the Word' },
+      { src: '/gallery/crusade/call-to-the-altar.jpg', moment: 'The Word', caption: 'A call that stirred the whole arena' },
+      { src: '/gallery/crusade/listening.jpg', moment: 'The Word', caption: 'Hearts attentive to the message' },
+      { src: '/gallery/crusade/reflection.jpg', moment: 'The Word', caption: 'Taking the Word to heart' },
+      { src: '/gallery/crusade/taking-notes.jpg', moment: 'The Word', caption: 'Writing down what God is saying' },
+      { src: '/gallery/crusade/sermon-notes-bw.jpg', moment: 'The Word', caption: 'Sermon notes on deliverance' },
+      { src: '/gallery/crusade/intercession-bw.jpg', moment: 'Prayer', caption: 'Standing in the gap' },
+      { src: '/gallery/crusade/interceding-together.jpg', moment: 'Prayer', caption: 'Interceding together' },
+      { src: '/gallery/crusade/surrender.jpg', moment: 'Prayer', caption: 'Total surrender' },
+      { src: '/gallery/crusade/open-hands.jpg', moment: 'Prayer', caption: 'Open hands, ready to receive' },
+      { src: '/gallery/crusade/ready-to-serve.jpg', moment: 'Prayer', caption: 'Ready to serve' },
+      { src: '/gallery/crusade/testimony-line.jpg', moment: 'Testimonies', caption: 'Lining up to share what God has done' },
+      { src: '/gallery/crusade/testimony.jpg', moment: 'Testimonies', caption: "A testimony of God's faithfulness" },
+      { src: '/gallery/crusade/elder-testifies.jpg', moment: 'Testimonies', caption: 'An elder gives glory to God' },
+      { src: '/gallery/crusade/elder-testimony.jpg', moment: 'Testimonies', caption: 'Every testimony a seed of faith' },
+      { src: '/gallery/crusade/fellowship.jpg', moment: 'Fellowship', caption: 'Strangers became family' },
+      { src: '/gallery/crusade/pastors-greet.jpg', moment: 'Fellowship', caption: 'Warm greetings among ministers' },
+      { src: '/gallery/crusade/joyful-reunion.jpg', moment: 'Fellowship', caption: 'Laughter and fellowship' },
+      { src: '/gallery/crusade/pastor-in-white.jpg', moment: 'Fellowship', caption: 'Ready to serve the crusade' },
+    ],
   },
   {
     slug: 'church-dedication',
