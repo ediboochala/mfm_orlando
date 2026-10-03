@@ -52,7 +52,7 @@ export default function MinistriesContent() {
                     <div className={styles.photosRule} />
                   </div>
                   <div className={styles.photoCard}>
-                    <div className={`${styles.photoWrap} ${ministry.image !== '/new Logo mfm.png' ? styles.photoWrapCover : ''}`}>
+                    <div className={`${styles.photoWrap} ${ministry.image !== '/new Logo mfm.png' ? styles.photoWrapCover : ''} ${ministry.imageFit === 'contain' ? styles.photoWrapFlyer : ''}`}>
                       <Image
                         src={ministry.image}
                         alt={ministry.name}

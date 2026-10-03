@@ -321,6 +321,9 @@
 .photoWrapCover .photoImg {
   object-fit: cover;
 }
+/* Flyers carry text, so show them whole on a matching light backdrop */
+.photoWrapFlyer { background: #eeeeee; }
+.photoWrapFlyer .photoImg { object-fit: contain; }
 .photoCard:hover .photoImg { transform: scale(1.04); }
 
 /* Zoom overlay (shown on hover) */

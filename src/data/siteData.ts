@@ -183,10 +183,13 @@ export const MINISTRIES = [
     name: 'Youth Church',
     subtitle: 'Empowering the Next Generation',
     icon: 'flame',
-    image: '/youths.jpg',
+    image: '/youth-church-flyer.jpg',
+    // A flyer with text on it — show it whole instead of cropping to fill
+    imageFit: 'contain' as const,
     tagline: 'Young, on fire, and on purpose — for the glory of God.',
     description: "Youth Church at MFM Tampa Florida understands the unique pressures facing teenagers and young people in this generation. Identity crises, the pull of social media, peer pressure, moral confusion — these are real and formidable. Youth Church exists to give young people an anchor: a clear identity in Christ, a community that holds them accountable, and a vision for their lives that is bigger than anything the world is offering. We are raising a generation of young men and women who know who they are, know whose they are, and will not be moved.",
     details: [
+      'Meets every Sunday at 10:30 AM, upstairs. Come grow, connect and be empowered!',
       'Emotional, spiritual, and physical empowerment for teens and youths',
       'Helping youth discover and live out their God-given identity in Christ',
       'Navigating modern challenges: technology, culture, relationships, and purpose',
