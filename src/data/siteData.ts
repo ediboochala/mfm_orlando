@@ -61,14 +61,14 @@ export const SERVICES = [
     name: 'Sunday Worship Service',
     time: '10:00 AM (ET)',
     icon: '🙏',
-    image: '/3 sunday service (2).jpg',
+    image: '/service-sunday-worship.jpg',
   },
   {
     day: 'Tuesdays',
     name: 'Personal Prayer and Bible Study',
     time: '7:00 PM (ET)',
     icon: '📖',
-    image: '/3 bible study personal prayer.jpg',
+    image: '/service-bible-study.jpg',
   },
   {
     day: 'Thursdays',
@@ -83,7 +83,7 @@ export const SERVICES = [
     time: '10:00 AM (ET)',
     icon: '⚡',
     note: 'Streamed from MFM Lagos Headquarters',
-    image: '/3 pmch (2).jpg',
+    image: '/service-pmch.jpg',
   },
 ]
 
