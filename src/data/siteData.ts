@@ -87,6 +87,24 @@ export const SERVICES = [
   },
 ]
 
+// ── Featured weekly program (homepage spotlight + Services page) ─────────
+export const FEATURED_PROGRAM = {
+  title: 'The Mountain of Bring Your Problems to God',
+  presentedBy: 'Mountain of Fire and Miracles Ministries, Tampa, Florida presents',
+  schedule: 'Every Thursday',
+  time: '7:00 PM (ET)',
+  venue: '4618 North Florida Avenue, Tampa, FL 33603',
+  description:
+    'Whatever you are carrying, you do not have to carry it alone. Come up to the mountain every Thursday night and lay your burdens before the Lord. It is an evening of prayer, worship and the Word, set aside for anyone who needs God to step into their situation.',
+  scripture: {
+    text: 'Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.',
+    reference: 'Psalm 55:22 (KJV)',
+  },
+  instagram: { handle: '@mfmtampaflorida', href: 'https://www.instagram.com/mfmtampaflorida/' },
+  eventbriteUrl: 'https://www.eventbrite.com/e/mountain-of-fire-and-miracles-ministries-tampa-florida-tickets-2002810199220',
+  image: '/bring-your-problems-to-god-flyer.png',
+}
+
 // ── Online-only programs (streamed on social media, not held on-site) ──────
 export const ONLINE_PROGRAMS = [
   {
@@ -799,6 +817,7 @@ export const LIVE_SCHEDULE = [
   { day: 'Tuesdays',             service: 'Personal Prayer and Bible Study',   time: '7:00 PM ET',  streamed: false },
   { day: 'Tue / Thu / Fri',      service: 'Hour of Deliverance Power (Online)', time: '12:00 Noon ET', streamed: true  },
   { day: 'Thursdays',            service: 'Manna Water Service',               time: '7:00 PM ET',  streamed: false },
+  { day: 'Thursdays',            service: 'The Mountain of Bring Your Problems to God', time: '7:00 PM ET', streamed: false },
   { day: '1st Saturday / Month', service: 'Power Must Change Hands',           time: '10:00 AM ET', streamed: true  },
   { day: 'Last Sunday / Month',  service: 'Monthly Deliverance Weekend',       time: 'Fri – Sun',   streamed: false },
 ]

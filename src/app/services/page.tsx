@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CHURCH, THEMED_SUNDAYS, ONLINE_PROGRAMS } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import ServicesSection from '@/components/ServicesSection'
+import FeaturedProgramSection from '@/components/FeaturedProgramSection'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
@@ -46,6 +47,9 @@ export default function ServicesPage() {
 
       {/* ── Services Grid ── */}
       <ServicesSection />
+
+      {/* ── Featured weekly program ── */}
+      <FeaturedProgramSection />
 
       <main className={styles.main}>
         <div className={styles.mainInner}>
