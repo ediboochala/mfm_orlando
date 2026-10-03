@@ -48,6 +48,15 @@ export const GENERAL_OVERSEER = {
   quote: 'Holiness within and without is the greatest spiritual insecticide and a condition for Heaven.',
 }
 
+// ── Declaration over MFM by the General Overseer (homepage band) ────────
+export const DECLARATION = [
+  { lead: 'A sanctuary of', word: 'Peace' },
+  { lead: 'A sanctuary of', word: 'Power' },
+  { lead: 'A citadel of',   word: 'Glory' },
+  { lead: 'A citadel of',   word: 'Deliverance' },
+  { lead: 'A center for',   word: 'Evangelism' },
+]
+
 export const STATS = [
   { num: 1989, suffix: '', label: 'Year Founded' },
   { num: 140,  suffix: '+', label: 'Nations Reached' },
