@@ -6,7 +6,7 @@ import styles from './ChurchCarousel.module.css'
 
 const CARDS = [
   {
-    image: '/4 family of believers.jpg',
+    image: '/about-family-of-believers.jpg',
     tag: 'Our Congregation',
     title: 'A Family of Believers',
     desc: 'United in faith, prayer, and the love of Christ — the MFM Tampa Florida family welcomes every soul seeking God\'s presence.',
