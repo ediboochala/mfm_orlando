@@ -162,6 +162,14 @@
   margin-top: 8px;
   line-height: 1.4;
 }
+.cardNoteLink {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cardNoteLink:hover { color: var(--white); }
 
 /* ── Address line ── */
 .address {

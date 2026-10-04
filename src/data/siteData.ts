@@ -89,10 +89,12 @@ export const SERVICES = [
     image: '/service-bible-study.jpg',
   },
   {
-    day: 'Thursdays',
-    name: 'Manna Water Service',
+    day: 'Wednesdays',
+    name: 'Manna Water Service (Online)',
     time: '7:00 PM (ET)',
     icon: '💧',
+    note: 'Watch from home on MFM HQ YouTube',
+    noteHref: 'https://www.youtube.com/@MFMMinistries',
     image: '/3 manna water service.jpg',
   },
   {
@@ -1053,7 +1055,7 @@ export const LIVE_SCHEDULE = [
   { day: 'Sundays',              service: 'Sunday Worship Service',            time: '10:00 AM ET', streamed: true  },
   { day: 'Tuesdays',             service: 'Personal Prayer and Bible Study',   time: '7:00 PM ET',  streamed: false },
   { day: 'Tue / Thu / Fri',      service: 'Hour of Deliverance Power (Online)', time: '12:00 Noon ET', streamed: true  },
-  { day: 'Thursdays',            service: 'Manna Water Service',               time: '7:00 PM ET',  streamed: false },
+  { day: 'Wednesdays',           service: 'Manna Water Service (Online)',      time: '7:00 PM ET',  streamed: true  },
   { day: 'Thursdays',            service: 'The Mountain of Bring Your Problems to God', time: '7:00 PM ET', streamed: false },
   { day: '1st Saturday / Month', service: 'Power Must Change Hands',           time: '10:00 AM ET', streamed: true  },
   { day: 'Last Sunday / Month',  service: 'Monthly Deliverance Weekend',       time: 'Fri – Sun',   streamed: false },

@@ -26,7 +26,15 @@ export default function ServicesSection() {
                 <p className={styles.cardName}>{svc.name}</p>
                 <p className={styles.cardTime}>{svc.time}</p>
                 {'note' in svc && svc.note && (
-                  <p className={styles.cardNote}>{svc.note}</p>
+                  <p className={styles.cardNote}>
+                    {'noteHref' in svc && svc.noteHref ? (
+                      <a href={svc.noteHref} target="_blank" rel="noopener noreferrer" className={styles.cardNoteLink}>
+                        {svc.note} ↗
+                      </a>
+                    ) : (
+                      svc.note
+                    )}
+                  </p>
                 )}
               </div>
             </div>
