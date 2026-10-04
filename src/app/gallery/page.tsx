@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-import { CHURCH, GALLERY_EVENTS, type GalleryEvent, type GalleryPhoto } from '@/data/siteData'
+import { CHURCH, GALLERY_EVENTS, PHOTO_SHARE_GOOGLE_FORM, type GalleryEvent, type GalleryPhoto } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import SocialFollowRow from '@/components/SocialFollowRow'
 import styles from './page.module.css'
@@ -363,6 +363,12 @@ export default function GalleryPage() {
                 Share Your Photos
               </button>
             )}
+            <p className={styles.ctaAlt}>
+              Prefer Google?{' '}
+              <a href={PHOTO_SHARE_GOOGLE_FORM} target="_blank" rel="noopener noreferrer">
+                Upload through our Google Form
+              </a>
+            </p>
             <div className={styles.ctaFollow}>
               <SocialFollowRow label="See more on our socials" />
             </div>

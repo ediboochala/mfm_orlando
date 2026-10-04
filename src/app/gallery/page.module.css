@@ -545,6 +545,17 @@
   max-width: 540px;
   margin: 0 auto 30px;
 }
+.ctaAlt {
+  margin-top: 18px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.ctaAlt a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ctaAlt a:hover { color: var(--white); }
 
 /* ── Footer Strip ── */
 .footerStrip {

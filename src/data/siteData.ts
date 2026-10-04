@@ -52,6 +52,11 @@ export const GENERAL_OVERSEER = {
 //    its submissions to the inbox this key was registered with.
 export const WEB3FORMS_KEY = 'f42eff97-7491-4e37-b37b-6c43e0797da4'
 
+// ── Google Form alternative for sharing event photos — uploads land in the
+//    church's Google Drive (uploaders must sign in to Google).
+export const PHOTO_SHARE_GOOGLE_FORM =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfEfW4YKUKdOH_cVKjpTP91N143qfzHzm-W7GyItS4MXPCXCw/viewform'
+
 // ── Declaration over MFM by the General Overseer (homepage band) ────────
 export const DECLARATION = [
   { lead: 'A sanctuary of', word: 'Peace' },
