@@ -3,10 +3,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { CHURCH, GALLERY_EVENTS, type GalleryEvent, type GalleryPhoto } from '@/data/siteData'
 import PageHeroWatermark from '@/components/PageHeroWatermark'
 import SocialFollowRow from '@/components/SocialFollowRow'
 import styles from './page.module.css'
+
+// Upload form (and the Blob client it pulls in) only loads once someone taps "Share Your Photos"
+const SharePhotosForm = dynamic(() => import('./SharePhotosForm'), { ssr: false })
 
 type Slide = GalleryPhoto & { event: GalleryEvent }
 
@@ -17,6 +21,7 @@ const PAGE_SIZE = 12
 export default function GalleryPage() {
   const [active, setActive] = useState<string>('all')
   const [lightbox, setLightbox] = useState<{ index: number; dir: 1 | -1 } | null>(null)
+  const [shareOpen, setShareOpen] = useState(false)
   const gridRef = useRef<HTMLDivElement>(null)
   const tabsRef = useRef<HTMLDivElement>(null)
   const [indicator, setIndicator] = useState({ left: 0, width: 0 })
@@ -344,14 +349,20 @@ export default function GalleryPage() {
         ))}
 
         {/* ── Photo Submission CTA ── */}
-        <div className={styles.cta} data-reveal>
+        <div className={styles.cta} id="share-photos" data-reveal>
           <div className={styles.ctaInner}>
             <h3 className={styles.ctaTitle}>Were You There?</h3>
             <p className={styles.ctaText}>
               Have photos from the crusade or the church dedication? We&apos;d love to feature them here.
-              Send us your captured moments of God&apos;s work in our community.
+              Send your captured moments of God&apos;s work straight from your phone or computer.
             </p>
-            <Link href="/contact" className="btn-gold">Share Your Photos</Link>
+            {shareOpen ? (
+              <SharePhotosForm />
+            ) : (
+              <button type="button" className="btn-gold" onClick={() => setShareOpen(true)}>
+                Share Your Photos
+              </button>
+            )}
             <div className={styles.ctaFollow}>
               <SocialFollowRow label="See more on our socials" />
             </div>
