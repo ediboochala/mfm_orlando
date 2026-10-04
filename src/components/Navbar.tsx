@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
         <div className={styles.logoText}>
           <span className={styles.logoName}>{CHURCH.shortName}</span>
-          <span className={styles.logoTagline}>Citadel of Prayer and Deliverance</span>
+          <span className={styles.logoTagline}>Citadel, Sanctuary, Center</span>
         </div>
       </Link>
 

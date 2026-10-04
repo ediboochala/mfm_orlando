@@ -19,7 +19,7 @@ export default function FeaturedProgramSection() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.imgFrame}
-              aria-label={`Register for ${p.title} on Eventbrite`}
+              aria-label={`RSVP for ${p.title} on Eventbrite`}
             >
               <div className={`${styles.imgPlaceholder} ${styles.hasImage}`}>
                 <Image
@@ -30,7 +30,7 @@ export default function FeaturedProgramSection() {
                   style={{ objectFit: 'contain' }}
                 />
                 <div className={styles.imgHoverHint}>
-                  <span>Register on Eventbrite</span>
+                  <span>RSVP on Eventbrite</span>
                 </div>
               </div>
               <div className={styles.dateTag}>
@@ -90,7 +90,7 @@ export default function FeaturedProgramSection() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Register on Eventbrite
+                RSVP on Eventbrite
               </a>
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.venue)}`}
