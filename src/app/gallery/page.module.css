@@ -427,31 +427,57 @@
 }
 .tile:hover .tileShade,
 .tile:focus-visible .tileShade { opacity: 1; }
+/* Caption sits in a frosted card so it stays readable over any photo */
 .tileCaption {
   position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 14px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
   text-align: left;
+  background: rgba(24, 0, 28, 0.78);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  backdrop-filter: blur(10px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   transform: translateY(16px);
   opacity: 0;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .tile:hover .tileCaption,
-.tile:focus-visible .tileCaption { transform: none; opacity: 1; }
+.tile:focus-visible .tileCaption {
+  transform: none;
+  opacity: 1;
+  border-color: rgba(var(--accent-rgb), 0.65);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(var(--accent-rgb), 0.25);
+}
+/* Event label: solid gold tag with dark text instead of thin gold-on-photo */
 .tileEvent {
-  font-size: 9px;
-  letter-spacing: 3px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--gold-light);
+  color: #1f0a22;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.3;
   text-transform: uppercase;
-  color: var(--gold-light);
 }
 .tileText {
-  font-size: 12px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #fff;
 }
 .tileZoom {
   position: absolute;
@@ -719,6 +745,9 @@
   .album       { margin-bottom: 64px; }
   .wall        { columns: 2; column-gap: 10px; }
   .tile        { margin-bottom: 10px; border-radius: 10px; }
+  .tileCaption { left: 8px; right: 8px; bottom: 8px; padding: 9px 10px; gap: 6px; border-radius: 9px; }
+  .tileEvent   { font-size: 9px; letter-spacing: 1.5px; padding: 3px 8px; }
+  .tileText    { font-size: 12px; }
   .storyTitle  { font-size: 25px; }
   .ctaInner    { padding: 40px 20px; }
   .breadcrumb  { display: none; }
