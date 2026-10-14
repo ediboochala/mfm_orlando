@@ -166,12 +166,12 @@ export const MINISTRIES = [
   },
   {
     id: 'glorious-women',
-    name: 'Glorious Women',
+    name: 'Women Foundation, Tampa, Florida',
     subtitle: "Women's Ministry",
     icon: 'flower',
     image: '/glorious-women-ministry.jpg',
     tagline: 'Knowing God. Filled with His Spirit. Doing His Will. Loving His People.',
-    description: "Glorious Women is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
+    description: "Women Foundation, Tampa, Florida is built on four unshakeable pillars — Knowing God's Word, being Filled with God's Spirit, Doing God's Will, and Loving God's People — captured in the acronym KFDL. This ministry exists to impact the lives of women at every stage of their journey: spiritually, physically, and financially. It addresses the unique challenges women face as mothers, wives, daughters, and leaders, and equips them to be transforming forces in their families and communities. A woman walking in her God-given identity changes everything around her.",
     details: [
       'Spirit-filled programs addressing spiritual, physical, and financial growth',
       "Focus on the woman's calling as mother, wife, and spiritual force in the home",
@@ -1117,7 +1117,7 @@ export const EVENT_REPLAYS = [
 export const MINISTRY_PROJECTS = [
   // Men of Valor
   { id: 1,  ministryId: 'men-of-valor',        title: 'Men of Valor Prayer Night',        date: 'March 2025',     description: 'Men gathered for intense warfare prayer and spiritual breakthrough.',                        image: '/new Logo mfm.png' },
-  // Glorious Women
+  // Women Foundation, Tampa, Florida
   { id: 3,  ministryId: 'glorious-women',      title: 'KFDL Women\'s Conference',         date: 'February 2025',  description: 'Spirit-filled conference equipping women in every area of their God-given calling.',          image: '/new Logo mfm.png' },
   // Children's Ministry
   { id: 5,  ministryId: 'children-church',     title: 'Children\'s Dedication Service',   date: 'December 2024',  description: 'Children celebrated and dedicated to the Lord by their families.',                          image: null },

@@ -9,7 +9,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: `Our Ministries — ${CHURCH.shortName}`,
   description:
-    "Discover the ministries of MFM Tampa Florida — Men of Valor, Glorious Women, Children's Ministry, Youth Church, Young Adults Church, Choir, and GEN 2:18.",
+    "Discover the ministries of MFM Tampa Florida — Men of Valor, Women Foundation, Children's Ministry, Youth Church, Young Adults Church, Choir, and GEN 2:18.",
   alternates: { canonical: '/ministries' },
 }
 
