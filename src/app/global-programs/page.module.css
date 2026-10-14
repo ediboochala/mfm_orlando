@@ -149,6 +149,12 @@
   line-height: 1.25;
   margin-bottom: 18px;
 }
+.programWhen {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin: -4px 0 18px;
+}
 .programDivider {
   width: 50px;
   height: 2px;

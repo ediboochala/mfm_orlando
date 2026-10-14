@@ -400,13 +400,14 @@ export const DELIVERANCE = {
   areas: ['Sickness and Health', 'Marriage and Family', 'Finances and Career', 'Spiritual Attack', 'Dreams', 'Addiction', 'Fear and Anxiety', 'Something Else'],
 }
 
-// ── Global Programs — Annual 70 Days Prayer and Fasting ─────────────────────
+// ── Global Programs — Global Thanksgiving ───────────────────────────────────
 export const GLOBAL_PROGRAMS = {
-  seventyDays: {
-    name: 'Annual 70 Days Prayer and Fasting',
-    description: 'MFM\'s signature global prayer and fasting program, observed by MFM branches worldwide as we press into a new year with prayer, holiness, and fasting.',
-    link: 'https://www.facebook.com/share/p/18akCUvmLX/?mibextid=wwXIfr',
-    image: '/92ede09c-b4e8-4a03-9d39-7183593df9d4.jpg' as string | null,
+  globalThanksgiving: {
+    name: 'Global Thanksgiving',
+    when: 'Sunday, October 18, 2026 · 10:00 AM (ET)',
+    description: 'MFM branches all over the world come together to give God thanks for His faithfulness, mercy, and the victories He has given us. Come with a grateful heart and join us this Sunday as we lift up a sacrifice of praise as one global family.',
+    link: null as string | null,
+    image: null as string | null,
   },
 }
 

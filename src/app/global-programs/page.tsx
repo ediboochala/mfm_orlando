@@ -8,12 +8,12 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `Global Programs — ${CHURCH.shortName}`,
-  description: `Join MFM branches worldwide for the ${GLOBAL_PROGRAMS.seventyDays.name}.`,
+  description: `Join MFM branches worldwide for the ${GLOBAL_PROGRAMS.globalThanksgiving.name}.`,
   alternates: { canonical: '/global-programs' },
 }
 
 export default function GlobalProgramsPage() {
-  const { seventyDays } = GLOBAL_PROGRAMS
+  const { globalThanksgiving } = GLOBAL_PROGRAMS
 
   return (
     <div className={styles.page}>
@@ -49,17 +49,18 @@ export default function GlobalProgramsPage() {
       <main className={styles.main}>
         <div className={styles.mainInner}>
 
-          <div className={`${styles.programCard} ${seventyDays.image ? styles.programCardWithImage : ''}`}>
+          <div className={`${styles.programCard} ${globalThanksgiving.image ? styles.programCardWithImage : ''}`}>
             <div className={styles.programContent}>
-              <span className={styles.programLabel}>Annual Global Program</span>
-              <h2 className={styles.programName}>{seventyDays.name}</h2>
+              <span className={styles.programLabel}>Global Program · This Sunday</span>
+              <h2 className={styles.programName}>{globalThanksgiving.name}</h2>
+              <p className={styles.programWhen}>{globalThanksgiving.when}</p>
               <div className={styles.programDivider} />
-              <p className={styles.programDesc}>{seventyDays.description}</p>
+              <p className={styles.programDesc}>{globalThanksgiving.description}</p>
 
-              {seventyDays.link ? (
+              {globalThanksgiving.link ? (
                 <div className={styles.programLinkWrap}>
                   <a
-                    href={seventyDays.link}
+                    href={globalThanksgiving.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"
@@ -68,17 +69,18 @@ export default function GlobalProgramsPage() {
                   </a>
                 </div>
               ) : (
-                <div className={styles.pendingNote}>
-                  The link for this year&apos;s {seventyDays.name} is being finalized and will be
-                  posted here soon. In the meantime, contact the church office for details.
+                <div className={styles.programLinkWrap}>
+                  <Link href="/services" className="btn-primary">
+                    Plan Your Visit
+                  </Link>
                 </div>
               )}
             </div>
-            {seventyDays.image && (
+            {globalThanksgiving.image && (
               <div className={styles.programImageWrap}>
                 <Image
-                  src={seventyDays.image}
-                  alt={seventyDays.name}
+                  src={globalThanksgiving.image}
+                  alt={globalThanksgiving.name}
                   fill
                   sizes="(max-width: 700px) 100vw, 320px"
                   style={{ objectFit: 'contain' }}
@@ -89,10 +91,10 @@ export default function GlobalProgramsPage() {
 
           {/* ── CTA ── */}
           <div className={styles.cta}>
-            <h3 className={styles.ctaTitle}>Prayer Changes Everything</h3>
+            <h3 className={styles.ctaTitle}>Come With a Grateful Heart</h3>
             <p className={styles.ctaText}>
-              Whatever season you are in, prayer and fasting position you for a breakthrough.
-              Join us in person or online as we press into God together.
+              Whatever season you are in, there is a reason to thank God.
+              Join us in person or online as we give Him praise together.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/services" className="btn-gold">View Service Times</Link>
