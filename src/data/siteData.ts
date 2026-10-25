@@ -400,16 +400,43 @@ export const DELIVERANCE = {
   areas: ['Sickness and Health', 'Marriage and Family', 'Finances and Career', 'Spiritual Attack', 'Dreams', 'Addiction', 'Fear and Anxiety', 'Something Else'],
 }
 
-// ── Global Programs — Global Thanksgiving ───────────────────────────────────
-export const GLOBAL_PROGRAMS = {
-  globalThanksgiving: {
-    name: 'Global Thanksgiving',
-    when: 'Sunday, October 18, 2026 · 10:00 AM (ET)',
-    description: 'MFM branches all over the world come together to give God thanks for His faithfulness, mercy, and the victories He has given us. Come with a grateful heart and join us this Sunday as we lift up a sacrifice of praise as one global family.',
-    link: null as string | null,
-    image: null as string | null,
-  },
+// ── Global Programs ─────────────────────────────────────────────────────────
+// status 'coming-soon' shows a "Coming Soon" graphic in place of the image.
+export type GlobalProgram = {
+  id: string
+  label: string
+  name: string
+  when: string
+  description: string
+  status: 'coming-soon' | 'ongoing'
+  startDate?: string
+  link: string | null
+  image: string | null
 }
+
+export const GLOBAL_PROGRAMS: GlobalProgram[] = [
+  {
+    id: 'pray-your-way-2027',
+    label: 'Global Program · Coming Soon',
+    name: 'Pray Your Way to 2027',
+    when: 'Begins Thursday, December 24, 2026',
+    description: 'As the year draws to a close, MFM branches all over the world will join together in prayer to close 2026 with thanksgiving and step into 2027 under the covering of God. Mark your calendar and get ready to pray your way into the new year with us.',
+    status: 'coming-soon',
+    startDate: 'Dec 24',
+    link: null,
+    image: null,
+  },
+  {
+    id: 'monthly-vigil',
+    label: 'Global Program · Monthly',
+    name: 'Monthly Vigil',
+    when: 'Every second Friday · 11:00 PM – 1:00 AM (ET)',
+    description: 'Once a month, MFM branches worldwide keep watch in prayer through the night. Join us every second Friday of the month as we stand in the gap for our families, our church, and the nations.',
+    status: 'ongoing',
+    link: null,
+    image: null,
+  },
+]
 
 export const HISTORY_TIMELINE = [
   {

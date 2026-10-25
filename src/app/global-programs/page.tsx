@@ -8,13 +8,11 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: `Global Programs — ${CHURCH.shortName}`,
-  description: `Join MFM branches worldwide for the ${GLOBAL_PROGRAMS.globalThanksgiving.name}.`,
+  description: `Join MFM branches worldwide for ${GLOBAL_PROGRAMS.map(p => p.name).join(' and the ')}.`,
   alternates: { canonical: '/global-programs' },
 }
 
 export default function GlobalProgramsPage() {
-  const { globalThanksgiving } = GLOBAL_PROGRAMS
-
   return (
     <div className={styles.page}>
       <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Global Programs', path: '/global-programs' }]} />
@@ -49,52 +47,67 @@ export default function GlobalProgramsPage() {
       <main className={styles.main}>
         <div className={styles.mainInner}>
 
-          <div className={`${styles.programCard} ${globalThanksgiving.image ? styles.programCardWithImage : ''}`}>
-            <div className={styles.programContent}>
-              <span className={styles.programLabel}>Global Program · This Sunday</span>
-              <h2 className={styles.programName}>{globalThanksgiving.name}</h2>
-              <p className={styles.programWhen}>{globalThanksgiving.when}</p>
-              <div className={styles.programDivider} />
-              <p className={styles.programDesc}>{globalThanksgiving.description}</p>
+          {GLOBAL_PROGRAMS.map(program => {
+            const hasVisual = program.image || program.status === 'coming-soon'
+            return (
+              <div
+                key={program.id}
+                className={`${styles.programCard} ${hasVisual ? styles.programCardWithImage : ''}`}
+              >
+                <div className={styles.programContent}>
+                  <span className={styles.programLabel}>{program.label}</span>
+                  <h2 className={styles.programName}>{program.name}</h2>
+                  <p className={styles.programWhen}>{program.when}</p>
+                  <div className={styles.programDivider} />
+                  <p className={styles.programDesc}>{program.description}</p>
 
-              {globalThanksgiving.link ? (
-                <div className={styles.programLinkWrap}>
-                  <a
-                    href={globalThanksgiving.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary"
-                  >
-                    Learn More and Join In
-                  </a>
+                  {program.link ? (
+                    <div className={styles.programLinkWrap}>
+                      <a
+                        href={program.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary"
+                      >
+                        Learn More and Join In
+                      </a>
+                    </div>
+                  ) : program.status === 'ongoing' ? (
+                    <div className={styles.programLinkWrap}>
+                      <Link href="/services" className="btn-primary">
+                        Plan Your Visit
+                      </Link>
+                    </div>
+                  ) : null}
                 </div>
-              ) : (
-                <div className={styles.programLinkWrap}>
-                  <Link href="/services" className="btn-primary">
-                    Plan Your Visit
-                  </Link>
-                </div>
-              )}
-            </div>
-            {globalThanksgiving.image && (
-              <div className={styles.programImageWrap}>
-                <Image
-                  src={globalThanksgiving.image}
-                  alt={globalThanksgiving.name}
-                  fill
-                  sizes="(max-width: 700px) 100vw, 320px"
-                  style={{ objectFit: 'contain' }}
-                />
+                {program.image ? (
+                  <div className={styles.programImageWrap}>
+                    <Image
+                      src={program.image}
+                      alt={program.name}
+                      fill
+                      sizes="(max-width: 700px) 100vw, 320px"
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
+                ) : program.status === 'coming-soon' && (
+                  <div className={styles.comingSoon} aria-label={`${program.name} — coming soon`}>
+                    <span className={styles.comingSoonKicker}>Starts</span>
+                    <span className={styles.comingSoonDate}>{program.startDate}</span>
+                    <span className={styles.comingSoonRule} />
+                    <span className={styles.comingSoonTitle}>Coming<br />Soon</span>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            )
+          })}
 
           {/* ── CTA ── */}
           <div className={styles.cta}>
-            <h3 className={styles.ctaTitle}>Come With a Grateful Heart</h3>
+            <h3 className={styles.ctaTitle}>Pray With Us</h3>
             <p className={styles.ctaText}>
-              Whatever season you are in, there is a reason to thank God.
-              Join us in person or online as we give Him praise together.
+              Whatever season you are in, there is power in praying together.
+              Join us in person or online as we seek God&apos;s face as one family.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/services" className="btn-gold">View Service Times</Link>
