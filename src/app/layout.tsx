@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar'
 import { CHURCH, SOCIAL_LINKS } from '@/data/siteData'
 import './globals.css'
 
-const CustomCursor  = dynamic(() => import('@/components/CustomCursor'),    { ssr: false })
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), { ssr: false })
 
 // Self-hosted via next/font — no external Google Fonts request, no
@@ -110,7 +109,6 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(churchJsonLd) }}
         />
-        <CustomCursor />
         <Navbar />
         {children}
         <WhatsAppButton />

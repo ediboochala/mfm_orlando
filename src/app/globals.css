@@ -55,10 +55,6 @@ body {
   overflow-x: hidden;
 }
 
-@media (pointer: fine) {
-  body, a, button, [role="button"] { cursor: none !important; }
-}
-
 /* ── PARTICLES CANVAS ── */
 #particles {
   position: fixed;
