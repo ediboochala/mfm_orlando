@@ -397,6 +397,29 @@ export const DELIVERANCE = {
     email:  'entry.2113979486',
     reason: 'entry.1020246183',
   },
+  // Upcoming special deliverance program (shown above the signup form).
+  // Set to null once the event has passed.
+  upcoming: {
+    label: 'Special Program',
+    title: 'Last Deliverance Session for 2026',
+    dates: 'November 27–29, 2026',
+    sessions: [
+      { day: 'Friday',   date: 'Nov. 27', time: '11:00 PM' },
+      { day: 'Saturday', date: 'Nov. 28', time: '2:00 PM' },
+      { day: 'Sunday',   date: 'Nov. 29', time: '10:00 AM' },
+    ],
+    scripture: 'If the Son therefore shall make you free, ye shall be free indeed.',
+    scriptureRef: 'John 8:36 (KJV)',
+    invitation: 'Come and receive freedom, restoration, and breakthrough before the year ends!',
+  } as {
+    label: string
+    title: string
+    dates: string
+    sessions: { day: string; date: string; time: string }[]
+    scripture: string
+    scriptureRef: string
+    invitation: string
+  } | null,
   areas: ['Sickness and Health', 'Marriage and Family', 'Finances and Career', 'Spiritual Attack', 'Dreams', 'Addiction', 'Fear and Anxiety', 'Something Else'],
 }
 

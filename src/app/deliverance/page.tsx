@@ -70,6 +70,35 @@ export default function DeliverancePage() {
             </div>
           </figure>
 
+          {/* ── Upcoming deliverance program ── */}
+          {DELIVERANCE.upcoming && (
+            <section className={styles.section} aria-labelledby="upcoming-deliverance">
+              <div className={styles.sectionHeader}>
+                <span className={styles.sectionLabel}>{DELIVERANCE.upcoming.label}</span>
+                <h2 id="upcoming-deliverance" className={styles.sectionTitle}>{DELIVERANCE.upcoming.title}</h2>
+                <div className={styles.sectionDivider} />
+                <p className={styles.eventDates}>{DELIVERANCE.upcoming.dates}</p>
+              </div>
+
+              <ul className={styles.eventSessions}>
+                {DELIVERANCE.upcoming.sessions.map((s) => (
+                  <li key={s.day} className={styles.eventSession}>
+                    <span className={styles.eventDay}>{s.day}</span>
+                    <span className={styles.eventDate}>{s.date}</span>
+                    <span className={styles.eventTime}>{s.time}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <blockquote className={styles.eventScripture}>
+                &ldquo;{DELIVERANCE.upcoming.scripture}&rdquo;
+                <span className={styles.sectionScriptureRef}>— {DELIVERANCE.upcoming.scriptureRef}</span>
+              </blockquote>
+
+              <p className={styles.sectionDesc}>{DELIVERANCE.upcoming.invitation}</p>
+            </section>
+          )}
+
           <section className={styles.section}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionLabel}>Deliverance Signup</span>

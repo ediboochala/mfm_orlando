@@ -224,6 +224,59 @@
 }
 
 /* ── Form embed ── */
+/* ── Upcoming deliverance program ── */
+.eventDates {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--primary);
+}
+.eventSessions {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.eventSession {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(var(--primary-rgb), 0.12);
+  border-radius: 10px;
+}
+.eventDay {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(var(--text-rgb), 0.55);
+}
+.eventDate {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+}
+.eventTime {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.eventScripture {
+  margin: 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--gold);
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text);
+}
+@media (max-width: 600px) {
+  .eventSessions { grid-template-columns: 1fr; }
+}
+
 .formWrap {
   border: 1px solid rgba(var(--accent-rgb), 0.18);
   background: #FFFFFF;
