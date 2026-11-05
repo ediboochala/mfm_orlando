@@ -50,7 +50,10 @@ export default function NextServiceBadge() {
 
   return (
     <div className={styles.nextServiceWrap}>
-      <span className={styles.nextServiceLabel}>Next Up</span>
+      <div className={styles.nextServiceHead}>
+        <span className={styles.liveDot} aria-hidden />
+        <span className={styles.nextServiceLabel}>Next Service</span>
+      </div>
       <p className={styles.nextServiceName}>{next.name}</p>
       <p className={styles.nextServiceDate}>{formatNextServiceDateTime(next)}</p>
       {countdown && (
